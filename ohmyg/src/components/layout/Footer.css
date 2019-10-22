@@ -1,0 +1,42 @@
+.footer {
+    background-color: #08f9d6;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+}
+
+.footer div {
+    margin: auto;
+}
+
+@media screen and (max-width: 1050px) {
+    .footer {      
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+    }
+
+    .footer div {
+        padding: 5px;
+        display: flex;
+        margin: 5px auto;
+        padding-left: 35px;
+        width: 180px;
+    }
+
+    .footer div * {
+    }
+
+    .footer div p {
+        margin: auto;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 1051px) {
+    .footer {
+        height: 200px;        
+        flex-direction: row;;
+    }
+}
