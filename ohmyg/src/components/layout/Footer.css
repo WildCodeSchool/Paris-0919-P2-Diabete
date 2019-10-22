@@ -6,7 +6,11 @@
     display: flex;
 }
 
-.footer div {
+.footer {
+    display: flex;
+}
+
+.footer a div {
     margin: auto;
 }
 
@@ -17,7 +21,7 @@
         grid-template-rows: 1fr 1fr; 
     }
 
-    .footer div {
+    .footer a div {
         padding: 5px;
         display: flex;
         margin: 5px auto;
@@ -25,10 +29,10 @@
         width: 180px;
     }
 
-    .footer div * {
+    .footer a div * {
     }
 
-    .footer div p {
+    .footer a div p {
         margin: auto;
         margin-left: 20px;
     }
