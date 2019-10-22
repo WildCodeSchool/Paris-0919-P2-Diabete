@@ -4,7 +4,10 @@ class InsulinCalculation extends Component {
   state = {
     totalGlucides: "",
     ratio: "",
-    glycemie: ""
+    glycemie: "",
+    sensibilite: "",
+    fleche:"",
+    total: "total",
   };
 
   handleChange = e => {
@@ -16,6 +19,43 @@ class InsulinCalculation extends Component {
     });
   };
 
+  hypoglycemie = () => {
+    return <p className="hypoglycemie"> Attention, tu es en hypoglycémie. la prise d'insuline n'est pas indiquée. Pense à te resucrer :) </p>
+  }
+
+  hyperglycemie = () => {
+    return <div classname="hyperglycemie">
+      <p> Attention, tu es en hyperglycémie. Rentre ces nouveaux paramètres :)</p>
+      <div>
+        <h1>Sensibilité : </h1>
+        <input
+          id="sensibiliteinput"
+          type="number"
+          name="sensibilite"
+          onChange={this.handleChange}
+          value={this.state.sensibilite}
+        />
+        <label> ?</label>
+        <p> {this.state.sensibilite}</p>
+
+      </div>
+
+      <div>
+        <h1>Flèche : </h1>
+        <input
+          id="flecheinput"
+          type="number"
+          name="fleche"
+          onChange={this.handleChange}
+          value={this.state.fleche}
+        />
+        <label> ?</label>
+        <p> {this.state.fleche}</p>
+
+      </div>
+
+    </div>
+  }
 
   render() {
     return (
@@ -59,10 +99,22 @@ class InsulinCalculation extends Component {
           <label> g/l</label>
         </div>
 
-        <h1>state glucides : {this.state.totalGlucides}</h1>
-        <h1> state ratio : {this.state.ratio}</h1>
-        <h1>state glycémie : {this.state.glycemie}</h1>
+        <div>
+          {this.state.glycemie > "1.20" ? this.hyperglycemie() : ""}
+        </div>
+
+      <div>
+        {/* Ici on va mettre le composant boutton qu'on aura utilisé sur toutes les autres pages. On va lui rajouter la fonction "onclick" => faire le calcul. */}
+        <button> Valider</button>
       </div>
+
+      <div>
+          <h1>Dose d'insuline suggérée :</h1>
+          <p> {this.state.total} </p>
+        </div>
+
+      </div>
+
     );
   }
 }
