@@ -6,12 +6,16 @@
     display: flex;
 }
 
-.footer {
+.footer a div {
     display: flex;
+
 }
 
-.footer a div {
-    margin: auto;
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    
 }
 
 @media screen and (max-width: 1050px) {
@@ -23,24 +27,34 @@
 
     .footer a div {
         padding: 5px;
-        display: flex;
-        margin: 5px auto;
         padding-left: 35px;
         width: 180px;
-    }
-
-    .footer a div * {
     }
 
     .footer a div p {
         margin: auto;
         margin-left: 20px;
     }
+
+    a {
+        justify-content: center;
+        margin: 0 10px;
+    }
 }
 
 @media screen and (min-width: 1051px) {
     .footer {
-        height: 200px;        
-        flex-direction: row;;
+        height: 200px;
+        justify-content: space-around;
+    }
+
+    .footer a div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a{
+        margin: 40px;
     }
 }
