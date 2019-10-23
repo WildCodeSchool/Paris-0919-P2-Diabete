@@ -27,6 +27,7 @@ class InsulinCalculation extends Component {
       <p> Attention, tu es en hyperglycémie. Rentre ces nouveaux paramètres :)</p>
       <div>
         <h1>Sensibilité : </h1>
+        <label>1 pour </label>
         <input
           id="sensibiliteinput"
           type="number"
@@ -34,7 +35,7 @@ class InsulinCalculation extends Component {
           onChange={this.handleChange}
           value={this.state.sensibilite}
         />
-        <label> ?</label>
+        <label> g/l</label>
         <p> {this.state.sensibilite}</p>
 
       </div>
