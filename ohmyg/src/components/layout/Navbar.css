@@ -1,0 +1,60 @@
+ul{
+    list-style:none;
+    background-color:black;
+    height:70px;
+  }
+  
+  li{
+    color:white; 
+    margin-right:10px;
+  }
+  
+  ul li a{
+    display:block;
+    width: 100%;
+    color:white;
+    text-decoration:none;
+   text-align:center;
+   font-size:1.3em;
+   padding:0.3em;
+   }
+  
+  ul li a:hover {
+   background-color: rgb(64, 207, 172);
+   border-color:#696969 #DCDCDC #DCDCDC #696969;  
+  }
+  
+  ul li{
+    display:inline-block;
+  }
+ 
+  .logoNews {
+    background-color: aliceblue;
+    align-items: center;
+   
+
+  }
+
+  .Navbar_logo{
+    display:flex;
+    margin-right: 35%;
+    align-content: center;
+    font-size: 2rem;
+    background-color: rgb(64, 207, 172);
+  }
+
+  a{
+      display: block;
+      margin: auto;
+  }
+
+
+  .Navbar {
+    display: flex;
+    background-color: black;
+    
+  }
+
+  #icon-nav {
+    fill: white;
+  }
