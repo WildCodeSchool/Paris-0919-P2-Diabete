@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./InsulinCalculation.css"
 
 class InsulinCalculation extends Component {
   state = {
@@ -6,8 +7,9 @@ class InsulinCalculation extends Component {
     ratio: "",
     glycemie: "",
     sensibilite: "",
-    fleche:"",
+    glycemiecible:"",
     total: "total",
+    hypo: false,
   };
 
   handleChange = e => {
@@ -19,12 +21,9 @@ class InsulinCalculation extends Component {
     });
   };
 
-  hypoglycemie = () => {
-    return <p className="hypoglycemie"> Attention, tu es en hypoglycémie. la prise d'insuline n'est pas indiquée. Pense à te resucrer :) </p>
-  }
-
+  
   hyperglycemie = () => {
-    return <div classname="hyperglycemie">
+    return <div className="hyperglycemie">
       <p> Attention, tu es en hyperglycémie. Rentre ces nouveaux paramètres :)</p>
       <div>
         <h1>Sensibilité : </h1>
@@ -41,26 +40,37 @@ class InsulinCalculation extends Component {
       </div>
 
       <div>
-        <h1>Flèche : </h1>
+        <h1>Glycémie cible : </h1>
         <input
           id="flecheinput"
           type="number"
-          name="fleche"
+          name="glycemiecible"
           onChange={this.handleChange}
-          value={this.state.fleche}
+          value={this.state.glycemiecible}
         />
-        <label> ?</label>
-        <p> {this.state.fleche}</p>
+        <label> g/l</label>
+        <p> {this.state.glycemiecible}</p>
 
       </div>
 
     </div>
   }
 
+  calculhypoglycemie = () => {
+    if (this.state.glycemie<"0.8"){
+      this.setState({hypo: true})
+      console.log(this.state.hypo)
+      return this.state.hypo
+    } else this.setState ({hypo: false})
+
+    // else calculnormal()
+  }
+
   render() {
     return (
       <div>
         <div>
+          <p>bla {this.state.hypo}</p>
           <h1>Mon total de glucides : </h1>
           <label htmlFor="totalGlucides">Mon total de glucides : </label>
           <input
@@ -101,11 +111,20 @@ class InsulinCalculation extends Component {
 
         <div>
           {this.state.glycemie > "1.20" ? this.hyperglycemie() : ""}
+
         </div>
 
       <div>
         {/* Ici on va mettre le composant boutton qu'on aura utilisé sur toutes les autres pages. On va lui rajouter la fonction "onclick" => faire le calcul. */}
-        <button> Valider</button>
+        <button onClick={this.calculhypoglycemie}
+        > Valider</button>
+        {/* {this.state.glycemie < "0.80" ? "Attention, tu es en hypo => resucrage" : ""} */}
+          
+      </div>
+
+{/* test affichage phrase hypoglycemie */}
+      <div>
+        <p className={this.state.hypo === true ? "hypoglycemie" : "no-hypoglycemie" }>Tu es en hypoglycemie, pense à te resucrer :)</p>
       </div>
 
       <div>
