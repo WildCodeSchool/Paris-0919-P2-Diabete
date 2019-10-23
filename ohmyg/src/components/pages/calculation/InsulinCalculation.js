@@ -7,7 +7,7 @@ class InsulinCalculation extends Component {
     ratio: "",
     glycemie: "",
     sensibilite: "",
-    glycemiecible:"",
+    glycemiecible: "",
     total: "total",
     hypo: false,
   };
@@ -21,7 +21,7 @@ class InsulinCalculation extends Component {
     });
   };
 
-  
+
   hyperglycemie = () => {
     return <div className="hyperglycemie">
       <p> Attention, tu es en hyperglycémie. Rentre ces nouveaux paramètres :)</p>
@@ -58,20 +58,34 @@ class InsulinCalculation extends Component {
   }
 
   calculhypoglycemie = () => {
-    if (this.state.glycemie<"0.8"){
-      this.setState({hypo: true})
-      console.log(this.state.hypo)
+    if (this.state.glycemie < "0.8") {
+      this.setState({ hypo: true })
       return this.state.hypo
-    } else this.setState ({hypo: false})
+    }
 
-    // else calculnormal()
+    if (this.state.glycemie >= "0.80" && this.state.glycemie <= "1.20") {
+      this.setState({ hypo: false });
+      this.setState({total : this.state.totalGlucides / this.state.ratio})
+      return this.state.total
+
+    }
+
+    else {
+      this.setState({ hypo: false });
+      const ecart = this.state.glycemie - this.state.glycemiecible
+      const correction = ecart / this.state.sensibilite
+      this.setState({total : (this.state.totalGlucides / this.state.ratio)+correction} )
+      console.log(this.state.total)
+      return this.state.total
+
+    }
+
   }
 
   render() {
     return (
       <div>
         <div>
-          <p>bla {this.state.hypo}</p>
           <h1>Mon total de glucides : </h1>
           <label htmlFor="totalGlucides">Mon total de glucides : </label>
           <input
@@ -88,7 +102,7 @@ class InsulinCalculation extends Component {
           <h1>Mon Ratio : </h1>
           <label htmlFor="totalGlucides">1 pour : </label>
           <input
-            id="totalGlucides"
+            id="ratio"
             type="number"
             name="ratio"
             onChange={this.handleChange}
@@ -101,7 +115,7 @@ class InsulinCalculation extends Component {
           <h1>Ma glycémie avant repas : </h1>
           <label htmlFor="totalGlucides">Ma glycémie : </label>
           <input
-            id="totalGlucides"
+            id="glycemie"
             type="number"
             name="glycemie"
             onChange={this.handleChange}
@@ -115,22 +129,22 @@ class InsulinCalculation extends Component {
 
         </div>
 
-      <div>
-        {/* Ici on va mettre le composant boutton qu'on aura utilisé sur toutes les autres pages. On va lui rajouter la fonction "onclick" => faire le calcul. */}
-        <button onClick={this.calculhypoglycemie}
-        > Valider</button>
-        {/* {this.state.glycemie < "0.80" ? "Attention, tu es en hypo => resucrage" : ""} */}
-          
-      </div>
+        <div>
+          {/* Ici on va mettre le composant boutton qu'on aura utilisé sur toutes les autres pages. On va lui rajouter la fonction "onclick" => faire le calcul. */}
+          <button onClick={this.calculhypoglycemie}
+          > Valider</button>
+          {/* {this.state.glycemie < "0.80" ? "Attention, tu es en hypo => resucrage" : ""} */}
 
-{/* test affichage phrase hypoglycemie */}
-      <div>
-        <p className={this.state.hypo === true ? "hypoglycemie" : "no-hypoglycemie" }>Tu es en hypoglycemie, pense à te resucrer :)</p>
-      </div>
+        </div>
 
-      <div>
+        {/* test affichage phrase hypoglycemie */}
+        <div>
+          <p className={this.state.hypo === true ? "hypoglycemie" : "no-hypoglycemie"}>Tu es en hypoglycemie, pense à te resucrer :)</p>
+        </div>
+
+        <div>
           <h1>Dose d'insuline suggérée :</h1>
-          <p> {this.state.total} </p>
+          <p> Total : {this.state.total} </p>
         </div>
 
       </div>
