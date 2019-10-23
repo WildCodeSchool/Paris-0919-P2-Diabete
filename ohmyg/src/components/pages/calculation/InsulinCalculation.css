@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 
+@import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
 
 /* Page structure */ 
+
 
 .insulinCalculationContainer {
     display: flex;
@@ -10,22 +13,27 @@
     border : 1px solid blue;
 }
 
+.inputAndLabels {
+    display: flex;
+    flex-direction: row;
+    margin : 10px;
+}
+
+
+
 .ratioAndGlycemie {
     display: flex;
     flex-direction: row;
     border : 1px solid red;
 }
 
-.totalGlucides {
-    border : 1px solid green;
+.ratio {
+ display: flex;
+ flex-direction: column;
+justify-content : center;
+ flex-wrap: wrap;
 
 }
-
-.total {
-    border : 1px solid red
-}
-
-
 
 .hyperglycemie {
     display: flex;
@@ -50,9 +58,30 @@ input {
 }
 /* --- */
 
+/** Borders **/
+.totalGlucides {
+    border : 1px solid green;
+
+}
+
+.total {
+    border : 1px solid red
+}
+
+/** Borders **/ 
 
 
-/* Font-size */
+
+/* Font */
+
+label {
+    font-family: "Barlow", sans-serif;
+}
+
+p {
+    font-family: "Barlow", sans-serif;
+}
+
 
 .inputTitle {
     font-size : 20px;
