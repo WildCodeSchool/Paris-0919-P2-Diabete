@@ -1,0 +1,42 @@
+:root {
+    background-image: url("../../../assets/pictures/eatCake.png");
+    background-size: cover;
+}
+
+.mealAndCalcul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.meal, .calcul, .news, .nutri {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px #08f9d6;
+    background-color: gray;
+    background-size: cover;
+}
+
+.meal, .calcul {
+    width: 380px;
+    height: 160px;
+}
+
+.newsAndNutri {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.news, .nutri {
+    width: 187.5px;
+    height: 130px;
+}
+
+.mealAndCalcul a, .newsAndNutri a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
