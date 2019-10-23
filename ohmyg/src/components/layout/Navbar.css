@@ -2,31 +2,19 @@ ul{
     list-style:none;
     background-color:black;
     height:70px;
+    padding: 10px;
+    margin-left: 20px;
   }
   
-  li{
-    color:white; 
-    margin-right:10px;
-  }
+ 
   
-  ul li a{
-    display:block;
-    width: 100%;
-    color:white;
-    text-decoration:none;
-   text-align:center;
-   font-size:1.3em;
-   padding:0.3em;
-   }
   
-  ul li a:hover {
+  .Navbar_Navigation :hover {
    background-color: rgb(64, 207, 172);
    border-color:#696969 #DCDCDC #DCDCDC #696969;  
   }
   
-  ul li{
-    display:inline-block;
-  }
+
  
   .logoNews {
     background-color: aliceblue;
@@ -36,25 +24,42 @@ ul{
   }
 
   .Navbar_logo{
-    display:flex;
+    display:none;
     margin-right: 35%;
     align-content: center;
     font-size: 2rem;
     background-color: rgb(64, 207, 172);
   }
 
-  a{
-      display: block;
-      margin: auto;
-  }
-
 
   .Navbar {
     display: flex;
     background-color: black;
+    justify-content: center;
     
   }
 
   #icon-nav {
     fill: white;
+    margin-left: 25%;
+    margin: inherit;
+    position: inherit;
+
+    
   }
+
+  /*div*/
+  nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    width: 80%;
+
+  } 
+  
+  nav a {
+    display: flex;
+    justify-content: center;
+  }
+
+  
