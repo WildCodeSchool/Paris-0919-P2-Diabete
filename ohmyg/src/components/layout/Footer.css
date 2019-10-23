@@ -45,7 +45,7 @@ a {
 @media screen and (min-width: 1051px) {
     .footer {
         height: 200px;
-        justify-content: space-around;
+        justify-content: center;
     }
 
     .footer a div {
