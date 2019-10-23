@@ -23,10 +23,14 @@ class InsulinCalculation extends Component {
 
 
   hyperglycemie = () => {
-    return <div className="hyperglycemie">
-      <p> Attention, tu es en hyperglycémie. Rentre ces nouveaux paramètres :)</p>
-      <div>
-        <h1>Sensibilité : </h1>
+    return <div>
+
+     <p id="hyperglycemieWarning"> Attention, tu es en hyperglycémie. Rentre ces nouveaux paramètres :)</p>
+     <div className="hyperglycemie">
+
+      <div className="sensibilite">
+        <p className="inputTitle">Sensibilité : </p>
+        <div className="inputAndLabels">
         <label>1 pour </label>
         <input
           id="sensibiliteinput"
@@ -36,12 +40,12 @@ class InsulinCalculation extends Component {
           value={this.state.sensibilite}
         />
         <label> g/l</label>
-        <p> {this.state.sensibilite}</p>
-
+      </div>
       </div>
 
-      <div>
-        <h1>Glycémie cible : </h1>
+      <div className="glycemieCible">
+        <p className="inputTitle">Glycémie cible : </p>
+        <div className="inputAndLabels">
         <input
           id="flecheinput"
           type="number"
@@ -50,11 +54,11 @@ class InsulinCalculation extends Component {
           value={this.state.glycemiecible}
         />
         <label> g/l</label>
-        <p> {this.state.glycemiecible}</p>
-
+      </div>
       </div>
 
     </div>
+    </div> 
   }
 
   calculhypoglycemie = () => {
@@ -84,10 +88,11 @@ class InsulinCalculation extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <h1>Mon total de glucides : </h1>
-          <label htmlFor="totalGlucides">Mon total de glucides : </label>
+      <div className="insulinCalculationContainer">
+
+        <div className="totalGlucides">
+        <div className="inputAndLabels">
+          <p className="inputTitle">Mon Total de Glucides </p>
           <input
             id="totalGlucides"
             type="number"
@@ -96,11 +101,14 @@ class InsulinCalculation extends Component {
             value={this.state.totalGlucides}
           />
           <label> g</label>
+          </div>
         </div>
 
-        <div>
-          <h1>Mon Ratio : </h1>
+        <div className="ratioAndGlycemie">
+        <div className="ratio">
+          <p className="inputTitle">Mon Ratio : </p>
           <label htmlFor="totalGlucides">1 pour : </label>
+          <div className="inputAndLabels">
           <input
             id="ratio"
             type="number"
@@ -109,11 +117,12 @@ class InsulinCalculation extends Component {
             value={this.state.ratio}
           />
           <label> g de glucides</label>
+          </div>
         </div>
 
-        <div>
-          <h1>Ma glycémie avant repas : </h1>
-          <label htmlFor="totalGlucides">Ma glycémie : </label>
+        <div className="glycemie">
+          <p className="inputTitle">Ma glycémie avant repas : </p>
+          <div className="inputAndLabels">
           <input
             id="glycemie"
             type="number"
@@ -122,6 +131,8 @@ class InsulinCalculation extends Component {
             value={this.state.glycemie}
           />
           <label> g/l</label>
+          </div>
+        </div>
         </div>
 
         <div>
@@ -130,11 +141,8 @@ class InsulinCalculation extends Component {
         </div>
 
         <div>
-          {/* Ici on va mettre le composant boutton qu'on aura utilisé sur toutes les autres pages. On va lui rajouter la fonction "onclick" => faire le calcul. */}
           <button onClick={this.calculhypoglycemie}
           > Valider</button>
-          {/* {this.state.glycemie < "0.80" ? "Attention, tu es en hypo => resucrage" : ""} */}
-
         </div>
 
         {/* test affichage phrase hypoglycemie */}
@@ -142,9 +150,9 @@ class InsulinCalculation extends Component {
           <p className={this.state.hypo === true ? "hypoglycemie" : "no-hypoglycemie"}>Tu es en hypoglycemie, pense à te resucrer :)</p>
         </div>
 
-        <div>
-          <h1>Dose d'insuline suggérée :</h1>
-          <p> Total : {this.state.total} </p>
+        <div className="total">
+          <p id="totalTitle">Dose d'insuline suggérée :</p>
+          <p id="totalNumber"> Total : {this.state.total} </p>
         </div>
 
       </div>

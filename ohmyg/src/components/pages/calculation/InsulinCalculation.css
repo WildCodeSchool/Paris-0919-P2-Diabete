@@ -1,7 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+
+/* Page structure */ 
+
+.insulinCalculationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border : 1px solid blue;
+}
+
+.ratioAndGlycemie {
+    display: flex;
+    flex-direction: row;
+    border : 1px solid red;
+}
+
+.totalGlucides {
+    border : 1px solid green;
+
+}
+
+.total {
+    border : 1px solid red
+}
+
+
+
+.hyperglycemie {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputAndLabels {
+    display: flex;
+    
+}
+input {
+    margin-bottom : 15px;
+}
+
+
 .no-hypoglycemie {
     display : none;
 }
 
 .hypoglycemie {
-    display : block;
+    display : flex;
 }
+/* --- */
+
+
+
+/* Font-size */
+
+.inputTitle {
+    font-size : 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+#totalTitle {
+    font-size : 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+#totalNumber {
+    font-size : 25px;
+    
+
+    
+}
+
+/* ---------- */
