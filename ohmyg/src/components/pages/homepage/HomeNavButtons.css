@@ -20,8 +20,8 @@
 }
 
 .meal, .calcul {
-    width: 380px;
-    height: 160px;
+    width: 90vw;
+    height: 38vw;
 }
 
 .newsAndNutri {
@@ -31,8 +31,8 @@
 }
 
 .news, .nutri {
-    width: 187.5px;
-    height: 130px;
+    width: 44vw;
+    height: 18.5vw;
 }
 
 .mealAndCalcul a, .newsAndNutri a {
@@ -41,6 +41,17 @@
     align-items: center;
 }
 
-@media screen and (max-width: 1050px) {
-    
+@media screen and (min-width: 1051px) {
+    .mealAndCalcul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: 5px;
+    }
+
+    .meal, .calcul, .news, .nutri {
+        width: 40vw;
+        height: 17vw;
+        margin: 10px;
+    }
 }
