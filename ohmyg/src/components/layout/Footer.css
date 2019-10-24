@@ -18,11 +18,17 @@ a {
     
 }
 
+.footer-icons {
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+}
+
 @media screen and (max-width: 1050px) {
     .footer {      
         display: grid;
         grid-template-columns: 1fr 1fr; 
-        grid-template-rows: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
     }
 
     .footer a div {
@@ -37,8 +43,19 @@ a {
     }
 
     a {
+        display: flex;
         justify-content: center;
         margin: 0 10px;
+        border: 1px solid blue;
+    }
+
+    p {
+        border: 1px solid black;
+    }
+
+    .aboutUs {
+        display: flex;
+        justify-content: flex-start;
     }
 }
 
