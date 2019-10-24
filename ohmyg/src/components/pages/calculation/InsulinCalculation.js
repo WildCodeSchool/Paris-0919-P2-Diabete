@@ -160,6 +160,10 @@ class InsulinCalculation extends Component {
           </div>
         </div>
 
+        <div className="warningCalcul">
+          <p>Attention, ce calcul ne prend pas en compte l'évolution de ta glycémie à cet instant et l'activité physique que tu auras après ton repas.</p>
+        </div>
+
       </div>
 
     );

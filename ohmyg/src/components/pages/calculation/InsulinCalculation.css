@@ -31,7 +31,7 @@ input {
     height: 2em;
     text-align: center;
     font-size:1.2em;
-    border: 2px solid grey;
+    border: 4px solid grey;
 }
 
 .warning {
@@ -59,8 +59,6 @@ label {
     font-size : 1.4em;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
-    /* text-align: center;
-    align-self: center; */
 }
 
 #totalTitle {
@@ -76,7 +74,7 @@ label {
 
 .totalNumber {
     font-size : 2em;
-    border: 2px solid grey;
+    border: 4px solid grey;
     width: 30%;
     height: 3em;
     align-self: center;
@@ -100,6 +98,12 @@ button{
     height:auto;
 }
 
+.warningCalcul{
+    font-size: 1.4em;
+    border: 4px solid #8c31c9;
+    margin: 2em auto 2em auto;
+    width: 90%;
+}
 
 
 
@@ -135,4 +139,7 @@ button{
         background-color: aqua;
     }
 
+    .warningCalcul p{
+        font-size: 1.6em;
+    }
 }
