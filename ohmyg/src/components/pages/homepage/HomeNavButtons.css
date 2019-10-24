@@ -34,20 +34,23 @@ div {
 }
 
 @media screen and (min-width: 1051px) {
+    .frameContainer {
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
     .frame {
         display: flex;
         justify-content: center;
         flex-direction: row;
-        margin: 5px;
     }
 
     .pageLogo {
-        margin: 5px;
         display: flex;
         justify-content: center;
         background-size: cover;
         width: 40vw;
         height: 17vw;
-        margin: 10px;
     }
 }
