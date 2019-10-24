@@ -3,53 +3,49 @@
     background-size: cover;
 }
 
-.mealAndCalcul {
+.frameContainer {
+    margin: 30px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+.frame {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 5px;
-}
-
-.meal, .calcul, .news, .nutri {
-    margin: 5px;
-    display: flex;
-    justify-content: center;
     box-shadow: 5px 5px #08f9d6;
     background-color: gray;
-    background-size: cover;
+    width: 85vw;
+    height: 200vw;
 }
 
-.meal, .calcul {
-    width: 90vw;
-    height: 38vw;
+.pageLogo {
+    display: none;
 }
 
-.newsAndNutri {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-}
-
-.news, .nutri {
-    width: 44vw;
-    height: 18.5vw;
-}
-
-.mealAndCalcul a, .newsAndNutri a {
+.frame a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+div {
+}
+
 @media screen and (min-width: 1051px) {
-    .mealAndCalcul {
+    .frame {
         display: flex;
         justify-content: center;
         flex-direction: row;
         margin: 5px;
     }
 
-    .meal, .calcul, .news, .nutri {
+    .pageLogo {
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        background-size: cover;
         width: 40vw;
         height: 17vw;
         margin: 10px;
