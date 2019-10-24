@@ -1,0 +1,8 @@
+.headerBox {
+    background-color: #08f9d6;
+    width: 100vw;
+    height: 18.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
