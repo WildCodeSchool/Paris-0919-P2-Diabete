@@ -1,8 +1,8 @@
 import React from 'react'
 
-import './HomeNavButtons.css'
+import './ContentFrame.css'
 
-const HomeNavButtons = () => {
+const ContentFrame = () => {
     return (
         <>
             <div class="frameContainer">
@@ -29,4 +29,4 @@ const HomeNavButtons = () => {
     )
 }
 
-export default HomeNavButtons
+export default ContentFrame
