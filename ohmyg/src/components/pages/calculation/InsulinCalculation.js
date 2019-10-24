@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./InsulinCalculation.css"
+import smileyHypo from "../../../assets/icons/hypo-13.png";
 
 class InsulinCalculation extends Component {
   state = {
@@ -8,12 +9,12 @@ class InsulinCalculation extends Component {
     glycemie: "",
     sensibilite: "",
     glycemiecible: "",
-    total: "total",
+    total: "0",
     hypo: false,
   };
 
   handleChange = e => {
-    if (e.target.value.length > 5) {
+    if (e.target.value.length > 4) {
       return;
     }
     this.setState({
@@ -25,37 +26,37 @@ class InsulinCalculation extends Component {
   hyperglycemie = () => {
     return <div>
 
-      <p id="hyperglycemieWarning"> Attention, tu es en hyperglycémie. Rentre ces nouveaux paramètres :)</p>
+      <p className="warning"> Attention, tu es en hyperglycémie. Rentre ces nouveaux paramètres :)</p>
       <div className="hyperglycemie">
 
-        <div className="sensibilite">
-          <p className="inputTitle">Sensibilité : </p>
-          <div className="inputAndLabels">
-            <label>1 pour </label>
-            <input
-              id="sensibiliteinput"
-              type="number"
-              name="sensibilite"
-              onChange={this.handleChange}
-              value={this.state.sensibilite}
-            />
-            <label> g/l</label>
+          <div className="sensibilite">
+            <p className="inputTitle">Sensibilité : </p>
+            <div className="inputAndLabels">
+              <label>1 pour </label>
+              <input
+                id="sensibiliteinput"
+                type="number"
+                name="sensibilite"
+                onChange={this.handleChange}
+                value={this.state.sensibilite}
+              />
+              <label> g/l</label>
+            </div>
           </div>
-        </div>
 
-        <div className="glycemieCible">
-          <p className="inputTitle">Glycémie cible : </p>
-          <div className="inputAndLabels">
-            <input
-              id="flecheinput"
-              type="number"
-              name="glycemiecible"
-              onChange={this.handleChange}
-              value={this.state.glycemiecible}
-            />
-            <label> g/l</label>
+          <div className="glycemieCible">
+            <p className="inputTitle">Glycémie cible : </p>
+            <div className="inputAndLabels">
+              <input
+                id="flecheinput"
+                type="number"
+                name="glycemiecible"
+                onChange={this.handleChange}
+                value={this.state.glycemiecible}
+              />
+              <label> g/l</label>
+            </div>
           </div>
-        </div>
 
       </div>
     </div>
@@ -106,7 +107,7 @@ class InsulinCalculation extends Component {
 
         <div className="ratioAndGlycemie">
           <div className="ratio">
-            <p className="inputTitle">Mon Ratio : </p>
+            <p className="inputTitle">Mon Ratio</p>
             <div className="inputAndLabels">
               <label htmlFor="totalGlucides">1 pour  </label>
               <input
@@ -116,12 +117,12 @@ class InsulinCalculation extends Component {
                 onChange={this.handleChange}
                 value={this.state.ratio}
               />
-              <label> g de glucides</label>
+              <label> g</label>
             </div>
           </div>
 
           <div className="glycemie">
-            <p className="inputTitle">Ma glycémie avant repas : </p>
+            <p className="inputTitle">Ma glycémie avant repas</p>
             <div className="inputAndLabels">
               <input
                 id="glycemie"
@@ -141,18 +142,18 @@ class InsulinCalculation extends Component {
         </div>
 
         <div>
-          <button onClick={this.calculhypoglycemie}
+          <button onClick={this.calculhypoglycemie} value="&#x23B7;"
           > Valider</button>
         </div>
 
         {/* test affichage phrase hypoglycemie */}
-        <div>
-          <p className={this.state.hypo === true ? "hypoglycemie" : "no-hypoglycemie"}>Tu es en hypoglycemie, pense à te resucrer :)</p>
+        <div className={this.state.hypo === true ? "warning" : "no-hypoglycemie"}>
+          <img className= "smileyHypo" src={smileyHypo} alt="Attention, tu es en hypoglycémie, resucre-toi :)" />
         </div>
 
         <div className="total">
           <p id="totalTitle">Dose d'insuline suggérée :</p>
-          <p id="totalNumber"> Total : {this.state.total} </p>
+          <p id="totalNumber"> {this.state.total} </p>
         </div>
 
       </div>

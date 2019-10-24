@@ -7,69 +7,47 @@
 
 
 .insulinCalculationContainer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-auto-columns: 1fr;
     align-items: center;
-    border : 1px solid blue;
 }
 
-.inputAndLabels {
+.ratioAndGlycemie, .hyperglycemie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1em;
+}
+
+.ratio, .glycemie, .sensibilite, .glycemieCible {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+/* .hyperglycemie {
     display: flex;
     flex-direction: row;
-    margin : 10px;
-}
+} */
 
 
-
-.ratioAndGlycemie {
-    display: flex;
-    flex-direction: row;
-    border : 1px solid red;
-}
-
-.ratio {
- display: flex;
- flex-direction: column;
-justify-content : center;
- flex-wrap: wrap;
-
-}
-
-.hyperglycemie {
-    display: flex;
-    flex-direction: row;
-}
-
-.inputAndLabels {
-    display: flex;
-    
-}
 input {
     margin-bottom : 15px;
+    width: 4em;
+    height: 2em;
+    text-align: center;
 }
 
+.warning {
+    display : flex;
+    justify-content: center;
+   
+}
 
 .no-hypoglycemie {
     display : none;
 }
 
-.hypoglycemie {
-    display : flex;
-}
 /* --- */
-
-/** Borders **/
-.totalGlucides {
-    border : 1px solid green;
-
-}
-
-.total {
-    border : 1px solid red
-}
-
-/** Borders **/ 
-
 
 
 /* Font */
@@ -78,15 +56,13 @@ label {
     font-family: "Barlow", sans-serif;
 }
 
-p {
-    font-family: "Barlow", sans-serif;
-}
-
 
 .inputTitle {
-    font-size : 20px;
+    font-size : 1.4em;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
+    text-align: center;
+    align-self: center;
 }
 
 #totalTitle {
@@ -102,4 +78,34 @@ p {
     
 }
 
-/* ---------- */
+/* size smiley */
+
+.smileyHypo {
+    width:50%;
+    height:auto;
+}
+
+
+/* Media Querys */ 
+
+@media screen and (min-width:960px) {
+.inputTitle {
+    font-size : 2em;
+
+}
+
+#totalTitle, #totalNumber  {
+    font-size : 2.7em;
+
+}
+
+input {
+    margin-bottom : 15px;
+    width: 4em;
+    height: 2em;
+    font-size: ;
+}
+
+
+
+}
