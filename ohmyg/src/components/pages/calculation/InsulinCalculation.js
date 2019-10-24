@@ -70,7 +70,7 @@ class InsulinCalculation extends Component {
       return this.state.hypo
     }
 
-    if (this.state.glycemie >= "0.80" && this.state.glycemie <= "1.20") {
+    else if (this.state.glycemie >= "0.80" && this.state.glycemie <= "1.20") {
       this.setState({ hypo: false });
       this.setState({ total: this.state.totalGlucides / this.state.ratio })
       return this.state.total
