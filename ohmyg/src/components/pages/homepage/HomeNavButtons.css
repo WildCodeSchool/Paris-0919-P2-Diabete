@@ -46,12 +46,12 @@
         display: flex;
         justify-content: center;
         flex-direction: row;
+        margin: 0;
     }
 
     .meal, .calcul, .news, .nutri {
         width: 40vw;
         height: 17vw;
-        margin: 0.5vw;
     }
 
     .meal, .news {
