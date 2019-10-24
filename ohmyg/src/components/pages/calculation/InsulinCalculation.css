@@ -24,17 +24,14 @@
     grid-template-rows: 1fr;
 }
 
-/* .hyperglycemie {
-    display: flex;
-    flex-direction: row;
-} */
-
 
 input {
     margin-bottom : 15px;
     width: 4em;
     height: 2em;
     text-align: center;
+    font-size:1.2em;
+    border: 2px solid grey;
 }
 
 .warning {
@@ -54,6 +51,7 @@ input {
 
 label {
     font-family: "Barlow", sans-serif;
+    font-size: 1.2em;
 }
 
 
@@ -61,51 +59,80 @@ label {
     font-size : 1.4em;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
-    text-align: center;
-    align-self: center;
+    /* text-align: center;
+    align-self: center; */
 }
 
 #totalTitle {
-    font-size : 30px;
+    font-size : 2em;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
 }
 
-#totalNumber {
-    font-size : 25px;
-    
+.total{
+    display: flex;
+    flex-direction: column;
+}
 
+.totalNumber {
+    font-size : 2em;
+    border: 2px solid grey;
+    width: 30%;
+    height: 3em;
+    align-self: center;
     
+}
+
+/* BUTTON */
+
+button{
+    margin:3vw;
+    width: 20%;
+    height: 3em;
+    font-size: 1.2em;
+    background-color: aqua;
 }
 
 /* size smiley */
 
 .smileyHypo {
-    width:50%;
+    width:60%;
     height:auto;
 }
+
+
+
+
 
 
 /* Media Querys */ 
 
 @media screen and (min-width:960px) {
-.inputTitle {
-    font-size : 2em;
+    .inputTitle {
+        font-size : 2em;
 
-}
+    }
 
-#totalTitle, #totalNumber  {
-    font-size : 2.7em;
+    #totalTitle, #totalNumber  {
+        font-size : 2.5em;
 
-}
+    }
 
-input {
-    margin-bottom : 15px;
-    width: 4em;
-    height: 2em;
-    font-size: ;
-}
+    label{
+        font-size: 1.7em;
+    }
 
+    input{
+        height: 3em;
+        width: 6em;
+        font-size: 1.6em;
+    }
 
+    button{
+        width: 30%;
+        height: 3.5em;
+        font-size: 1.6em;
+        background-color: aqua;
+    }
 
 }

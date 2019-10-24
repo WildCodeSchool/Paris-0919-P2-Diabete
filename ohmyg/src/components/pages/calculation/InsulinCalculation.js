@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./InsulinCalculation.css"
-import smileyHypo from "../../../assets/icons/hypo-13.png";
+import smileyHypo from "../../../assets/icons/picto hyper-hypo-14.png";
+import smileyHyper from "../../../assets/icons/picto hyper-hypo-13.png";
+
 
 class InsulinCalculation extends Component {
   state = {
@@ -26,7 +28,7 @@ class InsulinCalculation extends Component {
   hyperglycemie = () => {
     return <div>
 
-      <p className="warning"> Attention, tu es en hyperglycémie. Rentre ces nouveaux paramètres :)</p>
+<img className= "smileyHypo" src={smileyHyper} alt="Tu es en hyperglycémie, remplie la suite :)" />
       <div className="hyperglycemie">
 
           <div className="sensibilite">
@@ -143,7 +145,7 @@ class InsulinCalculation extends Component {
 
         <div>
           <button onClick={this.calculhypoglycemie} value="&#x23B7;"
-          > Valider</button>
+          > Clic </button>
         </div>
 
         {/* test affichage phrase hypoglycemie */}
@@ -152,8 +154,10 @@ class InsulinCalculation extends Component {
         </div>
 
         <div className="total">
-          <p id="totalTitle">Dose d'insuline suggérée :</p>
-          <p id="totalNumber"> {this.state.total} </p>
+          <p id="totalTitle">Dose d'insuline suggérée</p>
+          <div className="totalNumber">
+            <p id="number"> {this.state.total} </p>
+          </div>
         </div>
 
       </div>
