@@ -32,9 +32,9 @@ class InsulinCalculation extends Component {
       <div className="hyperglycemie">
 
           <div className="sensibilite">
-            <p className="inputTitle">Sensibilité : </p>
+            <p className="inputTitle">Sensibilité</p>
             <div className="inputAndLabels">
-              <label>1 pour </label>
+              <label  className="label">1 pour </label>
               <input
                 id="sensibiliteinput"
                 type="number"
@@ -42,12 +42,12 @@ class InsulinCalculation extends Component {
                 onChange={this.handleChange}
                 value={this.state.sensibilite}
               />
-              <label> g/l</label>
+              <label className="unit"> g/l</label>
             </div>
           </div>
 
           <div className="glycemieCible">
-            <p className="inputTitle">Glycémie cible : </p>
+            <p className="inputTitle">Glycémie cible</p>
             <div className="inputAndLabels">
               <input
                 id="flecheinput"
@@ -56,7 +56,7 @@ class InsulinCalculation extends Component {
                 onChange={this.handleChange}
                 value={this.state.glycemiecible}
               />
-              <label> g/l</label>
+              <label className="unit"> g/l</label>
             </div>
           </div>
 
@@ -94,7 +94,7 @@ class InsulinCalculation extends Component {
       <div className="insulinCalculationContainer">
 
         <div className="totalGlucides">
-          <p className="inputTitle">Mon Total de Glucides </p>
+          <p className="inputTitle" >Mon Total de Glucides </p>
           <div className="inputAndLabels">
             <input
               id="totalGlucides"
@@ -103,7 +103,7 @@ class InsulinCalculation extends Component {
               onChange={this.handleChange}
               value={this.state.totalGlucides}
             />
-            <label> g</label>
+            <label className="unit"> g</label>
           </div>
         </div>
 
@@ -111,7 +111,7 @@ class InsulinCalculation extends Component {
           <div className="ratio">
             <p className="inputTitle">Mon Ratio</p>
             <div className="inputAndLabels">
-              <label htmlFor="totalGlucides">1 pour  </label>
+              <label className="label" htmlFor="totalGlucides">1 pour  </label>
               <input
                 id="ratio"
                 type="number"
@@ -119,7 +119,7 @@ class InsulinCalculation extends Component {
                 onChange={this.handleChange}
                 value={this.state.ratio}
               />
-              <label> g</label>
+              <label className="unit"> g</label>
             </div>
           </div>
 
@@ -133,7 +133,7 @@ class InsulinCalculation extends Component {
                 onChange={this.handleChange}
                 value={this.state.glycemie}
               />
-              <label> g/l</label>
+              <label className="unit"> g/l</label>
             </div>
           </div>
         </div>
