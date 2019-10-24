@@ -30,15 +30,23 @@
     grid-template-areas: "label input unit";
 }
 
+.totalGlucides .inputAndLabels {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 input {
     grid-area: input;
     margin-bottom : 15px;
-    width: 80%;
-    height: 100%;
+    width: 4em;
+    height: 2em;
     text-align: center;
     font-size:1.2em;
     border: 4px solid grey;
     margin: auto;
+}
+
+#totalGlucides {
+    width: 6em
 }
 
 .label {
@@ -70,7 +78,7 @@ input {
 
 label {
     font-family: "Barlow", sans-serif;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 
@@ -113,7 +121,7 @@ button{
 /* size smiley */
 
 .smileyHypo {
-    width:60%;
+    width:40%;
     height:auto;
 }
 
@@ -142,13 +150,17 @@ button{
     }
 
     label{
-        font-size: 1.7em;
+        font-size: 2em;
     }
 
     input{
         height: 3em;
         width: 6em;
         font-size: 1.6em;
+    }
+
+    #totalGlucides {
+        width: 9em
     }
 
     button{

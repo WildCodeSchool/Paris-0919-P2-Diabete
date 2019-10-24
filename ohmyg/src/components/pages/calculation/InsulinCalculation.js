@@ -32,7 +32,7 @@ class InsulinCalculation extends Component {
       <div className="hyperglycemie">
 
           <div className="sensibilite">
-            <p className="inputTitle">Sensibilité : </p>
+            <p className="inputTitle">Sensibilité</p>
             <div className="inputAndLabels">
               <label  className="label">1 pour </label>
               <input
@@ -47,7 +47,7 @@ class InsulinCalculation extends Component {
           </div>
 
           <div className="glycemieCible">
-            <p className="inputTitle">Glycémie cible : </p>
+            <p className="inputTitle">Glycémie cible</p>
             <div className="inputAndLabels">
               <input
                 id="flecheinput"
@@ -94,7 +94,7 @@ class InsulinCalculation extends Component {
       <div className="insulinCalculationContainer">
 
         <div className="totalGlucides">
-          <p className="inputTitle">Mon Total de Glucides </p>
+          <p className="inputTitle" >Mon Total de Glucides </p>
           <div className="inputAndLabels">
             <input
               id="totalGlucides"
