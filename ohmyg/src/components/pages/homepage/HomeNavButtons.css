@@ -4,8 +4,7 @@
 }
 
 .frameContainer {
-    margin: 30px;
-    border: 1px solid red;
+    margin: 8vw;
     display: flex;
     justify-content: center;
 }
@@ -14,8 +13,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: 5px 5px #08f9d6;
-    background-color: gray;
+    box-shadow: 10px 10px black;
+    background-color: white;
+    border: 4px solid black;
     width: 100%;
     height: 200vw;
 }
@@ -26,7 +26,7 @@
 
 @media screen and (min-width: 1051px) {
     .frameContainer {
-        margin: 0.5vw 10vw;
+        margin: 8vw;
         display: flex;
         justify-content: center;
     }
@@ -35,15 +35,15 @@
         display: flex;
         justify-content: center;
         flex-direction: row;
-        width: 80.7vw;
-        height: 35vw;
+        box-shadow: 20px 20px black;
+        border: 6px solid black;
+        width: 100%;
+        height: 42vw;
     }
 
     .pageLogo {
         display: flex;
         justify-content: center;
         background-size: cover;
-        width: 40vw;
-        height: 17vw;
     }
 }
