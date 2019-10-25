@@ -4,7 +4,7 @@ import HomeNavButtons from './components/pages/homepage/HomeNavButtons';
 
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <HomeNavButtons />
