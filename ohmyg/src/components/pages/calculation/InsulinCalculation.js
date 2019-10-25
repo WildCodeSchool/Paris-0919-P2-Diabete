@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./InsulinCalculation.css"
-import smileyHypo from "../../../assets/icons/picto hyper-hypo-14.png";
-import smileyHyper from "../../../assets/icons/picto hyper-hypo-13.png";
+import smileyHypo from "../../../assets/icons/pictos-16.png";
+import smileyHyper from "../../../assets/icons/pictos-17.png";
 
 
 class InsulinCalculation extends Component {
