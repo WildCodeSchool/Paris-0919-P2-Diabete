@@ -41,7 +41,7 @@ li
   margin: auto;
   display: block;
 }
-.Navbar_icon5resp {
+.Navbar_iconHome {
   display: none;
   
   }
@@ -57,13 +57,13 @@ li
 
 @media (max-width: 1050px){
   .Navbar_logo{
-    display:none;
-    
+    display:none;  
   }
-  .Navbar_icon5resp {
-    display: inline-block; 
-    
-    
+
+
+  .Navbar_iconHome {
+    display: block; 
+    fill:white; 
     }
 
   .Navbar_Navigation{
@@ -81,7 +81,6 @@ li
   }
 
   .icones {
-
     fill:white;
   }
 }

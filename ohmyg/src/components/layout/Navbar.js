@@ -8,7 +8,19 @@ const Navbar = props => (
         <div className = "Navbar_logo">
         <img src={logo} alt='Logo' />
         </div>
-            <ul className="Navbar_ul" > 
+            <ul className="Navbar_ul" >
+            <li className="Navbar_li">
+            <a class="Navbar_iconHome" href="https://www.instagram.com/" target="_blank">
+            <svg version="1.0"  x="0px" y="0px" width="40px"
+                height="40px" viewBox="0 0 130.2 150.2"  >
+            <defs>
+            </defs>
+            <path d="M64.2,0L42.6,18.7V5.1H20v33.3L0,55.8v94.4h45.7h38.8h45.7V55.8L64.2,0z M26.5,11.6h9.7v11.5l-9.7,8.1V11.6z M52.2,143.7
+            v-37.3H78v37.3H52.2z M123.7,143.7H84.5V99.9H45.7v43.8H6.5v-85L64.2,8.6l59.4,50.2V143.7z"/>
+            </svg>
+            </a>
+        </li> 
+     
                 <li className="Navbar_li">
                 <a className="icones" href="https://www.instagram.com/" target="_blank">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px"
@@ -84,13 +96,11 @@ const Navbar = props => (
 		V136.3z"/>
 </g>
 </svg>
-
 </a>
-
-                </li>
+</li>
 
                 
-
+<li>
                 <a className="icones" href="https://www.instagram.com/" target="_blank">
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40px"
 	 height="40px" viewBox="0 0 115.7 152.8" enable-background="new 0 0 115.7 152.8">
@@ -110,20 +120,12 @@ const Navbar = props => (
 </g>
 </svg>
 </a>
-
-                
-                    {/* <li className="Navbar_icon5resp">
-                        <a className="Navbar_a">
-                    <img src={home} alt='Logo' />
+</li>
                     
-                
-                
-                </a>
-                </li> */}
-                </ul>
-        </nav>
+  </ul>     
+    </nav>
         
-    </header>
+</header>
     
 );
 
