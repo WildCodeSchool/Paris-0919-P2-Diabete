@@ -17,22 +17,33 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 1em;
+    
 }
 
 .ratio, .glycemie, .sensibilite, .glycemieCible {
     display: grid;
     grid-template-rows: 1fr;
+    align-items: center;
 }
 
 .inputAndLabels {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "label input unit";
+    margin: auto;
 }
 
 .totalGlucides .inputAndLabels {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 8em 1fr;
+
+    
+  
 }
+
+#totalGlucides {
+    width: 6em
+}
+
 
 input {
     grid-area: input;
@@ -45,8 +56,9 @@ input {
     margin: auto;
 }
 
-#totalGlucides {
-    width: 6em
+label {
+    margin : 0 1em 0 1em
+
 }
 
 .label {
@@ -157,6 +169,11 @@ button{
         height: 3em;
         width: 6em;
         font-size: 1.6em;
+    }
+
+    .totalGlucides .inputAndLabels {
+        grid-template-columns: 1fr 16em 1fr;
+
     }
 
     #totalGlucides {

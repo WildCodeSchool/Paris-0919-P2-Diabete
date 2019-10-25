@@ -133,7 +133,7 @@ class InsulinCalculation extends Component {
                 onChange={this.handleChange}
                 value={this.state.glycemie}
               />
-              <label className="unit"> g/l</label>
+              <label className="unit">g/l</label>
             </div>
           </div>
         </div>
