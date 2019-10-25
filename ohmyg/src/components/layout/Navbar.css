@@ -22,7 +22,7 @@
   
 }
 
-.Navbar_a :hover {
+.icones:hover {
   cursor: pointer;
   fill: rgb(64, 207, 172);
 }
