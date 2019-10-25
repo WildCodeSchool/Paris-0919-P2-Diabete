@@ -1,0 +1,18 @@
+.headerBox {
+    background-color: white;
+    border-bottom: 1px solid black;
+    width: 100vw;
+    height: 18.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title {
+}
+
+@media screen and (min-width: 1051px) {
+    .headerBox {
+        display: none;
+    }
+}

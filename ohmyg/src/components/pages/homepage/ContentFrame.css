@@ -1,0 +1,49 @@
+:root {
+    background-image: url("../../../assets/pictures/eatCake.png");
+    background-size: cover;
+}
+
+.frameContainer {
+    margin: 8vw;
+    display: flex;
+    justify-content: center;
+}
+
+.frame {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 10px 10px black;
+    background-color: white;
+    border: 4px solid black;
+    width: 100%;
+    height: 200vw;
+}
+
+.pageLogo {
+    display: none;
+}
+
+@media screen and (min-width: 1051px) {
+    .frameContainer {
+        margin: 16vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .frame {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        box-shadow: 20px 20px black;
+        border: 6px solid black;
+        width: 100%;
+        height: 39.75vw;
+    }
+
+    .pageLogo {
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+    }
+}
