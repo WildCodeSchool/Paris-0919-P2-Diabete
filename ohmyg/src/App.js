@@ -15,16 +15,13 @@ import InsulinCalculation from './components/pages/calculation/InsulinCalculatio
 const App = () => {
   return (
     <div className="App">
-<<<<<<< HEAD
       <InsulinCalculation />
-=======
       <Navbar  />
       <Footer />
       <HeaderMobile />
       <HomeNavButtons />
       <ContentFrame />
 
->>>>>>> dev
     </div>
   );
 }
