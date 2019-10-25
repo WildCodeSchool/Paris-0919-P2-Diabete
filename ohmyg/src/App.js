@@ -1,15 +1,17 @@
 import React from 'react';
 
+import Footer from './components/layout/Footer';
 import HomeNavButtons from './components/pages/homepage/HomeNavButtons';
 
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
+      <Footer />
       <HomeNavButtons />
     </div>
-  );
+  )
 }
 
 export default App;
