@@ -13,6 +13,7 @@ class InsulinCalculation extends Component {
     glycemiecible: "",
     total: "0",
     hypo: false,
+    hyper: false
   };
 
   handleChange = e => {
@@ -24,11 +25,27 @@ class InsulinCalculation extends Component {
     });
   };
 
+  hyperChange = e => {
+    console.log('allo');
+    
+    this.handleChange()
+    if (this.state.glycemie > "1.2") {
+      this.setState ({
+        hyper : true
+      },_=>{
+
+        console.log(this.state.hyper)
+      })
+      return this.state.hyper
+    }
+
+  }
+
 
   hyperglycemie = () => {
     return <div>
 
-<img className= "smileyHypo" src={smileyHyper} alt="Tu es en hyperglycémie, remplie la suite :)" />
+<img className= "smileyHyper" src={smileyHyper} alt="Tu es en hyperglycémie, remplie la suite :)" />
       <div className="hyperglycemie">
 
           <div className="sensibilite">
@@ -53,7 +70,7 @@ class InsulinCalculation extends Component {
                 id="flecheinput"
                 type="number"
                 name="glycemiecible"
-                onChange={this.handleChange}
+                onChange={this.hyperChange}
                 value={this.state.glycemiecible}
               />
               <label className="unit"> g/l</label>
@@ -67,11 +84,13 @@ class InsulinCalculation extends Component {
   calculhypoglycemie = () => {
     if (this.state.glycemie < "0.8") {
       this.setState({ hypo: true })
+      this.setState({ hyper: false })
       return this.state.hypo
     }
 
     else if (this.state.glycemie >= "0.80" && this.state.glycemie <= "1.20") {
       this.setState({ hypo: false });
+      this.setState({ hyper: false })
       this.setState({ total: this.state.totalGlucides / this.state.ratio })
       return this.state.total
 
@@ -79,6 +98,7 @@ class InsulinCalculation extends Component {
 
     else {
       this.setState({ hypo: false });
+      this.setState({ hyper: true })
       const ecart = this.state.glycemie - this.state.glycemiecible
       const correction = ecart / this.state.sensibilite
       this.setState({ total: (this.state.totalGlucides / this.state.ratio) + correction })
@@ -127,6 +147,7 @@ class InsulinCalculation extends Component {
             <p className="inputTitle">Ma glycémie avant repas</p>
             <div className="inputAndLabels">
               <input
+                className={this.state.hypo === true ? "glycemieInputHypoColor" : this.state.glycemie > "1.20" ? "glycemieInputHyperColor" : ""}
                 id="glycemie"
                 type="number"
                 name="glycemie"
@@ -148,7 +169,6 @@ class InsulinCalculation extends Component {
           > Clic </button>
         </div>
 
-        {/* test affichage phrase hypoglycemie */}
         <div className={this.state.hypo === true ? "warning" : "no-hypoglycemie"}>
           <img className= "smileyHypo" src={smileyHypo} alt="Attention, tu es en hypoglycémie, resucre-toi :)" />
         </div>

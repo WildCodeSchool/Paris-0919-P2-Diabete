@@ -82,6 +82,14 @@ label {
    
 }
 
+.glycemieInputHypoColor {
+    border-color : #ffa476;
+}
+
+.glycemieInputHyperColor {
+    border-color : #a13df9;
+}
+
 .no-hypoglycemie {
     display : none;
 }
@@ -152,7 +160,7 @@ button{
 
 .warningCalcul{
     font-size: 1.0em;
-    color: blueviolet; 
+    color : #a13df9;
     /* border: 4px solid #8c31c9; */
     margin: 1em auto 1em auto;
     width: 90%;
