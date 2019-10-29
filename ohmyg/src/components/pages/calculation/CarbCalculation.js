@@ -22,6 +22,11 @@ class CarbCalculation extends React.Component {
                     minValue={0}
                     value={this.state.value}
                     onChange={value => this.setState({ value })} />
+                <input 
+                    className="foodWeight"
+                    type='number' 
+                    value={this.state.value}
+                    onChange={value => this.setState({ value })} />
             </div>
         );
     }
