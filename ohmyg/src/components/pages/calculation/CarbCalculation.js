@@ -21,28 +21,39 @@ class CarbCalculation extends React.Component {
     render() {
         return (
             <div className="range">
-                <InputRange
-                    className="input-range"
-                    step={0.5}
-                    maxValue={500}
-                    minValue={0}
-                    value={this.state.value}
-                    onChange={value => this.setState({ value })} />
-
-                    <label>Poids </label>
-                <input 
-                    className="foodWeight"
-                    type='number'
-                    maxValue={500}
-                    value={this.state.value}
-                    onChange={this.handleChange} />
+                <div className='blockFoodWeight'>
+                    <div>
+                        <InputRange
+                            className="input-range"
+                            step={0.5}
+                            maxValue={600}
+                            minValue={0}
+                            value={this.state.value}
+                            onChange={value => this.setState({ value })} />
+                    </div>
+                    <div>
+                        <label>Poids </label>
+                        <input 
+                            className="foodWeight"
+                            type='number'
+                            maxValue={500}
+                            value={this.state.value}
+                            onChange={this.handleChange} />
+                            <label> g</label>
+                    </div>
+                </div>    
+                        <label>Glucides </label>
+                    <input 
+                        className="carbohydrate"
+                        type='number'
+                        value={this.state.carb100g*this.state.value/100}
+                    />
                     <label> g</label>
                 
-                <input 
-                    className="carbohydrate"
-                    type='number'
-                    value={this.state.carb100g*this.state.value/100}
-                />
+
+                <div>
+                    <button>V</button>
+                </div>
             </div>
         );
     }
