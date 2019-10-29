@@ -14,7 +14,7 @@ class CarbCalculation extends React.Component {
     handleChange = (event) => {
         if (event.target.value > 500) {
             return;
-          }
+        }
         this.setState({value: event.target.value});
     }
 
