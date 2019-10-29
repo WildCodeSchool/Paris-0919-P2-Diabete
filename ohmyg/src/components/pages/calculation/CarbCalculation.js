@@ -2,7 +2,7 @@ import React from 'react'
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css'
 
-// import './CarbCalculation.css'
+import './CarbCalculation.css'
 
 class CarbCalculation extends React.Component {
     state = {
@@ -15,7 +15,8 @@ class CarbCalculation extends React.Component {
         return (
             <div className="range">
                 <InputRange
-                    step={1}
+                    className="input-range"
+                    step={0.1}
                     maxValue={500}
                     minValue={0}
                     value={this.state.value}
