@@ -2,15 +2,24 @@ import React, {Component} from 'react'
 import axios from 'axios'
 
     
-const ingr = "Courgette";
+// let ingr = "pomme";
 
 class ApiRequest extends Component {
     state = {
-        foods:[]
+        foods:[],
+        title:"null"
     };
 
+    handleChange= (event)=> {
+        this.setState({ title: event.target.value });
+          if (event.target.value.length >= 4) {
+              this.getInfo()
+          }
+        }
+      
+
     getInfo = () => {
-        axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&facet=origgpnm&q=${ingr}`)
+        axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=20&facet=origgpnm&q=${this.state.title}`)
       // Extract the DATA from the received response
       .then(response => response.data)
       // Use this data to update the state
@@ -30,16 +39,28 @@ class ApiRequest extends Component {
     render () {
     
     return (
-        <select className="ApiRequest">
-            {this.state.foods
-                // .filter(food => food.fields.origfdnm.includes("Barre"))
-                .map(food => (
-                <option key={food.fields.origfdnm}>
-                {" "}
-                {food.fields.origfdnm}
-                </option>
-            ))}
-       </select>
+        <div>
+            <form>
+                <input
+                id="title"
+                name="title"
+                list="food"
+                type="text"
+                value={this.state.title}
+                onChange={this.handleChange}
+                minLength="4" required
+                />
+
+                <datalist id="food" className="ApiRequest">
+                    {this.state.foods
+                        .map(food => (
+                        <option key={food.fields.origfdnm} value={food.fields.origfdnm}>
+                        </option>
+                    ))}
+                </datalist>
+                
+            </form>
+       </div>
         )
     }
 }
