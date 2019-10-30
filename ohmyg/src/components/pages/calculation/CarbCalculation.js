@@ -22,7 +22,7 @@ class CarbCalculation extends React.Component {
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
-                    <div>
+                    
                         <InputRange
                             className="input-range"
                             step={0.5}
@@ -30,26 +30,33 @@ class CarbCalculation extends React.Component {
                             minValue={0}
                             value={this.state.value}
                             onChange={value => this.setState({ value })} />
+                    
+                    <div className='inputWeightCarbo'>
+                        <div className='inputWeight'>
+                            <label>Poids </label>
+                            <div className='borderInputLabel'>
+                                <input 
+                                    className="foodWeight"
+                                    type='number'
+                                    maxValue={500}
+                                    value={this.state.value}
+                                    onChange={this.handleChange} />
+                                <label> g</label>
+                            </div>
+                        </div>
+                        <div className='inputCarbo'>
+                            <label>Glucides </label>
+                            <div className='borderInputLabel'>
+                                <input 
+                                    className="carbohydrate"
+                                    type='number'
+                                    value={this.state.carb100g*this.state.value/100}
+                                />
+                                <label> g</label>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <label>Poids </label>
-                        <input 
-                            className="foodWeight"
-                            type='number'
-                            maxValue={500}
-                            value={this.state.value}
-                            onChange={this.handleChange} />
-                            <label> g</label>
-                    </div>
-                </div>    
-                        <label>Glucides </label>
-                    <input 
-                        className="carbohydrate"
-                        type='number'
-                        value={this.state.carb100g*this.state.value/100}
-                    />
-                    <label> g</label>
-                
+                </div> 
 
                 <div>
                     <button>V</button>
