@@ -7,7 +7,8 @@ import axios from 'axios'
 class ApiRequest extends Component {
     state = {
         foods:[],
-        title:"null"
+        title:"null",
+        chosenFood: {}
     };
 
     handleChange= (event)=> {
@@ -15,7 +16,11 @@ class ApiRequest extends Component {
           if (event.target.value.length >= 4) {
               this.getInfo()
           }
-        }
+        };
+
+    chooseElement= (e) => {
+        this.setState ({chosenFood : e.target.value})
+    };
       
 
     getInfo = () => {
@@ -51,7 +56,7 @@ class ApiRequest extends Component {
                 minLength="4" required
                 />
 
-                <datalist id="food" className="ApiRequest">
+                <datalist id="food" className="ApiRequest" onClick={this.chooseElement}>
                     {this.state.foods
                         .map(food => (
                         <option key={food.fields.origfdnm} value={food.fields.origfdnm}>
