@@ -58,8 +58,9 @@ class CarbCalculation extends React.Component {
                     </div>
                 </div> 
 
-                <div>
-                    <button>V</button>
+                <div className="carbButtons">
+                    <button className="valid-button">V</button>
+                    <button className="delete-button">X</button>
                 </div>
             </div>
         );

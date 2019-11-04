@@ -2,13 +2,14 @@
          /* SLIDER */
 
 .input-range__track--active{
-      background: gray;
+      background: #08f9d6;
 }
 
 .input-range__slider{
-   background: gray;
+   background: white;
    border: 1px solid black;
-   box-shadow: 2px 2px 0px black;
+   box-shadow: 1.5px 1.5px 0px grey;
+   margin-top: -0.75rem;
 }
 
 .input-range {
@@ -18,6 +19,10 @@
 
 .input-range__label-container {
    display: none;
+}
+
+.input-range__track {
+   border-top: 1px solid gray
 }
 
 /* SIZE INPUT */
@@ -75,14 +80,26 @@ input{
 
 /* BUTTON */
 
-button{
+.carbButtons {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.carbButtons button{
    margin:3vw;
    width: 20%;
    height: 3em;
    font-size: 1.2em;
-   background-color: aqua;
 }
 
+.valid-button {
+   background-color: #08f9d6;
+}
+
+.delete-button {
+   background-color: red;
+}
 
 
 /* VERSION DESKTOP */
