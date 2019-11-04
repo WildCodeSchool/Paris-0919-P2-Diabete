@@ -2,15 +2,43 @@ import React from 'react'
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 import './CarbCalculation.css';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 class CarbCalculation extends React.Component {
     state = {
         name: 'poire',
         value:  100,
         carb100g: 20,
-        carbRatio: 20
+        carbRatio: 20,
+        galleryItems: [
+            {name: 'poire',
+            value:  100,
+            carb100g: 20,
+            carbRatio: 20}, 
+            {name: 'pomme',
+            value:  100,
+            carb100g: 20,
+            carbRatio: 20}, 
+            {name: 'fraise tagada',
+            value:  100,
+            carb100g: 20,
+            carbRatio: 20}].map((i) => <h2 key={i}>{i.name}</h2>),
+    }
+
+    responsive = {
+        0: { items: 1 },
+        1024: { items: 2 },
+    }
+
+    onSlideChange(e) {
+        console.debug('Item`s position during a change: ', e.item)
+        console.debug('Slide`s position during a change: ', e.slide)
+    }
+     
+    onSlideChanged(e) {
+        console.debug('Item`s position after changes: ', e.item)
+        console.debug('Slide`s position after changes: ', e.slide)
     }
     
     handleChange = (event) => {
@@ -65,19 +93,15 @@ class CarbCalculation extends React.Component {
                     <button className="delete-button">X</button>
                 </div>
 
-                <div>
-                    <CarouselProvider
-                        naturalSlideWidth={5}
-                        naturalSlideHeight={5}
-                        totalSlides={3}>
-                            <Slider className='carb-slides'>
-                                <Slide className='carbo-slide' index={0}>I am the first Slide.</Slide>
-                                <Slide className='carbo-slide' index={1}>I am the second Slide.</Slide>
-                                <Slide className='carbo-slide' index={2}>I am the third Slide.</Slide>
-                            </Slider>
-                            <ButtonBack>Back</ButtonBack>
-                            <ButtonNext>Next</ButtonNext>
-                        </CarouselProvider>
+                <div className='carbo-carousel'>
+                    <AliceCarousel
+                        items={this.state.galleryItems{'name'}}
+                        responsive={this.responsive}
+                        fadeOutAnimation={true}
+                        mouseTrackingEnabled={true}
+                        onSlideChange={this.onSlideChange}
+                        onSlideChanged={this.onSlideChanged}
+                    />
                 </div>
             </div>
         );
