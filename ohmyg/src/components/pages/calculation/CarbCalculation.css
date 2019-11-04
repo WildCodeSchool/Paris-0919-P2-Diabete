@@ -12,7 +12,6 @@
 
 .input-range {
    width: 90%;
-   /* border: 1px solid pink; */
    height: 5vw;
 }
 
@@ -27,7 +26,10 @@ input{
    font-size:1.2em;
 }
 
+.borderInputLabel{
+   border: 4px solid grey;
 
+}
 
 /*ALIGNEMENT OF SLIDER AND INPUT FOODWEIGHT */
 
@@ -44,12 +46,12 @@ input{
 .inputWeight, .inputCarbo{
    display: flex;
    align-items: center;
-   margin: 10vw 3.5vw 0 3.5vw;
+   margin: 5vw;
 }
 
 .foodWeight, .carbohydrate{
    margin: auto 2vw;
-   border: 4px solid grey;
+
 }
 
 .blockFoodWeight{
@@ -62,12 +64,6 @@ input{
    margin-top: 20vw;
 }
 
-/* FONT-SIZE */
-
-label{
-   font-size: 1em;
-   font-family: "Barlow", sans-serif;
-}
 
 /* BUTTON */
 
