@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import "./ApiRequest.css"
 
 
 class ApiRequest extends Component {
@@ -20,10 +21,6 @@ class ApiRequest extends Component {
     });
 }
 
-    // componentDidMount () {
-    //     this.getInfo()
-    // } 
-
 
     handleChange= (event)=> {
         this.setState({ title: event.target.value });
@@ -37,6 +34,7 @@ class ApiRequest extends Component {
         const item = this.state.foods.find(element => 
            element.fields.origfdnm === name) 
         this.setState({chosenFood : item})
+        this.setState({title: ""})
         
     };
       
@@ -44,10 +42,11 @@ class ApiRequest extends Component {
         console.log(this.state.chosenFood)
     return (
         <div>
-            <form>
+            <form className="ApiRequest-form">
                 <input
                 id="title"
                 name="title"
+                className="ApiRequest-input"
                 list="food"
                 type="text"
                 value={this.state.title}
@@ -55,12 +54,15 @@ class ApiRequest extends Component {
                 minLength="4" required
                 />
 
-                <ul id="food" className="ApiRequest" >
-                    {this.state.foods
+                <ul id="food" className="ApiRequest-list" >
+                    {this.state.title.length > 3 ? 
+                    this.state.foods
                         .map(food => (
-                        <li key={food.fields.origfdnm} onClick={() => this.chooseFood(food.fields.origfdnm)}> {food.fields.origfdnm}
-                        </li>
-                    ))}
+                        <li key={food.fields.origfdnm} className="ApiRequest-listItem" onClick={() => this.chooseFood(food.fields.origfdnm)}> {food.fields.origfdnm}
+                        </li> 
+                    ))
+                    : ""
+                }
                 </ul>
                 
             </form>

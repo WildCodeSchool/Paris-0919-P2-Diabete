@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.ApiRequest-form {
+   
+    width: 80%;
+    margin: auto;
+    
+}
+
+.ApiRequest-input {
+    width: 100%;
+}
+
+
+.ApiRequest-list {
+    border: solid 2px blue;
+    width: 100%;
+    padding: 0.5em
+
+}
+
+.ApiRequest-listItem {
+    list-style: none;
+    text-align: left;
+   
+    padding : 0.5em  
+}
+
+.ApiRequest-listItem:hover{
+    background-color:grey
+}
