@@ -78,3 +78,10 @@ button{
    font-size: 1.2em;
    background-color: aqua;
 }
+
+
+
+/* VERSION DESKTOP */
+   input{
+      font-size: 1.6em;
+   }
