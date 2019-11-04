@@ -21,6 +21,13 @@
 
 /* SIZE INPUT */
 
+label {
+   font-family: "Barlow", sans-serif;
+   font-size: 1em;
+   font-weight: 800;
+
+}
+
 input{
    grid-area: input;
    margin-bottom : 15px;
