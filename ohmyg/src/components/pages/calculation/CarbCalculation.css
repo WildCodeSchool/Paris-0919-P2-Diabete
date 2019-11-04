@@ -6,14 +6,24 @@
 }
 
 .input-range__slider{
-   background: gray;
-   border: 1px solid black;
+   background:transparent;
+   border-radius: 0;
+   width: 0; 
+  height: 0; 
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  
+  border-left: 60px solid green;
 }
 
 .input-range {
    width: 90%;
-   border: 1px solid pink;
+   /* border: 1px solid pink; */
    height: 5vw;
+}
+
+.input-range__label {
+   display: none;
 }
 
 /* SIZE INPUT */
@@ -46,7 +56,7 @@ input{
 }
 
 .inputWeight, .inputCarbo{
-   border: 1px solid red;
+   border: 1px solid ghostwhite;
    /* padding: 0;
    width: 10vw;
    height: 5vw; */
