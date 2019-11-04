@@ -85,3 +85,7 @@ button{
    input{
       font-size: 1.6em;
    }
+
+   label{
+      font-size: 2em;
+   }
