@@ -10,15 +10,22 @@
    border-radius: 0;
    width: 0; 
    height: 0; 
-   border-top: 60px solid transparent;
-   border-bottom: 60px solid transparent;
-   border-left: 60px solid green;
+   border-top: 3.5vw solid transparent;
+   border-bottom: 3.5vw solid transparent;
+   border-left: 4vw solid gray;
+   border-right: none;
+   margin-top: -3.7vw;
 }
 
 .input-range {
    width: 90%;
-   /* border: 1px solid pink; */
    height: 5vw;
+}
+
+.input-range__slider-container {
+   display: flex;
+   align-items: center;
+   flex-direction: row;
 }
 
 .input-range__label {
