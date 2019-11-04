@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import ApiRequest from './components/pages/meal/ApiRequest';
 import CarbCalculation from './components/pages/calculation/CarbCalculation';
 // import ContentFrame from './components/pages/homepage/ContentFrame';
 // import Footer from './components/layout/Footer';
@@ -16,16 +15,16 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <CarbCalculation />
       {/* <InsulinCalculation />
       <Navbar  />
       <Footer />
       <HeaderMobile />
       <HomeNavButtons />
       <ContentFrame /> */}
-
+      <ApiRequest />
+      <CarbCalculation />
     </div>
-  );
+  )
 }
 
 export default App;
