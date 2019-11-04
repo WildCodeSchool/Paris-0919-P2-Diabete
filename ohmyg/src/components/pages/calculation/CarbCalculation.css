@@ -78,6 +78,8 @@ button{
 
 
 /* VERSION DESKTOP */
+
+@media screen and (min-width: 1051px) {
    input{
       font-size: 1.6em;
    }
@@ -85,3 +87,4 @@ button{
    label{
       font-size: 2em;
    }
+}
