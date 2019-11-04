@@ -26,7 +26,7 @@ class CarbCalculation extends React.Component {
                         <InputRange
                             className="input-range"
                             step={0.5}
-                            maxValue={600}
+                            maxValue={300}
                             minValue={0}
                             value={this.state.value}
                             onChange={value => this.setState({ value })} />
@@ -49,7 +49,7 @@ class CarbCalculation extends React.Component {
                             <div className='borderInputLabel'>
                                 <input 
                                     className="carbohydrate"
-                                    type='number'
+                                    type="number"
                                     value={this.state.carb100g*this.state.value/100}
                                 />
                                 <label> g</label>
