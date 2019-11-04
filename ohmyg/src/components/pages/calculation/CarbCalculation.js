@@ -23,7 +23,7 @@ class CarbCalculation extends React.Component {
             {name: 'fraise tagada',
             value:  100,
             carb100g: 20,
-            carbRatio: 20}].map((i) => <h2 key={i}>{i.name}</h2>),
+            carbRatio: 20}].map((i) => <h2 key={i}>{i.name}  {i.carbRatio}</h2>),
     }
 
     responsive = {
@@ -95,7 +95,7 @@ class CarbCalculation extends React.Component {
 
                 <div className='carbo-carousel'>
                     <AliceCarousel
-                        items={this.state.galleryItems{'name'}}
+                        items={this.state.galleryItems}
                         responsive={this.responsive}
                         fadeOutAnimation={true}
                         mouseTrackingEnabled={true}
