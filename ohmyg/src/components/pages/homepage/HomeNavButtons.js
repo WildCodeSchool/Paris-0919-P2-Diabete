@@ -2,6 +2,7 @@ import React from 'react'
 import './HomeNavButtons.css'
 
 
+
 import pictoSectionRepas from '../../../assets/icons/picto-section-repas.png';
 import pictoSectionCalcul from '../../../assets/icons/picto-section-calcul.png';
 import pictoSectionNews from '../../../assets/icons/picto-section-news.png';
@@ -42,4 +43,4 @@ const HomeNavButtons = () => {
     )
 }
 
-export default HomeNavButtons
+export default HomeNavButtons;
