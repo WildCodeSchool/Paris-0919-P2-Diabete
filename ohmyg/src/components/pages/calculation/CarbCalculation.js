@@ -8,22 +8,16 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 class CarbCalculation extends React.Component {
     state = {
         name: 'poire',
-        value:  100,
         carb100g: 20,
+        value:  100,
         carbRatio: 20,
         galleryItems: [
             {name: 'poire',
-            value:  100,
-            carb100g: 20,
             carbRatio: 20}, 
             {name: 'pomme',
-            value:  100,
-            carb100g: 20,
             carbRatio: 20}, 
             {name: 'fraise tagada',
-            value:  100,
-            carb100g: 20,
-            carbRatio: 20}].map((i) => <h2 key={i}>{i.name}</h2>),
+            carbRatio: 20}].map((i) => <h2 key={i}>{i.name}<br />{i.carbRatio}g</h2>),
     }
 
     responsive = {
@@ -95,7 +89,7 @@ class CarbCalculation extends React.Component {
 
                 <div className='carbo-carousel'>
                     <AliceCarousel
-                        items={this.state.galleryItems{'name'}}
+                        items={this.state.galleryItems}
                         responsive={this.responsive}
                         fadeOutAnimation={true}
                         mouseTrackingEnabled={true}
