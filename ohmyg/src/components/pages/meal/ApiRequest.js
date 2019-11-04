@@ -54,16 +54,18 @@ class ApiRequest extends Component {
                 minLength="4" required
                 />
 
-                <ul id="food" className="ApiRequest-list" >
+               
                     {this.state.title.length > 3 ? 
-                    this.state.foods
+                     <ul id="food" className="ApiRequest-list" >
+                    {this.state.foods
                         .map(food => (
                         <li key={food.fields.origfdnm} className="ApiRequest-listItem" onClick={() => this.chooseFood(food.fields.origfdnm)}> {food.fields.origfdnm}
                         </li> 
-                    ))
+                    ))}
+                    </ul>
                     : ""
                 }
-                </ul>
+                
                 
             </form>
        </div>
