@@ -29,7 +29,7 @@ class CarbCalculation extends React.Component {
         console.debug('Item`s position during a change: ', e.item)
         console.debug('Slide`s position during a change: ', e.slide)
     }
-     
+
     onSlideChanged(e) {
         console.debug('Item`s position after changes: ', e.item)
         console.debug('Slide`s position after changes: ', e.slide)
