@@ -12,7 +12,7 @@ class ApiRequest extends Component {
     
 
     getInfo = () => {
-        axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=20&facet=origfdnm&q=${this.state.title}`)
+        axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=15&facet=origfdnm&q=${this.state.title}`)
       .then(response => response.data)
       .then(data => { console.log(data) ||
         this.setState({
@@ -41,7 +41,7 @@ class ApiRequest extends Component {
     render () {
         console.log(this.state.chosenFood)
     return (
-        <div>
+        <div className="global">
             <form className="ApiRequest-form">
                 <input
                 id="title"
@@ -52,6 +52,8 @@ class ApiRequest extends Component {
                 value={this.state.title}
                 onChange={this.handleChange}
                 minLength="4" required
+                placeholder=  "Choisis un aliment..."
+                
                 />
 
                
