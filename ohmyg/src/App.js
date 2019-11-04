@@ -1,6 +1,5 @@
 import React from 'react';
-import ApiRequest from './components/pages/meal/ApiRequest';
-import CarbCalculation from './components/pages/calculation/CarbCalculation';
+import ApiCarbs from './components/pages/meal/ApiCarbs';
 // import ContentFrame from './components/pages/homepage/ContentFrame';
 // import Footer from './components/layout/Footer';
 // import HeaderMobile from './components/layout/HeaderMobile';
@@ -21,8 +20,7 @@ const App = () => {
       <HeaderMobile />
       <HomeNavButtons />
       <ContentFrame /> */}
-      <ApiRequest />
-      <CarbCalculation />
+      <ApiCarbs/>
     </div>
   )
 }

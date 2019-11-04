@@ -30,18 +30,25 @@ class ApiRequest extends Component {
         };
 
 
-    chooseFood= (name) => {
-        const item = this.state.foods.find(element => 
+    chooseFood= async (name) => {
+        const item = await this.state.foods.find(element => 
            element.fields.origfdnm === name) 
-        this.setState({chosenFood : item})
-        this.setState({title: ""})
-        
+        await this.setState({chosenFood : item})
+        await this.setState({title: ""})
+        // console.log("verif", this.state.chosenFood)
+        this.props.name (this.state.chosenFood.fields.origfdnm)
+        this.props.carbs (this.state.chosenFood.fields.glucides_g_100g)  
+        // console.log ("name",this.state.chosenFood.fields.origfdnm || "carbs", this.state.chosenFood.fields.glucides_g_100g)
     };
-      
+        
+
+
+
+
     render () {
-        console.log(this.state.chosenFood)
+        // console.log("verif2",this.state.chosenFood)
     return (
-        <div className="global">
+        <div>
             <form className="ApiRequest-form">
                 <input
                 id="title"
