@@ -51,13 +51,6 @@ input{
 }
 
 .inputWeight, .inputCarbo{
-<<<<<<< HEAD
-   border: 1px solid ghostwhite;
-   /* padding: 0;
-   width: 10vw;
-   height: 5vw; */
-=======
->>>>>>> 980ed8b422246af6856254c808e308f8776ad8b8
    display: flex;
    align-items: center;
    margin: 10vw 3.5vw 0 3.5vw;
