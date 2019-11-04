@@ -1,7 +1,9 @@
 import React from 'react'
 import InputRange from 'react-input-range';
-import 'react-input-range/lib/css/index.css'
-import './CarbCalculation.css'
+import 'react-input-range/lib/css/index.css';
+import './CarbCalculation.css';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 class CarbCalculation extends React.Component {
     state = {
@@ -61,6 +63,21 @@ class CarbCalculation extends React.Component {
                 <div className="carbButtons">
                     <button className="valid-button">V</button>
                     <button className="delete-button">X</button>
+                </div>
+
+                <div>
+                    <CarouselProvider
+                        naturalSlideWidth={5}
+                        naturalSlideHeight={5}
+                        totalSlides={3}>
+                            <Slider className='carb-slides'>
+                                <Slide className='carbo-slide' index={0}>I am the first Slide.</Slide>
+                                <Slide className='carbo-slide' index={1}>I am the second Slide.</Slide>
+                                <Slide className='carbo-slide' index={2}>I am the third Slide.</Slide>
+                            </Slider>
+                            <ButtonBack>Back</ButtonBack>
+                            <ButtonNext>Next</ButtonNext>
+                        </CarouselProvider>
                 </div>
             </div>
         );

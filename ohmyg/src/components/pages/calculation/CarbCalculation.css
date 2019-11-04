@@ -113,3 +113,20 @@ input{
       font-size: 2em;
    }
 }
+
+
+/* SLIDER */
+
+.carb-slides{
+   background-color: #08f9d6;
+   width:100px;
+   height: 100px;
+   border: 1px solid black;
+
+}
+
+/* .carbo-slide{
+   width:5px;
+   height: 10px;
+   border: 1px solid black;
+} */
