@@ -1,10 +1,11 @@
 .footer {
-    background-color: #08f9d6;
+   background-color: #364eff;
    /* position: absolute;*/
     bottom: 0;
     width: 100vw;
     display: flex;
 }
+
 
 .footer a div {
     display: flex;

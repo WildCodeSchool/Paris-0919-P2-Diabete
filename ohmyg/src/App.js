@@ -1,12 +1,12 @@
 import React from 'react';
 
 import './App.css';
-import Food from './components/pages/food/food';
+import Calculation from './components/pages/calculation/calculation';
 
 const App = () => {
   return (
     <div className="App">
-      <Food  />
+      <Calculation  />
     </div>
   );
 }
