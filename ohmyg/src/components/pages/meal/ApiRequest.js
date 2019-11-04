@@ -1,15 +1,29 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 
-    
-// let ingr = "pomme";
 
 class ApiRequest extends Component {
     state = {
         foods:[],
-        title:"null",
+        title:"",
         chosenFood: {}
     };
+    
+
+    getInfo = () => {
+        axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=20&facet=origfdnm&q=${this.state.title}`)
+      .then(response => response.data)
+      .then(data => { console.log(data) ||
+        this.setState({
+            foods:data.records
+        });
+    });
+}
+
+    // componentDidMount () {
+    //     this.getInfo()
+    // } 
+
 
     handleChange= (event)=> {
         this.setState({ title: event.target.value });
@@ -18,31 +32,16 @@ class ApiRequest extends Component {
           }
         };
 
-    chooseElement= (e) => {
-        this.setState ({chosenFood : e.target.value})
+
+    chooseFood= (name) => {
+        const item = this.state.foods.find(element => 
+           element.fields.origfdnm === name) 
+        this.setState({chosenFood : item})
+        
     };
       
-
-    getInfo = () => {
-        axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=20&facet=origgpnm&q=${this.state.title}`)
-      // Extract the DATA from the received response
-      .then(response => response.data)
-      // Use this data to update the state
-      .then(data => { console.log(data) ||
-        this.setState({
-            foods:data.records
-        });
-        console.log("state", this.state)
-    });
-}
-
-
-    componentDidMount () {
-        this.getInfo()
-    } 
-    
     render () {
-    
+        console.log(this.state.chosenFood)
     return (
         <div>
             <form>
@@ -56,13 +55,13 @@ class ApiRequest extends Component {
                 minLength="4" required
                 />
 
-                <datalist id="food" className="ApiRequest" onClick={this.chooseElement}>
+                <ul id="food" className="ApiRequest" >
                     {this.state.foods
                         .map(food => (
-                        <option key={food.fields.origfdnm} value={food.fields.origfdnm}>
-                        </option>
+                        <li key={food.fields.origfdnm} onClick={() => this.chooseFood(food.fields.origfdnm)}> {food.fields.origfdnm}
+                        </li>
                     ))}
-                </datalist>
+                </ul>
                 
             </form>
        </div>
