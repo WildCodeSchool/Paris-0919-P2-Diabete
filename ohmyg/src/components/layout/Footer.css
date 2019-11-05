@@ -1,4 +1,11 @@
 
+*{
+    margin:0;
+  }
+ 
+
+
+  /* different colors for footer background depending on the active page */
 
 .footer-calculation {
     background-color: #364eff;
@@ -8,7 +15,6 @@
     justify-content: center;
 }
 
-
 .footer-homepage {
     background-color: #08f9d6;
     bottom: 0;
@@ -16,6 +22,34 @@
     display: flex;
     justify-content: center;
 }
+
+.footer-meal {
+    background-color: #ffa476;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-news {
+    background-color: #a13df9;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-info {
+    background-color: #08f9d6;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+/*//////////////////////////////////////////////////////*/
+
+
+
 
 
 .footer a div {

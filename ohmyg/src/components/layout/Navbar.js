@@ -11,7 +11,7 @@ const Navbar = (props) => {
         </div>
         <ul className="Navbar_ul">
           <li className="Navbar_li">
-            <Link to="/calculation" className="Navbar_iconHome">
+            <Link to="/homepage" className="Navbar_iconHome">
                 <svg
                     version="1.0"
                     x="0px"
@@ -30,7 +30,7 @@ const Navbar = (props) => {
           </li>
   
           <li className="Navbar_li">
-            <Link to="/calculation" className={props.color}>
+            <Link to="/meal" className={props.color}>
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@ const Navbar = (props) => {
           </li>
   
           <li className="Navbar_li">
-          <Link to="/calculation"  className={props.color}>
+          <Link to="/news" className={props.color}>
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ const Navbar = (props) => {
           </li>
   
           <li>
-          <Link to="/calculation"  className={props.color}>
+          <Link to="/nutritioninfo" className={props.color}>
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"

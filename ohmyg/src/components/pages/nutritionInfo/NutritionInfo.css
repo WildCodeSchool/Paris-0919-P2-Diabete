@@ -1,10 +1,8 @@
-.meal-background {
-    background-image: url("../../../assets/pictures/background-meal.jpg");
+.info-background {
+    background-image: url("../../../assets/pictures/background-info.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-
     width:100%;
 }
- 
