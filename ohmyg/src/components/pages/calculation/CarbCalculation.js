@@ -50,14 +50,14 @@ class CarbCalculation extends React.Component {
         this.setState({value: event.target.value});
     }
 
-    handleClick = async () => {
+    handleClick =  () => {
         let carbRatioItem = (this.state.carb100g*this.state.value/100).toFixed(2)
-        await this.setState({carbRatio: carbRatioItem})
-        let objectName = this.state.name;
-        let objectCarbRatio = this.state.carbRatio
-        this.state.galleryItems.push({dish: objectName, dishCarb: objectCarbRatio})
-        console.log(this.state.galleryItems);
-        
+        this.setState({carbRatio: carbRatioItem}, _=> {
+            let objectName = this.state.name;
+            let objectCarbRatio = this.state.carbRatio
+            this.state.galleryItems.push({dish: objectName, dishCarb: objectCarbRatio})
+            this.forceUpdate()
+        } )
     }
 
 
