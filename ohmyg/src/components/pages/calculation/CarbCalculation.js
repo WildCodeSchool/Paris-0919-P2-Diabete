@@ -21,13 +21,9 @@ class CarbCalculation extends React.Component {
     }
 
     componentDidUpdate() {
-        if (this.state.name !== this.props.newName) {
+        if (this.state.name !== this.props.newName || this.state.carb100g !== this.props.newCarbs) {
             this.newFood()
         }
-        if (this.state.carb100g !== this.props.newCarbs) {
-            this.newFood()
-        }
-
     }
     
 
