@@ -1,0 +1,13 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.homepage-background {
+    background-image: url("../../../assets/pictures/background-homepage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width:100%;
+}
+ 

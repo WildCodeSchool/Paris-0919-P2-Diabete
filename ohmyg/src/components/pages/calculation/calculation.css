@@ -1,0 +1,10 @@
+.calculation-background {
+    background-image: url("../../../assets/pictures/background-calculation.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    width:100%;
+}
+ 

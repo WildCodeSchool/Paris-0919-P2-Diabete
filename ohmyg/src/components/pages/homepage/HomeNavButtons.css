@@ -1,13 +1,7 @@
-:root {
-    background-image: url("../../../assets/pictures/background-homepage.jpg") ;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-}
+
 
 .fourBoxes {
-    margin: 8vw;
+    margin: 3vw; 
 }
 
 .mealAndCalcul {

@@ -1,14 +1,16 @@
 import React from 'react';
 import Navbar from '../../layout/Navbar';
-import ContentFrame from '../homepage/ContentFrame';
+import ContentFrame from '../../layout/ContentFrame';
 import Footer from '../../layout/Footer';
+import logo from "../../../assets/pictures/logoOMGBlue.svg"
+import "./Calculation.css"
 
 const Calculation = () => {
     return (
-      <div className="App">
-        <Navbar  />
+      <div className = "calculation-background">
+        <Navbar  src = {logo}/>
         <ContentFrame />
-        <Footer className='footer-calculation' />
+        <Footer color = 'footer-calculation'/>
       </div>
     );
   }

@@ -3,8 +3,8 @@ import './ContentFrame.css'
 
 const ContentFrame = () => {
     return (
-        <>
-            <div class="frameContainer">
+       
+            <div className="frameContainer">
                 <div className="frame">
                     <div className="pageLogo">
                         <svg width="50" height="50" viewBox="0 0 90 90">
@@ -24,7 +24,8 @@ const ContentFrame = () => {
                     </div>                
                 </div>
             </div>
-        </>
+       
+       
     )
 }
 

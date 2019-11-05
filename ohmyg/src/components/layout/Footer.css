@@ -1,22 +1,31 @@
-.footer {
-   background-color: #364eff;
-   /* position: absolute;*/
+
+
+.footer-calculation {
+    background-color: #364eff;
     bottom: 0;
     width: 100vw;
     display: flex;
+    justify-content: center;
+}
+
+
+.footer-homepage {
+    background-color: #08f9d6;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 
 .footer a div {
     display: flex;
-
 }
 
 a {
     text-decoration: none;
     color: black;
-    display: flex;
-    
+    display: flex; 
 }
 
 @media screen and (max-width: 1050px) {

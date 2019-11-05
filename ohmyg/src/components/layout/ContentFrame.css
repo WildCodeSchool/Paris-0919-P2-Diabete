@@ -1,13 +1,11 @@
-:root {
-    background-image: url("../../../assets/pictures/fond-calcultation.jpg") ;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+* {
+    margin:0;
+    padding:0;
+    
 }
 
-.frameContainer {
-    margin: 8vw;
+.frameContainer{
+    margin: auto;
     display: flex;
     justify-content: center;
 }
@@ -28,10 +26,10 @@
 }
 
 @media screen and (min-width: 1051px) {
+
     .frameContainer {
-        margin: 16vw;
-        display: flex;
-        justify-content: center;
+        width:80%;
+        margin: 4vw auto 4vw auto ;
     }
 
     .frame {

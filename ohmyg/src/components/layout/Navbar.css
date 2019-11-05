@@ -1,4 +1,7 @@
  
+ *{
+   margin:0;
+ }
  .Navbar_Navigation{
    display: flex;
    align-content: center;
@@ -41,6 +44,7 @@ li
   margin: auto;
   display: block;
 }
+
 .Navbar_iconHome {
   display: none;
   

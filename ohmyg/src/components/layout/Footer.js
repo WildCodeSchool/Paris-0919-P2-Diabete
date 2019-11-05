@@ -1,10 +1,11 @@
 import React from 'react'
 import './Footer.css'
 
-const Footer = () => {
+const Footer = (props) => {
+    
     return(
         <>
-            <div className="footer">
+            <div className={props.color}>
                 <a href="#">
                     <div className="aboutUs">
                         <svg  width="55px" height="40px" viewBox="0 0 180.7 118"  >
