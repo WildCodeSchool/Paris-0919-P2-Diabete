@@ -16,12 +16,11 @@ class ApiCarbs extends Component {
 
     getChosenFoodCarbs = (food) => {
         this.setState({carbsFromApi : food})
-        
     }
 
 render () {
-    console.log(this.state.nameFromApi)
-    console.log(this.state.carbsFromApi)
+    // console.log(this.state.nameFromApi)
+    // console.log(this.state.carbsFromApi)
     return(
     <div>
         <ApiRequest
@@ -29,8 +28,8 @@ render () {
         carbs = {this.getChosenFoodCarbs}
         />
         <CarbCalculation
-        name = {this.state.nameFromApi}
-        carbs = {this.state.carbsFromApi}
+        newName = {this.state.nameFromApi}
+        newCarbs = {this.state.carbsFromApi}
         />
     </div>
     )

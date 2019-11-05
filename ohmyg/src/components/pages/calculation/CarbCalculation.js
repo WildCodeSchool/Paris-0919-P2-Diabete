@@ -7,30 +7,31 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 
 class CarbCalculation extends React.Component {
     state = {
-        name: 'poire',
+        name: 'truc bidon',
         carb100g: 20,
         value:  100,
         carbRatio: 20,
-        galleryItems: [
-            {name: 'poire',
-            carbRatio: 20}, 
-            {name: 'pomme',
-            carbRatio: 20}, 
-            {name: 'fraise tagada',
-            carbRatio: 20}].map((i) => <h2 key={i}>{i.name}<br />{i.carbRatio}g</h2>),
+        galleryItems: 
+            [].map((i) => <h2 key={i}>{i.name}<br />{i.carbRatio}g</h2>),
     }
+
+    newFood = () => {
+        this.setState({name: this.props.newName})
+        this.setState({carb100g: this.props.newCarbs})
+    }
+    
 
     responsive = {
         0: { items: 1 },
         1024: { items: 2 },
     }
 
-    onSlideChange(e) {
+    onSlideChange = (e) => {
         console.debug('Item`s position during a change: ', e.item)
         console.debug('Slide`s position during a change: ', e.slide)
     }
 
-    onSlideChanged(e) {
+    onSlideChanged = (e) => {
         console.debug('Item`s position after changes: ', e.item)
         console.debug('Slide`s position after changes: ', e.slide)
     }
@@ -43,11 +44,18 @@ class CarbCalculation extends React.Component {
     }
 
     render() {
+
+        console.log(this.state.name)
+        console.log(this.state.carb100g)
+
+        console.log(this.props.newName);
+        console.log(this.props.newCarbs);
+        // this.newFood()
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
 
-                    <h2> Food : </h2>
+                    <h2> {this.state.name} : </h2>
                     
                         <InputRange
                             className="input-range"
