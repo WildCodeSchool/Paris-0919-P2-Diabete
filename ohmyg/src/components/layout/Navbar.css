@@ -24,8 +24,33 @@
   fill:#364eff;
 }
 
+.icones-meal {
+  fill:black;
+  cursor: pointer;
+}
 
-/*//////////////////////////////////////*/
+.icones-meal:hover {
+  fill:#ffa476;
+}
+
+.icones-news {
+  fill:black;
+  cursor: pointer;
+}
+
+.icones-news:hover {
+  fill:#a13df9;
+}
+
+.icones-nutritionInfo {
+  fill:black;
+  cursor: pointer;
+}
+
+.icones-nutritionInfo:hover {
+  fill:#08f9d6;
+}
+/*//////////////////////////////////////////////////////*/
 
 
 
