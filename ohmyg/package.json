@@ -3,11 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "pure-react-carousel": "^1.23.2",
-=======
     "axios": "^0.19.0",
->>>>>>> ApiAndCarbs
     "react": "^16.10.2",
     "react-alice-carousel": "^1.16.0",
     "react-dom": "^16.10.2",
