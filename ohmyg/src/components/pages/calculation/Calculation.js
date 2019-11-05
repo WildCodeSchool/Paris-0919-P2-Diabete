@@ -8,7 +8,9 @@ import "./Calculation.css"
 const Calculation = () => {
     return (
       <div className = "calculation-background">
-        <Navbar  src = {logo}/>
+        <Navbar  src = {logo}
+                 color = 'icones-calculation'  
+        />
         <ContentFrame />
         <Footer color = 'footer-calculation'/>
       </div>

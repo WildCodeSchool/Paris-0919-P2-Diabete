@@ -19,15 +19,24 @@
   justify-content: space-around;
 }
 
-.icones {
-
+.icones-homepage {
   fill:black;
-  
+  cursor: pointer;
 }
 
-.icones:hover {
+.icones-homepage:hover {
+  fill:#08f9d6;
+}
+
+
+
+.icones-calculation {
+  fill:black;
   cursor: pointer;
-  fill: rgb(54, 77, 255);
+}
+
+.icones-calculation:hover {
+  fill:#364eff;
 }
 
 li 

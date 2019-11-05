@@ -9,7 +9,9 @@ import "./Homepage.css"
 const Homepage = () => {
     return (
       <div className = "homepage-background">
-        <Navbar  src = {logo}/>
+        <Navbar  src = {logo}
+                 color = 'icones-homepage'  
+        />
         <HomeNavButtons />
         <Footer color = 'footer-homepage'/>
       </div>

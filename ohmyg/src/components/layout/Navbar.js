@@ -4,7 +4,6 @@ import './Navbar.css';
 import { Link } from "react-router-dom"
 
 const Navbar = (props) => {
-  console.log(props.src)
   return (
     <header className="Navbar">
       <nav className="Navbar_Navigation">
@@ -13,7 +12,7 @@ const Navbar = (props) => {
         </div>
         <ul className="Navbar_ul">
           <li className="Navbar_li">
-            <Link to="/calculation" class="Navbar_iconHome">
+            <Link to="/calculation" className="Navbar_iconHome">
                 <svg
                     version="1.0"
                     x="0px"
@@ -32,7 +31,7 @@ const Navbar = (props) => {
           </li>
   
           <li className="Navbar_li">
-            <Link to="/calculation" class="icones">
+            <Link to="/calculation" className={props.color}>
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +72,7 @@ const Navbar = (props) => {
             </Link>
           </li>
           <li className="Navbar_li">
-            <Link to="/calculation" class="icones">
+            <Link to="/calculation"  className={props.color}>
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +104,7 @@ const Navbar = (props) => {
           </li>
   
           <li className="Navbar_li">
-            <a class="icones" href="https://www.instagram.com/" target="_blank">
+          <Link to="/calculation"  className={props.color}>
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
@@ -138,11 +137,11 @@ const Navbar = (props) => {
                   />
                 </g>
               </svg>
-            </a>
+              </Link>
           </li>
   
           <li>
-          <Link to="/calculation" class="icones">
+          <Link to="/calculation"  className={props.color}>
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
