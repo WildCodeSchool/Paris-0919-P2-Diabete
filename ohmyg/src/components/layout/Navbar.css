@@ -2,6 +2,34 @@
  *{
    margin:0;
  }
+
+
+ /* different colors for icons depending on the active page */
+
+.icones-homepage {
+  fill:black;
+  cursor: pointer;
+}
+
+.icones-homepage:hover {
+  fill:#08f9d6;
+}
+
+.icones-calculation {
+  fill:black;
+  cursor: pointer;
+}
+
+.icones-calculation:hover {
+  fill:#364eff;
+}
+
+
+/*//////////////////////////////////////*/
+
+
+
+
  .Navbar_Navigation{
    display: flex;
    align-content: center;
@@ -17,26 +45,6 @@
   align-items: center;
   width: 60%;
   justify-content: space-around;
-}
-
-.icones-homepage {
-  fill:black;
-  cursor: pointer;
-}
-
-.icones-homepage:hover {
-  fill:#08f9d6;
-}
-
-
-
-.icones-calculation {
-  fill:black;
-  cursor: pointer;
-}
-
-.icones-calculation:hover {
-  fill:#364eff;
 }
 
 li 
