@@ -11,10 +11,10 @@ class CarbCalculation extends React.Component {
         carb100g: 25,
         value:  100,
         carbRatio: 20,
-        galleryItems: 
-            [].map((i) => <h2 key={i}>{i.name}<br />{i.carbRatio}g</h2>),
+        galleryItems: []
     }
-
+    
+    // [].map((i) => <h2 key={i}>{i.name}<br />{i.carbRatio}g</h2>),
     newFood = () => {
         this.setState({name: this.props.newName})
         this.setState({carb100g: this.props.newCarbs})
@@ -53,7 +53,17 @@ class CarbCalculation extends React.Component {
         this.setState({value: event.target.value});
     }
 
+    handleClick = (event) => {
+        let objectName = this.state.name;
+        let objectCarbRatio = this.state.carbRatio
+        this.state.galleryItems.push({dish: objectName, dishCarb:objectCarbRatio})
+        console.log(this.state.galleryItems);
+        
+    }
+
+    
     render() {
+        let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
@@ -87,7 +97,7 @@ class CarbCalculation extends React.Component {
                                 <input 
                                     className="carbohydrate"
                                     type="number"
-                                    value={this.state.carb100g*this.state.value/100}
+                                    value={carbRatio}
                                 />
                                 <label> g</label>
                             </div>
@@ -96,7 +106,7 @@ class CarbCalculation extends React.Component {
                 </div> 
 
                 <div className="carbButtons">
-                    <button className="valid-button">V</button>
+                    <button className="valid-button" onClick= {this.handleClick}>V</button>
                     <button className="delete-button">X</button>
                 </div>
 
