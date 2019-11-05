@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/pictures/logo OMG.svg"
+import logo from "../../assets/pictures/logo_OMG_blue.svg"
 import './Navbar.css';
 import {NavLink} from "react-router-dom"
 
