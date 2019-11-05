@@ -1,5 +1,4 @@
 import React from "react";
-// import logo from "../../assets/pictures/logo_OMG.svg"
 import './Navbar.css';
 import { Link } from "react-router-dom"
 
