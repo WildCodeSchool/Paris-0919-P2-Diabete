@@ -7,8 +7,8 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 
 class CarbCalculation extends React.Component {
     state = {
-        name: 'truc bidon',
-        carb100g: 20,
+        name: "",
+        carb100g: 25,
         value:  100,
         carbRatio: 20,
         galleryItems: 
@@ -18,6 +18,16 @@ class CarbCalculation extends React.Component {
     newFood = () => {
         this.setState({name: this.props.newName})
         this.setState({carb100g: this.props.newCarbs})
+    }
+
+    componentDidUpdate() {
+        if (this.state.name !== this.props.newName) {
+            this.newFood()
+        }
+        if (this.state.carb100g !== this.props.newCarbs) {
+            this.newFood()
+        }
+
     }
     
 
@@ -44,13 +54,6 @@ class CarbCalculation extends React.Component {
     }
 
     render() {
-
-        console.log(this.state.name)
-        console.log(this.state.carb100g)
-
-        console.log(this.props.newName);
-        console.log(this.props.newCarbs);
-        // this.newFood()
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
