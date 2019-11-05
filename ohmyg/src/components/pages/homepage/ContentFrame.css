@@ -1,5 +1,8 @@
 :root {
-    background-image: url("../../../assets/pictures/eatCake.png");
+    background-image: url("../../../assets/pictures/background-homepage.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     background-size: cover;
 }
 
