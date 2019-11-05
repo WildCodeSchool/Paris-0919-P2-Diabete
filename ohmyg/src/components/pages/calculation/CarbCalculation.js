@@ -14,7 +14,6 @@ class CarbCalculation extends React.Component {
         galleryItems: []
     }
     
-    // [].map((i) => <h2 key={i}>{i.name}<br />{i.carbRatio}g</h2>),
     newFood = () => {
         this.setState({name: this.props.newName})
         this.setState({carb100g: this.props.newCarbs})
@@ -27,7 +26,6 @@ class CarbCalculation extends React.Component {
         if (this.state.carb100g !== this.props.newCarbs) {
             this.newFood()
         }
-
     }
     
 
@@ -53,17 +51,24 @@ class CarbCalculation extends React.Component {
         this.setState({value: event.target.value});
     }
 
-    handleClick = (event) => {
+    handleClick = async () => {
+        let carbRatioItem = (this.state.carb100g*this.state.value/100).toFixed(2)
+        await this.setState({carbRatio: carbRatioItem})
+
+
         let objectName = this.state.name;
         let objectCarbRatio = this.state.carbRatio
-        this.state.galleryItems.push({dish: objectName, dishCarb:objectCarbRatio})
+        this.state.galleryItems.push({dish: objectName, dishCarb: objectCarbRatio})
         console.log(this.state.galleryItems);
         
     }
 
+
     
     render() {
         let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
+        console.log(this.state.carbRatio);
+        
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
@@ -106,13 +111,14 @@ class CarbCalculation extends React.Component {
                 </div> 
 
                 <div className="carbButtons">
-                    <button className="valid-button" onClick= {this.handleClick}>V</button>
+                    <button className="valid-button" 
+                    onClick= {this.handleClick}>V</button>
                     <button className="delete-button">X</button>
                 </div>
 
                 <div className='carbo-carousel'>
                     <AliceCarousel
-                        items={this.state.galleryItems}
+                        items={this.state.galleryItems.map((i) => <h2 key={i}>{i.name}<br />{i.carbRatio}</h2>)}
                         responsive={this.responsive}
                         fadeOutAnimation={true}
                         mouseTrackingEnabled={true}
