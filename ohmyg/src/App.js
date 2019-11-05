@@ -1,7 +1,5 @@
 import React from 'react';
-
-
-import CarbCalculation from './components/pages/calculation/CarbCalculation';
+import ApiCarbs from './components/pages/meal/ApiCarbs';
 // import ContentFrame from './components/pages/homepage/ContentFrame';
 // import Footer from './components/layout/Footer';
 // import HeaderMobile from './components/layout/HeaderMobile';
@@ -16,16 +14,15 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <CarbCalculation />
       {/* <InsulinCalculation />
       <Navbar  />
       <Footer />
       <HeaderMobile />
       <HomeNavButtons />
       <ContentFrame /> */}
-
+      <ApiCarbs/>
     </div>
-  );
+  )
 }
 
 export default App;

@@ -34,7 +34,7 @@ label {
 
 }
 
-input{
+.blockFoodWeight input{
    grid-area: input;
    margin-bottom : 15px;
    width: 3.5em;

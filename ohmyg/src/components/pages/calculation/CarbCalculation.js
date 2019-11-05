@@ -46,6 +46,8 @@ class CarbCalculation extends React.Component {
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
+
+                    <h2> Food : </h2>
                     
                         <InputRange
                             className="input-range"
