@@ -64,8 +64,18 @@ class CarbCalculation extends React.Component {
     
     render() {
         let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
-        console.log(this.state.carbRatio);
+
         let newGalleryItems = this.state.galleryItems.map((i) => <h2 key={i.dish}>{i.dish}<br />{i.dishCarb}</h2>)
+
+        
+        const addTotalCarb= () =>{
+            let totalCarb = 0
+            for(let a=0; a < this.state.galleryItems.length; a++) {
+                totalCarb+=this.state.galleryItems[a].dishCarb
+            }
+            return
+        }
+
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
@@ -112,7 +122,14 @@ class CarbCalculation extends React.Component {
                     onClick= {this.handleClick}>V</button>
                     <button className="delete-button">X</button>
                 </div>
-
+            <div>
+                <div>
+                    <input
+                        className='carbCalculation-totalCarb'
+                        type= 'number'
+                        value={addTotalCarb()}
+                    />
+                </div>
                 <div className='carbo-carousel'>
                     <AliceCarousel
                         items={newGalleryItems}
@@ -123,6 +140,7 @@ class CarbCalculation extends React.Component {
                         onSlideChanged={this.onSlideChanged}
                     />
                 </div>
+            </div>
             </div>
         );
     }
