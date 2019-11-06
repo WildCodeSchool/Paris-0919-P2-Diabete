@@ -1,36 +1,61 @@
 import React from "react";
-import './Navbar.css';
-import { Link } from "react-router-dom"
-
-const Navbar = (props) => {
+import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 
+const body = document.body;
+const scrollUp = "scroll-up";
+const scrollDown = "scroll-down";
+let lastScroll = 0;
+
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll == 0) {
+    body.classList.remove(scrollUp);
+    return;
+  }
+  
+  if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+    // down
+    body.classList.remove(scrollUp);
+    body.classList.add(scrollDown);
+  } else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
+    // up
+    body.classList.remove(scrollDown);
+    body.classList.add(scrollUp);
+  }
+  lastScroll = currentScroll;
+});
+
+
+const Navbar = props => {
   return (
     <header className="Navbar_Header">
       <nav className="Navbar_Navigation">
-          <Link to="/" className="Navbar_logo">
-            <img src={props.src} alt="Logo" />
-          </Link>
+        <Link to="/" className="Navbar_logo">
+          <img src={props.src} alt="Logo" />
+        </Link>
         <ul className="Navbar_ul">
           <li className="Navbar_li">
             <Link to="/" className={`Navbar_iconHome ${props.color}`}>
-                <svg
-                    version="1.0"
-                    x="0px"
-                    y="0px"
-                    width="40px"
-                    height="40px"
-                    viewBox="0 0 130.2 150.2"
-                >
-                    <defs></defs>
-                    <path
-                    d="M64.2,0L42.6,18.7V5.1H20v33.3L0,55.8v94.4h45.7h38.8h45.7V55.8L64.2,0z M26.5,11.6h9.7v11.5l-9.7,8.1V11.6z M52.2,143.7
+              <svg
+                version="1.0"
+                x="0px"
+                y="0px"
+                width="40px"
+                height="40px"
+                viewBox="0 0 130.2 150.2"
+              >
+                <defs></defs>
+                <path
+                  d="M64.2,0L42.6,18.7V5.1H20v33.3L0,55.8v94.4h45.7h38.8h45.7V55.8L64.2,0z M26.5,11.6h9.7v11.5l-9.7,8.1V11.6z M52.2,143.7
                 v-37.3H78v37.3H52.2z M123.7,143.7H84.5V99.9H45.7v43.8H6.5v-85L64.2,8.6l59.4,50.2V143.7z"
-                    />
-                </svg>
+                />
+              </svg>
             </Link>
           </li>
-  
+
           <li className="Navbar_li">
             <Link to="/meal" className={props.color}>
               <svg
@@ -73,7 +98,7 @@ const Navbar = (props) => {
             </Link>
           </li>
           <li className="Navbar_li">
-            <Link to="/calculation"  className={props.color}>
+            <Link to="/calculation" className={props.color}>
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
@@ -103,9 +128,9 @@ const Navbar = (props) => {
               </svg>
             </Link>
           </li>
-  
+
           <li className="Navbar_li">
-          <Link to="/news" className={props.color}>
+            <Link to="/news" className={props.color}>
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
@@ -138,11 +163,11 @@ const Navbar = (props) => {
                   />
                 </g>
               </svg>
-              </Link>
+            </Link>
           </li>
-  
+
           <li className="Navbar_li">
-          <Link to="/nutritioninfo" className={props.color}>
+            <Link to="/nutritioninfo" className={props.color}>
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
@@ -178,8 +203,7 @@ const Navbar = (props) => {
         </ul>
       </nav>
     </header>
-    
   );
-  }
+};
 
-  export default  Navbar;
+export default Navbar;
