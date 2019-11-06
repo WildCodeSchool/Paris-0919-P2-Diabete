@@ -4,47 +4,46 @@
     box-sizing: border-box;
 }
 
-.frameContainer{
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
 
-.frame {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 10px 10px black;
-    background-color: white;
-    border: 4px solid black;
-    width: 100%;
-    height: 200vw;
-}
 
-.pageLogo {
-    display: none;
-}
 
 @media screen and (min-width: 1051px) {
 
     .frameContainer {
         width:80%;
-        margin: 4vw auto 4vw auto ;
+        margin: 4vw;
+        box-shadow: 10px 10px black;
+        background-color: white;
+        border: 4px solid black;
+        height: 700px;
+        position: relative;
     }
 
-    .frame {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        box-shadow: 20px 20px black;
-        border: 6px solid black;
-        width: 100%;
-        height: 39.75vw;
+    .ContentFrame-Icon {
+        width:50px;
+        position: absolute;
+        top:20px;
+        left:20px;
     }
 
-    .pageLogo {
-        display: flex;
-        justify-content: center;
-        background-size: cover;
+    .ContentFrame-Icon img{
+        height:80px;
+        width:auto;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .frameContainer {
+        width:85%;
+        margin: 8vw;
+        box-shadow: 10px 10px black;
+        background-color: white;
+        border: 4px solid black;
+        height: 500px;
+        position: relative;
+    }
+
+    .ContentFrame-Icon {
+       display:none;
     }
 }

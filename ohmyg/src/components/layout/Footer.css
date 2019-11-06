@@ -8,96 +8,74 @@
 
 .footer-calculation {
     background-color: #364eff;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .footer-homepage {
     background-color: #08f9d6;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .footer-meal {
     background-color: #ffa476;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .footer-news {
     background-color: #a13df9;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .footer-info {
     background-color: #08f9d6;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
-/*//////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////*/
 
-
-
-
-
-.footer a div {
-    display: flex;
-}
-
-.footer a {
+.footer-link {
     text-decoration: none;
     color: black;
-    display: flex; 
+    margin: 2vw;
+    fill:black;
 }
 
+.footer-link:hover {
+    color: white;
+    fill:white;
+}
+
+
+.footer-aboutUs, .footer-contactUs, .footer-terms, .footer-follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    line-height: 2em;
+    height: 50px;
+}
+
+
 @media screen and (max-width: 1050px) {
-    .footer {      
+    .footer-calculation, .footer-homepage, .footer-news, .footer-meal, .footer-info {      
         display: grid;
         grid-template-columns: 1fr 1fr; 
         grid-template-rows: 1fr 1fr; 
+        padding-left:18vw;
+        padding-right:18vw;
+        padding-top:2vw;
+        width: 100%;
+        padding-bottom : 80px;
     }
 
-    .footer a div {
-        padding: 5px;
-        padding-left: 35px;
-        width: 180px;
-    }
-
-    .footer a div p {
-        margin: auto;
-        margin-left: 20px;
-    }
-
-    a {
-        justify-content: center;
-        margin: 0 10px;
+    .footer-aboutUs, .footer-contactUs, .footer-terms, .footer-follow {
+        height:60px;
     }
 }
 
 @media screen and (min-width: 1051px) {
-    .footer {
-        height: 170px;
+    .footer-calculation, .footer-homepage, .footer-news, .footer-meal, .footer-info{
+        display: flex;
         justify-content: center;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        bottom : 0;
     }
 
-    .footer a div {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    a{
-        margin: 40px;
-    }
 }

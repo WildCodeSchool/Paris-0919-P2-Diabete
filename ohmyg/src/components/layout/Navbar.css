@@ -4,95 +4,108 @@
   box-sizing: border-box;
 }
 
-/* different colors for icons depending on the active page */
-
-.icones-homepage {
-  fill: black;
-  cursor: pointer;
-}
-
+  /* different colors for icons depending on the active page */
 .icones-homepage:hover {
   fill: #08f9d6;
-}
-
-.icones-calculation {
-  fill: black;
-  cursor: pointer;
 }
 
 .icones-calculation:hover {
   fill: #364eff;
 }
 
-.icones-meal {
-  fill: black;
-  cursor: pointer;
-}
-
 .icones-meal:hover {
   fill: #ffa476;
-}
-
-.icones-news {
-  fill: black;
-  cursor: pointer;
 }
 
 .icones-news:hover {
   fill: #a13df9;
 }
 
-.icones-nutritionInfo {
-  fill: black;
-  cursor: pointer;
-}
-
 .icones-nutritionInfo:hover {
   fill: #08f9d6;
 }
+
+
 /*//////////////////////////////////////////////////////*/
 
-.Navbar_Header{
-  background-color: white;
-  height: 100px;
-  width: 100%;
-  display: flex;
-  align-items: center;
+
+
+
+@media (min-width: 1051px) {
+
+  .Navbar_Navigation {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100px;
+  }
+
+
+  .Navbar_ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-around;
+  }
+
+  .icones-homepage,
+  .icones-calculation,
+  .icones-meal,
+  .icones-news,
+  .icones-nutritionInfo {
+    fill: black;
+    cursor: pointer;
+  }
+
+
+  .Navbar_Header {
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index:100;
+  }
+
+
+  .Navbar_logo {
+    width: 250px;
+    display: block;
+    margin: auto;
+  }
+
+  .Navbar_iconHome {
+    display: none;
+  }
 }
-
-.Navbar_Navigation {
-  display: flex;
-  width: 80%;
-  justify-content: center;
-  margin: auto;
-  height: 100px;
-}
-
-.Navbar_ul {
-  list-style: none;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  width: 60%;
-  justify-content: space-around;
-
-}
-
-.Navbar_logo {
-  width: 250px;
-  display: block;
-  margin: auto;
-}
-
-.Navbar_iconHome {
-  display: none;
-}
-
-
 
 @media (max-width: 1050px) {
-  .Navbar_Header{
-    display:none
+
+  .Navbar_Header {
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index:100;
+  }
+
+  .Navbar_ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .Navbar_logo {
@@ -101,21 +114,24 @@
 
   .Navbar_iconHome {
     display: block;
+    fill:white;
+  }
+
+  .icones-homepage,
+  .icones-calculation,
+  .icones-meal,
+  .icones-news,
+  .icones-nutritionInfo {
     fill: white;
+    cursor: pointer;
   }
 
   .Navbar_Navigation {
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    z-index: 100;
-  }
-
-  .Navbar_ul {
+    display: flex;
     width: 90%;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
   }
 
-  .icones {
-    fill: white;
-  }
 }

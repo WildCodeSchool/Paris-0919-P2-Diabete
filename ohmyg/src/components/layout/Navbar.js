@@ -3,6 +3,8 @@ import './Navbar.css';
 import { Link } from "react-router-dom"
 
 const Navbar = (props) => {
+
+
   return (
     <header className="Navbar_Header">
       <nav className="Navbar_Navigation">
@@ -11,7 +13,7 @@ const Navbar = (props) => {
           </Link>
         <ul className="Navbar_ul">
           <li className="Navbar_li">
-            <Link to="/homepage" className="Navbar_iconHome">
+            <Link to="/" className={`Navbar_iconHome ${props.color}`}>
                 <svg
                     version="1.0"
                     x="0px"
