@@ -76,14 +76,15 @@ class CarbCalculation extends React.Component {
                 <div className='blockFoodWeight'>
 
                     <h2 className='carbCalculation-h2'> {this.state.name} : </h2>
-                    
-                        <InputRange
-                            className="input-range"
-                            step={0.5}
-                            maxValue={300}
-                            minValue={0}
-                            value={this.state.value}
-                            onChange={value => this.setState({ value })} />
+                        <div className="InputRangeTest">
+                            <InputRange
+                                className="input-range"
+                                step={0.5}  
+                                maxValue={300}
+                                minValue={0}
+                                value={this.state.value}
+                                onChange={value => this.setState({ value })} />
+                        </div>    
                     
                     <div className='inputWeightCarbo'>
                         <div className='inputWeight'>

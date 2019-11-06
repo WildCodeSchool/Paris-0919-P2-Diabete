@@ -109,7 +109,9 @@ label {
 }
 
 
-
+.InputRangeTest{
+   widows: 100%;
+}
 
 /* VERSION DESKTOP */
 
@@ -126,6 +128,7 @@ label {
 
 /* CAROUSEL */
 
+
 .carboCalculation-aliceCarousel{
    background-color: blueviolet;
 }
@@ -133,6 +136,7 @@ label {
 .carbo-carousel{
    width:100%;
    height: auto;
+   overflow: hidden;
 }
 
 .carbCalculation-totalCarousel{
@@ -163,11 +167,11 @@ label {
 }
 
 
-.alice-carousel__stage-item {
+/* .alice-carousel__stage-item {
    padding-left: 10px;
    padding-right: 10px;
    box-sizing: border-box;
- }
+ } */
 
  .alice-carousel__next-btn {
    text-align: left;
