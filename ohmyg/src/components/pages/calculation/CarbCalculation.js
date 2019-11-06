@@ -10,7 +10,8 @@ class CarbCalculation extends React.Component {
         name: "",
         carb100g: 25,
         value:  100,
-        carbRatio: 20,
+        carbRatio: 0,
+        totalCarb: 0,
         galleryItems: [],
     }
 
@@ -50,32 +51,26 @@ class CarbCalculation extends React.Component {
         this.setState({value: event.target.value});
     }
 
-    handleClick =  () => {
+    handleClick =   async () => {
         let carbRatioItem = (this.state.carb100g*this.state.value/100).toFixed(2)
-        this.setState({carbRatio: carbRatioItem}, _=> {
+        this.setState({carbRatio: carbRatioItem}, async () => {
             let objectName = this.state.name;
             let objectCarbRatio = this.state.carbRatio
-            this.state.galleryItems.push({dish: objectName, dishCarb: objectCarbRatio})
-            this.forceUpdate()
+
+            const tab = [...this.state.galleryItems,{dish: objectName, dishCarb: objectCarbRatio} ]
+            await this.setState({galleryItems: tab })
         } )
+        const result = await parseFloat(this.state.totalCarb) + parseFloat(this.state.carbRatio)
+
+        await this.setState({totalCarb: result })
+
     }
-
-
     
     render() {
         let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
-
-        let newGalleryItems = this.state.galleryItems.map((i) => <h2 key={i.dish}>{i.dish}<br />{i.dishCarb}</h2>)
-
         
-        const addTotalCarb= () =>{
-            let totalCarb = 0
-            for(let a=0; a < this.state.galleryItems.length; a++) {
-                totalCarb+=this.state.galleryItems[a].dishCarb
-            }
-            return
-        }
-
+        let newGalleryItems = this.state.galleryItems.map((i) => <h2 key={i.dish}>{i.dish}<br />{i.dishCarb}</h2>)
+        
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
@@ -127,7 +122,7 @@ class CarbCalculation extends React.Component {
                     <input
                         className='carbCalculation-totalCarb'
                         type= 'number'
-                        value={addTotalCarb()}
+                        value={this.state.totalCarb}
                     />
                 </div>
                 <div className='carbo-carousel'>
