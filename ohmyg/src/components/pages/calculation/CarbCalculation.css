@@ -110,7 +110,7 @@ label {
 
 
 .InputRangeTest{
-   widows: 100%;
+   width: 70%;
 }
 
 /* VERSION DESKTOP */
@@ -166,14 +166,44 @@ label {
    text-align: center;
 }
 
+/* .alice-carousel__stage{
+   width: 30vw;
+   height:1vw
+}  */
 
-/* .alice-carousel__stage-item {
+/* .alice-carousel__stage-item__active{
+   width: 30vw;
+} */
+
+.alice-carousel__stage-item {
    padding-left: 10px;
    padding-right: 10px;
    box-sizing: border-box;
- } */
+   border: 1px solid greenyellow;
+   width: 30vw;
+   height: auto;
+ } 
 
  .alice-carousel__next-btn {
    text-align: left;
+   border: 1px solid red;
  }
+ .alice-carousel__wrapper{
+    font-size:0.75em;
+    border: 1.5px solid black;
+    max-width: 30vw;
+    height: 1vw;
+ }
+
+ ul.alice-carousel__dots {
+   border: 1px solid yellow;
+   /* margin: 5px auto;
+   overflow: hidden; */
+ }
+
+ .thumb-container {
+   border: 1px solid red;
+ }
+
+
  

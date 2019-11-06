@@ -62,7 +62,7 @@ class CarbCalculation extends React.Component {
         } )
         const result = await parseFloat(this.state.totalCarb) + parseFloat(this.state.carbRatio)
 
-        await this.setState({totalCarb: result })
+        await this.setState({totalCarb: result.toFixed(2) })
 
     }
     
@@ -128,8 +128,8 @@ class CarbCalculation extends React.Component {
                         responsive={this.responsive}
                         fadeOutAnimation={true}
                         mouseTrackingEnabled={true}
-                        onSlideChange={this.onSlideChange}
-                        onSlideChanged={this.onSlideChanged}
+                        // onSlideChange={this.onSlideChange}
+                        // onSlideChanged={this.onSlideChanged}
                     />
                 </div>
             </div>
