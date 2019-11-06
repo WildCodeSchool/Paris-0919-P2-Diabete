@@ -3,29 +3,39 @@ import axios from "axios"
 
 class InfoNutApi extends React.Component {
     state={
-        foodsFromCategory : []
+        foodsFromCategory : [],
+        update : this.props.food2
 
     }
 
     getFood = async () => {
-    await axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=legumes`)
+    await axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=${this.props.firstFood}`)
         .then (response => response.data)
         .then (data => {
         this.setState({
         foodsFromCategory:data.records 
         });
-        console.log(this.state.foodsFromCategory)})
+        })
 
         
-    axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=fruits`)
+    axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=${this.props.food2}`)
         .then (response => response.data)
         .then (data => {
             this.state.foodsFromCategory.push(...data.records 
             );
-            console.log(this.state.         foodsFromCategory)
+
+    this.setState({update: this.props.food2})
 
     });
     }
+
+
+    componentDidUpdate() {
+        if (this.state.update != this.props.food2) {
+            this.getFood()
+        }
+    }
+
 
     componentDidMount() {
         this.getFood()
@@ -35,7 +45,6 @@ class InfoNutApi extends React.Component {
     render(){
         return(
             <div>
-                <p>bonjour</p>
                 {this.state.foodsFromCategory.map(food => (
                     <p> {food.fields.origfdnm}</p>
                 )
@@ -44,12 +53,6 @@ class InfoNutApi extends React.Component {
         )
     }
 }
-
-// {this.state.foods
-//     .map(food => (
-//     <li key={food.fields.origfdnm} }> {food.fields.origfdnm}
-//     </li> 
-// ))}
 
 
 export default InfoNutApi;

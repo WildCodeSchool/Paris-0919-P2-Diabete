@@ -7,7 +7,7 @@ import HeaderMobile from './components/layout/HeaderMobile';
 import HomeNavButtons from './components/pages/homepage/HomeNavButtons';
 import InsulinCalculation from './components/pages/calculation/InsulinCalculation';
 import Navbar from './components/layout/Navbar';
-import InfoNutApi from './components/pages/nutritionInfo/InfoNutApi';
+import InfoNutCategories from './components/pages/nutritionInfo/InfoNutCategories';
 
 
 import './App.css';
@@ -15,7 +15,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <InfoNutApi />
+      <InfoNutCategories />
     </div>
   );
 }
