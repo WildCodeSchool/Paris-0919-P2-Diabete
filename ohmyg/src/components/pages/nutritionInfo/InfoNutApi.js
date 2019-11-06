@@ -8,7 +8,7 @@ class InfoNutApi extends React.Component {
     }
 
     getFood = async () => {
-    await axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=20&facet=origgpfr&q=legumes`)
+    await axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=legumes`)
         .then (response => response.data)
         .then (data => {
         this.setState({
@@ -17,7 +17,7 @@ class InfoNutApi extends React.Component {
         console.log(this.state.foodsFromCategory)})
 
         
-    axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=20&facet=origgpfr&q=fruits`)
+    axios.get(`https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=fruits`)
         .then (response => response.data)
         .then (data => {
             this.state.foodsFromCategory.push(...data.records 
@@ -36,10 +36,20 @@ class InfoNutApi extends React.Component {
         return(
             <div>
                 <p>bonjour</p>
+                {this.state.foodsFromCategory.map(food => (
+                    <p> {food.fields.origfdnm}</p>
+                )
+                )}
             </div>
         )
     }
 }
+
+// {this.state.foods
+//     .map(food => (
+//     <li key={food.fields.origfdnm} }> {food.fields.origfdnm}
+//     </li> 
+// ))}
 
 
 export default InfoNutApi;
