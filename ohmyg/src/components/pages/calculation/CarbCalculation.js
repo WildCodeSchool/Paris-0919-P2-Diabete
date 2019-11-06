@@ -4,6 +4,7 @@ import 'react-input-range/lib/css/index.css';
 import './CarbCalculation.css';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import InsulinCalculation from "./InsulinCalculation"
 
 class CarbCalculation extends React.Component {
     state = {
@@ -131,8 +132,13 @@ class CarbCalculation extends React.Component {
                         onSlideChange={this.onSlideChange}
                         onSlideChanged={this.onSlideChanged}
                     />
-                </div>
             </div>
+                </div>
+                <div className="meal-CalculationButton">
+                    <button>Calculation</button>
+
+                </div>
+                    <InsulinCalculation />
             </div>
         );
     }
