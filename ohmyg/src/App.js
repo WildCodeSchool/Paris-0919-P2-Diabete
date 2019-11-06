@@ -20,7 +20,7 @@ const App = () => {
       <HeaderMobile />
       <HomeNavButtons />
       <ContentFrame /> */}
-      <ApiCarbs className='app-apiCarbs'/>
+      <ApiCarbs />
     </div>
   )
 }
