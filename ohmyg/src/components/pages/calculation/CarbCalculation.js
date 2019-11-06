@@ -75,7 +75,7 @@ class CarbCalculation extends React.Component {
             <div className="range">
                 <div className='blockFoodWeight'>
 
-                    <h2> {this.state.name} : </h2>
+                    <h2 className='carbCalculation-h2'> {this.state.name} : </h2>
                     
                         <InputRange
                             className="input-range"
@@ -115,18 +115,14 @@ class CarbCalculation extends React.Component {
                 <div className="carbButtons">
                     <button className="valid-button" 
                     onClick= {this.handleClick}>V</button>
-                    <button className="delete-button">X</button>
                 </div>
-            <div>
-                <div>
-                    <input
-                        className='carbCalculation-totalCarb'
-                        type= 'number'
-                        value={this.state.totalCarb}
-                    />
+            <div className='carbCalculation-totalCarousel'>
+                <div className='carbCalculation-addition'>
+                    <p className='carbCalculation-p'>{this.state.totalCarb} g</p>
                 </div>
                 <div className='carbo-carousel'>
                     <AliceCarousel
+                        className='carboCalculation-aliceCarousel'
                         items={newGalleryItems}
                         responsive={this.responsive}
                         fadeOutAnimation={true}

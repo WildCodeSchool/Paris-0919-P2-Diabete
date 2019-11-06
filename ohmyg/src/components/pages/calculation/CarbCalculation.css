@@ -1,15 +1,21 @@
 
-         /* SLIDER */
+*{
+   
+   height: auto;
+   margin: 0px;
+   padding: 0px;
+}
+
+/* SLIDER */
 
 .input-range__track--active{
-      background: #08f9d6;
+   background: #08f9d6;
 }
 
 .input-range__slider{
    background: white;
    border: 1px solid black;
    box-shadow: 1.5px 1.5px 0px grey;
-   margin-top: -0.75rem;
 }
 
 .input-range {
@@ -36,9 +42,9 @@ label {
 
 .blockFoodWeight input{
    grid-area: input;
-   margin-bottom : 15px;
-   width: 3.5em;
-   height: 1.5em;
+   margin-bottom : 5px;
+   width: 3.7em;
+   height: 2.3em;
    text-align: center;
    font-size:1.2em;
    border: 4px solid grey;
@@ -63,7 +69,7 @@ label {
 }
 
 .foodWeight, .carbohydrate{
-   margin: auto 2vw;
+   margin: 1vw 1vw;
 
 }
 
@@ -71,12 +77,17 @@ label {
    display: flex;
    flex-direction: column;
    align-items: center;
+   margin: auto;
 }
 
 .range{
-   margin-top: 20vw;
+   margin-top: 5vw;
+   margin-bottom: 5vw;
 }
 
+.carbCalculation-h2{
+   margin: 5vw;;
+}
 
 /* BUTTON */
 
@@ -88,18 +99,16 @@ label {
 
 .carbButtons button{
    margin:3vw;
-   width: 20%;
-   height: 3em;
    font-size: 1.2em;
 }
 
 .valid-button {
    background-color: #08f9d6;
+   width: 90%;
+   height: 1.7em;
 }
 
-.delete-button {
-   background-color: red;
-}
+
 
 
 /* VERSION DESKTOP */
@@ -115,13 +124,42 @@ label {
 }
 
 
-/* SLIDER */
+/* CAROUSEL */
+
+.carboCalculation-aliceCarousel{
+   background-color: blueviolet;
+}
 
 .carbo-carousel{
-   background-color: #08f9d6;
    width:100%;
-   height: 10vw;
-   border: 1px solid black;
-
+   height: auto;
 }
+
+.carbCalculation-totalCarousel{
+   border: 1px solid black;
+   background-color: blueviolet;
+   display: flex;
+   flex-direction: column; 
+   width: 100%;
+   height: auto;
+}
+
+.carbCalculation-addition{
+   border: 1px solid black;
+   color: white;
+   background-color: black;
+   font-size: 1.2em;
+   margin: 5px auto;
+   padding: auto;
+   width: 25%;
+   height: 2.5em;
+   display: flex;
+   vertical-align: center;
+}
+
+.carbCalculation-p{
+   margin: auto;
+   text-align: center;
+}
+
 
