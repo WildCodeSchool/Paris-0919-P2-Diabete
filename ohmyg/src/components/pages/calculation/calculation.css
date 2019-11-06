@@ -1,3 +1,9 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 .calculation-background {
     background-image: url("../../../assets/pictures/background-calculation.jpg");
     background-repeat: no-repeat;

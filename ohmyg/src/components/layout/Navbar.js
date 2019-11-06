@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 
 const Navbar = (props) => {
   return (
-    <header className="Navbar">
+    <header className="Navbar_Header">
       <nav className="Navbar_Navigation">
-        <div className="Navbar_logo">
-          <img src={props.src} alt="Logo" />
-        </div>
+          <Link to="/" className="Navbar_logo">
+            <img src={props.src} alt="Logo" />
+          </Link>
         <ul className="Navbar_ul">
           <li className="Navbar_li">
             <Link to="/homepage" className="Navbar_iconHome">
@@ -36,7 +36,7 @@ const Navbar = (props) => {
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
-                width="50px"
+                width="60px"
                 height="40px"
                 viewBox="0 0 205.7 150.7"
                 enable-background="new 0 0 205.7 150.7"
@@ -139,7 +139,7 @@ const Navbar = (props) => {
               </Link>
           </li>
   
-          <li>
+          <li className="Navbar_li">
           <Link to="/nutritioninfo" className={props.color}>
               <svg
                 version="1.0"

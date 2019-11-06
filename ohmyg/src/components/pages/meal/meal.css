@@ -1,3 +1,8 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 .meal-background {
     background-image: url("../../../assets/pictures/background-meal.jpg");
     background-repeat: no-repeat;

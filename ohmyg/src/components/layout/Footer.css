@@ -1,16 +1,15 @@
-
 *{
     margin:0;
-  }
- 
-
+    padding:0;
+    box-sizing: border-box;
+}
 
   /* different colors for footer background depending on the active page */
 
 .footer-calculation {
     background-color: #364eff;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -18,7 +17,7 @@
 .footer-homepage {
     background-color: #08f9d6;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -26,7 +25,7 @@
 .footer-meal {
     background-color: #ffa476;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -34,7 +33,7 @@
 .footer-news {
     background-color: #a13df9;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -42,7 +41,7 @@
 .footer-info {
     background-color: #08f9d6;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -56,7 +55,7 @@
     display: flex;
 }
 
-a {
+.footer a {
     text-decoration: none;
     color: black;
     display: flex; 
@@ -88,7 +87,7 @@ a {
 
 @media screen and (min-width: 1051px) {
     .footer {
-        height: 200px;
+        height: 170px;
         justify-content: center;
     }
 
