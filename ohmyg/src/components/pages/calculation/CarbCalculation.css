@@ -163,3 +163,13 @@ label {
 }
 
 
+.alice-carousel__stage-item {
+   padding-left: 10px;
+   padding-right: 10px;
+   box-sizing: border-box;
+ }
+
+ .alice-carousel__next-btn {
+   text-align: left;
+ }
+ 
