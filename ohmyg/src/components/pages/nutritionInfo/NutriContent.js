@@ -1,8 +1,19 @@
 import React from 'react'
 import ApiRequest from '../meal/ApiRequest';
+import InfoNutApi from "./InfoNutApi"
 import './NutriContent.css'
 
 class NutriContent extends React.Component {
+    state = {
+        category1 : "null",
+        category2: "null",
+    }
+
+    changeProps = (item1, item2) => {
+        this.setState({category1: item1})
+        this.setState({category2: item2})
+    }
+
     render() {
         return(
             <div className="main-box">
@@ -14,42 +25,43 @@ class NutriContent extends React.Component {
                 </div>
                 <div className="sixBoxes">
                     <div className="fruitAndVeg">
-                        <a href="">
+                        <h2 onClick={() => this.changeProps("fruit", "legume")}>
                             {/* <img className = "iconMeal" src={pictoSectionRepas}/> */}
                             Fruits et légumes
-                        </a>
+                        </h2>
                     </div>
                     <div className="meatAndFish">
-                        <a href="">
+                        <h2 onClick={() => this.changeProps("viande", "legume")}>
                             {/* <img className = "iconCalcul" src={pictoSectionCalcul}/> */}
                             Viandes et Poissons
-                        </a>
+                        </h2>
                     </div>
                     <div className="drink">
-                        <a href="">
+                        <h2 onClick={() => this.changeProps("boisson", "alcool")}>
                             {/* <img className = "iconNews" src={pictoSectionNews}/> */}
                             Boissons
-                        </a>
+                        </h2>
                     </div>
                     <div className="starchy">
-                        <a href="">
+                        <h2 onClick={() => this.changeProps("riz", "terre")}>
                             {/* <img className = "iconInfosNut" src={pictoSectionInfosNut}/> */}
                             Féculents
-                        </a>
+                        </h2>
                     </div>
                     <div className="junkFood">
-                        <a href="">
+                        <h2 onClick={() => this.changeProps("pizza", "bonbons")}>
                             {/* <img className = "iconInfosNut" src={pictoSectionInfosNut}/> */}
                             Junk Food
-                        </a>
+                        </h2>
                     </div>
                     <div className="dessert">
-                        <a href="">
+                        <h2 onClick={() => this.changeProps("chocolat", "gateau")}>
                             {/* <img className = "iconInfosNut" src={pictoSectionInfosNut}/> */}
                             Desserts
-                        </a>
+                        </h2>
                     </div>
                 </div>
+                <InfoNutApi className="food-box" firstFood={this.state.category1} food2={this.state.category2}/>
             </div>
         )
     }

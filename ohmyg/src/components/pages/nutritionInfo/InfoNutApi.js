@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios"
+import './InfoNutApi.css'
 
 class InfoNutApi extends React.Component {
     state={
@@ -31,7 +32,7 @@ class InfoNutApi extends React.Component {
 
 
     componentDidUpdate() {
-        if (this.state.update != this.props.food2) {
+        if (this.state.update !== this.props.food2) {
             this.getFood()
         }
     }
@@ -44,9 +45,9 @@ class InfoNutApi extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className="infoNutApi-mainBox">
                 {this.state.foodsFromCategory.map(food => (
-                    <p> {food.fields.origfdnm}</p>
+                    <p className="food-card"> {food.fields.origfdnm}</p>
                 )
                 )}
             </div>

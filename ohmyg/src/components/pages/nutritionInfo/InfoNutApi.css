@@ -1,0 +1,37 @@
+.infoNutApi-mainBox{
+    display: flex;
+    flex-direction: column;
+    margin: 5vw;
+}
+
+.food-card {
+    border: 3px solid #08f9d6;
+    background-color: hsl(171, 95%, 80%);
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin: 0.2vw;
+    height: auto;
+}
+
+
+
+
+
+@media screen and (min-width: 1051px) {
+    .infoNutApi-mainBox{
+        display: flex;
+        flex-direction: column;
+        margin: 5vw;
+    }
+
+    .food-card {
+        border: 3px solid #08f9d6;
+        background-color: hsl(171, 95%, 80%);
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        margin: 0.2vw;
+        height: auto;
+    }
+}
