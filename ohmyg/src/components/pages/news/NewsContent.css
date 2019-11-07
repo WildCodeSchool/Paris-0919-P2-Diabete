@@ -1,29 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
 .Main-Video {
-display:flex;
-
-
-}
-#video1, #video2, #video3 {
-width: 100%;
-height: 100%;
-object-fit: contain;
-}
-
-.Small-Video{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align:center;
 
 }
 
-.Big-Video{
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-
+#video1,
+#video2,
+#video3 {
+  width: 90%;
+  height: 500px;
+  object-fit: contain;
+}
+#video1,
+#video2{
+  margin-bottom:20px;
 }
 
 
 
+@media screen and (max-width: 1050px) {
+#video1,
+#video2,
+#video3 {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom:10px;
+}
+}
 
-        
+.Main-Video h1{
+    font-size : 3em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+
+.Main-Video h2{
+  font-size : 1.5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  margin-bottom:10px;
+}

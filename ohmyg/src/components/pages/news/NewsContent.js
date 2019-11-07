@@ -1,30 +1,54 @@
-import React from 'react'
-import './NewsContent.css'
-import Youtube from'react-youtube'
+import React from "react";
+import "./NewsContent.css";
+import Youtube from "react-youtube";
 
-const NewsContent = () => {
-    return (
-        <>
-                <div className="Main-Video">
-                <div className ="Big-Video" >
+class NewsContent extends React.Component  {
 
-                <h2> A la Une</h2>
-                        <Youtube id = "video1" width="600" height="500" src="https://www.youtube.com/embed/0idJ9XpBFEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
-                 </div>
+  render () {
+    // const size1 = {
+    //     height: '400',
+    //     }
+  
+      return (
 
-                          <div className = "Small-Video">
-                                            <h2> Temoignage</h2>
-                                            <Youtube id = "video2" width="560" height="430" src="https://www.youtube.com/embed/0idJ9XpBFEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
-                                            <h2> Rencontre</h2>
-                                            <Youtube id = "video3" width="560" height="430" src="https://www.youtube.com/embed/0idJ9XpBFEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
-                                            
+    <>
+      <div className="Main-Video">
 
-                         </div>
+          <h1> A la Une !</h1>
+          <Youtube
+            id="video2"
+            videoId="0idJ9XpBFEo"
+            // opts={size1}
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
 
-                        
-                     </div>                
-        </>
-    )
+
+
+          <h2> Temoignages</h2>
+          <Youtube
+            id="video2"
+            videoId="A320QGM80Z8"
+            // opts={size1}
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+          <h2> Rencontres</h2>
+          <Youtube
+            id="video3"
+            videoId="hVaKaZcQqec"
+            // opts={size1}
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+
+    </>
+  );
+};
 }
 
-export default NewsContent
+export default NewsContent;

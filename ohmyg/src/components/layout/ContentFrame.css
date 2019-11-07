@@ -8,7 +8,7 @@
 
 
 @media screen and (min-width: 1051px) {
-
+    
     .ContentFrame-Box {
         width:80%;
         margin: 4vw;
@@ -32,8 +32,8 @@
     }
 
     .ContentFrame-Content {
-        margin: 5vw;
-        text-align: center;
+        padding:8%;
+        
     }
 }
 
@@ -55,7 +55,6 @@
     }
 
     .ContentFrame-Content {
-        margin: 2vw;
-        text-align: center;
+        padding:8%;     
     }
 }
