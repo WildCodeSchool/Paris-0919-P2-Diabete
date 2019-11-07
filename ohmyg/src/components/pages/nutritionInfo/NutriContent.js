@@ -24,38 +24,38 @@ class NutriContent extends React.Component {
                     />
                 </div>
                 <div className="sixBoxes">
-                    <div className="fruitAndVeg">
-                        <h2 onClick={() => this.changeProps("fruit", "legume")}>
+                    <div className="fruitAndVeg" onClick={() => this.changeProps("fruit", "legume")}>
+                        <h2>
                             {/* <img className = "iconMeal" src={pictoSectionRepas}/> */}
                             Fruits et légumes
                         </h2>
                     </div>
-                    <div className="meatAndFish">
-                        <h2 onClick={() => this.changeProps("viande", "legume")}>
+                    <div className="meatAndFish" onClick={() => this.changeProps("viande", "legume")}>
+                        <h2>
                             {/* <img className = "iconCalcul" src={pictoSectionCalcul}/> */}
                             Viandes et Poissons
                         </h2>
                     </div>
-                    <div className="drink">
-                        <h2 onClick={() => this.changeProps("boisson", "alcool")}>
+                    <div className="drink" onClick={() => this.changeProps("boisson", "alcool")}>
+                        <h2>
                             {/* <img className = "iconNews" src={pictoSectionNews}/> */}
                             Boissons
                         </h2>
                     </div>
-                    <div className="starchy">
-                        <h2 onClick={() => this.changeProps("riz", "terre")}>
+                    <div className="starchy" onClick={() => this.changeProps("riz", "terre")}>
+                        <h2>
                             {/* <img className = "iconInfosNut" src={pictoSectionInfosNut}/> */}
                             Féculents
                         </h2>
                     </div>
-                    <div className="junkFood">
-                        <h2 onClick={() => this.changeProps("pizza", "bonbons")}>
+                    <div className="junkFood" onClick={() => this.changeProps("pizza", "bonbons")}>
+                        <h2>
                             {/* <img className = "iconInfosNut" src={pictoSectionInfosNut}/> */}
                             Junk Food
                         </h2>
                     </div>
-                    <div className="dessert">
-                        <h2 onClick={() => this.changeProps("chocolat", "gateau")}>
+                    <div className="dessert" onClick={() => this.changeProps("chocolat", "gateau")}>
+                        <h2>
                             {/* <img className = "iconInfosNut" src={pictoSectionInfosNut}/> */}
                             Desserts
                         </h2>
