@@ -13,6 +13,7 @@ class CarbCalculation extends React.Component {
         totalCarb: 0,
         galleryItems: [],
         buttonIsClicked: false,
+        buttonDeleteClicked: false,
         modifyingItem: false,
     }
 
@@ -81,11 +82,17 @@ class CarbCalculation extends React.Component {
 
     modifyItem = async (elem) => {
         await this.setState({modifyingItem : true})
+        
         this.setState({name : elem.dish})
         this.setState({value: elem.dishWeight})
         this.setState({carbRatio: (elem.dishCarb100*elem.dishWeight)/100})
         }
     
+        buttonTrash =() => {
+            this.setState({buttonDeleteClicked : true})
+            console.log(this.state.buttonDeleteClicked);
+        }
+
         // slider= async (value) => {
         //     await this.setState({ value: value });
         //     let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
@@ -99,6 +106,8 @@ class CarbCalculation extends React.Component {
         let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
         console.log(this.state.galleryItems)
         console.log(this.state.buttonIsClicked)
+        console.log(this.state.modifyingItem);
+
 
         return (
             <div className="range">
@@ -153,11 +162,15 @@ class CarbCalculation extends React.Component {
                 <div className='carbs-list'>
 
                     {this.state.galleryItems.map(elem => 
-                        <ul onClick={ () => this.modifyItem(elem)} > 
+                        <ul onClick= {this.state.buttonDeleteClicked ? "className='buttonTrashNotOk'" : "className='buttonTrashOk'"} > 
                         <li> {elem.dish}</li>
                         <li> {elem.dishCarb}</li>
                     </ul>)}
 
+            </div>
+
+            <div>
+                <button className='buttonTrashOk' className='buttonTrashNotOk'>Poubelle</button>
             </div>
                 </div>
                 <div className="meal-CalculationButton">

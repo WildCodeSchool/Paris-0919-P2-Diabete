@@ -176,43 +176,10 @@ label {
    text-align: center;
 }
 
-
-
-
-.alice-carousel__stage-item {
+.buttonTrashNotOk{
    display: none;
-   padding: 0;
-   margin:0;
-   box-sizing: border-box;
-   font-size: 1em;
-   border: 1px solid greenyellow;
-   max-width: 100%;
-   height: auto;
-} 
-
- .alice-carousel__next-btn {
-   text-align: left;
-   border: 1px solid red;
- }
- .alice-carousel__wrapper{
-    font-size:0.75em;
-    border: 4px solid black;
-    max-width: 100%;
-    height: auto;
- }
-
- ul.alice-carousel__dots {
-    display: none;
- }
-
- .thumb-container {
-   border: 1px solid red;
- }
-
-.alice-carousel div{
-   width: 100%;
-   height:auto;
-   border: 2px solid salmon;
-
 }
- 
+
+.buttonTrashOk{
+   background-color: blueviolet;
+}
