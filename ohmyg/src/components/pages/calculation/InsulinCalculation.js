@@ -167,9 +167,12 @@ class InsulinCalculation extends Component {
         <div>{this.state.glycemie > "1.20" ? this.hyperglycemie() : ""}</div>
 
         <div>
-          <button className="InsulinCalculation-button" onClick={this.calculhypoglycemie}>
+          <button
+            className="InsulinCalculation-button"
+            onClick={this.calculhypoglycemie}
+          >
             <div className="Button-Border"></div>
-            <img className="Button-Icon-Checked" src = {icon}/>
+            <img className="Button-Icon-Checked" src={icon} />
           </button>
         </div>
 
