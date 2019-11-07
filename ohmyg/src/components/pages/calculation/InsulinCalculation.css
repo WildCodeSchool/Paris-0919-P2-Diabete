@@ -8,6 +8,12 @@
 @import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 
 
+.InsulinCalculation-button:active {
+  top:4px;
+}
+.InsulinCalculation-button:hover {
+  cursor: pointer;
+}
 .insulinCalculationContainer {
   display: grid;
   grid-auto-columns: 1fr;
@@ -126,10 +132,12 @@ label {
   display: flex;
   font-size: 1.5em;
   border: 4px solid grey;
-  width: 4em;
+  min-width: 4em;
+  width: auto;
   height: 2em;
   align-self: center;
   justify-self: center;
+  padding:0 1em;
 }
 
 #number {
@@ -139,7 +147,7 @@ label {
 
 /* size smiley */
 
-.smileyHypo {
+.smileyHypo, .smileyHyper {
   width: 85%;
   height: auto;
 }
@@ -156,6 +164,7 @@ label {
 @media screen and (max-width: 959px) {
     /* BUTTON */
   
+
     .InsulinCalculation-button {
       margin: 3vw;
       width: 60%;
@@ -214,7 +223,7 @@ label {
   #totalGlucides {
     width: 9em;
   }
-  .smileyHypo {
+  .smileyHypo .smileyHyper {
     width: 50%;
     height: auto;
   }
@@ -248,7 +257,9 @@ label {
   }
 
   .totalNumber {
-    width: 8em;
+    min-width: 8em;
+    width: auto;
     height: 3.5em;
+    padding:0 1em;
   }
 }
