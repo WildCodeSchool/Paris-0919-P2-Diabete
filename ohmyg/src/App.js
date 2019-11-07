@@ -19,7 +19,7 @@ const App = () => {
             <Route path="/nutritioninfo" component={NutritionInfo} /> 
         </Switch>
     </div>
-  );
+  )
 }
 
 export default App;
