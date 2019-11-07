@@ -154,7 +154,8 @@ button{
     width: 20%;
     height: 3em;
     font-size: 1.2em;
-    background-color: aqua;
+    background-color: #08f9d6;
+    border:none;
 }
 
 /* size smiley */
