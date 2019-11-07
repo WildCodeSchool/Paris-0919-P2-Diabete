@@ -21,7 +21,7 @@
 }
 
 .food-box {
-    margin: 5vw 5vw 0;
+    margin: 0 5vw;
     display: flex;
     flex-direction: column;
 }
@@ -87,24 +87,13 @@
     .sixBoxes > * {
         height: 26vw;
     }
+
+    .sixBoxes h2 {
+        font-size: 1.2em;
+    }
 }
 
 @media screen and (min-width: 1051px) {
-
-    .mealAndCalcul {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        margin: 0;
-    }
-
-    .meal, .calcul, .news, .nutri {
-        width: 100%;
-        height: 18vw;
-        margin-bottom: 3vw;
-        box-shadow: 14px 14px black;
-        border: 5px solid black;
-    }
 
     .meal, .news {
         margin-right: 3vw;

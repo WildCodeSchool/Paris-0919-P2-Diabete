@@ -6,7 +6,8 @@ import logo from "../../../assets/pictures/logoOMGPurple.svg"
 import "./News.css"
 import icon from "../../../assets/icons/picto-section-news.png"
 import HeaderMobile from '../../layout/HeaderMobile';
-// import toncomponent from "./toncomponent.js"
+import NewsContent from './NewsContent';
+
 
 
 const News = () => {
@@ -18,7 +19,7 @@ const News = () => {
         <HeaderMobile src = {logo}/>
         <ContentFrame
             src = {icon}
-            // content = {<toncomponent/>}
+             content = {<NewsContent/>}
         />
         <Footer color = 'footer-news'/>
       </div>

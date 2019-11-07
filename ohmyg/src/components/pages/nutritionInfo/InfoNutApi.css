@@ -1,7 +1,7 @@
 .infoNutApi-mainBox{
     display: flex;
     flex-direction: column;
-    margin: 5vw;
+    margin: 1.5vw 5vw;
 }
 
 .food-card {
@@ -22,7 +22,7 @@
     .infoNutApi-mainBox{
         display: flex;
         flex-direction: column;
-        margin: 5vw;
+        margin: 2vw 5vw;
     }
 
     .food-card {
