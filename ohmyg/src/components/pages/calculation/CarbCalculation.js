@@ -14,6 +14,7 @@ class CarbCalculation extends React.Component {
         carbRatio: 0,
         totalCarb: 0,
         galleryItems: [],
+        buttonIsClicked: false,
     }
 
     
@@ -66,12 +67,18 @@ class CarbCalculation extends React.Component {
         await this.setState({totalCarb: result })
 
     }
+
+    buttonClick = () => {
+        this.setState({buttonIsClicked: true})
+        console.log(this.state.buttonIsClicked)
+
+    }
     
     render() {
         let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
         
         let newGalleryItems = this.state.galleryItems.map((i) => <h2 key={i.dish}>{i.dish}<br />{i.dishCarb}</h2>)
-        
+        console.log(this.state.buttonIsClicked)
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
@@ -135,10 +142,11 @@ class CarbCalculation extends React.Component {
             </div>
                 </div>
                 <div className="meal-CalculationButton">
-                    <button>Calculation</button>
+                    <button onClick={this.buttonClick}>Calculation</button>
 
                 </div>
-                    <InsulinCalculation />
+                {this.state.buttonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} /> : "" } 
+                
             </div>
         );
     }
