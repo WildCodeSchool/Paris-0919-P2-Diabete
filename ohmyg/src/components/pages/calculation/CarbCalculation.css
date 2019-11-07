@@ -176,10 +176,19 @@ label {
    text-align: center;
 }
 
-.buttonTrashNotOk{
-   display: none;
+.carbs-list{
+   display: flex;
+   flex-direction: row;
+   font-size: 1em;
 }
 
-.buttonTrashOk{
-   background-color: blueviolet;
+.foodList{
+   border: 2px solid black;
+   list-style: none;
+   width:30vw;
+   height:7em; 
+   overflow: hidden;
+   margin: 3px;
+   display: flex;
+   flex-direction: column;
 }

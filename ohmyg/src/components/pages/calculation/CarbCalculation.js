@@ -90,7 +90,6 @@ class CarbCalculation extends React.Component {
     
         buttonTrash =() => {
             this.setState({buttonDeleteClicked : true})
-            console.log(this.state.buttonDeleteClicked);
         }
 
         // slider= async (value) => {
@@ -154,7 +153,10 @@ class CarbCalculation extends React.Component {
                 <div className="carbButtons">
                     <button className="valid-button" 
                     onClick= {this.handleClick}>V</button>
+                <button>Poubelle</button>
                 </div>
+                
+                
             <div className='carbCalculation-totalCarousel'>
                 <div className='carbCalculation-addition'>
                     <p className='carbCalculation-p'>{this.state.totalCarb} g</p>
@@ -162,16 +164,13 @@ class CarbCalculation extends React.Component {
                 <div className='carbs-list'>
 
                     {this.state.galleryItems.map(elem => 
-                        <ul onClick= {this.state.buttonDeleteClicked ? "className='buttonTrashNotOk'" : "className='buttonTrashOk'"} > 
+                        <ul className='foodList'  > 
                         <li> {elem.dish}</li>
                         <li> {elem.dishCarb}</li>
                     </ul>)}
 
             </div>
 
-            <div>
-                <button className='buttonTrashOk' className='buttonTrashNotOk'>Poubelle</button>
-            </div>
                 </div>
                 <div className="meal-CalculationButton">
                     <button onClick={this.buttonClick}>Calculation</button>
