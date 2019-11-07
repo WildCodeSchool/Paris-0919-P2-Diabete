@@ -1,113 +1,132 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 .fourBoxes {
-    margin: 5vw;
+  margin: 5vw;
 }
 
 .mealAndCalcul {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.meal, .calcul, .news, .nutri {
-    margin-bottom: 6vw;
-    display: flex;
-    justify-content: center;
-    box-shadow: 8px 8px black;
-    border: 4px solid black;
-    background-color: white;
-    background-size: cover;
+.meal,
+.calcul,
+.news,
+.nutri {
+  margin-bottom: 6vw;
+  display: flex;
+  justify-content: center;
+  box-shadow: 8px 8px black;
+  border: 4px solid black;
+  background-color: white;
+  background-size: cover;
 }
 
-.meal, .calcul {
-    width: 100%;
-    height: 38vw;
+.meal,
+.calcul {
+  width: 100%;
+  height: 38vw;
 }
 
 .newsAndNutri {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.news, .nutri {
-    width: 100%;
-    height: 18.5vw;
+.news,
+.nutri {
+  width: 100%;
+  height: 18.5vw;
 }
 
 .news {
-    margin-right: 6vw;
+  margin-right: 6vw;
 }
 
-.mealAndCalcul a, .newsAndNutri a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mealAndCalcul a,
+.newsAndNutri a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.iconNews, .iconInfosNut {
-    width: 85px;
-    height: auto;
-    margin: auto;
+.iconNews,
+.iconInfosNut {
+  width: 85px;
+  height: auto;
+  margin: auto;
 }
 
-
-.iconMeal, .iconCalcul {
-    width: 140px;
-    height: auto;
-    margin: auto;
+.iconMeal,
+.iconCalcul {
+  width: 140px;
+  height: auto;
+  margin: auto;
 }
-
 
 @media screen and (min-width: 1051px) {
-    .fourBoxes {
-        margin: 8vw 16vw 7vw 16vw;
-    }
+  .fourBoxes {
+    margin: 8vw 16vw 7vw 16vw;
+  }
 
-    .mealAndCalcul {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        margin: 0;
-    }
+  .mealAndCalcul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0;
+  }
 
-    .meal, .calcul, .news, .nutri {
-        width: 100%;
-        height: 18vw;
-        margin-bottom: 3vw;
-        box-shadow: 14px 14px black;
-        border: 4px solid black;
-    }
+  .meal, .calcul, .news, .nutri {
+    width: 100%;
+    height: 18vw;
+    margin-bottom: 3vw;
+    box-shadow: 14px 14px black;
+    border: 4px solid black;
+  }
 
-  
-    .fade-in-bck {
-        animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
-    }
+  .scale-up-center {
+    -webkit-animation: scale-up-center 0.5s cubic-bezier(0.39, 0.575, 0.565, 1)
+      1.3s both;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 1.3s both;
+  }
 
- @keyframes fade-in-bck {
+  @-webkit-keyframes scale-up-center {
     0% {
-      transform: translateZ(80px);
-      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
     }
     100% {
-      transform: translateZ(0);
-      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
     }
   }
-  
-  
-    .meal, .news {
-        margin-right: 3vw;
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
     }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
 
-    .iconMeal, .iconCalcul, .iconNews, .iconInfosNut {
-        width: 160px;
-        height:auto;
-        margin: auto;
-    }
+  .meal,
+  .news {
+    margin-right: 3vw;
+  }
+
+  .iconMeal,
+  .iconCalcul,
+  .iconNews,
+  .iconInfosNut {
+    width: 160px;
+    height: auto;
+    margin: auto;
+  }
 }

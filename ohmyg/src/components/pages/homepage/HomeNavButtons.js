@@ -13,24 +13,24 @@ const HomeNavButtons = () => {
         <>  
             <div className="fourBoxes">
                 <div className="mealAndCalcul">
-                    <div className="meal fade-in-bck">
+                    <div className="meal scale-up-center">
                         <Link to="/meal">
                             <img className = "iconMeal" src={pictoSectionRepas}/>                   
                         </Link>
                     </div>
-                    <div className="calcul fade-in-bck">
+                    <div className="calcul scale-up-center">
                         <Link to="/calculation">
                             <img className = "iconCalcul" src={pictoSectionCalcul}/>
                         </Link>
                     </div>
                 </div>
                 <div className="newsAndNutri">
-                    <div className="news fade-in-bck">
+                    <div className="news scale-up-center">
                         <Link to="/news">
                             <img className = "iconNews" src={pictoSectionNews}/>
                         </Link>
                     </div>
-                    <div className="nutri fade-in-bck">
+                    <div className="nutri scale-up-center">
                         <Link to="/nutritioninfo">
                             <img className = "iconInfosNut" src={pictoSectionInfosNut}/>
                         </Link>
