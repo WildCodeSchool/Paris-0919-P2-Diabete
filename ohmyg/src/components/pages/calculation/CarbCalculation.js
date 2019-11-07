@@ -2,8 +2,7 @@ import React from 'react'
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 import './CarbCalculation.css';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+import InsulinCalculation from "./InsulinCalculation"
 
 class CarbCalculation extends React.Component {
     state = {
@@ -13,6 +12,7 @@ class CarbCalculation extends React.Component {
         carbRatio: 0,
         totalCarb: 0,
         galleryItems: [],
+        buttonIsClicked: false,
     }
 
     
@@ -66,20 +66,17 @@ class CarbCalculation extends React.Component {
 
     }
 
-    thumbItem = (item, i) => (
-        <span
-          style={{ padding: 10 }}
-          key={item}
-          onClick={() => this.Carousel.slideTo(i)}
-        >
-          *{" "}
-        </span>)
+    buttonClick = () => {
+        this.setState({buttonIsClicked: true})
+        console.log(this.state.buttonIsClicked)
+
+    }
     
     render() {
         let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
         
         let newGalleryItems = this.state.galleryItems.map((i) => <h2 key={i.dish}>{i.dish}<br />{i.dishCarb}</h2>)
-        
+        console.log(this.state.buttonIsClicked)
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
@@ -130,19 +127,22 @@ class CarbCalculation extends React.Component {
                 <div className='carbCalculation-addition'>
                     <p className='carbCalculation-p'>{this.state.totalCarb} g</p>
                 </div>
-                <div className='carbo-carousel'>
-                    <AliceCarousel
-                        // className='carboCalculation-aliceCarousel'
-                        items={newGalleryItems}
-                        // dotsDisabled={true}
-                        responsive={this.responsive}
-                        fadeOutAnimation={true}
-                        mouseTrackingEnabled={true}
-                        onSlideChange={this.onSlideChange}
-                        onSlideChanged={this.onSlideChanged}
-                    />
-                </div>
+                <div className='carbs-list'>
+
+                    {this.state.galleryItems.map(elem => 
+                        <ul > 
+                        <li> {elem.dish}</li>
+                        <li> {elem.dishCarb}</li>
+                    </ul>)}
+
             </div>
+                </div>
+                <div className="meal-CalculationButton">
+                    <button onClick={this.buttonClick}>Calculation</button>
+
+                </div>
+                {this.state.buttonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} /> : "" } 
+                
             </div>
         );
     }
