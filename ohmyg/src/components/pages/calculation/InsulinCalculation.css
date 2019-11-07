@@ -18,12 +18,14 @@ p{
     display: grid;
     grid-auto-columns: 1fr;
     align-items: center;
+    text-align:center;
 }
 
 .ratioAndGlycemie, .hyperglycemie {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    text-align:center;
     /* grid-column-gap: 0em; */
     
 }
@@ -35,6 +37,7 @@ p{
 }
 
 .inputAndLabels {
+    text-align:center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "label input unit";
