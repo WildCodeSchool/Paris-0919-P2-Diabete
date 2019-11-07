@@ -13,20 +13,25 @@ class CarbCalculation extends React.Component {
         totalCarb: 0,
         galleryItems: [],
         buttonIsClicked: false,
+        modifyingItem: false,
     }
 
     
     
     newFood = () => {
-        this.setState({name: this.props.newName})
+        this.setState({name: this.props.newName}, _=>{
+            console.log(this.state);
+            
+        })
         this.setState({carb100g: this.props.newCarbs})
     }
 
     componentDidUpdate() {
-        if (this.state.name !== this.props.newName || this.state.carb100g !== this.props.newCarbs) {
-            this.newFood()
-        }
-    }
+        if (this.state.modifyingItem === false) {
+             if (this.state.name !== this.props.newName || this.state.carb100g !== this.props.newCarbs) {
+                this.newFood()
+             }
+          }}
     
 
     responsive = {
@@ -55,9 +60,11 @@ class CarbCalculation extends React.Component {
         let carbRatioItem = (this.state.carb100g*this.state.value/100).toFixed(2)
         this.setState({carbRatio: carbRatioItem}, async () => {
             let objectName = this.state.name;
-            let objectCarbRatio = this.state.carbRatio
+            let objectCarbRatio = this.state.carbRatio;
+            let objectValue = this.state.value;
+            let objectCarb100 = this.state.carb100g
 
-            const tab = [...this.state.galleryItems,{dish: objectName, dishCarb: objectCarbRatio} ]
+            const tab = [...this.state.galleryItems,{dish: objectName, dishCarb: objectCarbRatio, dishWeight : objectValue, dishCarb100 : objectCarb100} ]
             await this.setState({galleryItems: tab })
         } )
         const result = await parseFloat(this.state.totalCarb) + parseFloat(this.state.carbRatio)
@@ -71,12 +78,28 @@ class CarbCalculation extends React.Component {
         console.log(this.state.buttonIsClicked)
 
     }
+
+    modifyItem = async (elem) => {
+        await this.setState({modifyingItem : true})
+        this.setState({name : elem.dish})
+        this.setState({value: elem.dishWeight})
+        this.setState({carbRatio: (elem.dishCarb100*elem.dishWeight)/100})
+        }
+    
+        // slider= async (value) => {
+        //     await this.setState({ value: value });
+        //     let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
+        //     this.setState({carbRatio: carbRatio})
+    
+    
+        // }
+        
     
     render() {
         let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
-        
-        let newGalleryItems = this.state.galleryItems.map((i) => <h2 key={i.dish}>{i.dish}<br />{i.dishCarb}</h2>)
+        console.log(this.state.galleryItems)
         console.log(this.state.buttonIsClicked)
+
         return (
             <div className="range">
                 <div className='blockFoodWeight'>
@@ -130,7 +153,7 @@ class CarbCalculation extends React.Component {
                 <div className='carbs-list'>
 
                     {this.state.galleryItems.map(elem => 
-                        <ul > 
+                        <ul onClick={ () => this.modifyItem(elem)} > 
                         <li> {elem.dish}</li>
                         <li> {elem.dishCarb}</li>
                     </ul>)}
