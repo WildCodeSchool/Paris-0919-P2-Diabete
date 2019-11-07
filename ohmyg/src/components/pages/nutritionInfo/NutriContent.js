@@ -5,15 +5,15 @@ import './NutriContent.css'
 class NutriContent extends React.Component {
     render() {
         return(
-            <div>
-                <div>
+            <div className="main-box">
+                <div className="search-box">
                     <ApiRequest
                         name = {this.getChosenFoodName}
                         carbs = {this.getChosenFoodCarbs}
                     />
                 </div>
                 <div className="sixBoxes">
-                    <div className="fuitAndVeg">
+                    <div className="fruitAndVeg">
                         <a href="">
                             {/* <img className = "iconMeal" src={pictoSectionRepas}/> */}
                             Fruits et légumes
