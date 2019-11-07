@@ -1,6 +1,6 @@
 import React from 'react'
 import './HomeNavButtons.css'
-
+import { Link } from "react-router-dom"
 import pictoSectionRepas from '../../../assets/icons/picto-section-repas.png';
 import pictoSectionCalcul from '../../../assets/icons/picto-section-calcul.png';
 import pictoSectionNews from '../../../assets/icons/picto-section-news.png';
@@ -14,26 +14,26 @@ const HomeNavButtons = () => {
             <div className="fourBoxes">
                 <div className="mealAndCalcul">
                     <div className="meal">
-                        <a href="">
+                        <Link to="/meal">
                             <img className = "iconMeal" src={pictoSectionRepas}/>                   
-                        </a>
+                        </Link>
                     </div>
                     <div className="calcul">
-                        <a href="">
+                        <Link to="/calculation">
                             <img className = "iconCalcul" src={pictoSectionCalcul}/>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="newsAndNutri">
                     <div className="news">
-                        <a href="">
+                        <Link to="/news">
                             <img className = "iconNews" src={pictoSectionNews}/>
-                        </a>
+                        </Link>
                     </div>
                     <div className="nutri">
-                        <a href="">
+                        <Link to="/nutritioninfo">
                             <img className = "iconInfosNut" src={pictoSectionInfosNut}/>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
