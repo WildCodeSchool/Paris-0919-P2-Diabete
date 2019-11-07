@@ -6,6 +6,7 @@ import logo from "../../../assets/pictures/logoOMGOrange.svg"
 import "./Meal.css"
 import icon from "../../../assets/icons/picto-section-repas.png"
 import HeaderMobile from '../../layout/HeaderMobile';
+// import toncomponent from "./toncomponent.js"
 
 const Meal = () => {
     return (
@@ -14,7 +15,9 @@ const Meal = () => {
                  color = 'icones-meal'  
         />
         <HeaderMobile src = {logo}/>
-        <ContentFrame src = {icon}/>
+        <ContentFrame src = {icon}
+        // content = {<toncomponent/>}
+        />
         <Footer color = 'footer-meal'/>
       </div>
     );

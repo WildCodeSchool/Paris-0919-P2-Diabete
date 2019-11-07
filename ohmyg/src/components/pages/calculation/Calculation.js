@@ -6,6 +6,7 @@ import logo from "../../../assets/pictures/logoOMGBlue.svg"
 import icon from "../../../assets/icons/picto-section-calcul.png"
 import "./Calculation.css"
 import HeaderMobile from '../../layout/HeaderMobile';
+// import toncomponent from "./toncomponent.js"
 
 const Calculation = () => {
     return (
@@ -14,7 +15,9 @@ const Calculation = () => {
                  color = 'icones-calculation'  
         />
         <HeaderMobile src = {logo}/>
-        <ContentFrame src = {icon}/>
+        <ContentFrame src = {icon}
+        // content = {<toncomponent/>}
+        />
         <Footer color = 'footer-calculation'/>
       </div>
     );
