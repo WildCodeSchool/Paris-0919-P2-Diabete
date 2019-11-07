@@ -9,14 +9,17 @@ import HeaderMobile from '../../layout/HeaderMobile';
 
 const Homepage = () => {
     return (
-      <div className = "homepage-background">
-        <Navbar  src = {logo}
-                 color = 'icones-homepage'  
-        />
+      <>
+      <div>
+          <Navbar  src = {logo}
+                  color = 'icones-homepage'  
+          />
         <HeaderMobile src = {logo}/>
         <HomeNavButtons />
         <Footer color = 'footer-homepage'/>
       </div>
+      <div className = "homepage-background-slide-in-bottom"></div>
+      </>
     );
   }
 
