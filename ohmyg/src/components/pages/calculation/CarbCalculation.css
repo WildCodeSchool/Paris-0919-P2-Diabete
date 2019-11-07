@@ -43,11 +43,17 @@ label {
 .blockFoodWeight input{
    grid-area: input;
    margin-bottom : 5px;
-   width: 3.7em;
+   width: 3.6em;
    height: 2.3em;
    text-align: center;
    font-size:1.2em;
    border: 4px solid grey;
+}
+         
+
+.range{
+   margin-top: 5vw;
+   margin-bottom: 5vw;
 }
 
 /*ALIGNEMENT OF SLIDER AND INPUT FOODWEIGHT */
@@ -65,11 +71,12 @@ label {
 .inputWeight, .inputCarbo{
    display: flex;
    align-items: center;
-   margin: 5vw;
+   margin: 5vw 0 5vw 0;
 }
 
 .foodWeight, .carbohydrate{
-   margin: 1vw 1vw;
+   margin: 1vw 0 1vw 0;
+   padding: 0; 
 
 }
 
@@ -80,14 +87,17 @@ label {
    margin: auto;
 }
 
-.range{
-   margin-top: 5vw;
-   margin-bottom: 5vw;
-}
 
 .carbCalculation-h2{
    margin: 5vw;;
 }
+
+.carbCalculation-label{
+   padding: 0; 
+}
+
+
+
 
 /* BUTTON */
 
@@ -166,23 +176,19 @@ label {
    text-align: center;
 }
 
-/* .alice-carousel__stage{
-   width: 30vw;
-   height:1vw
-}  */
 
-/* .alice-carousel__stage-item__active{
-   width: 30vw;
-} */
+
 
 .alice-carousel__stage-item {
-   padding-left: 10px;
-   padding-right: 10px;
+   display: none;
+   padding: 0;
+   margin:0;
    box-sizing: border-box;
+   font-size: 1em;
    border: 1px solid greenyellow;
-   width: 30vw;
+   max-width: 100%;
    height: auto;
- } 
+} 
 
  .alice-carousel__next-btn {
    text-align: left;
@@ -190,20 +196,23 @@ label {
  }
  .alice-carousel__wrapper{
     font-size:0.75em;
-    border: 1.5px solid black;
-    max-width: 30vw;
-    height: 1vw;
+    border: 4px solid black;
+    max-width: 100%;
+    height: auto;
  }
 
  ul.alice-carousel__dots {
-   border: 1px solid yellow;
-   /* margin: 5px auto;
-   overflow: hidden; */
+    display: none;
  }
 
  .thumb-container {
    border: 1px solid red;
  }
 
+.alice-carousel div{
+   width: 100%;
+   height:auto;
+   border: 2px solid salmon;
 
+}
  

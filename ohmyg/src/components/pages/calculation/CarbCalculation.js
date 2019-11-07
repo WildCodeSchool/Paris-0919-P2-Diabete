@@ -65,6 +65,15 @@ class CarbCalculation extends React.Component {
         await this.setState({totalCarb: result.toFixed(2) })
 
     }
+
+    thumbItem = (item, i) => (
+        <span
+          style={{ padding: 10 }}
+          key={item}
+          onClick={() => this.Carousel.slideTo(i)}
+        >
+          *{" "}
+        </span>)
     
     render() {
         let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
@@ -88,7 +97,7 @@ class CarbCalculation extends React.Component {
                     
                     <div className='inputWeightCarbo'>
                         <div className='inputWeight'>
-                            <label>Poids </label>
+                            <label className='carbCalculation-label'>Poids </label>
                             <div className='borderInputLabel'>
                                 <input 
                                     className="foodWeight"
@@ -96,18 +105,18 @@ class CarbCalculation extends React.Component {
                                     maxValue={500}
                                     value={this.state.value}
                                     onChange={this.handleChange} />
-                                <label> g</label>
+                                <label className='carbCalculation-label'> g</label>
                             </div>
                         </div>
                         <div className='inputCarbo'>
-                            <label>Glucides </label>
+                            <label className='carbCalculation-label'>Glucides </label>
                             <div className='borderInputLabel'>
                                 <input 
                                     className="carbohydrate"
                                     type="number"
                                     value={carbRatio}
                                 />
-                                <label> g</label>
+                                <label className='carbCalculation-label'> g</label>
                             </div>
                         </div>
                     </div>
@@ -123,13 +132,14 @@ class CarbCalculation extends React.Component {
                 </div>
                 <div className='carbo-carousel'>
                     <AliceCarousel
-                        className='carboCalculation-aliceCarousel'
+                        // className='carboCalculation-aliceCarousel'
                         items={newGalleryItems}
+                        // dotsDisabled={true}
                         responsive={this.responsive}
                         fadeOutAnimation={true}
                         mouseTrackingEnabled={true}
-                        // onSlideChange={this.onSlideChange}
-                        // onSlideChanged={this.onSlideChanged}
+                        onSlideChange={this.onSlideChange}
+                        onSlideChanged={this.onSlideChanged}
                     />
                 </div>
             </div>
