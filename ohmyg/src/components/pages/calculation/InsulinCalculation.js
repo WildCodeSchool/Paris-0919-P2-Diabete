@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./InsulinCalculation.css";
 import smileyHypo from "../../../assets/icons/pictos-16.png";
 import smileyHyper from "../../../assets/icons/pictos-17.png";
+import icon from "../../../assets/icons/checked.png";
 
 class InsulinCalculation extends Component {
   state = {
@@ -166,9 +167,9 @@ class InsulinCalculation extends Component {
         <div>{this.state.glycemie > "1.20" ? this.hyperglycemie() : ""}</div>
 
         <div>
-          <button onClick={this.calculhypoglycemie} value="&#x23B7;">
-            {" "}
-            Clic{" "}
+          <button className="InsulinCalculation-button" onClick={this.calculhypoglycemie}>
+            <div className="Button-Border"></div>
+            <img className="Button-Icon-Checked" src = {icon}/>
           </button>
         </div>
 
