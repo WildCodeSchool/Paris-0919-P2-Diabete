@@ -15,7 +15,7 @@
         box-shadow: 10px 10px black;
         background-color: white;
         border: 3px solid black;
-        height: 700px;
+        height: auto;
         position: relative;
     }
 
@@ -46,7 +46,7 @@
         box-shadow: 10px 10px black;
         background-color: white;
         border: 4px solid black;
-        height: 500px;
+        height: auto;
         position: relative;
     }
 

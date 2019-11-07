@@ -1,0 +1,29 @@
+.Main-Video {
+display:flex;
+
+
+}
+#video1, #video2, #video3 {
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+
+.Small-Video{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+}
+
+.Big-Video{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+
+}
+
+
+
+
+        
