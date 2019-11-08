@@ -26,8 +26,6 @@ class InsulinCalculation extends Component {
   };
 
   hyperChange = e => {
-    console.log("allo");
-
     this.handleChange();
     if (this.state.glycemie > "1.2") {
       this.setState(
@@ -73,7 +71,7 @@ class InsulinCalculation extends Component {
                 id="flecheinput"
                 type="number"
                 name="glycemiecible"
-                onChange={this.hyperChange}
+                onChange={this.handleChange}
                 value={this.state.glycemiecible}
               />
               <label className="unit"> g/l</label>
