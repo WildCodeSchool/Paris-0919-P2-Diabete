@@ -31,13 +31,18 @@ class InsulinCalculation extends Component {
       this.setState(
         {
           hyper: true
-        },
-        _ => {
-          console.log(this.state.hyper);
-        }
-      );
-      return this.state.hyper;
+        })
     }
+
+    if (this.state.glycemie > "0.1" && this.state.glycemie < "1.2") {
+      this.setState(
+        {
+          hypo: true
+        })
+    }
+    return (this.state.hyper,
+      this.state.hypo)
+
   };
 
   hyperglycemie = () => {
@@ -46,7 +51,7 @@ class InsulinCalculation extends Component {
         <img
           className="smileyHyper"
           src={smileyHyper}
-          alt="Tu es en hyperglycémie, remplie la suite :)"
+          alt="Tu es en hyperglycémie, remplis la suite :)"
         />
         <div className="hyperglycemie">
           <div className="sensibilite">
@@ -97,8 +102,9 @@ class InsulinCalculation extends Component {
       this.setState({ hyper: true });
       const ecart = this.state.glycemie - this.state.glycemiecible;
       const correction = ecart / this.state.sensibilite;
+      const totalCarbs = (this.state.totalGlucides / this.state.ratio + correction)
       this.setState({
-        total: this.state.totalGlucides / this.state.ratio + correction
+        total: totalCarbs.toFixed(2)
       });
       console.log(this.state.total);
       return this.state.total;
@@ -106,6 +112,7 @@ class InsulinCalculation extends Component {
   };
 
   render() {
+    console.log(this.state.hypo)
     return (
       <div className="insulinCalculationContainer">
         <div className="totalGlucides">
@@ -148,8 +155,8 @@ class InsulinCalculation extends Component {
                   this.state.hypo === true
                     ? "glycemieInputHypoColor"
                     : this.state.glycemie > "1.20"
-                    ? "glycemieInputHyperColor"
-                    : ""
+                      ? "glycemieInputHyperColor"
+                      : ""
                 }
                 id="glycemie"
                 type="number"
@@ -175,7 +182,7 @@ class InsulinCalculation extends Component {
         </div>
 
         <div
-          className={this.state.hypo === true ? "warning" : "no-hypoglycemie"}
+          className={this.state.hypo ? "warning" : "no-hypoglycemie"}
         >
           <img
             className="smileyHypo"
