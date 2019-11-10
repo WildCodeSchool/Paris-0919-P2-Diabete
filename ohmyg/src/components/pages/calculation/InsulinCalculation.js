@@ -12,7 +12,6 @@ class InsulinCalculation extends Component {
     sensibilite: "",
     glycemiecible: "",
     total: "0",
-    hypo: false,
   };
 
   handleChange = e => {
@@ -24,67 +23,18 @@ class InsulinCalculation extends Component {
     });
   };
 
-
-  hyperglycemie = () => {
-    return (
-      <div>
-        <img
-          className="smileyHyper"
-          src={smileyHyper}
-          alt="Tu es en hyperglycémie, remplis la suite :)"
-        />
-        <div className="hyperglycemie">
-          <div className="sensibilite">
-            <p className="inputTitle">Sensibilité</p>
-            <div className="inputAndLabels">
-              <label className="label">1 pour </label>
-              <input
-                id="sensibiliteinput"
-                type="number"
-                name="sensibilite"
-                onChange={this.handleChange}
-                value={this.state.sensibilite}
-              />
-              <label className="unit"> g/l</label>
-            </div>
-          </div>
-
-          <div className="glycemieCible">
-            <p className="inputTitle">Glycémie cible</p>
-            <div className="inputAndLabels">
-              <input
-                id="flecheinput"
-                type="number"
-                name="glycemiecible"
-                onChange={this.handleChange}
-                value={this.state.glycemiecible}
-              />
-              <label className="unit"> g/l</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
   calculhypoglycemie = () => {
     if (this.state.glycemie < "0.8") {
-      this.setState({ hypo: true });
-      return this.state.hypo;
+      this.setState({ total: "0" });
     } else if (this.state.glycemie >= "0.80" && this.state.glycemie <= "1.20") {
-      this.setState({ hypo: false });
       this.setState({ total: this.state.totalGlucides / this.state.ratio });
-      return this.state.total;
     } else {
-      this.setState({ hypo: false });
       const ecart = this.state.glycemie - this.state.glycemiecible;
       const correction = ecart / this.state.sensibilite;
       const totalCarbs = (this.state.totalGlucides / this.state.ratio + correction)
       this.setState({
         total: totalCarbs.toFixed(2)
       });
-      console.log(this.state.total);
-      return this.state.total;
     }
   };
 
@@ -131,7 +81,7 @@ class InsulinCalculation extends Component {
                 className={
                   this.state.glycemie > "1.20"
                     ? "glycemieInputHyperColor"
-                    : this.state.glycemie > "0.1" && this.state.glycemie < "0.8" ? "glycemieInputHypoColor" : ""
+                    : this.state.glycemie > "0.01" && this.state.glycemie < "0.8" ? "glycemieInputHypoColor" : ""
                 }
                 id="glycemie"
                 type="number"
@@ -144,7 +94,45 @@ class InsulinCalculation extends Component {
           </div>
         </div>
 
-        <div>{this.state.glycemie > "1.20" ? this.hyperglycemie() : ""}</div>
+        <div>{this.state.glycemie > "1.20" ? 
+         <div>
+         <img
+           className="smileyHyper"
+           src={smileyHyper}
+           alt="Tu es en hyperglycémie, remplis la suite :)"
+         />
+         <div className="hyperglycemie">
+           <div className="sensibilite">
+             <p className="inputTitle">Sensibilité</p>
+             <div className="inputAndLabels">
+               <label className="label">1 pour </label>
+               <input
+                 id="sensibiliteinput"
+                 type="number"
+                 name="sensibilite"
+                 onChange={this.handleChange}
+                 value={this.state.sensibilite}
+               />
+               <label className="unit"> g/l</label>
+             </div>
+           </div>
+ 
+           <div className="glycemieCible">
+             <p className="inputTitle">Glycémie cible</p>
+             <div className="inputAndLabels">
+               <input
+                 id="flecheinput"
+                 type="number"
+                 name="glycemiecible"
+                 onChange={this.handleChange}
+                 value={this.state.glycemiecible}
+               />
+               <label className="unit"> g/l</label>
+             </div>
+           </div>
+         </div>
+       </div>
+        : ""}</div>
 
         <div>{this.state.glycemie > "0.01" && this.state.glycemie < "0.8" ?
           <div
