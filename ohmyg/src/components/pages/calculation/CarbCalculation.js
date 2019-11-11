@@ -18,9 +18,9 @@ class CarbCalculation extends React.Component {
 
     
     newFood = () => {
+        this.setState({value : 100})  
         this.setState({name: this.props.newName})
         this.setState({carb100g: this.props.newCarbs})
-        this.setState({value : 100})  
     } 
 
     componentDidUpdate() {
@@ -59,7 +59,8 @@ class CarbCalculation extends React.Component {
     /* bouton validation */
 
     handleClick =   async () => {
-        if (this.state.modifyingItem === false) {
+        if (this.state.modifyingItem === false && this.state.name !== "") {
+
         let carbRatioItem = (this.state.carb100g*this.state.value/100).toFixed(2)
         this.setState({carbRatio: carbRatioItem}, async () => {
             let objectName = this.state.name;
@@ -73,6 +74,8 @@ class CarbCalculation extends React.Component {
         const result = await parseFloat(this.state.totalCarb) + parseFloat(this.state.carbRatio)
 
         await this.setState({totalCarb: result.toFixed(2) })
+        this.setState({value: 100})
+        this.setState({name : ""})
     }
 
     /* c'est dans le if ci-dessous, donc si on est en mode "modification", qu'il faut que les nouvelles valeurs du state remplacent celles de l'élément dans le tableau (avec un .find je pensais mais tu fais comme tu trouves) */
