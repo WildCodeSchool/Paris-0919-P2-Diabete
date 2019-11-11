@@ -18,14 +18,12 @@ class CarbCalculation extends React.Component {
     }
 
     
-    
+    /* Function that gets props from searchBar */
     newFood = () => {
-        this.setState({name: this.props.newName}, _=>{
-            console.log(this.state);
-            
-        })
+        this.setState({name: this.props.newName})
         this.setState({carb100g: this.props.newCarbs})
     }
+    /* --- */
 
     componentDidUpdate() {
         if (this.state.modifyingItem === false) {
@@ -35,6 +33,7 @@ class CarbCalculation extends React.Component {
           }}
     
 
+    /* Slider */
     responsive = {
         0: { items: 1 },
         1024: { items: 2 },
@@ -49,6 +48,8 @@ class CarbCalculation extends React.Component {
         console.debug('Item`s position after changes: ', e.item)
         console.debug('Slide`s position after changes: ', e.slide)
     }
+    /* --- */
+
     
     handleChange = (event) => {
         if (event.target.value > 500) {
@@ -57,6 +58,7 @@ class CarbCalculation extends React.Component {
         this.setState({value: event.target.value});
     }
 
+    /* Validation Button */
     handleClick =   async () => {
         let carbRatioItem = (this.state.carb100g*this.state.value/100).toFixed(2)
         this.setState({carbRatio: carbRatioItem}, async () => {
@@ -73,24 +75,35 @@ class CarbCalculation extends React.Component {
         await this.setState({totalCarb: result.toFixed(2) })
 
     }
+        /* --- */
 
-    buttonClick = () => {
-        this.setState({buttonIsClicked: true})
-        console.log(this.state.buttonIsClicked)
 
-    }
 
+
+    /* UL button that enables changes or suppression of a food item */
     modifyItem = async (elem) => {
         await this.setState({modifyingItem : true})
         
         this.setState({name : elem.dish})
-        this.setState({value: elem.dishWeight})
-        this.setState({carbRatio: (elem.dishCarb100*elem.dishWeight)/100})
+        this.setState({value: 100})
+        this.setState({carb100g: elem.dishCarb100})
+        console.log(elem)
+        console.log(this.state.name)
         }
+    /* --- */
+
     
-        buttonTrash =() => {
-            this.setState({buttonDeleteClicked : true})
-        }
+    // buttonTrash =() => {
+    //         this.setState({buttonDeleteClicked : true})
+    //     }
+
+    
+    // buttonClick = () => {
+    //         this.setState({buttonIsClicked: true})
+    //         console.log(this.state.buttonIsClicked)
+    
+    //     }
+
 
         // slider= async (value) => {
         //     await this.setState({ value: value });
@@ -104,8 +117,6 @@ class CarbCalculation extends React.Component {
     render() {
         let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
         console.log(this.state.galleryItems)
-        console.log(this.state.buttonIsClicked)
-        console.log(this.state.modifyingItem);
 
 
         return (
@@ -153,7 +164,7 @@ class CarbCalculation extends React.Component {
                 <div className="carbButtons">
                     <button className="valid-button" 
                     onClick= {this.handleClick}>V</button>
-                <button>Poubelle</button>
+                {/* <button>Poubelle</button> */}
                 </div>
                 
                 
@@ -164,7 +175,7 @@ class CarbCalculation extends React.Component {
                 <div className='carbs-list'>
 
                     {this.state.galleryItems.map(elem => 
-                        <ul className='foodList'  > 
+                        <ul className='foodList'  onClick={() => this.modifyItem}> 
                         <li> {elem.dish}</li>
                         <li> {elem.dishCarb}</li>
                     </ul>)}
