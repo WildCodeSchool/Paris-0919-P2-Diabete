@@ -1,0 +1,19 @@
+.NutriTable-content{
+    text-align: center;
+}
+
+.NutriTable-Tab {
+    border: solid 2px black;
+    text-align: center;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.NutriTable-Tab th, .NutriTable-Tab td {
+    border: solid 2px black;
+    padding: 0.7em 1.2em;
+}
+    
+.NutriTable-Tab th {
+    background-color: #08f9d6;
+}

@@ -30,7 +30,7 @@ class NutriContent extends React.Component {
                             Fruits et légumes
                         </h2>
                     </div>
-                    <div className="meatAndFish" onClick={() => this.changeProps("viande", "legume")}>
+                    <div className="meatAndFish" onClick={() => this.changeProps("viande", "poisson")}>
                         <h2>
                             {/* <img className = "iconCalcul" src={pictoSectionCalcul}/> */}
                             Viandes et Poissons

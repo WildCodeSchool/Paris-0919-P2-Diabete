@@ -10,21 +10,8 @@ import NutriContent from './NutriContent'
 
 import "./NutritionInfo.css"
 
-class NutritionInfo extends React.Component {
-    state = {
-        nameFromApi:"",
-        carbsFromApi:""
-    }
+const NutritionInfo = () => {
 
-    getChosenFoodName = (food) => {
-        this.setState({nameFromApi : food})
-    }
-
-    getChosenFoodCarbs = (food) => {
-        this.setState({carbsFromApi : food})
-    }
-
-    render() {
     return (
       <div className = "info-background">
         <Navbar  src = {logo}
@@ -35,7 +22,7 @@ class NutritionInfo extends React.Component {
         <Footer color = 'footer-info'/>
       </div>
     );
-  }
+  
 }
 
 export default NutritionInfo;
