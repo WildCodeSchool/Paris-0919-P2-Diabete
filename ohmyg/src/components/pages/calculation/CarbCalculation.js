@@ -12,18 +12,16 @@ class CarbCalculation extends React.Component {
         carbRatio: 0,
         totalCarb: 0,
         galleryItems: [],
-        buttonIsClicked: false,
-        buttonDeleteClicked: false,
+        calculationButtonIsClicked: false,
         modifyingItem: false,
     }
 
     
-    /* Function that gets props from searchBar */
     newFood = () => {
         this.setState({name: this.props.newName})
         this.setState({carb100g: this.props.newCarbs})
-    }
-    /* --- */
+        this.setState({value : 100})  
+    } 
 
     componentDidUpdate() {
         if (this.state.modifyingItem === false) {
@@ -33,7 +31,6 @@ class CarbCalculation extends React.Component {
           }}
     
 
-    /* Slider */
     responsive = {
         0: { items: 1 },
         1024: { items: 2 },
@@ -48,8 +45,6 @@ class CarbCalculation extends React.Component {
         console.debug('Item`s position after changes: ', e.item)
         console.debug('Slide`s position after changes: ', e.slide)
     }
-    /* --- */
-
     
     handleChange = (event) => {
         if (event.target.value > 500) {
@@ -58,8 +53,13 @@ class CarbCalculation extends React.Component {
         this.setState({value: event.target.value});
     }
 
-    /* Validation Button */
+
+    /* Boutons à modifier pour Charlotte : */
+
+    /* bouton validation */
+
     handleClick =   async () => {
+        if (this.state.modifyingItem === false) {
         let carbRatioItem = (this.state.carb100g*this.state.value/100).toFixed(2)
         this.setState({carbRatio: carbRatioItem}, async () => {
             let objectName = this.state.name;
@@ -73,51 +73,48 @@ class CarbCalculation extends React.Component {
         const result = await parseFloat(this.state.totalCarb) + parseFloat(this.state.carbRatio)
 
         await this.setState({totalCarb: result.toFixed(2) })
+    }
+
+    /* c'est dans le if ci-dessous, donc si on est en mode "modification", qu'il faut que les nouvelles valeurs du state remplacent celles de l'élément dans le tableau (avec un .find je pensais mais tu fais comme tu trouves) */
+
+        if (this.state.modifyingItem === true) {
+
+            this.setState({modifyingItem : false})
+        }
+
 
     }
-        /* --- */
+
+    /* Bouton poubelle */
+
+    deleteItem = () => {
+        this.setState({modifyingItem : false})
+    }
+
+    /* fin des boutons à modifier */
 
 
 
+    calculationButton = () => {
+        this.setState({calculationButtonIsClicked: true})
+    }
 
-    /* UL button that enables changes or suppression of a food item */
     modifyItem = async (elem) => {
         await this.setState({modifyingItem : true})
-        
         this.setState({name : elem.dish})
-        this.setState({value: 100})
-        this.setState({carb100g: elem.dishCarb100})
-        console.log(elem)
-        console.log(this.state.name)
+        this.setState({value: elem.dishWeight})
+        this.setState({carb100g : elem.dishCarb100})
         }
-    /* --- */
+    
 
-    
-    // buttonTrash =() => {
-    //         this.setState({buttonDeleteClicked : true})
-    //     }
-
-    
-    // buttonClick = () => {
-    //         this.setState({buttonIsClicked: true})
-    //         console.log(this.state.buttonIsClicked)
-    
-    //     }
-
-
-        // slider= async (value) => {
-        //     await this.setState({ value: value });
-        //     let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
-        //     this.setState({carbRatio: carbRatio})
-    
-    
-        // }
-        
-    
     render() {
         let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
-        console.log(this.state.galleryItems)
+        const weight = this.state.value
+        const ratio = 100/this.state.carb100g
+        let carbRatio2 = (weight/ratio).toFixed(2)
 
+        console.log(this.state.galleryItems)
+        console.log(this.state.modifyingItem)
 
         return (
             <div className="range">
@@ -153,7 +150,7 @@ class CarbCalculation extends React.Component {
                                 <input 
                                     className="carbohydrate"
                                     type="number"
-                                    value={carbRatio}
+                                    value={this.state.modifyingItem ? carbRatio2 : carbRatio }
                                 />
                                 <label className='carbCalculation-label'> g</label>
                             </div>
@@ -162,12 +159,12 @@ class CarbCalculation extends React.Component {
                 </div> 
 
                 <div className="carbButtons">
+                    {this.state.modifyingItem ? <button onClick={this.deleteItem}> Poubelle </button> : ""}
                     <button className="valid-button" 
                     onClick= {this.handleClick}>V</button>
-                {/* <button>Poubelle</button> */}
                 </div>
-                
-                
+
+
             <div className='carbCalculation-totalCarousel'>
                 <div className='carbCalculation-addition'>
                     <p className='carbCalculation-p'>{this.state.totalCarb} g</p>
@@ -175,19 +172,18 @@ class CarbCalculation extends React.Component {
                 <div className='carbs-list'>
 
                     {this.state.galleryItems.map(elem => 
-                        <ul className='foodList'  onClick={() => this.modifyItem}> 
+                        <ul onClick={ () => this.modifyItem(elem)} > 
                         <li> {elem.dish}</li>
                         <li> {elem.dishCarb}</li>
                     </ul>)}
 
             </div>
-
                 </div>
                 <div className="meal-CalculationButton">
-                    <button onClick={this.buttonClick}>Calculation</button>
+                    <button onClick={this.calculationButton}>Calculation</button>
 
                 </div>
-                {this.state.buttonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} /> : "" } 
+                {this.state.calculationButtonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} /> : "" } 
                 
             </div>
         );
