@@ -1,5 +1,5 @@
 import React from 'react'
-import ApiRequest from '../meal/ApiRequest';
+import ApiRequestInfo from './ApiRequestInfo';
 import InfoNutApi from "./InfoNutApi"
 import './NutriContent.css'
 
@@ -18,7 +18,7 @@ class NutriContent extends React.Component {
         return(
             <div className="main-box">
                 <div className="search-box">
-                    <ApiRequest
+                    <ApiRequestInfo
                         name = {this.getChosenFoodName}
                         carbs = {this.getChosenFoodCarbs}
                     />
