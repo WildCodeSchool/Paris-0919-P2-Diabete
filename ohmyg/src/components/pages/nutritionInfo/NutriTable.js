@@ -21,16 +21,16 @@ const NutriTable = (props) => {
                 <td colSpan="2" >Energie : {props.energie} kcal </td>
             </tr>
             <tr>
-                <td>Glucides : {props.glucides} g </td>
-                <td>dont Sucres : {props.sucres} g </td>
+                <td>{props.glucides === undefined ? 'Glucides : 0g' : `Glucides : ${props.glucides} g`}</td>
+                <td>{props.sucres === undefined ? 'Sucres : 0 g' : `Sucres : ${props.sucres} g`}</td>
             </tr>
             <tr>
-                <td>Protéines : {props.proteines} g</td>
-                <td>Lipides : {props.lipides} g</td>
+                <td>{props.proteines === undefined ? 'Protéines : 0g' : `Protéines : ${props.proteines} g`}</td>
+                <td>{props.lipides === undefined ? 'Lipides : 0g' : `Lipides : ${props.proteines} g`}</td>
             </tr>
             <tr>
-                <td>Sel : {props.sel} g</td>
-                <td>Fibres : {props.fibres} g</td>
+                <td>{props.sel === undefined ? 'Sel : 0g' : `Sel : ${props.sel} g`}</td>
+                <td>{props.fibres === undefined ? 'Fibres : 0g' : `Fibres : ${props.fibres} g`}</td>
             </tr>
         </tbody>
     </table>
