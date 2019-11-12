@@ -95,7 +95,7 @@ class CarbCalculation extends React.Component {
         const tab=this.state.galleryItems
         tab.splice(this.state.index,1)
         this.setState({galleryItems: tab})
-        const result = parseFloat(this.state.totalCarb) - parseFloat(this.state.carbRatio)
+        const result = (parseFloat(this.state.totalCarb) - parseFloat(this.state.carbRatio)).toFixed(2)
         this.setState({totalCarb: result}) 
     }
 
