@@ -164,21 +164,23 @@ class CarbCalculation extends React.Component {
                     </div>
                 </div>
 
-                <div >
-                    {this.state.modifyingItem ? 
-                    <button onClick={this.deleteItem} >
-                    <div className="Button-Border"></div>
-                    <img className="Button-Icon-Checked" src={bin} />
-                    </button> : ""}
+                <div className="CarbCalculation-buttonContainer">
+                    <div className="CarbButtons">
+                        <button className="CarbCalculation-Validation"
+                            onClick={this.handleClick}>
+                            <div className="Button-Border"></div>
+                            {/* <img className="Button-Icon-Checked" src={icon} /> */}
+                        </button>
+                        
+                        {this.state.modifyingItem ?
+                            <button onClick={this.deleteItem}
+                                className="CarbCalculation-Validation bin">
+                                <div className="Button-Border"></div>
+                                <img className="Button-Icon-Checked" src={bin} />
+                            </button> : ""}
 
 
-                    <button className="CarbCalculation-Validation"
-                        onClick={this.handleClick}>
-                        <div className="Button-Border"></div>
-                        {/* <img className="Button-Icon-Checked" src={icon} /> */}
-                    </button>
-
-
+                    </div>
                 </div>
 
 

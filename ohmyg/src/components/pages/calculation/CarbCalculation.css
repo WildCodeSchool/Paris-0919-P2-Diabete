@@ -4,12 +4,13 @@
    height: auto;
    margin: 0px;
    padding: 0px;
+   
 }
 
 /* SLIDER */
 
 .input-range__track--active{
-   background: orange;
+   background: #364eff;
 }
 
 .input-range__slider{
@@ -19,7 +20,6 @@
 }
 
 .input-range {
-   width: %;
    height: 5vw;
 }
 
@@ -104,20 +104,6 @@ label {
 }
 
 
-/* LIST TOTAL ITEMS AND GLUCIDES */
-
-.carbCalculation-ul {
-   margin : 10px;
-}
-.carbCalculation-liItem {
-   border : solid black 2px;
-   background-color: white;
-   list-style: none;
-   font-family: "Barlow", "sans serif";
-   font-size: 1.2em;
-   color: grey
-   
-}
 
 
 
@@ -125,102 +111,116 @@ label {
 /* BUTTON */
 
 
+.CarbButtons {
+   display:flex ;
+   flex-direction: column;
+   margin: auto;
+   align-items: center;
+}
 
- .CarbCalculation-Validation {
-   margin: 3vw;
+
+.CarbCalculation-Validation {
+   margin: 2vw;
+   margin-bottom: 1.5vw;
    width: 40%;
    height: 3.5em;
    font-size: 1.6em;
-   background-color: orange;
+   background-color: #364eff;;
    position: relative;
    border: none;
- }
+}
 
- .bin {
-    background-color: red;
+.bin {
+   background-color: red;
+   
+}
 
- }
-
- .Button-Icon-Checked {
+.Button-Icon-Checked {
    height: 70%;
    width: auto;
    margin: auto auto 3px auto;
- }
+}
 
- .Button-Border {
+.Button-Border {
    position: absolute;
    width: 101%;
    height: 3.6em;
    border: solid 4.5px black;
    bottom: 10px;
    right: 10px;
- }
-
-
-/* VERSION DESKTOP */
-
-@media screen and (min-width: 961px) {
-   input{
-      font-size: 1.6em;
-   }
-
-   label{
-      font-size: 2em;
-   }
 }
 
-
-/* CAROUSEL */
-
-
-
-
-.carbo-carousel{
-   width:100%;
-   height: auto;
-   overflow: hidden;
-}
-
-.carbCalculation-totalCarousel{
-   background-color: lightgrey;
-   display: flex;
-   flex-direction: column; 
-   width: 95%;
-   margin: auto;
-   height: auto;
-}
-
-.carbCalculation-addition{
-   border: 1px solid black;
-   color: white;
-   background-color: black;
-   font-size: 1.2em;
-   margin: 10px auto;
-   padding: auto;
-   width: 25%;
-   height: 2.5em;
-   display: flex;
-   vertical-align: center;
-}
-
-.carbCalculation-p{
-   margin: auto;
-   text-align: center;
-}
+/* LIST TOTAL ITEMS AND GLUCIDES */
 
 .carbs-list{
-   display: flex;
-   flex-direction: row;
-   font-size: 1em;
+   display: grid;
+   grid-template-columns : 1fr 1fr 1fr
 }
 
-.foodList{
-   border: 2px solid black;
-   list-style: none;
-   width:30vw;
-   height:7em; 
-   overflow: hidden;
-   margin: 3px;
-   display: flex;
-   flex-direction: column;
+.carbCalculation-ul {
+   margin : 10px;
+   width: auto;
+
 }
+.carbCalculation-liItem {
+   border : solid grey 2px;
+   background-color: white;
+   list-style: none;
+   font-family: "Barlow", "sans serif";
+   font-size: 1.2em;
+   color: black
+   
+}
+   
+   .carbCalculation-totalCarousel{
+      background-color: lightgrey;
+      display: flex;
+      flex-direction: column; 
+      width: 95%;
+      margin: auto;
+      height: auto;
+   }
+   
+   .carbCalculation-addition{
+      border: 1px solid black;
+      color: white;
+      background-color: black;
+      font-size: 1.2em;
+      margin: 10px auto;
+      padding: auto;
+      width: 25%;
+      height: 2.5em;
+      display: flex;
+      vertical-align: center;
+   }
+   
+   .carbCalculation-p{
+      margin: auto;
+      text-align: center;
+      font-size: 1.3em;
+   }
+   
+   
+   /* .foodList{
+      border: 2px solid black;
+      list-style: none;
+      width:30vw;
+      height:7em; 
+      overflow: hidden;
+      margin: 3px;
+      display: flex;
+      flex-direction: column;
+   } */
+
+
+   /* VERSION DESKTOP */
+   
+   @media screen and (min-width: 961px) {
+      input{
+         font-size: 1.6em;
+      }
+   
+      label{
+         font-size: 2em;
+      }
+   }
