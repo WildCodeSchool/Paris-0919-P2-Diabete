@@ -124,88 +124,95 @@ class CarbCalculation extends React.Component {
 
         return (
             <div className="range">
-                <div className='blockFoodWeight'>
+                <div className="CarbCalculation-BeforeCalculation">
+                    <div className="CarbCalculation-FoodBlock">
+                        <div className='blockFoodWeight'>
 
-                    <h2 className='carbCalculation-h2'> {this.state.name} : </h2>
-                    <div className="InputRangeTest">
-                        <InputRange
-                            className="input-range"
-                            step={0.5}
-                            maxValue={300}
-                            minValue={0}
-                            value={this.state.value}
-                            onChange={value => this.setState({ value })} />
-                    </div>
-
-                    <div className='inputWeightCarbo'>
-                        <div className='inputWeight'>
-                            <label className='carbCalculation-label'>Poids </label>
-                            <div className='borderInputLabel'>
-                                <input
-                                    className="foodWeight"
-                                    type='number'
-                                    maxValue={500}
+                            <h2 className='carbCalculation-h2'> {this.state.name} : </h2>
+                            <div className="InputRangeTest">
+                                <InputRange
+                                    className="input-range"
+                                    step={0.5}
+                                    maxValue={300}
+                                    minValue={0}
                                     value={this.state.value}
-                                    onChange={this.handleChange} />
-                                <label className='carbCalculation-label'> g</label>
+                                    onChange={value => this.setState({ value })} />
                             </div>
-                        </div>
-                        <div className='inputCarbo'>
-                            <label className='carbCalculation-label'>Glucides </label>
-                            <div className='borderInputLabel'>
-                                <input
-                                    className="carbohydrate"
-                                    type="number"
-                                    value={this.state.modifyingItem ? carbRatio2 : carbRatio}
-                                />
-                                <label className='carbCalculation-label'> g</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="CarbCalculation-buttonContainer">
-                    <div className="CarbButtons">
-                        <button className="CarbCalculation-Validation"
-                            onClick={this.handleClick}>
-                            <div className="Button-Border"></div>
-                            {/* <img className="Button-Icon-Checked" src={icon} /> */}
-                        </button>
-
-                        {this.state.modifyingItem ?
-                            <button onClick={this.deleteItem}
-                                className="CarbCalculation-Validation bin">
-                                <div className="Button-Border"></div>
-                                <img className="Button-Icon-Checked" src={bin} />
-                            </button> : ""}
-
-
-                    </div>
-                </div>
-
-
-                <div className='carbCalculation-totalCarousel'>
-                    <div className='carbCalculation-addition'>
-                        <p className='carbCalculation-p'>{this.state.totalCarb} g</p>
-                    </div>
-
-
-                    <div className='carbs-list'>
-                        {this.state.galleryItems.map(elem =>
-                            <ul className="carbCalculation-ul" onClick={() => this.modifyItem(elem)} >
-                                <div className="carbCalculation-liItem">
-                                    <li> {elem.dish}</li>
-                                    <li> {elem.dishCarb}</li>
+                            <div className='inputWeightCarbo'>
+                                <div className='inputWeight'>
+                                    <label className='carbCalculation-label'>Poids </label>
+                                    <div className='borderInputLabel'>
+                                        <input
+                                            className="foodWeight"
+                                            type='number'
+                                            maxValue={500}
+                                            value={this.state.value}
+                                            onChange={this.handleChange} />
+                                        <label className='carbCalculation-label'> g</label>
+                                    </div>
                                 </div>
-                            </ul>)}
+                                <div className='inputCarbo'>
+                                    <label className='carbCalculation-label'>Glucides </label>
+                                    <div className='borderInputLabel'>
+                                        <input
+                                            className="carbohydrate"
+                                            type="number"
+                                            value={this.state.modifyingItem ? carbRatio2 : carbRatio}
+                                        />
+                                        <label className='carbCalculation-label'> g</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="CarbCalculation-buttonContainer">
+                            <div className="CarbButtons">
+                                {this.state.modifyingItem ?
+                                    <button onClick={this.deleteItem}
+                                        className="CarbCalculation-Validation bin">
+                                        <div className="Button-Border"></div>
+                                        <img className="Button-Icon-Checked" src={bin} />
+                                    </button> : ""}
+
+                                <button className="CarbCalculation-Validation"
+                                    onClick={this.handleClick}>
+                                    <div className="Button-Border"></div>
+                                    {/* <img className="Button-Icon-Checked" src={icon} /> */}
+                                </button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="CarbCalculation-ListBlock">
+                        <div className='carbCalculation-totalCarousel'>
+                            <div className='carbCalculation-addition'>
+                                <p className='carbCalculation-p'>{this.state.totalCarb} g</p>
+                            </div>
+
+
+                            <div className='carbs-list'>
+                                {this.state.galleryItems.map(elem =>
+                                    <ul className="carbCalculation-ul" onClick={() => this.modifyItem(elem)} >
+                                        <div className="carbCalculation-liItem" >
+                                        {/* <div className={this.state.modifyingItem ? "carbCalculation-liItem" :"carbCalculation-liItem"} */}
+                                            <li> {elem.dish}</li>
+                                            <li> {elem.dishCarb}</li>
+                                        </div>
+                                    </ul>)}
+                            </div>
+                        </div>
+                        <div >
+                            <button onClick={this.calculationButton} className="meal-CalculationButton" id="#meal-CalculationButton">Calculation</button>
+
+                        </div>
                     </div>
                 </div>
-                <div >
-                   <button onClick={this.calculationButton} className="meal-CalculationButton" id="#meal-CalculationButton">Calculation</button>
-
+                <div className="CarbCalculation-InsulinCalculation">
+                    {this.state.calculationButtonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} /> : ""}
                 </div>
-                {this.state.calculationButtonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} /> : ""}
-
             </div>
         );
     }
