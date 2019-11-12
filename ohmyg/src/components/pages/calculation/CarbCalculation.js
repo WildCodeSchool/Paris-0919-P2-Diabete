@@ -8,7 +8,7 @@ class CarbCalculation extends React.Component {
     state = {
         name: "",
         carb100g: 25,
-        value:  100,
+        value: 100,
         carbRatio: 0,
         totalCarb: 0,
         galleryItems: [],
@@ -16,20 +16,21 @@ class CarbCalculation extends React.Component {
         modifyingItem: false,
     }
 
-    
+
     newFood = () => {
-        this.setState({value : 100})  
-        this.setState({name: this.props.newName})
-        this.setState({carb100g: this.props.newCarbs})
-    } 
+        this.setState({ value: 100 })
+        this.setState({ name: this.props.newName })
+        this.setState({ carb100g: this.props.newCarbs })
+    }
 
     componentDidUpdate() {
         if (this.state.modifyingItem === false) {
-             if (this.state.name !== this.props.newName || this.state.carb100g !== this.props.newCarbs) {
+            if (this.state.name !== this.props.newName || this.state.carb100g !== this.props.newCarbs) {
                 this.newFood()
-             }
-          }}
-    
+            }
+        }
+    }
+
 
     responsive = {
         0: { items: 1 },
@@ -45,12 +46,12 @@ class CarbCalculation extends React.Component {
         console.debug('Item`s position after changes: ', e.item)
         console.debug('Slide`s position after changes: ', e.slide)
     }
-    
+
     handleChange = (event) => {
         if (event.target.value > 500) {
             return;
         }
-        this.setState({value: event.target.value});
+        this.setState({ value: event.target.value });
     }
 
 
@@ -58,31 +59,31 @@ class CarbCalculation extends React.Component {
 
     /* bouton validation */
 
-    handleClick =   async () => {
+    handleClick = async () => {
         if (this.state.modifyingItem === false && this.state.name !== "") {
 
-        let carbRatioItem = (this.state.carb100g*this.state.value/100).toFixed(2)
-        this.setState({carbRatio: carbRatioItem}, async () => {
-            let objectName = this.state.name;
-            let objectCarbRatio = this.state.carbRatio;
-            let objectValue = this.state.value;
-            let objectCarb100 = this.state.carb100g
+            let carbRatioItem = (this.state.carb100g * this.state.value / 100).toFixed(2)
+            this.setState({ carbRatio: carbRatioItem }, async () => {
+                let objectName = this.state.name;
+                let objectCarbRatio = this.state.carbRatio;
+                let objectValue = this.state.value;
+                let objectCarb100 = this.state.carb100g
 
-            const tab = [...this.state.galleryItems,{dish: objectName, dishCarb: objectCarbRatio, dishWeight : objectValue, dishCarb100 : objectCarb100} ]
-            await this.setState({galleryItems: tab })
-        } )
-        const result = await parseFloat(this.state.totalCarb) + parseFloat(this.state.carbRatio)
+                const tab = [...this.state.galleryItems, { dish: objectName, dishCarb: objectCarbRatio, dishWeight: objectValue, dishCarb100: objectCarb100 }]
+                await this.setState({ galleryItems: tab })
+            })
+            const result = await parseFloat(this.state.totalCarb) + parseFloat(this.state.carbRatio)
 
-        await this.setState({totalCarb: result.toFixed(2) })
-        this.setState({value: 100})
-        this.setState({name : ""})
-    }
+            await this.setState({ totalCarb: result.toFixed(2) })
+            this.setState({ value: 100 })
+            this.setState({ name: "" })
+        }
 
-    /* c'est dans le if ci-dessous, donc si on est en mode "modification", qu'il faut que les nouvelles valeurs du state remplacent celles de l'élément dans le tableau (avec un .find je pensais mais tu fais comme tu trouves) */
+        /* c'est dans le if ci-dessous, donc si on est en mode "modification", qu'il faut que les nouvelles valeurs du state remplacent celles de l'élément dans le tableau (avec un .find je pensais mais tu fais comme tu trouves) */
 
         if (this.state.modifyingItem === true) {
 
-            this.setState({modifyingItem : false})
+            this.setState({ modifyingItem: false })
         }
 
 
@@ -91,7 +92,7 @@ class CarbCalculation extends React.Component {
     /* Bouton poubelle */
 
     deleteItem = () => {
-        this.setState({modifyingItem : false})
+        this.setState({ modifyingItem: false })
     }
 
     /* fin des boutons à modifier */
@@ -99,22 +100,22 @@ class CarbCalculation extends React.Component {
 
 
     calculationButton = () => {
-        this.setState({calculationButtonIsClicked: true})
+        this.setState({ calculationButtonIsClicked: true })
     }
 
     modifyItem = async (elem) => {
-        await this.setState({modifyingItem : true})
-        this.setState({name : elem.dish})
-        this.setState({value: elem.dishWeight})
-        this.setState({carb100g : elem.dishCarb100})
-        }
-    
+        await this.setState({ modifyingItem: true })
+        this.setState({ name: elem.dish })
+        this.setState({ value: elem.dishWeight })
+        this.setState({ carb100g: elem.dishCarb100 })
+    }
+
 
     render() {
-        let carbRatio = (this.state.carb100g*this.state.value/100).toFixed(2)
+        let carbRatio = (this.state.carb100g * this.state.value / 100).toFixed(2)
         const weight = this.state.value
-        const ratio = 100/this.state.carb100g
-        let carbRatio2 = (weight/ratio).toFixed(2)
+        const ratio = 100 / this.state.carb100g
+        let carbRatio2 = (weight / ratio).toFixed(2)
 
         console.log(this.state.galleryItems)
         console.log(this.state.modifyingItem)
@@ -124,21 +125,21 @@ class CarbCalculation extends React.Component {
                 <div className='blockFoodWeight'>
 
                     <h2 className='carbCalculation-h2'> {this.state.name} : </h2>
-                        <div className="InputRangeTest">
-                            <InputRange
-                                className="input-range"
-                                step={0.5}  
-                                maxValue={300}
-                                minValue={0}
-                                value={this.state.value}
-                                onChange={value => this.setState({ value })} />
-                        </div>    
-                    
+                    <div className="InputRangeTest">
+                        <InputRange
+                            className="input-range"
+                            step={0.5}
+                            maxValue={300}
+                            minValue={0}
+                            value={this.state.value}
+                            onChange={value => this.setState({ value })} />
+                    </div>
+
                     <div className='inputWeightCarbo'>
                         <div className='inputWeight'>
                             <label className='carbCalculation-label'>Poids </label>
                             <div className='borderInputLabel'>
-                                <input 
+                                <input
                                     className="foodWeight"
                                     type='number'
                                     maxValue={500}
@@ -150,44 +151,46 @@ class CarbCalculation extends React.Component {
                         <div className='inputCarbo'>
                             <label className='carbCalculation-label'>Glucides </label>
                             <div className='borderInputLabel'>
-                                <input 
+                                <input
                                     className="carbohydrate"
                                     type="number"
-                                    value={this.state.modifyingItem ? carbRatio2 : carbRatio }
+                                    value={this.state.modifyingItem ? carbRatio2 : carbRatio}
                                 />
                                 <label className='carbCalculation-label'> g</label>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
 
                 <div className="carbButtons">
                     {this.state.modifyingItem ? <button onClick={this.deleteItem}> Poubelle </button> : ""}
-                    <button className="valid-button" 
-                    onClick= {this.handleClick}>V</button>
+                    <button className="valid-button"
+                        onClick={this.handleClick}>V</button>
                 </div>
 
 
-            <div className='carbCalculation-totalCarousel'>
-                <div className='carbCalculation-addition'>
-                    <p className='carbCalculation-p'>{this.state.totalCarb} g</p>
-                </div>
-                <div className='carbs-list'>
+                <div className='carbCalculation-totalCarousel'>
+                    <div className='carbCalculation-addition'>
+                        <p className='carbCalculation-p'>{this.state.totalCarb} g</p>
+                    </div>
 
-                    {this.state.galleryItems.map(elem => 
-                        <ul className="carbCalculation-ulButton"onClick={ () => this.modifyItem(elem)} > 
-                        <li> {elem.dish}</li>
-                        <li> {elem.dishCarb}</li>
-                    </ul>)}
 
-            </div>
+                    <div className='carbs-list'>
+                        {this.state.galleryItems.map(elem =>
+                            <ul className="carbCalculation-ul" onClick={() => this.modifyItem(elem)} >
+                                <div className="carbCalculation-liItem">
+                                    <li> {elem.dish}</li>
+                                    <li> {elem.dishCarb}</li>
+                                </div>
+                            </ul>)}
+                    </div>
                 </div>
                 <div className="meal-CalculationButton">
                     <button onClick={this.calculationButton}>Calculation</button>
 
                 </div>
-                {this.state.calculationButtonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} /> : "" } 
-                
+                {this.state.calculationButtonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} /> : ""}
+
             </div>
         );
     }
