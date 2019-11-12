@@ -142,7 +142,7 @@ label {
 
 /* VERSION DESKTOP */
 
-@media screen and (min-width: 1051px) {
+@media screen and (min-width: 961px) {
    input{
       font-size: 1.6em;
    }
