@@ -31,7 +31,7 @@
 
 
 
-@media (min-width: 1051px) {
+@media (min-width: 961px) {
 
   .Navbar_Header {
     background-color: white;
@@ -102,7 +102,7 @@
 
 
 
-@media (max-width: 1050px) {
+@media (max-width: 960px) {
 
   .Navbar_Header {
     background-color: black;
@@ -124,6 +124,10 @@
     justify-content: space-between;
   }
 
+  .Navbar_li {
+    display: flex;
+  }
+
   .Navbar_logo {
     display: none;
   }
@@ -140,6 +144,16 @@
   .icones-nutritionInfo {
     fill: white;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icones-homepage svg,
+  .icones-calculation svg,
+  .icones-meal svg,
+  .icones-news svg,
+  .icones-nutritionInfo svg {
+    width: 60%;
   }
 
   .Navbar_Navigation {

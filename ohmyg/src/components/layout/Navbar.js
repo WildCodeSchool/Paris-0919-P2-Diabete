@@ -41,8 +41,6 @@ const Navbar = props => {
             <Link to="/" className={`Navbar_iconHome ${props.color}`}>
               <svg
                 version="1.0"
-                x="0px"
-                y="0px"
                 width="40px"
                 height="40px"
                 viewBox="0 0 130.2 150.2"
@@ -61,8 +59,6 @@ const Navbar = props => {
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
                 width="60px"
                 height="40px"
                 viewBox="0 0 205.7 150.7"
@@ -102,8 +98,6 @@ const Navbar = props => {
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
                 width="40px"
                 height="40px"
                 viewBox="0 0 117.3 149.7"
@@ -134,8 +128,6 @@ const Navbar = props => {
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
                 width="40px"
                 height="40px"
                 viewBox="0 0 129.6 148.7"
@@ -171,8 +163,6 @@ const Navbar = props => {
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
                 width="40px"
                 height="40px"
                 viewBox="0 0 115.7 152.8"
