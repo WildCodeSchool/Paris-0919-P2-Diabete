@@ -10,16 +10,6 @@ import './App.css';
 
 const App = () => {
   return (
-<<<<<<< HEAD
-    <div className="App">
-      {/* <InsulinCalculation />
-      <Navbar  />
-      <Footer />
-      <HeaderMobile />
-      <HomeNavButtons />
-      <ContentFrame /> */}
-      <ApiCarbs />
-=======
     <div>
         <Switch>
             <Route exact path="/" component={Homepage} />
@@ -28,7 +18,6 @@ const App = () => {
             <Route path="/news" component={News} />
             <Route path="/nutritioninfo" component={NutritionInfo} /> 
         </Switch>
->>>>>>> dev
     </div>
   )
 }
