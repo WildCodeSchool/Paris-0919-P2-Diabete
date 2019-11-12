@@ -9,7 +9,7 @@
 /* SLIDER */
 
 .input-range__track--active{
-   background: #08f9d6;
+   background: orange;
 }
 
 .input-range__slider{
@@ -19,7 +19,7 @@
 }
 
 .input-range {
-   width: 90%;
+   width: %;
    height: 5vw;
 }
 
@@ -98,6 +98,11 @@ label {
    padding: 0; 
 }
 
+.InputRangeTest {
+   width: 70%;
+   margin: auto;
+}
+
 
 /* LIST TOTAL ITEMS AND GLUCIDES */
 
@@ -109,7 +114,8 @@ label {
    background-color: white;
    list-style: none;
    font-family: "Barlow", "sans serif";
-   font-size: 1.2em
+   font-size: 1.2em;
+   color: grey
    
 }
 
@@ -118,27 +124,38 @@ label {
 
 /* BUTTON */
 
-.carbButtons {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-
-.carbButtons button{
-   margin:3vw;
-   font-size: 1.2em;
-}
-
-.valid-button {
-   background-color: #08f9d6;
-   width: 90%;
-   height: 1.7em;
-}
 
 
-.InputRangeTest{
-   width: 70%;
-}
+ .CarbCalculation-Validation {
+   margin: 3vw;
+   width: 40%;
+   height: 3.5em;
+   font-size: 1.6em;
+   background-color: orange;
+   position: relative;
+   border: none;
+ }
+
+ .bin {
+    background-color: red;
+
+ }
+
+ .Button-Icon-Checked {
+   height: 70%;
+   width: auto;
+   margin: auto auto 3px auto;
+ }
+
+ .Button-Border {
+   position: absolute;
+   width: 101%;
+   height: 3.6em;
+   border: solid 4.5px black;
+   bottom: 10px;
+   right: 10px;
+ }
+
 
 /* VERSION DESKTOP */
 
