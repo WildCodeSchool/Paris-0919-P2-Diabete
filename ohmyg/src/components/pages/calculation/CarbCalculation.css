@@ -115,6 +115,7 @@ label {
    display:flex ;
    flex-direction: column;
    margin: auto;
+   margin-bottom : 1.5vh;
    align-items: center;
 }
 
@@ -150,6 +151,17 @@ label {
    right: 10px;
 }
 
+.meal-CalculationButton {
+   background-color:black;
+   color: white;
+   width: 95%;
+   height: auto;
+   margin: auto;
+   margin-bottom : 2em;
+   font-size: 1.5em;
+}
+
+
 /* LIST TOTAL ITEMS AND GLUCIDES */
 
 .carbs-list{
@@ -163,15 +175,23 @@ label {
 
 }
 .carbCalculation-liItem {
-   border : solid grey 2px;
+   border : solid grey 3px;
    background-color: white;
    list-style: none;
    font-family: "Barlow", "sans serif";
    font-size: 1.2em;
-   color: black
+   color: black;
+   min-height: 100px;
+   height: auto;
+   
+   padding: auto;
+   display:flex;
+   flex-direction:column;
+   align-items: center;
+   justify-content: center;
    
 }
-   
+
    .carbCalculation-totalCarousel{
       background-color: lightgrey;
       display: flex;
@@ -223,4 +243,9 @@ label {
       label{
          font-size: 2em;
       }
+
+
+      .range {}
+
+
    }

@@ -171,7 +171,7 @@ class CarbCalculation extends React.Component {
                             <div className="Button-Border"></div>
                             {/* <img className="Button-Icon-Checked" src={icon} /> */}
                         </button>
-                        
+
                         {this.state.modifyingItem ?
                             <button onClick={this.deleteItem}
                                 className="CarbCalculation-Validation bin">
@@ -200,8 +200,8 @@ class CarbCalculation extends React.Component {
                             </ul>)}
                     </div>
                 </div>
-                <div className="meal-CalculationButton">
-                    <button onClick={this.calculationButton}>Calculation</button>
+                <div >
+                   <button onClick={this.calculationButton} className="meal-CalculationButton" id="#meal-CalculationButton">Calculation</button>
 
                 </div>
                 {this.state.calculationButtonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} /> : ""}
