@@ -93,18 +93,10 @@ class CarbCalculation extends React.Component {
     deleteItem =   () => {
         this.setState({modifyingItem : false})
         const tab=this.state.galleryItems
-        // const deletetedFood = tab.find(elem => elem.dish === this.state.name)
-        // // this.state.carbRatio = 
-        // this.setState({carbRatio: this.state.deletetedFood})
-        // let newTotalCarb = this.state.totalCarb - this.state.carbRatio
         tab.splice(this.state.index,1)
         this.setState({galleryItems: tab})
         const result = parseFloat(this.state.totalCarb) - parseFloat(this.state.carbRatio)
-        this.setState({totalCarb: result})
-        // console.log(this.state.totalCarb);
-        // console.log(this.state);
-        
-        
+        this.setState({totalCarb: result}) 
     }
 
     /* fin des boutons à modifier */
