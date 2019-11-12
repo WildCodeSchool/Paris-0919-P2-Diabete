@@ -15,8 +15,13 @@
 
 
 .ApiRequest-form {
+<<<<<<< HEAD
     width: 80%;
     margin: 5px auto auto auto;
+=======
+    width: 90%;
+    margin: 5vw auto auto auto;
+>>>>>>> dev
     box-shadow: 5px 3px 10px grey;  
 }
 
@@ -26,7 +31,7 @@
     padding-left: 0.5em;
     font-size: 1rem;
     outline: none;
-    border: solid 2px grey;
+    border: solid 2px black;
     background : url(../../../assets/icons/loupe.svg) no-repeat;
     background-position: right 0.5em center;
     background-size: auto 70%;

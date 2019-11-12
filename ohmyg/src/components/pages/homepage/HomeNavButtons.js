@@ -1,7 +1,6 @@
 import React from 'react'
 import './HomeNavButtons.css'
-
-
+import { Link } from "react-router-dom"
 import pictoSectionRepas from '../../../assets/icons/picto-section-repas.png';
 import pictoSectionCalcul from '../../../assets/icons/picto-section-calcul.png';
 import pictoSectionNews from '../../../assets/icons/picto-section-news.png';
@@ -11,35 +10,36 @@ import pictoSectionInfosNut from '../../../assets/icons/picto-section-infosnut.p
 
 const HomeNavButtons = () => {
     return (
-        <>
+        <>  
             <div className="fourBoxes">
                 <div className="mealAndCalcul">
-                    <div className="meal">
-                        <a href="">
+                    <div className="meal scale-up-center">
+                        <Link to="/meal">
                             <img className = "iconMeal" src={pictoSectionRepas}/>                   
-                        </a>
+                        </Link>
                     </div>
-                    <div className="calcul">
-                        <a href="">
+                    <div className="calcul scale-up-center">
+                        <Link to="/calculation">
                             <img className = "iconCalcul" src={pictoSectionCalcul}/>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="newsAndNutri">
-                    <div className="news">
-                        <a href="">
+                    <div className="news scale-up-center">
+                        <Link to="/news">
                             <img className = "iconNews" src={pictoSectionNews}/>
-                        </a>
+                        </Link>
                     </div>
-                    <div className="nutri">
-                        <a href="">
+                    <div className="nutri scale-up-center">
+                        <Link to="/nutritioninfo">
                             <img className = "iconInfosNut" src={pictoSectionInfosNut}/>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
+         
         </>
     )
 }
 
-export default HomeNavButtons
+export default HomeNavButtons;

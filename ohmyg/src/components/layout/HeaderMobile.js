@@ -1,11 +1,13 @@
 import React from 'react'
 import './HeaderMobile.css'
-import MainLogo from '../../assets/pictures/logo_OMG.svg'
+import { Link } from "react-router-dom"
 
-const HeaderMobile = () => {
+const HeaderMobile = (props) => {
     return (
         <div className="headerBox">
-            <img src={MainLogo} alt="oh my g" className="header-title" />
+            <Link to="/" className="HeaderMobile_logo">
+                <img src={props.src} alt="Logo" />
+            </Link>
         </div>
     )
 }

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homepage-background-slide-in-bottom {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: -100;
+  background-image: url("../../../assets/pictures/background-homepage.jpg");
+  background-size: cover;
+  width: 100%;
+  animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+  
+  }
+  

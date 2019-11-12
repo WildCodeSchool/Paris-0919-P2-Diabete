@@ -1,18 +1,16 @@
 import React from 'react';
-import ApiCarbs from './components/pages/meal/ApiCarbs';
-// import ContentFrame from './components/pages/homepage/ContentFrame';
-// import Footer from './components/layout/Footer';
-// import HeaderMobile from './components/layout/HeaderMobile';
-// import HomeNavButtons from './components/pages/homepage/HomeNavButtons';
-// import InsulinCalculation from './components/pages/calculation/InsulinCalculation';
-// import Navbar from './components/layout/Navbar';
-
-
-
+import Calculation from './components/pages/calculation/Calculation';
+import Meal from './components/pages/meal/Meal';
+import News from './components/pages/news/News';
+import NutritionInfo from './components/pages/nutritionInfo/NutritionInfo';
+import Homepage from './components/pages/homepage/Homepage';
+import {Switch, Route} from "react-router-dom";
 import './App.css';
+
 
 const App = () => {
   return (
+<<<<<<< HEAD
     <div className="App">
       {/* <InsulinCalculation />
       <Navbar  />
@@ -21,6 +19,16 @@ const App = () => {
       <HomeNavButtons />
       <ContentFrame /> */}
       <ApiCarbs />
+=======
+    <div>
+        <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route path="/calculation" component={Calculation} />
+            <Route path="/meal" component={Meal} />
+            <Route path="/news" component={News} />
+            <Route path="/nutritioninfo" component={NutritionInfo} /> 
+        </Switch>
+>>>>>>> dev
     </div>
   )
 }
