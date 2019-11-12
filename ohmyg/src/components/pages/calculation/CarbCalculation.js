@@ -81,15 +81,37 @@ class CarbCalculation extends React.Component {
 
     /* c'est dans le if ci-dessous, donc si on est en mode "modification", qu'il faut que les nouvelles valeurs du state remplacent celles de l'élément dans le tableau (avec un .find je pensais mais tu fais comme tu trouves) */
 
-        if (this.state.modifyingItem === true) {            
+        if (this.state.modifyingItem === true) { 
+            /*suppression de l'aliment*/
+            
+            this.deleteItem()     
+            console.log(this.state.galleryItems);
+            
+            
+            /*ajouter l'aliment avec les nouvelles valeurs dans le tableau*/
+            let carbRatioItem = (this.state.carb100g*this.state.value/100).toFixed(2)
+            this.setState({carbRatio: carbRatioItem}, async () => {
+                let objectName = this.state.name;
+                let objectValue = this.state.value;
+                let objectCarb100 = this.state.carb100g
+                let objectCarbRatio = this.state.carbRatio;
+                
+                const tab = [...this.state.galleryItems,{dish: objectName, dishCarb: objectCarbRatio, dishWeight : objectValue, dishCarb100 : objectCarb100} ]
+                await this.setState({galleryItems: tab })
+                const result = (parseFloat(this.state.totalCarb) + parseFloat(this.state.carbRatio)).toFixed(2)
+                this.setState({totalCarb: result}) 
+
+                
+            } )
             this.setState({modifyingItem : false})
+            
         }
-
-
+        
+        
     }
-
+    
     /* Bouton poubelle */
-
+    
     deleteItem =   () => {
         this.setState({modifyingItem : false})
         const tab=this.state.galleryItems
@@ -98,25 +120,24 @@ class CarbCalculation extends React.Component {
         const result = (parseFloat(this.state.totalCarb) - parseFloat(this.state.carbRatio)).toFixed(2)
         this.setState({totalCarb: result}) 
     }
-
+    
     /* fin des boutons à modifier */
-
-
-
+    
+    
+    
     calculationButton = () => {
         this.setState({calculationButtonIsClicked: true})
     }
-
+    
     modifyItem = async (elem, index) => {
         await this.setState({modifyingItem : true})
         this.setState({index: index})
         this.setState({name : elem.dish})
         this.setState({value: elem.dishWeight})
         this.setState({carbRatio: elem.dishCarb})
-        this.setState({carb100g : elem.dishCarb100})
-        console.log(this.state.name, this.state.carbRatio);
-        
-        }
+        this.setState({carb100g : elem.dishCarb100})        
+        console.log(this.state.name, this.state.carb100g, this.state.carbRatio, this.state.value);
+    }
     
 
     render() {
@@ -128,7 +149,7 @@ class CarbCalculation extends React.Component {
         console.log(this.state.galleryItems)
         console.log(this.state.index);
         
-        console.log(this.state.modifyingItem)
+        // console.log(this.state.modifyingItem)
 
         return (
             <div className="range">
@@ -185,8 +206,8 @@ class CarbCalculation extends React.Component {
                 </div>
                 <div className='carbs-list'>
 
-                    {this.state.galleryItems.map((elem) => 
-                        <ul onClick={ () => this.modifyItem(elem)} > 
+                    {this.state.galleryItems.map((elem, index) => 
+                        <ul onClick={ () => this.modifyItem(elem, index)} > 
                         <li> {elem.dish}</li>
                         <li> {elem.dishCarb}</li>
                     </ul>)}
