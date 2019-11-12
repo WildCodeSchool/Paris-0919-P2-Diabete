@@ -175,7 +175,7 @@ class CarbCalculation extends React.Component {
                 <div className='carbs-list'>
 
                     {this.state.galleryItems.map(elem => 
-                        <ul onClick={ () => this.modifyItem(elem)} > 
+                        <ul className="carbCalculation-ulButton"onClick={ () => this.modifyItem(elem)} > 
                         <li> {elem.dish}</li>
                         <li> {elem.dishCarb}</li>
                     </ul>)}
