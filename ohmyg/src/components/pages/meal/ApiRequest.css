@@ -7,7 +7,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
     color:black;
 }
 
@@ -31,15 +30,29 @@
     background-position: right 0.5em center;
     background-size: auto 70%;
     background-color: white;
-    
 }
+
+@media screen and (max-width: 480px) {
+    .ApiRequest-input {
+        height: 2.2em;
+        padding-left: 0.5em;
+        font-size: 1rem;
+        outline: none;
+        border: solid 2.6px black;
+    }
+}   
+
 
 .ApiRequest-list {
     border: solid 3px black;
     width: 100%;
-    animation-duration: 2s;
-    animation-name: slidein;
     overflow: hidden;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+.ApiRequest-link {
+    text-decoration: none;
 }
 
 @keyframes slidein {
@@ -55,9 +68,9 @@
 
 .ApiRequest-listItem {
     list-style: none;
-    text-align: left;
-   
-    padding : 0.5em  
+    text-align: left; 
+    padding : 0.5em ; 
+    text-decoration :none;
 }
 
 .ApiRequest-listItem:hover{

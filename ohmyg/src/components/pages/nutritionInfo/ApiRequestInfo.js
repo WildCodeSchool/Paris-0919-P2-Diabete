@@ -63,7 +63,7 @@ class ApiRequestInfo extends Component {
                      <ul id="food" className="ApiRequest-list" >
                     {this.state.foods
                         .map(food => (
-                            <Link to={`/displayinfonut/${food.fields.origfdcd}`}><li key={food.fields.origfdnm} className="ApiRequest-listItem" > {food.fields.origfdnm}</li> </Link>
+                            <Link className="ApiRequest-link" to={`/displayinfonut/${food.fields.origfdcd}`}><li key={food.fields.origfdnm} className="ApiRequest-listItem" > {food.fields.origfdnm}</li> </Link>
                     ))}
                     </ul>
                     : ""
