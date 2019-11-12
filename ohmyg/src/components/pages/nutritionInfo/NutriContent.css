@@ -2,121 +2,112 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-.main-box {
+
+.nutriContent-mainBox {
     display: flex;
     flex-direction: column;
 }
 
 
 
-.sixBoxes {
-    margin: 5vw 5vw 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap: 4.5vw;
-    grid-row-gap: 4.5vw;
-}
-
-.food-box {
+#food-box {
     margin: 0 5vw;
     display: flex;
     flex-direction: column;
 }
 
-.sixBoxes > * {
-    height: 12vw;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-}
-
-.sixBoxes * {
-    color: white;
-    font-weight: bold;
-}
-
 .fruitAndVeg {
-    background-color: hsl(90, 100%, 50%);
-    border: 4px solid hsl(90, 100%, 35%);
+    background-color: #08f9d6;
 }
 
 .meatAndFish {
-    background-color: hsl(180, 100%, 50%);
-    border: 4px solid hsl(180, 100%, 35%);
+    background-color:#ff245e;
 }
 
 .drink {
-    background-color: hsl(30, 59%, 60%);
-    border: 4px solid hsl(30, 59%, 45%);
+    background-color:rgba(54, 78, 255, 0.9);
 }
 
 .starchy {
-    background-color: hsl(225, 73%, 57%);
-    border: 4px solid hsl(225, 73%, 42%);
+    background-color: #ffa476;
 }
 
 .junkFood {
-    background-color: hsl(300, 100%, 50%);
-    border: 4px solid hsl(300, 100%, 35%);
+    background-color:rgba(161, 61, 249, 0.9);
 }
 
 .dessert {
-    background-color: hsl(51, 100%, 50%);
-    border: 4px solid hsl(51, 100%, 35%);
-}
-
-.iconNews, .iconInfosNut {
-    width: 85px;
-    height: auto;
-    margin: auto;
+    background-color:#ffd800;
 }
 
 
-.iconMeal, .iconCalcul {
-    width: 140px;
-    height: auto;
-    margin: auto;
-}
 
-@media screen and (max-width: 1050px) {
-    .sixBoxes > * {
+@media screen and (max-width: 960px) {
+
+    .nutriContent-sixBoxes {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 2vw;
+        grid-row-gap: 2vw;
+    }
+
+    .nutriContent-sixBoxes > * {
         height: 26vw;
     }
 
-    .sixBoxes h2 {
+    .nutriContent-sixBoxes h2 {
         font-size: 1.2em;
     }
 }
 
-@media screen and (min-width: 1051px) {
+@media screen and (min-width: 961px) {
 
-    .meal, .news {
-        margin-right: 3vw;
-    }
-
-    .iconMeal, .iconCalcul, .iconNews, .iconInfosNut {
-        width: 160px;
-        height:auto;
-        margin: auto;
-    }
-
-    .sixBoxes {
-        margin: 5vw 5vw 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-column-gap: 4vw;
-        grid-row-gap: 3.5vw;
-    }
-
-    .search-box {
+    .nutriContent-searchBox {
         width: 85%;
+        margin: auto;
         text-align: center;
         align-self: center;
     }
+
+    .nutriContent-sixBoxes {
+        width:85%;
+     
+        margin: 2em auto auto auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 2vw;
+        grid-row-gap: 2vw;
+    }
+
+    .nutriContent-sixBoxes * {
+        color: white;
+        text-align:center;
+    }
+
+    .fruitAndVeg, .meatAndFish, .drink, .starchy, .junkFood, .dessert {
+        display: flex;
+        flex-direction: column;
+        padding:1em;
+        height: max-content;
+    }
+
+    .nutriContent-IconCalcul {
+        width: 30px;
+        margin: auto;
+    }
+
 }
+    .Box-Border {
+      position: absolute;
+      width: 1fr;
+      height: 1fr;
+      border: solid 3.5px black;
+      bottom: 7px;
+      right: 7px;
+    }

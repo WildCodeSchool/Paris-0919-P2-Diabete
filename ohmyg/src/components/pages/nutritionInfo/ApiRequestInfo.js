@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 class ApiRequestInfo extends Component {
     state = {
         foods:[],
-        title:"",
-        chosenFood: {}
+        title:""
+        // chosenFood: {}
     };
     
 
@@ -31,23 +31,18 @@ class ApiRequestInfo extends Component {
         };
 
 
-    chooseFood= async (name) => {
-        const item = await this.state.foods.find(element => 
-           element.fields.origfdnm === name) 
-        await this.setState({chosenFood : item})
-        await this.setState({title: ""})
-        // console.log("verif", this.state.chosenFood)
-        this.props.name (this.state.chosenFood.fields.origfdnm)
-        this.props.carbs (this.state.chosenFood.fields.glucides_g_100g)  
-        // console.log ("name",this.state.chosenFood.fields.origfdnm || "carbs", this.state.chosenFood.fields.glucides_g_100g)
-    };
+    // chooseFood= async (name) => {
+    //     const item = await this.state.foods.find(element => 
+    //        element.fields.origfdnm === name) 
+    //     await this.setState({chosenFood : item})
+    //     await this.setState({title: ""})
+       
+    //     this.props.name (this.state.chosenFood.fields.origfdnm)
+    // };
         
 
-
-
-
     render () {
-        // console.log("verif2",this.state.chosenFood)
+       
     return (
         <div>
             <form className="ApiRequest-form">
@@ -61,7 +56,6 @@ class ApiRequestInfo extends Component {
                 onChange={this.handleChange}
                 minLength="4" required
                 placeholder=  "Choisis un aliment..."
-                
                 />
 
                
