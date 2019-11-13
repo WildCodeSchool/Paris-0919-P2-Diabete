@@ -7,7 +7,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    color:black;
 }
 
 
@@ -71,11 +70,12 @@
 
 .ApiRequest-listItem {
     list-style: none;
-    text-align: left; 
+    text-align: center; 
     padding : 0.5em ; 
     text-decoration :none;
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
+    color:black;
 }
 
 .ApiRequest-listItem:hover{

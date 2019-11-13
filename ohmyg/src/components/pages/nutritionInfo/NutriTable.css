@@ -17,7 +17,7 @@
 
 .backTo-link {
     text-decoration: none;
-    
+    color:black;
     margin: auto 0;
 }
 .backTo-text {
@@ -57,6 +57,9 @@
     background-color: #ffa476;
 }
 
+.NutriTable-Glucides {
+    font-weight: 700;
+}
 
 .Loading {
     width:65%;

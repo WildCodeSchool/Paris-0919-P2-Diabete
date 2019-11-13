@@ -2,8 +2,21 @@ import React from "react";
 import "./NutriTable.css";
 import { Link } from "react-router-dom";
 
+
+const cleanProps = value => {
+  let regex1 = /[<>]/g;
+  if (typeof value === "string" && value.search(regex1) === 0) {
+    value = value;
+  } else if (typeof value === "string") {
+    value = parseFloat(value).toFixed(1);
+  } else {
+    value = value.toFixed(1);
+  }
+  return value;
+};
+
 const NutriTable = props => {
-  console.log( "youpi", props.vitamineD)
+  
   return (
     <div className="NutriTable-content">
       <div className="backTo">
@@ -34,37 +47,37 @@ const NutriTable = props => {
           <tr>
             <td>
               {props.glucides === undefined
-                ? "Glucides : 0g"
-                : `Glucides : ${props.glucides.toFixed(1)}g`}
+                ? "Glucides : non renseigné"
+                : `Glucides : ${cleanProps(props.glucides)}g`}
             </td>
             <td>
               {props.sucres === undefined
-                ? "Sucres : 0g"
-                : `Sucres : ${props.sucres.toFixed(1)}g`}
+                ? "Sucres : non renseigné"
+                : `dont Sucres : ${cleanProps(props.sucres)}g`}
             </td>
           </tr>
           <tr>
             <td>
               {props.proteines === undefined
-                ? "Protéines : 0g"
-                : `Protéines : ${props.proteines.toFixed(1)}g`}
+                ? "Protéines : non renseigné"
+                : `Protéines : ${cleanProps(props.proteines)}g`}
             </td>
             <td>
               {props.lipides === undefined
-                ? "Lipides : 0g"
-                : `Lipides : ${props.proteines.toFixed(1)}g`}
+                ? "Lipides : non renseigné"
+                : `Lipides : ${cleanProps(props.lipides)}g`}
             </td>
           </tr>
           <tr>
             <td>
               {props.sel === undefined
-                ? "Sel : 0g"
-                : `Sel : ${props.sel.toFixed(1)}g`}
+                ? "Sel : non renseigné"
+                : `Sel : ${cleanProps(props.sel)}g`}
             </td>
             <td>
               {props.fibres === undefined
-                ? "Fibres : 0g"
-                : `Fibres : ${props.fibres.toFixed(1)}g`}
+                ? "Fibres : non renseigné"
+                : `Fibres : ${cleanProps(props.fibres)}g`}
             </td>
           </tr>
         </tbody>
@@ -81,37 +94,37 @@ const NutriTable = props => {
           <tr>
             <td>
               {props.calcium === undefined
-                ? "Calcium : 0 mg"
-                : `Calcium : ${parseFloat(props.calcium).toFixed(1)} mg`}
+                ? "Calcium : non renseigné"
+                : `Calcium : ${cleanProps(props.calcium)} mg`}
             </td>
             <td>
               {props.magnesium === undefined
-                ? "Magnésium : 0 mg"
-                : `Magnésium : ${parseFloat(props.magnesium).toFixed(1)} mg`}
+                ? "Magnésium : non renseigné"
+                : `Magnésium : ${cleanProps(props.magnesium)} mg`}
             </td>
           </tr>
           <tr>
             <td>
               {props.fer === undefined
-                ? "Fer : 0 mg"
+                ? "Fer : non renseigné"
                 : `Fer : ${parseFloat(props.fer).toFixed(1)} mg`}
             </td>
             <td>
               {props.vitamineC === undefined
-                ? "Vitamine C : 0 mg"
-                : `Vitamine C : ${parseFloat(props.vitamineC).toFixed(1)}mg`}
+                ? "Vitamine C : non renseigné"
+                : `Vitamine C : ${cleanProps(props.vitamineC)} mg`}
             </td>
           </tr>
           <tr>
             <td>
               {props.vitamineE === undefined
-                ? "Vitamine E : 0 mg"
-                : `Vitamine E : ${parseFloat(props.vitamineE).toFixed(1)} mg`}
+                ? "Vitamine E : non renseigné"
+                : `Vitamine E : ${cleanProps(props.vitamineE)} mg`}
             </td>
             <td>
               {props.vitamineD === undefined
-                ? "Vitamine D : 0 ug"
-                : `Vitamine D : ${parseFloat(props.vitamineD).toFixed(1)} ug`}
+                ? "Vitamine D : non renseigné"
+                : `Vitamine D : ${cleanProps(props.vitamineD)} ug`}
                 
             </td>
           </tr>
