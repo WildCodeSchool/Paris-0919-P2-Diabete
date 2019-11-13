@@ -30,32 +30,33 @@ class InfoNutApi extends React.Component {
         this.state.foodsFromCategory.push(...data.records);
         this.setState({ update: this.props.food2 })
       });
+
+    this.sortState()
   };
 
   componentDidUpdate() {
     if (this.state.update !== this.props.food2) {
       this.getFood();
     }
- 
+   
   }
 
   componentDidMount() {
-    this.getFood();
-    this.SortState();
+      this.getFood();
+      this.sortState();
   }
 
 
-  SortState = () => {
+  sortState = () => {
     const newState = this.state.foodsFromCategory.sort((a , b) => {
-      return a.food.fields.origfdnm - b.food.fields.origfdnm;
+      return a.fields.origfdnm - b.food.fields.origfdnm;
        })
-       this.setState({ foodsFromCategory: newState})
+    this.setState({ foodsFromCategory: newState})
   };
 
 
-
   render() {
-    
+
     return (
       <div id="food-box">
         {this.state.foodsFromCategory
