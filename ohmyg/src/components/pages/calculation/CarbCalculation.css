@@ -176,6 +176,9 @@ label {
    animation:slide-fwd-center .45s cubic-bezier(.25,.46,.45,.94) both
 }
 
+.carbCalculation-liItem:active {
+   border: solid red 3px;}
+
 @keyframes slide-fwd-center{0%{transform:translateZ(0)}100%{transform:translateZ(160px)}}
 
 /* .carbCalculation-liItemSelected {
