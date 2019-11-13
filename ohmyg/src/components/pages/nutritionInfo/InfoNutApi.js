@@ -6,10 +6,11 @@ import './InfoNutApi.css'
 class InfoNutApi extends React.Component {
   state = {
     foodsFromCategory: [],
-    update: this.props.food2
+    update: this.props.food2,
   };
 
   getFood = async() => {
+    
     // loader ? //
     const temporaryCategory = []
     await axios
@@ -38,7 +39,7 @@ class InfoNutApi extends React.Component {
       componentDidUpdate() {
        
         if (this.state.update !== this.props.food2) {
-          this.setState({ update: this.props.food2 }, ()=> {
+          this.setState({ loading : true, update: this.props.food2 }, ()=> {
             this.getFood()})
     }
    
@@ -49,19 +50,22 @@ class InfoNutApi extends React.Component {
     const newState = foodCategory.sort((a , b) => {
       return a.fields.origfdnm.localeCompare(b.fields.origfdnm)
        })
-    this.setState({ foodsFromCategory: newState})
+    this.setState({ loading : false, foodsFromCategory : newState})
   };
 
 
   render() {
     return (
-      <div id="food-box">
-        {this.state.foodsFromCategory
+      
+        <div id="food-box">
+        {this.state.loading ? 'true' : 
+        this.state.foodsFromCategory
         .map(food => (
           <Link className="food-card-link" to={`/displayinfonut/${food.fields.origfdcd}`}>
             <p className="food-card"> {food.fields.origfdnm}</p>{" "}
         </Link>))
         }
+  
       </div>
     );
   }
