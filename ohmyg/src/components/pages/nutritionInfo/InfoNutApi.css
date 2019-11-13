@@ -1,39 +1,54 @@
-.infoNutApi-mainBox{
-    display: flex;
-    flex-direction: column;
-    margin: 1.5vw 5vw;
-}
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+
 
 .food-card {
-    border: 3px solid #08f9d6;
     background-color: hsl(171, 95%, 80%);
-    font-weight: bold;
+    font-weight: 400;
     width: 100%;
     text-align: center;
-    margin: 0.2vw;
     height: auto;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 5px;
+    padding:0.3em;
+}
+
+.food-card-link {
+    text-decoration: none;
+}
+
+.food-card-link:hover {
+    cursor: pointer;
 }
 
 
+@media screen and (min-width: 961px) {
 
-.food-box-content{
-    margin-top:2em;
-}
-
-@media screen and (min-width: 1051px) {
-    .infoNutApi-mainBox{
-        display: flex;
-        flex-direction: column;
-        margin: 2vw 5vw;
+    #food-box{
+        margin: 2em auto auto auto;
+        width: 85%;
     }
+}
 
+@media screen and (max-width: 960px) {
+
+    #food-box{
+        margin: 2em auto auto auto;
+        width: 86%;
+    }
     .food-card {
-        border: 3px solid #08f9d6;
-        background-color: hsl(171, 95%, 80%);
-        font-weight: bold;
-        width: 100%;
-        text-align: center;
-        margin: 0.2vw;
-        height: auto;
+        font-size:0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #food-box{
+        margin: 2em auto auto auto;
+        width: 93%;
+    }
+    .food-card {
+        font-size:0.7em;
     }
 }

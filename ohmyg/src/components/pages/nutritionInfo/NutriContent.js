@@ -18,7 +18,7 @@ class NutriContent extends React.Component {
   changeProps = (item1, item2) => {
     this.setState({ category1: item1 });
     this.setState({ category2: item2 });
-    this.scrollTo();
+    this.scrollTo()
   };
 
   // scrollTo = () => {
@@ -27,13 +27,11 @@ class NutriContent extends React.Component {
   //       });
   // }
 
-  // scrollTo = () => {
-  //   setTimeout(() => {
-  //     document
-  //       .querySelector("#food-box")
-  //       .scrollIntoView({ behavior: "smooth" });
-  //   }, 1000);
-  // };
+  scrollTo = () => {
+    setTimeout(() => {
+      document.querySelector("#food-box").scrollIntoView({ behavior: "smooth" });
+    }, 800);
+  };
 
   render() {
     return (
@@ -83,7 +81,7 @@ class NutriContent extends React.Component {
           </div>
         </div>
 
-        <InfoNutApi
+        <InfoNutApi id="food-box"
           firstFood={this.state.category1}
           food2={this.state.category2}
         />

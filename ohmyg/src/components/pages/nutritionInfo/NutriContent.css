@@ -12,11 +12,6 @@
 }
 
 
-#food-box {
-    margin: 0 5vw;
-    display: flex;
-    flex-direction: column;
-}
 
 .fruitAndVeg {
     background-color: #08f9d6;

@@ -28,8 +28,7 @@ class InfoNutApi extends React.Component {
       .then(response => response.data)
       .then(data => {
         this.state.foodsFromCategory.push(...data.records);
-
-        this.setState({ update: this.props.food2 });
+        this.setState({ update: this.props.food2 })
       });
   };
 
@@ -37,20 +36,34 @@ class InfoNutApi extends React.Component {
     if (this.state.update !== this.props.food2) {
       this.getFood();
     }
+ 
   }
 
   componentDidMount() {
     this.getFood();
+    this.SortState();
   }
 
+
+  SortState = () => {
+    const newState = this.state.foodsFromCategory.sort((a , b) => {
+      return a.food.fields.origfdnm - b.food.fields.origfdnm;
+       })
+       this.setState({ foodsFromCategory: newState})
+  };
+
+
+
   render() {
+    
     return (
-      <div id="food-box-content">
-        {this.state.foodsFromCategory.map(food => (
-          <Link to={`/displayinfonut/${food.fields.origfdcd}`}>
+      <div id="food-box">
+        {this.state.foodsFromCategory
+        .map(food => (
+          <Link className="food-card-link" to={`/displayinfonut/${food.fields.origfdcd}`}>
             <p className="food-card"> {food.fields.origfdnm}</p>{" "}
-          </Link>
-        ))}
+        </Link>))
+        }
       </div>
     );
   }
