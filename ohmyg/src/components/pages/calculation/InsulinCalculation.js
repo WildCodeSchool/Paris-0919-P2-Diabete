@@ -3,6 +3,7 @@ import "./InsulinCalculation.css";
 import smileyHypo from "../../../assets/icons/pictos-16.png";
 import smileyHyper from "../../../assets/icons/pictos-17.png";
 import icon from "../../../assets/icons/checked.png";
+import smileySetParam from "../../../assets/icons/pictos-17.png";
 
 class InsulinCalculation extends Component {
   state = {
@@ -42,129 +43,158 @@ class InsulinCalculation extends Component {
     console.log(this.state.hypo)
     return (
       <div className="insulinCalculationContainer">
-        <div className="totalGlucides">
-          <p className="inputTitle">Mon Total de Glucides </p>
-          <div className="inputAndLabels">
-            <input
-              id="totalGlucides"
-              type="number"
-              name="totalGlucides"
-              onChange={this.handleChange}
-              value={this.state.totalGlucides}
-            />
-            <label className="unit"> g</label>
-          </div>
-        </div>
-
-        <div className="ratioAndGlycemie">
-          <div className="ratio">
-            <p className="inputTitle">Mon Ratio</p>
-            <div className="inputAndLabels">
-              <label className="label" htmlFor="totalGlucides">
-                1 pour{" "}
-              </label>
+        <div className="insulinCalculation-firstParamaters">
+          <div className="insulinCalculation-totalGlucides">
+            <p className="insulinCalculation-inputTitle">Les glucides contenus dans mon repas</p>
+            <div className="insulinCalculation-inputAndLabels">
               <input
-                id="ratio"
+                id="totalGlucides"
                 type="number"
-                name="ratio"
+                name="totalGlucides"
                 onChange={this.handleChange}
-                value={this.state.ratio}
+                value={this.state.totalGlucides}
               />
-              <label className="unit"> g</label>
+              <label className="insulinCalculation-unit"> g</label>
             </div>
           </div>
 
-          <div className="glycemie">
-            <p className="inputTitle">Ma glycémie avant repas</p>
-            <div className="inputAndLabels">
-              <input
-                className={
-                  this.state.glycemie > "1.20"
-                    ? "glycemieInputHyperColor"
-                    : this.state.glycemie > "0.01" && this.state.glycemie < "0.8" ? "glycemieInputHypoColor" : ""
-                }
-                id="glycemie"
-                type="number"
-                name="glycemie"
-                onChange={this.handleChange}
-                value={this.state.glycemie}
-              />
-              <label className="unit">g/l</label>
+          <div className="insulinCalculation-ratioAndGlycemie">
+            <div className="insulinCalculation-normal">
+              <div className="insulinCalculation-ratio">
+                <p className="insulinCalculation-inputTitle">Mon Ratio</p>
+                <div className="insulinCalculation-inputAndLabels">
+                  <label className="insulinCalculation-label" htmlFor="totalGlucides">
+                    1 /{" "}
+                  </label>
+                  <input
+                    id="ratio"
+                    type="number"
+                    name="ratio"
+                    onChange={this.handleChange}
+                    value={this.state.ratio}
+                  />
+                  <label className="insulinCalculation-unit"> g</label>
+                </div>
+              </div>
+
+              <div className="insulinCalculation-glycemie">
+                <p className="insulinCalculation-inputTitle">Glycémie avant repas</p>
+                <div className="insulinCalculation-inputAndLabels">
+                  <input
+                    className={
+                      this.state.glycemie > "1.20"
+                        ? "insulinCalculation-glycemieInputHyperColor"
+                        : this.state.glycemie > "0.01" && this.state.glycemie < "0.8" ? "glycemieInputHypoColor" : ""
+                    }
+                    id="glycemie"
+                    type="number"
+                    name="glycemie"
+                    onChange={this.handleChange}
+                    value={this.state.glycemie}
+                  />
+                  <label className="insulinCalculation-unit">g/l</label>
+                </div>
+              </div>
             </div>
+
+            <div className="insulinCalculation-notNormal">
+              <div>{this.state.glycemie > "1.20" ? 
+                <div className="insulinCalculation-hyperglycemie">
+                  <div className="insulinCalculation-sensibilite">
+                    <p className="insulinCalculation-inputTitle">Sensibilité</p>
+                    <div className="insulinCalculation-inputAndLabels">
+                      <label className="insulinCalculation-label">1 / </label>
+                      <input
+                        id="sensibiliteinput"
+                        type="number"
+                        name="sensibilite"
+                        onChange={this.handleChange}
+                        value={this.state.sensibilite}
+                      />
+                      <label className="insulinCalculation-unit"> g/l</label>
+                    </div>
+                  </div>
+    
+                  <div className="insulinCalculation-glycemieCible">
+                    <p className="insulinCalculation-inputTitle">Glycémie cible</p>
+                    <div className="insulinCalculation-inputAndLabels">
+                      <input
+                        id="flecheinput"
+                        type="number"
+                        name="glycemiecible"
+                        onChange={this.handleChange}
+                        value={this.state.glycemiecible}
+                      />
+                      <label className="insulinCalculation-unit"> g/l</label>
+                    </div>
+                  </div>
+                </div>
+                : ""}
+              </div>
+            </div>
+          </div>
+
+          <div className="insulinCalculation-smileys">
+            <div>{this.state.glycemie === "" ?
+              <div className="insulinCalculation-smileySetParam-box">
+                <img
+                  className="insulinCalculation-smileySetParam"
+                  src={smileySetParam}
+                  alt="Saisis tes paramètres"
+                />
+              </div>
+              : <p></p>}
+            </div>
+
+            <div>{this.state.glycemie > "1.20" ? 
+              <div className="insulinCalculation-smileySetParam-box">
+                <img
+                  className="insulinCalculation-smileyHyper"
+                  src={smileyHyper}
+                  alt="Tu es en hyperglycémie, remplis la suite :)"
+                />
+              </div>
+              : ""}
+            </div>
+
+            <div>{this.state.glycemie > "0.01" && this.state.glycemie < "0.8" ?
+              <div className="insulinCalculation-warning">
+                <img
+                  className="insulinCalculation-smileyHypo"
+                  src={smileyHypo}
+                  alt="Attention, tu es en hypoglycémie, resucre-toi :)"
+                />
+              </div> 
+              : ""}
+            </div>
+
           </div>
         </div>
 
-        <div>{this.state.glycemie > "1.20" ? 
-         <div>
-         <img
-           className="smileyHyper"
-           src={smileyHyper}
-           alt="Tu es en hyperglycémie, remplis la suite :)"
-         />
-         <div className="hyperglycemie">
-           <div className="sensibilite">
-             <p className="inputTitle">Sensibilité</p>
-             <div className="inputAndLabels">
-               <label className="label">1 pour </label>
-               <input
-                 id="sensibiliteinput"
-                 type="number"
-                 name="sensibilite"
-                 onChange={this.handleChange}
-                 value={this.state.sensibilite}
-               />
-               <label className="unit"> g/l</label>
-             </div>
-           </div>
- 
-           <div className="glycemieCible">
-             <p className="inputTitle">Glycémie cible</p>
-             <div className="inputAndLabels">
-               <input
-                 id="flecheinput"
-                 type="number"
-                 name="glycemiecible"
-                 onChange={this.handleChange}
-                 value={this.state.glycemiecible}
-               />
-               <label className="unit"> g/l</label>
-             </div>
-           </div>
-         </div>
-       </div>
-        : ""}</div>
 
-        <div>{this.state.glycemie > "0.01" && this.state.glycemie < "0.8" ?
-          <div
-            className="warning"
-          >
-            <img
-              className="smileyHypo"
-              src={smileyHypo}
-              alt="Attention, tu es en hypoglycémie, resucre-toi :)"
-            />
-          </div> : ""}</div>
 
-        <div>
+
+
+        <div className="insulinCalculation-button-box">
           <button
-            className="InsulinCalculation-button"
+            className="insulinCalculation-button"
             onClick={this.calculhypoglycemie}
           >
-            <div className="Button-Border"></div>
-            <img className="Button-Icon-Checked" src={icon} />
+            <div className="insulinCalculation-Button-Border"></div>
+            <img className="insulinCalculation-Button-Icon-Checked" src={icon} />
           </button>
         </div>
 
 
 
-        <div className="total">
-          <p id="totalTitle">Dose d'insuline suggérée</p>
-          <div className="totalNumber">
-            <p id="number"> {this.state.total} </p>
+        <div className="insulinCalculation-total">
+          <p id="insulinCalculation-totalTitle">Dose d'insuline suggérée</p>
+          <div className="insulinCalculation-totalNumber">
+            <p id="insulinCalculation-number"> {this.state.total} </p>
           </div>
         </div>
 
-        <div className="warningCalcul">
+        <div className="insulinCalculation-warningCalcul">
           <p>
             Attention, ce calcul ne prend pas en compte l'évolution de ta
             glycémie à l'instant présent et l'activité physique que tu auras
