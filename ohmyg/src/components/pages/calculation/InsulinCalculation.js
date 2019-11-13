@@ -14,6 +14,10 @@ class InsulinCalculation extends Component {
     total: "0",
   };
 
+  componentDidMount() {
+    this.setState ({totalGlucides : this.props.carbs})
+  }
+
   handleChange = e => {
     if (e.target.value.length > 4) {
       return;
@@ -51,6 +55,9 @@ class InsulinCalculation extends Component {
               name="totalGlucides"
               onChange={this.handleChange}
               value={this.state.totalGlucides}
+
+              // value={this.props.carbs > 0 ? this.props.carbs : 
+              //   this.state.totalGlucides}
             />
             <label className="unit"> g</label>
           </div>
