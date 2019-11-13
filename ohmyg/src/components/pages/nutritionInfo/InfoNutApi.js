@@ -9,62 +9,51 @@ class InfoNutApi extends React.Component {
     update: this.props.food2
   };
 
-  getFood =  () => {
-    axios
+  getFood = async() => {
+    // loader ? //
+    const temporaryCategory = []
+    await axios
       .get(
         `https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=${this.props.firstFood}`
       )
       .then(response => response.data)
       .then(data => {
-        this.setState({
-          foodsFromCategory: data.records
-        }, _=>{console.log('setState1');
-        });
-      }).then(_=>{
-        axios
+        temporaryCategory.push(...data.records)
+      })
+
+        await axios
           .get(
             `https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=${this.props.food2}`
           )
           .then(response => response.data)
           .then(data => {
-            const newFoodCat = this.state.foodsFromCategory;
-            newFoodCat.push(...data.records)
-            this.setState({foodsFromCategory : newFoodCat});
-          });
-        });
+            temporaryCategory.push(...data.records)
+          })
+        .then(_=> {this.sortState(temporaryCategory)})
         
         
-      };
+
+  }
       
       componentDidUpdate() {
        
         if (this.state.update !== this.props.food2) {
-          console.log('========');
-          
-          console.log('update', this.state.update, this.props.food2);
-          
           this.setState({ update: this.props.food2 }, ()=> {
-            this.getFood();
-            console.log('getFood');
-            
-          })
+            this.getFood()})
     }
    
   }
 
-
-  sortState = () => {
-    const newState = this.state.foodsFromCategory.sort((a , b) => {
-      return a.fields.origfdnm - b.fields.origfdnm;
+ 
+  sortState = (foodCategory) => {
+    const newState = foodCategory.sort((a , b) => {
+      return a.fields.origfdnm.localeCompare(b.fields.origfdnm)
        })
     this.setState({ foodsFromCategory: newState})
   };
 
 
   render() {
-    console.log(this.state.foodsFromCategory.length, this.state.foodsFromCategory);
-    
-
     return (
       <div id="food-box">
         {this.state.foodsFromCategory
