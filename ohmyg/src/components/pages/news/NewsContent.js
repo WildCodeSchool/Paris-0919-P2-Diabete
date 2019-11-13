@@ -64,14 +64,14 @@ class NewsContent extends React.Component {
 
         <div className="NewsContent-Article ">
           <div className='NewsContent-block1'>
-            <h2 className="Title-sport">Le sport et le diabète</h2>
+            <h2 className="secondArticleTitle">Le sport et le diabète</h2>
           </div>
 
           <div className='newsContent-block2'>
             <h3 className="Title-sport">Bouger pour aller mieux</h3>
             <div className='sportImageText'>
               <img className="Running-man" src="http://www.blacktiemagazine.com/Society_2009_january/Juvenile_Diabetes_Gary_hall.jpg" alt='Running Man' />
-              <p className="text-sportAndDiabete1"> Le nageur américain Gary Hall plusieurs fois médaillé aux JO de Sydney en 2000 ou encore Chris Jarvis, rameur, médaillé d'or en championnat du monde... Tous les deux sont diabétiques et leur maladie ne les a pas empêchés d'exercer un sport à haut niveau. Et si leurs parcours sont impressionnants et forcent l'admiration, l'idée reste toutefois de trouver un sport adapté à votre condition physique.
+              <p className="text-sportAndDiabete"> Le nageur américain Gary Hall plusieurs fois médaillé aux JO de Sydney en 2000 ou encore Chris Jarvis, rameur, médaillé d'or en championnat du monde... Tous les deux sont diabétiques et leur maladie ne les a pas empêchés d'exercer un sport à haut niveau. Et si leurs parcours sont impressionnants et forcent l'admiration, l'idée reste toutefois de trouver un sport adapté à votre condition physique.
               Pour promouvoir la pratique du sport auprès des personnes diabétiques, la Fédération française de triathlon a mis en place un programme adapté. Des entraîneurs ont reçu une formation spécifique pour mieux accompagner les sportifs atteints de diabète.</p>
             </div>
           </div>
@@ -87,11 +87,16 @@ class NewsContent extends React.Component {
         <div className='NewsContent-block4'>
         <h3 className="Title-sport">Sports et glycémie</h3>
         <p className="text-sportAndDiabete">Le plus souvent, l’exercice physique fait baisser la glycémie pendant le sport et surtout dans les heures qui suivent le sport. Des précautions simples permettent d’éviter l’hypoglycémie :
+        <br />
             • Diminuer les doses d’insuline
+            <br />
             • Adapter l’alimentation
+            <br />
             • Contrôler la glycémie, avant le sport pour savoir d’où on part et après pour savoir si la dose a été corrigée de façon correcte, pourquoi pas à la mi-temps.
+            <br />
             Il est important de noter dans le carnet le sport pratiqué, la dose d’insuline, les collations prises, les glycémies. Il faut être d’autant plus attentif au début du diabète, quand on commence une nouvelle activité physique dont on ne connaît pas les effets.
             Peu à peu, on fait sa propre expérience et on apprend, par ses propres réactions, à faire les ajustements nécessaires, en s’aidant des conseils de l’équipe médicale.
+            <br />
               Attention ! Ne jamais faire de sport à jeun.</p>
         </div>  
       </div>

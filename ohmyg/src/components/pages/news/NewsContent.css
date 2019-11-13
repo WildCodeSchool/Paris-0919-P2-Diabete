@@ -36,7 +36,7 @@
 /*TITLE VIDEO*/
 
 .newsContent-Page{
-  font-size : 1.8em;
+  font-size : 1.6em;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
@@ -44,27 +44,24 @@
   
 
 .newsContent-testymony, .newsContent-meeting{
-  font-size : 1.3em;
+  font-size : 1.2em;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  margin: 2px;
+  /* margin: 2px; */
 }
 
 
 
 /*CONTENT ARTICLES GLOBAL*/
 
-.Open-book{
-  width: 15%;
-}
 
 .NewsContent-Article{
     box-shadow : 4px;
     border-top: solid 2px black ;
-    margin-top: 20px; 
+    margin-top: 1vw; 
     font-family: Barlow;
     width: 100%;
-    padding:2vw;
+    padding:1vw;
   }
 
   /*FIST, SECOND AND THIRD ARTICLE*/
@@ -73,30 +70,33 @@
     text-align: center;
     margin: 3px;
   }
+
+  .firstArticleTitle, .thirdArticleTitle, .secondArticleTitle{
+    font-size: 1.3em;
+  }
   
   .textFirstArticle-block1, .textFirstArticle-block2, .text-sportAndDiabete, .text-pocketInsuline{
     text-align: justify;
-    /* word-spacing: normal; */
-    margin: 2vw;
+    font-size: 1em;
+    margin: 1vw;
   }
         
   
   /*pycto running man*/
 
 .Running-man{
-  width: 40%;
+  width: 60%;
   height: auto;
   display: block;
-  margin: 1em auto 1em;
-  /* float: left; */
+  margin: 0.5em auto 0.5em;
 }
         
 .picto-coeur{
   width: 30%;
 }
-.text-sportAndDiabete1{
+/* .text-sportAndDiabete1{
   overflow: auto;
-}
+} */
         
 .photo1{
   width: 85%;
@@ -126,6 +126,7 @@
   #video2,
   #video3 {
     width: 100%;
+    height: auto;
     object-fit: contain;
     margin-bottom:10px;
   }
