@@ -102,11 +102,15 @@ class NewsContent extends React.Component {
       </div>
       
       <div className="NewsContent-Article">
-        <img className ="picto-coeur" src={icon} alt="pictoCoeur" />
-        <h2 className="thirdArticleTitle">Coups de coeur de la semaine</h2>
-        <img className="photo1" src="https://i.etsystatic.com/8886419/r/il/3940ae/1162144846/il_570xN.1162144846_k79i.jpg" alt='Pictures of bag'/>
-        <p className="text-pocketInsuline">Aujourd'hui, nous vous présentons une jolie pochette "super mario" faite mains. Elle vous permets de ranger vos stylos à insuline et tout le nécessaire. Vous pouvez retrouver pleins d'autres modèles <a href='https://www.etsy.com/fr/search?q=pochettes+insuline' target='_blank'>ici</a>
-        </p>
+        <div className='pyctoAndTitle'>
+          <img className ="picto-coeur" src={icon} alt="pictoCoeur" />
+          <h2 className="thirdArticleTitle">Coups de coeur de la semaine</h2>
+        </div>
+        <div className='imageAndTextThirdArticle'>
+          <img className="photo1" src="https://i.etsystatic.com/8886419/r/il/3940ae/1162144846/il_570xN.1162144846_k79i.jpg" alt='Pictures of bag'/>
+          <p className="text-pocketInsuline">Aujourd'hui, nous vous présentons une jolie pochette "super mario" faite mains. Elle vous permets de ranger vos stylos à insuline et tout le nécessaire. Vous pouvez retrouver pleins d'autres modèles <a href='https://www.etsy.com/fr/search?q=pochettes+insuline' target='_blank'>ici</a>
+          </p>
+        </div>
       </div>
     </div>
     )

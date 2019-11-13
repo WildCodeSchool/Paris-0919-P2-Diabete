@@ -28,6 +28,7 @@
   height: auto;
   object-fit: contain;
 }
+
 #video1,
 #video2{
   margin:5px;
@@ -43,11 +44,10 @@
 
   
 
-.newsContent-testymony, .newsContent-meeting{
+.newsContent-testymony, .newsContent-meeting, .thirdArticleTitle{
   font-size : 1.2em;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  /* margin: 2px; */
 }
 
 
@@ -68,6 +68,7 @@
   
   .firstArticleTitle, .firstArticle-substitle, .Title-sport, .thirdArticleTitle{
     text-align: center;
+    font-size: 1.1em;
     margin: 3px;
   }
 
@@ -77,6 +78,7 @@
   
   .textFirstArticle-block1, .textFirstArticle-block2, .text-sportAndDiabete, .text-pocketInsuline{
     text-align: justify;
+    font-family: "Barlow", sans-serif;
     font-size: 1em;
     margin: 1vw;
   }
@@ -94,9 +96,7 @@
 .picto-coeur{
   width: 30%;
 }
-/* .text-sportAndDiabete1{
-  overflow: auto;
-} */
+
         
 .photo1{
   width: 85%;
@@ -108,26 +108,67 @@
 /*VERSION DESKTOP*/ 
 
 @media screen and (min-width: 960px) {
-  .sportImageText{
-    position: relative;
+  .newsContent-Page{
+    font-size : 3em;
+    margin: 10px
   }
 
-  /* .NewsContent-block1 {
-    display: grid;
-    grid-template-columns: 10% 70% 20%;
-  }
-
-  .NewsContent-Article {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-  }  */
+/*VIDEO*/
 
   #video1,
   #video2,
   #video3 {
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 500px;
     object-fit: contain;
-    margin-bottom:10px;
   }
+
+  /*SIZE OF TITLES*/
+
+  .newsContent-Page{
+    font-size : 3em;
+  }
+  
+  .newsContent-testymony, .newsContent-meeting{
+    font-size : 2em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+  }
+
+  .firstArticleTitle, .thirdArticleTitle, .secondArticleTitle{
+    font-size: 2em;
+  }
+
+  .textFirstArticle-block1, .textFirstArticle-block2, .text-sportAndDiabete, .text-pocketInsuline{
+    font-size: 1.2em;
+    margin: 1vw;
+  }
+
+  .firstArticle-substitle, .Title-sport{
+    font-size: 1.3em;
+  }
+
+  /*SIZE OF PYCTO*/
+  .picto-coeur{
+    width: 20%;
+  }
+
+  /*THIRD ARTICLE*/
+  
+  .pyctoAndTitle{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .thirdArticleTitle{
+    margin: auto;
+
+  }
+
+
+
+  .sportImageText{
+    position: relative;
+  }
+
 }
