@@ -2,6 +2,13 @@
 
 @import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 .Main-Video {
   display: flex;
   flex-direction: column;
@@ -23,9 +30,15 @@
   margin-bottom:20px;
 }
 
+.NewsContent-Article{
+  width:100%;
+  border: solid 2px black;
+  /* margin-top: 20px; */
+  font-family: Barlow;
+  }
+  
 
-
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 960px) {
 #video1,
 #video2,
 #video3 {
@@ -48,4 +61,27 @@
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   margin-bottom:10px;
+}
+
+.NewsContent-Article{
+  box-shadow : 4px;
+  border : solid 2px black ;
+  margin-top: 20px;
+  font-family: Barlow;
+  width: 100%;
+  text-align: center;
+  padding:10px;
+}
+
+.Open-book{
+  width: 80px;
+  margin-right: 400px;
+}
+
+.photo1{
+  width: 400px;
+}
+
+.Running-man{
+  width: 100px
 }
