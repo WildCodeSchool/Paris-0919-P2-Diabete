@@ -58,7 +58,7 @@ class InfoNutApi extends React.Component {
     return (
       
         <div id="food-box">
-        {this.state.loading ? 'true' : 
+        {this.state.loading ? 'Loading...' : 
         this.state.foodsFromCategory
         .map(food => (
           <Link className="food-card-link" to={`/displayinfonut/${food.fields.origfdcd}`}>
