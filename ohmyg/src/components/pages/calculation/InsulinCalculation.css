@@ -7,7 +7,10 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 
-
+.insulinCalculationContainer * {
+  margin-top: 0;
+  font-display: "Barlow", sans-serif;
+}
 
 @media screen and (max-width: 960px) {
   .insulinCalculationContainer {
@@ -35,6 +38,7 @@
     align-items: space-evenly;
     background-color: hsl(0, 0%, 93%);
     margin-top: 5vw;
+    padding-bottom: 4vw;
   }
 
   .insulinCalculation-normal{
@@ -70,8 +74,9 @@
   }
 
   .insulinCalculation-inputTitle, .insulinCalculation-label, .insulinCalculation-unit {
-    font-size: 3vw;
+    font-size: 5vw;
     margin: 1vw;
+    text-align: center;
   }
 
   .insulinCalculation-inputAndLabels {
@@ -84,10 +89,10 @@
 
   .insulinCalculation-inputAndLabels input {
     width: 70%;
-    height: 5vw;
+    height: 8vw;
     margin: 0 1vw;
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 4vw;
   }
 
   .insulinCalculation-hyperglycemie {
@@ -109,7 +114,7 @@
   .insulinCalculation-button {
     margin: 3vw 3vw 2vw;
     width: 30%;
-    height: 3.5vw;
+    height: 8.5vw;
     font-size: 1.6em;
     background-color: #364eff;
     position: relative;
@@ -125,10 +130,10 @@
   .insulinCalculation-Button-Border {
     position: absolute;
     width: 101%;
-    height: 3.6vw;
+    height: 8.6vw;
     border: solid 4.5px black;
-    bottom: 10px;
-    right: 10px;
+    bottom: 8px;
+    right: 8px;
   }
 
   .insulinCalculation-button-box {
@@ -145,11 +150,11 @@
   }
 
   .insulinCalculation-total p {
-    font-size: 1.4vw;
+    font-size: 4vw;
   }
 
   .insulinCalculation-warningCalcul p {
-    font-size: 1.2vw;
+    font-size: 3.5vw;
     color: hsl(233, 100%, 61%);
     text-align: center;
     margin-top: 1.5vw;
