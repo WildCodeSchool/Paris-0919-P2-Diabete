@@ -112,10 +112,10 @@
   }
 
   .insulinCalculation-button {
-    margin: 3vw 3vw 2vw;
-    width: 30%;
-    height: 8.5vw;
-    font-size: 1.6em;
+    margin: 3vw;
+    width: 60%;
+    height: 2.5em;
+    font-size: 1.2em;
     background-color: #364eff;
     position: relative;
     border: none;
@@ -124,16 +124,16 @@
   .insulinCalculation-Button-Icon-Checked {
     height: 70%;
     width: auto;
-    margin: auto auto 3px auto;
+    margin: auto auto 2px auto;
   }
 
   .insulinCalculation-Button-Border {
     position: absolute;
-    width: 101%;
-    height: 8.6vw;
-    border: solid 4.5px black;
-    bottom: 8px;
-    right: 8px;
+    width: 100%;
+    height: 2.5em;
+    border: solid 3.5px black;
+    bottom: 7px;
+    right: 7px;
   }
 
   .insulinCalculation-button-box {
