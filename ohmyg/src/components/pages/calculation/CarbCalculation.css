@@ -159,7 +159,7 @@ label {
    width: auto;
 }
 
-.carbCalculation-ulModifying div {
+.carbCalculation-ulModifying {
    margin: 10px;
    width: auto;
    pointer-events: none;
@@ -189,7 +189,7 @@ label {
 
 .carbCalculation-active {
    background-color : #364eff;
-   color: white;}
+color: white}
 
 @keyframes slide-fwd-center{0%{transform:translateZ(0)}100%{transform:translateZ(160px)}}
 
