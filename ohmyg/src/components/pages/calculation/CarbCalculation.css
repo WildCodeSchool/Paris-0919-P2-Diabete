@@ -159,6 +159,13 @@ label {
    width: auto;
 }
 
+.carbCalculation-ulModifying div {
+   margin: 10px;
+   width: auto;
+   pointer-events: none;
+
+}
+
 .carbCalculation-liItem {
    border: solid grey 3px;
    background-color: white;
@@ -176,8 +183,13 @@ label {
    animation:slide-fwd-center .45s cubic-bezier(.25,.46,.45,.94) both
 }
 
-.carbCalculation-liItem:active {
-   border: solid red 3px;}
+.carbCalculation-liItem li {
+   pointer-events: none;
+}
+
+.carbCalculation-active {
+   background-color : #364eff;
+   color: white;}
 
 @keyframes slide-fwd-center{0%{transform:translateZ(0)}100%{transform:translateZ(160px)}}
 

@@ -17,6 +17,7 @@ class CarbCalculation extends React.Component {
         galleryItems: [],
         calculationButtonIsClicked: false,
         modifyingItem: false,
+        listButtonIsClicked : false
     }
 
 
@@ -115,7 +116,11 @@ class CarbCalculation extends React.Component {
         this.setState({ calculationButtonIsClicked: true })
     }
     
-    modifyItem = async (elem, index) => {
+    modifyItem = async (event, elem, index) => {
+        console.log(event.target);
+
+        event.target.className += " carbCalculation-active"
+        
         await this.setState({modifyingItem : true})
         this.setState({index: index})
         this.setState({name : elem.dish})
@@ -205,8 +210,8 @@ class CarbCalculation extends React.Component {
 
                             <div className='carbs-list'>
                                 {this.state.galleryItems.map((elem, index) =>
-                                    <ul className="carbCalculation-ul" onClick={() => this.modifyItem(elem, index)} >
-                                        <div className="carbCalculation-liItem" >
+                                    <ul className={this.state.modifyingItem ? "carbCalculation-ulModifying" : "carbCalculation-ul"} >
+                                        <div className={`carbCalculation-liItem`} onClick={(event) => this.modifyItem(event, elem, index)} key={index}>
                                         {/* <div className={this.state.modifyingItem ? "carbCalculation-liItem" :"carbCalculation-liItem"} */}
                                             <li> {elem.dish}</li>
                                             <li> {elem.dishCarb}</li>
