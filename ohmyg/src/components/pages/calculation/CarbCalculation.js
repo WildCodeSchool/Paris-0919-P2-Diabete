@@ -5,6 +5,8 @@ import './CarbCalculation.css';
 import InsulinCalculation from "./InsulinCalculation";
 // import icon from "../../../assets/icons/checked.png";
 import bin from "../../../assets/icons/trash.png"
+import icon from "../../../assets/icons/checked.png"
+
 
 class CarbCalculation extends React.Component {
     state = {
@@ -193,7 +195,7 @@ class CarbCalculation extends React.Component {
                                 <button className="CarbCalculation-Validation"
                                     onClick={this.handleClick}>
                                     <div className="Button-Border"></div>
-                                    {/* <img className="Button-Icon-Checked" src={icon} /> */}
+                                    <img className="Button-Icon-Checked" src={icon} />
                                 </button>
 
 
@@ -211,8 +213,8 @@ class CarbCalculation extends React.Component {
                             <div className='carbs-list'>
                                 {this.state.galleryItems.map((elem, index) =>
                                     <ul className={this.state.modifyingItem ? "carbCalculation-ulModifying" : "carbCalculation-ul"} >
-                                        <div className={`carbCalculation-liItem`} onClick={(event) => this.modifyItem(event, elem, index)} key={index}>
-                                        {/* <div className={this.state.modifyingItem ? "carbCalculation-liItem" :"carbCalculation-liItem"} */}
+                                        <div className="carbCalculation-liItem" onClick={(event) => this.modifyItem(event, elem, index)} key={index}>
+                                        {/* <div className={this.state.modifyingItem ? "carbCalculation-liItem" :"carbCalculation-liItemBis"} */}
                                             <li> {elem.dish}</li>
                                             <li> {elem.dishCarb}</li>
                                         </div>
