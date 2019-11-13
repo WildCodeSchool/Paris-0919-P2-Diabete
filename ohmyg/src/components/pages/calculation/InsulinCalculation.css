@@ -27,7 +27,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: hsl(0, 0%, 93%);
+    background-color: hsl(216, 100%, 92%);
     padding: 2vw;
   }
 
@@ -36,7 +36,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: space-evenly;
-    background-color: hsl(0, 0%, 93%);
+    background-color: hsl(216, 100%, 92%);
     margin-top: 5vw;
     padding-bottom: 4vw;
   }
@@ -81,18 +81,19 @@
 
   .insulinCalculation-inputAndLabels {
     width: 90%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
     justify-content: center;
     align-items: center;
     padding-left: 2.5vw;
   }
 
   .insulinCalculation-inputAndLabels input {
-    width: 70%;
     height: 8vw;
     margin: 0 1vw;
     text-align: center;
     font-size: 4vw;
+    grid-column: 2/ span 1;
   }
 
   .insulinCalculation-hyperglycemie {
@@ -100,7 +101,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: hsl(0, 0%, 93%);
+    background-color: hsl(216, 100%, 92%);
     padding-bottom: 1.5vw;
   }
   
@@ -116,7 +117,7 @@
     width: 60%;
     height: 2.5em;
     font-size: 1.2em;
-    background-color: #364eff;
+    background-color: hsl(233, 100%, 61%);
     position: relative;
     border: none;
   }
@@ -139,13 +140,14 @@
   .insulinCalculation-button-box {
     display: flex;
     justify-content: center;
+    margin-bottom: 2vw;
   }
 
   .insulinCalculation-total {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: hsl(0, 0%, 93%);
+    background-color: hsl(216, 100%, 92%);
     height: 12vw;
   }
 
@@ -184,7 +186,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: hsl(0, 0%, 93%);
+    background-color: hsl(216, 100%, 92%);
   }
 
   .insulinCalculation-ratioAndGlycemie {
@@ -193,7 +195,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: space-evenly;
-    background-color: hsl(0, 0%, 93%);
+    background-color: hsl(216, 100%, 92%);
   }
 
   .insulinCalculation-normal {
@@ -251,7 +253,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: hsl(0, 0%, 93%);
+    background-color: hsl(216, 100%, 92%);
     height: 12vw;
     padding-bottom: 1.5vw;
   }
@@ -297,7 +299,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: hsl(0, 0%, 93%);
+    background-color: hsl(216, 100%, 92%);
     height: 12vw;
   }
 
