@@ -30,17 +30,6 @@ class ApiRequestInfo extends Component {
           }
         };
 
-
-    // chooseFood= async (name) => {
-    //     const item = await this.state.foods.find(element => 
-    //        element.fields.origfdnm === name) 
-    //     await this.setState({chosenFood : item})
-    //     await this.setState({title: ""})
-       
-    //     this.props.name (this.state.chosenFood.fields.origfdnm)
-    // };
-        
-
     render () {
        
     return (

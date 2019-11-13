@@ -9,8 +9,8 @@ class InfoNutApi extends React.Component {
     update: this.props.food2
   };
 
-  getFood = async () => {
-    await axios
+  getFood =  () => {
+    axios
       .get(
         `https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=${this.props.firstFood}`
       )
@@ -18,44 +18,52 @@ class InfoNutApi extends React.Component {
       .then(data => {
         this.setState({
           foodsFromCategory: data.records
+        }, _=>{console.log('setState1');
         });
-      });
-
-    axios
-      .get(
-        `https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=${this.props.food2}`
-      )
-      .then(response => response.data)
-      .then(data => {
-        this.state.foodsFromCategory.push(...data.records);
-        this.setState({ update: this.props.food2 })
-      });
-
-    this.sortState()
-  };
-
-  componentDidUpdate() {
-    if (this.state.update !== this.props.food2) {
-      this.getFood();
+      }).then(_=>{
+        axios
+          .get(
+            `https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=${this.props.food2}`
+          )
+          .then(response => response.data)
+          .then(data => {
+            const newFoodCat = this.state.foodsFromCategory;
+            newFoodCat.push(...data.records)
+            this.setState({foodsFromCategory : newFoodCat});
+          });
+        });
+        
+        
+      };
+      
+      componentDidUpdate() {
+       
+        if (this.state.update !== this.props.food2) {
+          console.log('========');
+          
+          console.log('update', this.state.update, this.props.food2);
+          
+          this.setState({ update: this.props.food2 }, ()=> {
+            this.getFood();
+            console.log('getFood');
+            
+          })
     }
    
-  }
-
-  componentDidMount() {
-      this.getFood();
-      this.sortState();
   }
 
 
   sortState = () => {
     const newState = this.state.foodsFromCategory.sort((a , b) => {
-      return a.fields.origfdnm - b.food.fields.origfdnm;
+      return a.fields.origfdnm - b.fields.origfdnm;
        })
     this.setState({ foodsFromCategory: newState})
   };
 
 
   render() {
+    console.log(this.state.foodsFromCategory.length, this.state.foodsFromCategory);
+    
 
     return (
       <div id="food-box">
