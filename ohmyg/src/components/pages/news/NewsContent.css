@@ -60,7 +60,7 @@
 
 .NewsContent-Article{
     box-shadow : 4px;
-    border : solid 2px black ;
+    border-top: solid 2px black ;
     margin-top: 20px; 
     font-family: Barlow;
     width: 100%;
@@ -75,17 +75,28 @@
   }
   
   .textFirstArticle-block1, .textFirstArticle-block2, .text-sportAndDiabete, .text-pocketInsuline{
-    text-justify: inter-word;
-    word-spacing: normal;
+    text-align: justify;
+    /* word-spacing: normal; */
     margin: 2vw;
   }
-        /*pycto running man*/
+        
   
-  .Running-man{
-    width: 20%;
-    display: block;
-    margin: 0 auto 0 auto;
-  }
+  /*pycto running man*/
+
+.Running-man{
+  width: 40%;
+  height: auto;
+  display: block;
+  margin: 1em auto 1em;
+  /* float: left; */
+}
+        
+.picto-coeur{
+  width: 30%;
+}
+.text-sportAndDiabete1{
+  overflow: auto;
+}
         
 .photo1{
   width: 85%;
@@ -97,6 +108,10 @@
 /*VERSION DESKTOP*/ 
 
 @media screen and (min-width: 960px) {
+  .sportImageText{
+    position: relative;
+  }
+
   /* .NewsContent-block1 {
     display: grid;
     grid-template-columns: 10% 70% 20%;
