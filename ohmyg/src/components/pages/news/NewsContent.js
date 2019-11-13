@@ -48,10 +48,9 @@ class NewsContent extends React.Component {
 
 
         <div className="NewsContent-Article">
-          <img className="Open-book" src="https://image.flaticon.com/icons/svg/182/182321.svg" />
+          <img className="Open-book" src="https://image.flaticon.com/icons/svg/182/182321.svg" alt='Book' />
           <h2>Tout savoir sur le diabète</h2>
-          <br />
-          <p> Le diabète, c’est avoir trop de sucre dans le sang. On dit que c’est un diabète sucré.                Attention ! On n’a pas un diabète sucré parce qu’on mange trop de sucre, comme on le                 croit trop souvent.
+          <p> Le diabète, c’est avoir trop de sucre dans le sang. On dit que c’est un diabète sucré.Attention ! On n’a pas un diabète sucré parce qu’on mange trop de sucre, comme on le                 croit trop souvent.
               Chez l’enfant, le diabète est dû à la disparition d’une substance appelée l’Insuline. C’est donc un diabète sucré insulinodépendant.</p>
 
           <h3>Le traitement</h3>
@@ -65,9 +64,9 @@ class NewsContent extends React.Component {
 
         <div className="NewsContent-Article">
           <div className='NewsContent-block1'>
-            <img className="Open-book" src="https://image.flaticon.com/icons/svg/182/182321.svg" />
+            <img className="Open-book" src="https://image.flaticon.com/icons/svg/182/182321.svg" alt='Book'/>
             <h2>Le sport et le diabète:</h2>
-            <img className="Running-man" src="https://image.flaticon.com/icons/svg/808/808507.svg" />
+            <img className="Running-man" src="https://image.flaticon.com/icons/svg/808/808507.svg" alt='Running Man' />
           </div>
 
           <div className='newsContent-block2'>
@@ -76,18 +75,16 @@ class NewsContent extends React.Component {
             Pour promouvoir la pratique du sport auprès des personnes diabétiques, la Fédération française de triathlon a mis en place un programme adapté. Des entraîneurs ont reçu une formation spécifique pour mieux accompagner les sportifs atteints de diabète.</p>
           </div>
           
-          <div className='NewsContent-block3'></div>
+          <div className='NewsContent-block3'>
           <h3>Des programmes sportifs adaptés aux diabétiques</h3>
-          <br />
           <p>Presque tous les sports peuvent être pratiqués, l’important est de se faire plaisir. On choisit celui qu’on préfère et qu’on peut pratiquer régulièrement.
           L’exercice musculaire régulier, qui peut se prolonger sans épuiser l’organisme développe la résistance à l’effort. De plus, si on a un diabète, l’exercice améliore le passage du glucose dans le muscle et permet de diminuer les doses d’insuline.
           Certains sports ne sont pas à encourager (voire à déconseiller), parce qu’ils sont potentiellement dangereux avec le diabète. Il peut s’agir d’un danger en cas d’hypoglycémie deltaplane, parapente, parachutisme, alpinisme en montagne, voile en solitaire, sports mécaniques) ; ou d’un risque de lésions rétiniennes (boxe).
               Pour la plongée sous-marine, l’apnée a toujours pu être pratiquée. Avec bouteilles, les jeunes de plus de 18 ans peuvent être accueillis dans les clubs de plongée, mais avec l’obligation de respecter certaines règles.</p>
-        </div>
+          </div>
         
         <div className='NewsContent-block4'>
         <h3>Sports et glycémie</h3>
-        <br />
         <p>Le plus souvent, l’exercice physique fait baisser la glycémie pendant le sport et surtout dans les heures qui suivent le sport. Des précautions simples permettent d’éviter l’hypoglycémie :
             • Diminuer les doses d’insuline
             • Adapter l’alimentation
@@ -100,13 +97,12 @@ class NewsContent extends React.Component {
       
       <div className="NewsContent-Article">
         <h2>Coups de coeur de la semaine</h2>
-        <img className="photo1" src="https://i.etsystatic.com/8886419/r/il/3940ae/1162144846/il_570xN.1162144846_k79i.jpg" />
+        <img className="photo1" src="https://i.etsystatic.com/8886419/r/il/3940ae/1162144846/il_570xN.1162144846_k79i.jpg" alt='Pictures of bag'/>
         <p>Aujourd'hui, nous vous présentons une jolie pochette "super mario" faite mains. Elle vous permets de ranger vos stylos à insuline et tout le nécessaire. Vous pouvez retrouver pleins d'autres modèles <a href='https://www.etsy.com/fr/search?q=pochettes+insuline' target='_blank'>ici</a>
         </p>
       </div>
-  
     </div>
-    )    
+    )
   };
 }
 
