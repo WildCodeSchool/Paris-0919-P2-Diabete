@@ -44,7 +44,10 @@
 
 
 .ApiRequest-list {
-    border: solid 3px black;
+    border-left:solid 3px black;
+    border-right:solid 3px black;
+    border-bottom:solid 3px black;
+    border-top:none;
     width: 100%;
     overflow: hidden;
     scroll-behavior: smooth;
@@ -71,8 +74,10 @@
     text-align: left; 
     padding : 0.5em ; 
     text-decoration :none;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
 }
 
 .ApiRequest-listItem:hover{
-    background-color:lightgrey
+    background-color: hsl(171, 95%, 80%);
 }

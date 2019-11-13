@@ -21,16 +21,12 @@ class NutriContent extends React.Component {
     this.scrollTo()
   };
 
-  // scrollTo = () => {
-  //     document.querySelector(id="food-box").scrollIntoView({
-  //         behavior: 'smooth'
-  //       });
-  // }
+
 
   scrollTo = () => {
     setTimeout(() => {
       document.querySelector("#food-box").scrollIntoView({ behavior: "smooth" });
-    }, 800);
+    }, 1100);
   };
 
   render() {

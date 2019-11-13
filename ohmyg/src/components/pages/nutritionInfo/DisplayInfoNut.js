@@ -1,3 +1,4 @@
+
 import React from "react";
 import ContentFrame from "../../layout/ContentFrame";
 import Footer from "../../layout/Footer";
@@ -56,6 +57,14 @@ class DisplayInfoNut extends React.Component {
                   lipides={this.state.food[0].fields.lipides_g_100g}
                   sel={this.state.food[0].fields.sel_chlorure_de_sodium_g_100g}
                   fibres={this.state.food[0].fields.fibres_alimentaires_g_100g}
+                  vitamineE={this.state.food[0].fields.vitamine_e_mg_100g}
+                  vitamineD={this.state.food[0].fields.vitamine_d_ug_100g}
+                  vitamineC={this.state.food[0].fields.vitamine_c_mg_100g}
+                  vitamineB2={this.state.food[0].fields.vitamine_b2_ou_riboflavine_mg_100g}
+                  vitamineB1={this.state.food[0].fields.vitamine_b1_ou_thiamine_mg_100g}
+                  calcium={this.state.food[0].fields.calcium_mg_100g}
+                  magnesium={this.state.food[0].fields.magnesium_mg_100g}
+                  fer={this.state.food[0].fields.fer_mg_100g}
                 />
               }
             />

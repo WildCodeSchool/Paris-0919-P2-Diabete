@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 
 @import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
@@ -24,12 +25,17 @@
     font-weight: 400;
 }
 
-h3 {
+.NutriTable-Title{
+    font-size:2em
+}
+.NutriTable-Title, .NutriTable-SubTitle  {
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    margin-top:2vw;
+    font-weight: 800;
 }
 
-.NutriTable-Tab {
+.NutriTable-Tab, .NutriTable-Vit{
     width: 80%;
     border: solid 2px black;
     text-align: center;
@@ -39,13 +45,16 @@ h3 {
     font-weight: 400;
 }
 
-.NutriTable-Tab th, .NutriTable-Tab td {
+.NutriTable-Tab th, .NutriTable-Tab td, .NutriTable-Vit th, .NutriTable-Vit td {
     border: solid 2px black;
     padding: 0.7em 1.2em;
 }
     
 .NutriTable-Tab th {
     background-color: #08f9d6;
+}
+.NutriTable-Vit th {
+    background-color: #ffa476;
 }
 
 
@@ -86,15 +95,22 @@ h3 {
     .backTo {
         display :flex;
         align-content: center;
-        margin-left:0;
+        margin-left:-2vh;
         margin-top:-3vh;
     }
-    h3 {
+    
+    
+    .NutriTable-Title, .NutriTable-SubTitle {
         margin-top:2vh;
         text-align: center;
     }
 
-    .NutriTable-Tab {
+    .NutriTable-Title {
+        line-height: 1.2em;
+    }
+    
+    .NutriTable-Tab,  .NutriTable-Vit {
         width: 100%;
+        font-size: 0.8em;
     }
 }

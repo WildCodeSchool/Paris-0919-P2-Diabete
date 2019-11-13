@@ -19,8 +19,10 @@
     text-decoration: none;
 }
 
-.food-card-link:hover {
+
+.food-card-link:hover .food-card:hover {
     cursor: pointer;
+    background-color:#08f9d6;
 }
 
 
@@ -29,6 +31,7 @@
     #food-box{
         margin: 2em auto auto auto;
         width: 85%;
+        text-align: center;
     }
 }
 
@@ -37,6 +40,7 @@
     #food-box{
         margin: 2em auto auto auto;
         width: 86%;
+        text-align: center;
     }
     .food-card {
         font-size:0.9em;
@@ -47,6 +51,7 @@
     #food-box{
         margin: 2em auto auto auto;
         width: 93%;
+        text-align: center;
     }
     .food-card {
         font-size:0.7em;
