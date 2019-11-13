@@ -18,7 +18,7 @@
   align-content: center;
   justify-content: center;
   text-align:center;
-
+  margin-bottom: 6vw;;
 }
 
 #video1,
@@ -57,8 +57,9 @@
 
 .NewsContent-Article{
     box-shadow : 4px;
-    border-top: solid 2px black ;
+    border-top: solid 5px blueviolet ;
     margin-top: 1vw; 
+    margin-bottom: 6vw;
     font-family: Barlow;
     width: 100%;
     padding:1vw;
@@ -74,6 +75,7 @@
 
   .firstArticleTitle, .thirdArticleTitle, .secondArticleTitle{
     font-size: 1.3em;
+    text-align: center;
   }
   
   .textFirstArticle-block1, .textFirstArticle-block2, .text-sportAndDiabete, .text-pocketInsuline{
@@ -94,16 +96,27 @@
 }
         
 .picto-coeur{
-  width: 30%;
+  width: 25%;
+  height: 60px;
+  margin: 0;
+}
+
+.pyctoAndTitle{
+  display: flex;
+  flex-direction: row;
 }
 
         
 .photo1{
-  width: 85%;
+  width: 100%;
   display: block;
-  margin: 0 auto 0 auto;
+  margin: 2vw auto 3.5vw auto;
+  box-shadow: 10px 10px 0 blueviolet;
 }
 
+.newsTarget{
+  font-weight: bold;
+}
 
 /*VERSION DESKTOP*/ 
 
@@ -112,9 +125,9 @@
     font-size : 3em;
     margin: 10px
   }
-
-/*VIDEO*/
-
+  
+  /*VIDEO*/
+  
   #video1,
   #video2,
   #video3 {
@@ -122,9 +135,9 @@
     height: 500px;
     object-fit: contain;
   }
-
+  
   /*SIZE OF TITLES*/
-
+  
   .newsContent-Page{
     font-size : 3em;
   }
@@ -134,23 +147,33 @@
     font-family: "Poppins", sans-serif;
     font-weight: 700;
   }
-
+  
   .firstArticleTitle, .thirdArticleTitle, .secondArticleTitle{
     font-size: 2em;
   }
-
+  
   .textFirstArticle-block1, .textFirstArticle-block2, .text-sportAndDiabete, .text-pocketInsuline{
     font-size: 1.2em;
     margin: 1vw;
   }
-
+  
   .firstArticle-substitle, .Title-sport{
     font-size: 1.3em;
+    margin: 2vw;
   }
+  
+  .Running-man{
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0.5em auto 0.5em;
+  }
+
 
   /*SIZE OF PYCTO*/
   .picto-coeur{
-    width: 20%;
+    width: 15%;
+    height: 6vw;
   }
 
   /*THIRD ARTICLE*/
@@ -158,13 +181,17 @@
   .pyctoAndTitle{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: auto;
   }
 
   .thirdArticleTitle{
     margin: auto;
-
   }
 
+  .newsTarget{
+    font-size: 1.2em;
+  }
 
 
   .sportImageText{
