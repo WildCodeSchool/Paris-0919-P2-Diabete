@@ -7,6 +7,8 @@ import "./News.css"
 import icon from "../../../assets/icons/picto-section-news.png"
 import HeaderMobile from '../../layout/HeaderMobile';
 import NewsContent from './NewsContent';
+import "./NewsContent.css";
+
 
 
 

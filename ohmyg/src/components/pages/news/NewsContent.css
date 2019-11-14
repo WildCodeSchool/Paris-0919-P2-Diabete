@@ -2,50 +2,184 @@
 
 @import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 
+/*GLOBAL*/
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/*VIDEO*/
+
 .Main-Video {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   text-align:center;
-
+  margin-bottom: 6vw;;
 }
 
-#video1,
-#video2,
-#video3 {
-  width: 90%;
-  height: 500px;
-  object-fit: contain;
-}
-#video1,
-#video2{
-  margin-bottom:20px;
-}
-
-
-
-@media screen and (max-width: 1050px) {
 #video1,
 #video2,
 #video3 {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: contain;
-  margin-bottom:10px;
-}
 }
 
-.Main-Video h1{
+#video1,
+#video2{
+  margin:5px;
+}
+
+/*TITLE VIDEO*/
+
+.newsContent-Page{
+  font-size : 1.6em;
+  font-weight: 700;
+}
+
+.newsContent-Page, .newsContent-meeting, .newsContent-testymony, .firstArticleTitle, .firstArticle-substitle, .secondArticleTitle, .Title-sport, .thirdArticleTitle{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/*CONTENT ARTICLES GLOBAL*/
+.newsContent-Page, .newsContent-meeting, .firstArticleTitle, .secondArticleTitle, .thirdArticleTitle{
+  font-size: 1.4em;
+}
+
+.Title-sport, .firstArticle-substitle{
+  font-size: 1.2em;
+}
+
+.NewsContent-Article{
+    box-shadow : 4px;
+    border-top: solid 5px blueviolet ;
+    margin-top: 1vw; 
+    margin-bottom: 6vw;
+    font-family: Barlow;
+    width: 100%;
+    padding:1vw;
+  }
+
+  /*FIST, SECOND AND THIRD ARTICLE*/
+  
+  .firstArticleTitle, .firstArticle-substitle, .Title-sport, .thirdArticleTitle{
+    text-align: center;
+    margin: 3px;
+  }
+
+  .firstArticleTitle, .thirdArticleTitle, .secondArticleTitle{
+    text-align: center;
+  }
+  
+  .textFirstArticle-block1, .textFirstArticle-block2, .text-sportAndDiabete, .text-pocketInsuline{
+    text-align: justify;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.9em;
+    margin: 1vw;
+  }
+        
+  
+  /*pycto running man*/
+
+.Running-man{
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0.5em auto 0.5em auto;
+}
+        
+.picto-coeur{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.pyctoAndTitle{
+  display: grid;
+  grid-template-columns: 20% 80%;;
+}
+
+        
+.photo1{
+  width: 100%;
+  display: block;
+  margin: 2vw auto 3.5vw auto;
+  box-shadow: 10px 10px 0 blueviolet;
+}
+
+.newsTarget{
+  font-weight: bold;
+}
+
+/*VERSION DESKTOP*/ 
+
+@media screen and (min-width: 960px) {
+  .newsContent-Page{
     font-size : 3em;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-}
+    margin: 10px
+  }
+  
+  /*VIDEO*/
+  
+  #video1,
+  #video2,
+  #video3 {
+    width: 90%;
+    height: 500px;
+    object-fit: contain;
+  }
+  
+  /*SIZE OF TITLES*/
+  
+  
+  .newsContent-testymony, .newsContent-meeting, .firstArticleTitle, .thirdArticleTitle, .secondArticleTitle{
+    font-size : 2em;
+    font-weight: 700;
+  }
+  
+  .Title-sport, .firstArticle-substitle{
+    font-size: 1.5em;
+    margin: 2vw;
+  }
+  
+  .textFirstArticle-block1, .textFirstArticle-block2, .text-sportAndDiabete, .text-pocketInsuline{
+    font-size: 1.0em;
+    margin: 1vw;
+  }
+  
+  
+  .Running-man{
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0.5em auto 0.5em;
+  }
 
+  /*      THIRD ARTICLE      */
 
-.Main-Video h2{
-  font-size : 1.5em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  margin-bottom:10px;
+  /*SIZE OF PYCTO*/
+  .pyctoAndTitle{
+    width: 100%;
+    height: auto;
+  }
+
+  .picto-coeur{
+    width: 100%;
+    height: auto;
+    margin: auto 0 auto 0;
+  }
+
+  .thirdArticleTitle{
+    margin: auto 0 auto 0;
+  }
+
+  .newsTarget{
+    font-size: 1.2em;
+  }
+
 }

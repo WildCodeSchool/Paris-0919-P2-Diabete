@@ -4,119 +4,192 @@
     box-sizing: border-box;
 }
 
-.main-box {
+
+
+.nutriContent-mainBox {
     display: flex;
     flex-direction: column;
 }
 
 
-
-.sixBoxes {
-    margin: 5vw 5vw 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap: 4.5vw;
-    grid-row-gap: 4.5vw;
-}
-
-.food-box {
-    margin: 0 5vw;
-    display: flex;
-    flex-direction: column;
-}
-
-.sixBoxes > * {
-    height: 12vw;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-}
-
-.sixBoxes * {
-    color: white;
-    font-weight: bold;
-}
 
 .fruitAndVeg {
-    background-color: hsl(90, 100%, 50%);
-    border: 4px solid hsl(90, 100%, 35%);
+    background-color: #08f9d6;
 }
 
 .meatAndFish {
-    background-color: hsl(180, 100%, 50%);
-    border: 4px solid hsl(180, 100%, 35%);
+    background-color:#ff245e;
 }
 
 .drink {
-    background-color: hsl(30, 59%, 60%);
-    border: 4px solid hsl(30, 59%, 45%);
+    background-color:rgba(54, 78, 255, 0.9);
 }
 
 .starchy {
-    background-color: hsl(225, 73%, 57%);
-    border: 4px solid hsl(225, 73%, 42%);
+    background-color: #ffa476;
 }
 
 .junkFood {
-    background-color: hsl(300, 100%, 50%);
-    border: 4px solid hsl(300, 100%, 35%);
+    background-color:rgba(161, 61, 249, 0.9);
 }
 
 .dessert {
-    background-color: hsl(51, 100%, 50%);
-    border: 4px solid hsl(51, 100%, 35%);
+    background-color:#ffd800;
 }
 
-.iconNews, .iconInfosNut {
-    width: 85px;
-    height: auto;
+
+
+
+.nutriContent-CatName{
+    display: none;
+    margin-bottom: 5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nutriContent-Icon {
+    width: 70%;
     margin: auto;
 }
 
-
-.iconMeal, .iconCalcul {
-    width: 140px;
-    height: auto;
-    margin: auto;
+.nutriContent-sixBoxes>*:hover .nutriContent-CatName {
+    display: inline;
+    cursor: pointer;
+    padding : 1em;
 }
 
-@media screen and (max-width: 1050px) {
-    .sixBoxes > * {
-        height: 26vw;
-    }
-
-    .sixBoxes h2 {
-        font-size: 1.2em;
-    }
+.nutriContent-sixBoxes>*:hover .nutriContent-Icon{
+    display: none;
 }
 
-@media screen and (min-width: 1051px) {
 
-    .meal, .news {
-        margin-right: 3vw;
-    }
+.nutriContent-searchBox ::placeholder {
+    color:black;
+    opacity:0.3;
+}
 
-    .iconMeal, .iconCalcul, .iconNews, .iconInfosNut {
-        width: 160px;
-        height:auto;
-        margin: auto;
-    }
+@media screen and (max-width: 960px) {
 
-    .sixBoxes {
-        margin: 5vw 5vw 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-column-gap: 4vw;
-        grid-row-gap: 3.5vw;
-    }
-
-    .search-box {
-        width: 85%;
+    .nutriContent-searchBox {
+        width: 87%;
+        margin: auto ;
         text-align: center;
         align-self: center;
     }
+
+
+    .nutriContent-sixBoxes {
+        width:85%;
+        margin: 3em  auto auto auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 4vw;
+        grid-row-gap: 4vw;
+    }
+
+    .nutriContent-sixBoxes > * {
+        position: relative;
+        height: 26vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content:center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+   
+    .nutriContent-sixBoxes h2 {
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .Box-Border {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: solid 3.2px black;
+        bottom: 1vw;
+        right: 1vw;
+      }
 }
+
+@media screen and (min-width: 961px) {
+
+    .nutriContent-searchBox {
+        width: 86%;
+        margin: auto ;
+        text-align: center;
+        align-self: center;
+    }
+
+
+
+    .nutriContent-sixBoxes {
+        width:85%;
+        margin: 3em auto auto auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 2vw;
+        grid-row-gap: 2vw;
+    }
+
+    .nutriContent-sixBoxes > * {
+        position: relative;
+        height: 12vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content:center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .nutriContent-sixBoxes h2 {
+        color: white;
+        font-size: 1.1rem;
+    }
+
+
+    .Box-Border {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: solid 3.2px black;
+        bottom: 0.6vw;
+        right: 0.6vw;
+      }
+
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    .nutriContent-sixBoxes h2 {
+        font-size: 1em;
+    }
+
+
+    .nutriContent-searchBox ::placeholder {
+        font-size:0.9em;
+        text-align: left;
+    }
+
+    .nutriContent-searchBox  {
+        width:94%;
+    }
+
+    .nutriContent-sixBoxes {
+        width:92%;
+        margin: 1.5em auto auto auto;
+    }
+
+    .Box-Border {
+        border: solid 2.8px black;
+        bottom: 1.4vw;
+        right: 1.4vw;
+      }
+
+}
+
