@@ -24,6 +24,7 @@ render () {
     return(
     <div>
         <ApiRequest
+        className='apiCarbs-apiRequest'
         name = {this.getChosenFoodName}
         carbs = {this.getChosenFoodCarbs}
         />
