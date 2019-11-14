@@ -100,6 +100,8 @@ class CarbCalculation extends React.Component {
                 this.setState({totalCarb: result}) 
             } )
             this.setState({modifyingItem : false}) 
+            // document.getElementsByClassName("carbCalculation-active")[0].classList.remove("carbCalculation-active")
+
         } 
     }
     
@@ -112,6 +114,7 @@ class CarbCalculation extends React.Component {
         this.setState({galleryItems: tab})
         const result = (parseFloat(this.state.totalCarb) - parseFloat(this.state.carbRatio)).toFixed(2)
         this.setState({totalCarb: result}) 
+        document.getElementsByClassName("carbCalculation-active")[0].classList.remove("carbCalculation-active")
     }  
     
     calculationButton = () => {
@@ -134,7 +137,10 @@ class CarbCalculation extends React.Component {
     
 
     render() {
+        console.log(this.state.modifyingItem);
+        
         let carbRatio = (this.state.carb100g * this.state.value / 100).toFixed(2)
+
         const weight = this.state.value
         const ratio = 100 / this.state.carb100g
         let carbRatio2 = (weight / ratio).toFixed(2)
@@ -213,7 +219,7 @@ class CarbCalculation extends React.Component {
                             <div className='carbs-list'>
                                 {this.state.galleryItems.map((elem, index) =>
                                     <ul className={this.state.modifyingItem ? "carbCalculation-ulModifying" : "carbCalculation-ul"} >
-                                        <div className="carbCalculation-liItem" onClick={(event) => this.modifyItem(event, elem, index)} key={index}>
+                                        <div className= "carbCalculation-liItem "  onClick={(event) => this.modifyItem(event, elem, index)} key={index}>
                                         {/* <div className={this.state.modifyingItem ? "carbCalculation-liItem" :"carbCalculation-liItemBis"} */}
                                             <li> {elem.dish}</li>
                                             <li> {elem.dishCarb}</li>
