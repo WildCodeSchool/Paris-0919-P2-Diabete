@@ -225,11 +225,8 @@ class CarbCalculation extends React.Component {
                                         </div>
                                     </ul>)}
                             </div>
-                            <div >
-                                <button onClick={this.calculationButton} className="meal-CalculationButton" id="#meal-CalculationButton">Calculation</button>
-
-                            </div>
                         </div>
+                        <button onClick={this.calculationButton} className="meal-CalculationButton" id="#meal-CalculationButton">Calculation</button>
                     </div>
                 </div>
                 <div className="CarbCalculation-InsulinCalculation">
