@@ -11,13 +11,13 @@
 }
 
 
-.ApiRequest-form {
+.ApiRequestInfo-form {
     width: 100%;
     margin: 1vw auto auto auto;
     box-shadow: 5px 5px 7px lightgrey;  
 }
 
-.ApiRequest-input {
+.ApiRequestInfo-input {
     font-family: "Poppins", sans-serif ;
     font-weight: 700;
     width: 100%;
@@ -33,7 +33,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .ApiRequest-input {
+    .ApiRequestInfo-input {
         height: 2.2em;
         padding-left: 0.5em;
         font-size: 1rem;
@@ -43,7 +43,7 @@
 }   
 
 
-.ApiRequest-list {
+.ApiRequestInfo-list {
     border-left:solid 3px black;
     border-right:solid 3px black;
     border-bottom:solid 3px black;
@@ -54,7 +54,7 @@
     text-decoration: none;
 }
 
-.ApiRequest-link {
+.ApiRequestInfo-link {
     text-decoration: none;
 }
 
@@ -69,7 +69,7 @@
 
 }
 
-.ApiRequest-listItem {
+.ApiRequestInfo-listItem {
     list-style: none;
     text-align: center; 
     padding : 0.5em ; 
@@ -79,6 +79,6 @@
     color:black;
 }
 
-.ApiRequest-listItem:hover{
-    background-color: #ffdb92;
+.ApiRequestInfo-listItem:hover{
+    background-color: hsl(171, 95%, 80%);
 }
