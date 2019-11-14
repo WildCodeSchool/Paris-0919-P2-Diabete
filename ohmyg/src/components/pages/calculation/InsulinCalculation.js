@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./InsulinCalculation.css";
-import smileyHypo from "../../../assets/icons/picto-hypo.png";
+// import smileyHypo from "../../../assets/icons/picto-hypo.png";
 import smileyHyper from "../../../assets/icons/picto-hyper.png";
-import icon from "../../../assets/icons/checked.png";
-import smileySetParam from "../../../assets/icons/picto-param.png";
-import smileyHypoMob from "../../../assets/icons/picto-hypo-mob.png";
 import smileyHyperMob from "../../../assets/icons/picto-hyper-mob.png";
-import smileySetParamMob from "../../../assets/icons/picto-param-mob.png";
+import icon from "../../../assets/icons/checked.png";
+// import smileySetParam from "../../../assets/icons/picto-param.png";
+// import smileyHypoMob from "../../../assets/icons/picto-hypo-mob.png";
+// import smileySetParamMob from "../../../assets/icons/picto-param-mob.png";
 
 class InsulinCalculation extends Component {
   state = {
@@ -57,7 +57,7 @@ class InsulinCalculation extends Component {
               <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileySetParam"
-                  src={smileySetParamMob}
+                  src={this.props.mobParam}
                   alt="Saisis tes paramètres"
                 />
               </div>
@@ -79,7 +79,7 @@ class InsulinCalculation extends Component {
               <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileyHypo"
-                  src={smileyHypoMob}
+                  src={this.props.mobHypo}
                   alt="Attention, tu es en hypoglycémie, resucre-toi :)"
                 />
               </div> 
@@ -183,7 +183,7 @@ class InsulinCalculation extends Component {
               <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileySetParam"
-                  src={smileySetParam}
+                  src={this.props.desktParam}
                   alt="Saisis tes paramètres"
                 />
               </div>
@@ -205,7 +205,7 @@ class InsulinCalculation extends Component {
               <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileyHypo"
-                  src={smileyHypo}
+                  src={this.props.desktHypo}
                   alt="Attention, tu es en hypoglycémie, resucre-toi :)"
                 />
               </div> 
