@@ -45,7 +45,7 @@ const NutriTable = props => {
             <td colSpan="2">Energie : {props.energie} kcal </td>
           </tr>
           <tr>
-            <td>
+            <td className="NutriTable-Glucides">
               {props.glucides === undefined
                 ? "Glucides : non renseigné"
                 : `Glucides : ${cleanProps(props.glucides)}g`}

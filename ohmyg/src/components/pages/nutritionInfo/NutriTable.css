@@ -88,7 +88,11 @@
         margin-left:0;
         margin-top:-3vh;
     }
-
+    .NutriTable-Title {
+        line-height: 1.2em;
+        font-size:1.6em;
+    }
+    
 }
 
 
@@ -110,6 +114,7 @@
 
     .NutriTable-Title {
         line-height: 1.2em;
+        font-size:1em;
     }
     
     .NutriTable-Tab,  .NutriTable-Vit {
