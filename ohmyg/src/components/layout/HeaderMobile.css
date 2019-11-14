@@ -20,7 +20,7 @@
     margin: auto;
 }
 
-@media screen and (min-width: 1051px) {
+@media screen and (min-width: 961px) {
     .headerBox {
         display: none;
     }
