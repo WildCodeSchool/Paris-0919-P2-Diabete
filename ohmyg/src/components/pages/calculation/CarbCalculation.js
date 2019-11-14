@@ -225,10 +225,10 @@ class CarbCalculation extends React.Component {
                                     </ul>)}
                             </div>
                         </div>
-                        <button onClick={this.calculationButton} className="meal-CalculationButton" id="#meal-CalculationButton">Calculation</button>
+                        <a href="#insulinCalculation" ><button onClick={this.calculationButton} className="meal-CalculationButton" id="#meal-CalculationButton">Calculation</button></a>
                     </div>
                 </div>
-                <div className="CarbCalculation-InsulinCalculation">
+                <div className="CarbCalculation-InsulinCalculation" id="insulinCalculation">
                     {this.state.calculationButtonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} color1="insulin-orange" color2="insulin-lightOrange" color3="insulin-lightOrangeText"
                               desktParam={smileySetParamOrange} desktHypo={smileyHypoBlue} mobParam={smileySetParamMobOrange} mobHypo={smileyHypoMobBlue}
                               /> : ""}
