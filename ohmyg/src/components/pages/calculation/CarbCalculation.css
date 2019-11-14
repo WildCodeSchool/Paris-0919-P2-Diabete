@@ -30,7 +30,7 @@
 
 /* SIZE INPUT */
 
-label {
+.carbCalculation-label {
    font-family: "Barlow", sans-serif;
    font-size: 1.2em;
    font-weight: 800;
@@ -150,7 +150,6 @@ label {
    color: white;
    width: 100%;
    bottom: 0;
-   position: absolute;
    font-size: 1.3em;
 
 }
@@ -159,7 +158,8 @@ label {
 
 .carbs-list {
    display: grid;
-   grid-template-columns: 1fr 1fr
+   grid-template-columns: 1fr 1fr;
+   position:relative;
 }
 
 .carbCalculation-ul {
@@ -265,8 +265,7 @@ color: white}
    }
 
    .carbCalculation-totalCarousel {
-      min-height: 35em;
-      max-height:35em;
+      min-height:30em;
    }
 
    .carbCalculation-addition {
@@ -274,7 +273,8 @@ color: white}
 
       .carbs-list {
          display: grid;
-         grid-template-columns: 1fr 
+         grid-template-columns: 1fr ;
+         position:relative;
       }
 
       .inputWeight, .inputCarbo {

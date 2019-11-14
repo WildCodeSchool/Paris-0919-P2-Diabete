@@ -7,7 +7,7 @@
 
 
 
-@media screen and (min-width: 1051px) {
+@media screen and (min-width: 961px) {
     
     .ContentFrame-Box {
         width:65%;
@@ -22,8 +22,8 @@
     .ContentFrame-Icon {
         width:50px;
         position: absolute;
-        top:20px;
-        left:20px;
+        top:1vw;
+        left:0.2vw;
     }
 
     .ContentFrame-Icon img{
@@ -38,7 +38,7 @@
 }
 
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 960px) {
 
     .ContentFrame-Box {
         width:85%;

@@ -23,11 +23,13 @@ render () {
     // console.log(this.state.carbsFromApi)
     return(
     <div>
-        <ApiRequest
-        className='apiCarbs-apiRequest'
-        name = {this.getChosenFoodName}
-        carbs = {this.getChosenFoodCarbs}
-        />
+        <div className="nutriContent-searchBox">
+            <ApiRequest
+            className='apiCarbs-apiRequest'
+            name = {this.getChosenFoodName}
+            carbs = {this.getChosenFoodCarbs}
+            />
+        </div>
         <CarbCalculation
         newName = {this.state.nameFromApi}
         newCarbs = {this.state.carbsFromApi}
