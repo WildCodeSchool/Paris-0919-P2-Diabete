@@ -189,7 +189,6 @@ label {
    align-items: center;
    justify-content: center;
    animation:slide-fwd-center .45s cubic-bezier(.25,.46,.45,.94) both;
-   overflow: scroll;
    margin: 0;
 
 }
