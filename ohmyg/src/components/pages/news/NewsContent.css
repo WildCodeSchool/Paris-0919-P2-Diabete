@@ -69,6 +69,7 @@
   
   .firstArticleTitle, .firstArticle-substitle, .Title-sport, .thirdArticleTitle{
     text-align: center;
+    line-height: 1.1em ;
     margin: 3px;
   }
 
@@ -101,7 +102,7 @@
 
 .pyctoAndTitle{
   display: grid;
-  grid-template-columns: 20% 80%;;
+  grid-template-columns: 25% 75%;;
 }
 
         
