@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./InsulinCalculation.css";
-import smileyHypo from "../../../assets/icons/picto-hypo.png";
+// import smileyHypo from "../../../assets/icons/picto-hypo.png";
 import smileyHyper from "../../../assets/icons/picto-hyper.png";
-import icon from "../../../assets/icons/checked.png";
-import smileySetParam from "../../../assets/icons/picto-param.png";
-import smileyHypoMob from "../../../assets/icons/picto-hypo-mob.png";
 import smileyHyperMob from "../../../assets/icons/picto-hyper-mob.png";
-import smileySetParamMob from "../../../assets/icons/picto-param-mob.png";
+import icon from "../../../assets/icons/checked.png";
+// import smileySetParam from "../../../assets/icons/picto-param.png";
+// import smileyHypoMob from "../../../assets/icons/picto-hypo-mob.png";
+// import smileySetParamMob from "../../../assets/icons/picto-param-mob.png";
 
 class InsulinCalculation extends Component {
   state = {
@@ -35,7 +35,7 @@ class InsulinCalculation extends Component {
     if (this.state.glycemie < "0.8") {
       this.setState({ total: "0" });
     } else if (this.state.glycemie >= "0.80" && this.state.glycemie <= "1.20") {
-      this.setState({ total: this.state.totalGlucides / this.state.ratio });
+      this.setState({ total: (this.state.totalGlucides / this.state.ratio).toFixed(2) });
     } else {
       const ecart = this.state.glycemie - this.state.glycemiecible;
       const correction = ecart / this.state.sensibilite;
@@ -57,7 +57,7 @@ class InsulinCalculation extends Component {
               <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileySetParam"
-                  src={smileySetParamMob}
+                  src={this.props.mobParam}
                   alt="Saisis tes paramètres"
                 />
               </div>
@@ -79,7 +79,7 @@ class InsulinCalculation extends Component {
               <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileyHypo"
-                  src={smileyHypoMob}
+                  src={this.props.mobHypo}
                   alt="Attention, tu es en hypoglycémie, resucre-toi :)"
                 />
               </div> 
@@ -88,7 +88,7 @@ class InsulinCalculation extends Component {
           </div>
 
 
-          <div className="insulinCalculation-totalGlucides">
+          <div className={`insulinCalculation-totalGlucides ${this.props.color2}`}>
             <p className="insulinCalculation-inputTitle">Les glucides contenus dans mon repas</p>
             <div className="insulinCalculation-inputAndLabels">
               <input
@@ -102,7 +102,7 @@ class InsulinCalculation extends Component {
             </div>
           </div>
 
-          <div className="insulinCalculation-ratioAndGlycemie">
+          <div className={`insulinCalculation-ratioAndGlycemie ${this.props.color2} `}>
             <div className="insulinCalculation-normal">
               <div className="insulinCalculation-ratio">
                 <p className="insulinCalculation-inputTitle">Mon Ratio</p>
@@ -143,7 +143,7 @@ class InsulinCalculation extends Component {
 
             <div className="insulinCalculation-notNormal">
               <div>{this.state.glycemie > "1.20" ? 
-                <div className="insulinCalculation-hyperglycemie">
+                <div className={`insulinCalculation-hyperglycemie ${this.props.color2}`}>
                   <div className="insulinCalculation-sensibilite">
                     <p className="insulinCalculation-inputTitle">Sensibilité</p>
                     <div className="insulinCalculation-inputAndLabels">
@@ -183,7 +183,7 @@ class InsulinCalculation extends Component {
               <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileySetParam"
-                  src={smileySetParam}
+                  src={this.props.desktParam}
                   alt="Saisis tes paramètres"
                 />
               </div>
@@ -205,7 +205,7 @@ class InsulinCalculation extends Component {
               <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileyHypo"
-                  src={smileyHypo}
+                  src={this.props.desktHypo}
                   alt="Attention, tu es en hypoglycémie, resucre-toi :)"
                 />
               </div> 
@@ -223,7 +223,7 @@ class InsulinCalculation extends Component {
 
         <div className="insulinCalculation-button-box">
           <button
-            className="insulinCalculation-button"
+            className={`insulinCalculation-button ${this.props.color1}`}
             onClick={this.calculhypoglycemie}
           >
             <div className="insulinCalculation-Button-Border"></div>
@@ -233,12 +233,12 @@ class InsulinCalculation extends Component {
 
 
 
-        <div className="insulinCalculation-total">
+        <div className={`insulinCalculation-total ${this.props.color2}`}>
           <p id="insulinCalculation-totalTitle">Doses d'insuline suggérées</p>
           <div className="insulinCalculation-totalNumber">
             <p id="insulinCalculation-number"> {this.state.total} </p>
           </div>
-          <div className="insulinCalculation-warningCalcul">
+          <div className={`insulinCalculation-warningCalcul`}>
             <p>
               Attention, ce calcul ne prend pas en compte l'évolution de ta
               glycémie à l'instant présent et l'activité physique que tu auras
