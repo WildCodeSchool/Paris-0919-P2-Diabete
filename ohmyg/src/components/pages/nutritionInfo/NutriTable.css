@@ -28,6 +28,9 @@
 .NutriTable-Title{
     font-size:2em
 }
+
+
+
 .NutriTable-Title, .NutriTable-SubTitle  {
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -91,6 +94,10 @@
     .NutriTable-Title {
         line-height: 1.2em;
         font-size:1.6em;
+    }
+
+    .NutriTable-SubTitle{
+        font-size: 1em;
     }
     
 }
