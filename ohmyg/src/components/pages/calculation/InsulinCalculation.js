@@ -188,7 +188,7 @@ class InsulinCalculation extends Component {
 
 
         <div className="insulinCalculation-total">
-          <p id="insulinCalculation-totalTitle">Dose d'insuline suggérée</p>
+          <p id="insulinCalculation-totalTitle">Nombre de doses d'insuline suggéré</p>
           <div className="insulinCalculation-totalNumber">
             <p id="insulinCalculation-number"> {this.state.total} </p>
           </div>
