@@ -31,7 +31,7 @@
 
 
 
-@media (min-width: 1051px) {
+@media (min-width: 961px) {
 
   .Navbar_Header {
     background-color: white;
@@ -55,12 +55,13 @@
   }
 
 
+
   .Navbar_ul {
     list-style: none;
     padding: 10px;
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 65%;
     justify-content: space-around;
   }
 
@@ -73,6 +74,15 @@
     cursor: pointer;
   }
 
+
+  .icones-homepage svg,
+  .icones-calculation svg,
+  .icones-meal svg,
+  .icones-news svg,
+  .icones-nutritionInfo svg {
+    display:block;
+    height:220px;
+  }
 
   .Navbar_logo {
     width: 250px;
@@ -98,15 +108,26 @@
 /*////////////////////////////////////////*/
 }
 
+@media (max-width: 480px) {
+  .Navbar_Navigation {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+  }
+  .Navbar_Header {
+    height: 70px;   
+  }
+}
 
 
 
-
-@media (max-width: 1050px) {
+@media (max-width: 960px) {
 
   .Navbar_Header {
     background-color: black;
-    height: 80px;
+    height: 70px;
     width: 100%;
     display: flex;
     align-content: center;
@@ -122,6 +143,10 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
+  }
+
+  .Navbar_li {
+    display: flex;
   }
 
   .Navbar_logo {
@@ -140,6 +165,16 @@
   .icones-nutritionInfo {
     fill: white;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icones-homepage svg,
+  .icones-calculation svg,
+  .icones-meal svg,
+  .icones-news svg,
+  .icones-nutritionInfo svg {
+    width: 70%;
   }
 
   .Navbar_Navigation {
