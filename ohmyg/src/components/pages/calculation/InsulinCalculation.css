@@ -29,6 +29,7 @@
     align-items: center;
     background-color: hsl(216, 100%, 92%);
     padding: 2vw;
+    margin-top: 3vw;
   }
 
   .insulinCalculation-ratioAndGlycemie {
@@ -115,13 +116,13 @@
   }
 
   .insulinCalculation-button {
-    margin: 3vw;
+    margin: 3vw 3vw 4.5vw;
     width: 60%;
     height: 2.5em;
     font-size: 1.2em;
     background-color: hsl(233, 100%, 61%);
     position: relative;
-    border: none;
+
   }
 
   .insulinCalculation-Button-Icon-Checked {
@@ -142,7 +143,8 @@
   .insulinCalculation-button-box {
     display: flex;
     justify-content: center;
-    margin-bottom: 2vw;
+    align-items: center;
+    margin-top: 4vw;
   }
 
   .insulinCalculation-total {
@@ -180,6 +182,10 @@
     align-self: center;
     padding:0 1em;
     margin-left: 3vw;
+  }
+
+  .insulinCalculation-hiddenInMobile {
+    display: none;
   }
 }
 
@@ -352,5 +358,9 @@
     height: 4vw;
     align-self: center;
     padding:0 1em;
+  }
+
+  .insulinCalculation-hiddenInDesktop {
+    display: none;
   }
 }  
