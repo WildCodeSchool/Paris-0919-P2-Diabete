@@ -10,7 +10,7 @@ import HeaderMobile from '../../layout/HeaderMobile';
 const Homepage = () => {
     return (
       <>
-      <div>
+      <div className='Homepage-total'>
           <Navbar  src = {logo}
                   color = 'icones-homepage'  
           />

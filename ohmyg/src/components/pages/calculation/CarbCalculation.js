@@ -3,9 +3,12 @@ import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 import './CarbCalculation.css';
 import InsulinCalculation from "./InsulinCalculation";
-// import icon from "../../../assets/icons/checked.png";
 import bin from "../../../assets/icons/trash.png"
 import icon from "../../../assets/icons/checked.png"
+import smileySetParamOrange from "../../../assets/icons/picto-param-orange.png";
+import smileySetParamMobOrange from "../../../assets/icons/picto-param-orange-mob.png";
+import smileyHypoMobBlue from "../../../assets/icons/picto-hypo-bleu-mob.png";
+import smileyHypoBlue from "../../../assets/icons/picto-hypo-bleu.png";
 
 
 class CarbCalculation extends React.Component {
@@ -186,12 +189,13 @@ class CarbCalculation extends React.Component {
                           }
                         />
                         <label className="carbCalculation-label"> g</label>
-                      </div>
+                        </div>
                     </div>
                   </div>
                 </div>
 
-    
+
+
                 <div className="CarbCalculation-buttonContainer">
                   <div className="CarbCalculation-button-box">
                     <button
@@ -220,7 +224,8 @@ class CarbCalculation extends React.Component {
                     )}
                   </div>
                 </div>
-              </div>
+
+                </div>
 
               <div className="CarbCalculation-ListBlock">
                 <div className="carbCalculation-totalCarousel">
@@ -252,21 +257,13 @@ class CarbCalculation extends React.Component {
                     ))}
                   </div>
                 </div>
-                <button
-                  onClick={this.calculationButton}
-                  className="meal-CalculationButton"
-                  id="#meal-CalculationButton"
-                >
-                  Calcule ton Insuline
-                </button>
+                <a href="#insulinCalculation" ><button onClick={this.calculationButton} className="meal-CalculationButton" id="#meal-CalculationButton">Calcule ton Insuline</button></a>
               </div>
             </div>
-            <div className="CarbCalculation-InsulinCalculation">
-              {this.state.calculationButtonIsClicked ? (
-                <InsulinCalculation carbs={this.state.totalCarb} />
-              ) : (
-                ""
-              )}
+            <div className="CarbCalculation-InsulinCalculation" id="insulinCalculation">
+                    {this.state.calculationButtonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} color1="insulin-orange" color2="insulin-lightOrange" color3="insulin-lightOrangeText"
+                              desktParam={smileySetParamOrange} desktHypo={smileyHypoBlue} mobParam={smileySetParamMobOrange} mobHypo={smileyHypoMobBlue}
+                              /> : ""}
             </div>
           </div>
         );

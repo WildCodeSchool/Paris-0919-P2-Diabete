@@ -71,9 +71,9 @@
 
 
 .scale-up-center {
-  -webkit-animation: scale-up-center 0.5s cubic-bezier(0.39, 0.575, 0.565, 1)
-    1.3s both;
-  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 1.3s both;
+  -webkit-animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1)
+    0.2s both;
+  animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
 }
 
 @-webkit-keyframes scale-up-center {
@@ -100,7 +100,7 @@
 
 @media screen and (min-width: 1051px) {
   .fourBoxes {
-    margin: 8vw 16vw 7vw 16vw;
+    margin: 4vw 16vw 1vw 16vw;
   }
 
   .mealAndCalcul {

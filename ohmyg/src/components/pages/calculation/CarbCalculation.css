@@ -1,13 +1,9 @@
 * {
   margin: 0px;
   padding: 0px;
+  scroll-behavior: smooth;
 }
 
-input, Button {
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-}
 
 /* SLIDER */
 
@@ -184,9 +180,35 @@ input, Button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: slide-fwd-center 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   margin: 0;
 }
+
+.scale-up-center {
+   -webkit-animation: scale-up-center 0.5s cubic-bezier(0.39, 0.575, 0.565, 1)
+     1.3s both;
+   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 1.3s both;
+ }
+ 
+ @-webkit-keyframes scale-up-center {
+   0% {
+     -webkit-transform: scale(0);
+     transform: scale(0);
+   }
+   100% {
+     -webkit-transform: scale(1);
+     transform: scale(1);
+   }
+ }
+ @keyframes scale-up-center {
+   0% {
+     -webkit-transform: scale(0);
+     transform: scale(0);
+   }
+   100% {
+     -webkit-transform: scale(1);
+     transform: scale(1);
+   }
+ }
 
 .carbCalculation-liItem li {
   pointer-events: none;
