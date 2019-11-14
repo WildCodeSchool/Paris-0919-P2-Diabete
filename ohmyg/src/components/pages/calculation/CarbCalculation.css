@@ -32,7 +32,7 @@
 
 label {
    font-family: "Barlow", sans-serif;
-   font-size: 1em;
+   font-size: 1.2em;
    font-weight: 800;
 }
 
@@ -59,14 +59,21 @@ label {
 }
 
 .inputWeightCarbo {
-   display: flex;
-   flex-direction: row;
-}
+   display: grid;
+   grid-template-columns:1fr 1fr;
+   width: 100%
+ }
 
 .inputWeight, .inputCarbo {
-   display: flex;
-   align-items: center;
-   margin: 5vw 0 5vw 0;
+   display: grid;
+   align-content: center;
+   margin: 1vh 0 1vh 0;
+}
+
+.borderInputLabel {
+   display:flex;
+   margin: auto;
+
 }
 
 .foodWeight, .carbohydrate {
@@ -84,11 +91,12 @@ label {
 .carbCalculation-h2 {
    margin: 1vw;
    font-family: "Barlow", "sans serif";
-   font-size: 2.1em
+   font-size: 1.8em
 }
 
 .carbCalculation-label {
    padding: 0;
+   margin:auto;
 }
 
 .InputRangeTest {
@@ -102,13 +110,13 @@ label {
    display: flex;
    flex-direction: column;
    margin: auto;
-   margin-bottom: 1.5vh;
+   margin-top: 3vh;
    align-items: center;
 }
 
 .CarbCalculation-Validation {
    margin: 2vw;
-   margin-bottom: 1.5vw;
+   margin-top: 1.5vw;
    width: 40%;
    height: 3.5em;
    font-size: 1.6em;
@@ -140,18 +148,18 @@ label {
 .meal-CalculationButton {
    background-color: black;
    color: white;
-   width: 95%;
-   height: auto;
-   margin: auto;
-   margin-bottom: 2em;
-   font-size: 1.5em;
+   width: 100%;
+   bottom: 0;
+   position: absolute;
+   font-size: 1.3em;
+
 }
 
 /* LIST TOTAL ITEMS AND GLUCIDES */
 
 .carbs-list {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr
+   grid-template-columns: 1fr 1fr
 }
 
 .carbCalculation-ul {
@@ -171,7 +179,7 @@ label {
    background-color: white;
    list-style: none;
    font-family: "Barlow", "sans serif";
-   font-size: 1.2em;
+   font-size: 1.3em;
    color: black;
    min-height: 100px;
    height: auto;
@@ -180,7 +188,10 @@ label {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   animation:slide-fwd-center .45s cubic-bezier(.25,.46,.45,.94) both
+   animation:slide-fwd-center .45s cubic-bezier(.25,.46,.45,.94) both;
+   overflow: scroll;
+   margin: 0;
+
 }
 
 .carbCalculation-liItem li {
@@ -193,29 +204,15 @@ color: white}
 
 @keyframes slide-fwd-center{0%{transform:translateZ(0)}100%{transform:translateZ(160px)}}
 
-/* .carbCalculation-liItemSelected {
-   border: solid #364eff 3px; 
-   background-color: white;
-   list-style: none;
-   font-family: "Barlow", "sans serif";
-   font-size: 1.2em;
-   color: black;
-   min-height: 100px;
-   height: auto;
-   padding: auto;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center; 
-} */
-
 .carbCalculation-totalCarousel {
    background-color: lightgrey;
    display: flex;
+   overflow: scroll;
    flex-direction: column;
    width: 95%;
    margin: auto;
-   height: auto;
+   max-height: 11em;
+   position:relative;
 }
 
 .carbCalculation-addition {
@@ -226,7 +223,7 @@ color: white}
    margin: 10px auto;
    padding: auto;
    width: 25%;
-   height: 2.5em;
+   height: auto;
    display: flex;
    vertical-align: center;
 }
@@ -237,17 +234,6 @@ color: white}
    font-size: 1.3em;
 }
 
-/* .foodList{
-      border: 2px solid black;
-      list-style: none;
-      width:30vw;
-      height:7em; 
-      overflow: hidden;
-      margin: 3px;
-      display: flex;
-      flex-direction: column;
-   } */
-
 /* VERSION DESKTOP */
 
 @media screen and (min-width: 961px) {
@@ -255,7 +241,7 @@ color: white}
       font-size: 1.6em;
    }
    label {
-      font-size: 2em;
+      font-size: 1.4em;
    }
    .CarbCalculation-BeforeCalculation {
       display:grid;
@@ -280,10 +266,27 @@ color: white}
    }
 
    .carbCalculation-totalCarousel {
-      min-height: 20em;
+      min-height: 35em;
+      max-height:35em;
    }
 
    .carbCalculation-addition {
       width: 40%;}
+
+      .carbs-list {
+         display: grid;
+         grid-template-columns: 1fr 
+      }
+
+      .inputWeight, .inputCarbo {
+         display: flex;
+         align-items: center;
+         margin: 1vh 0 1vh 0;
+      }
+
+      .carbCalculation-label {
+         padding: 0;
+         margin-left: auto;
+      }
    
 }
