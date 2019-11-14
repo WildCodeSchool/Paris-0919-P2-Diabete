@@ -25,7 +25,6 @@ render () {
     <div>
         <div className="nutriContent-searchBox">
             <ApiRequest
-            className='apiCarbs-apiRequest'
             name = {this.getChosenFoodName}
             carbs = {this.getChosenFoodCarbs}
             />

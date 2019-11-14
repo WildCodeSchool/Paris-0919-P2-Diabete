@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import "../meal/ApiRequest.css"
+import "./ApiRequestInfo.css"
 import { Link } from 'react-router-dom';
 
 
@@ -34,11 +34,11 @@ class ApiRequestInfo extends Component {
        
     return (
         <div>
-            <form className="ApiRequest-form">
+            <form className="ApiRequestInfo-form">
                 <input
                 id="title"
                 name="title"
-                className="ApiRequest-input"
+                className="ApiRequestInfo-input"
                 list="food"
                 type="text"
                 value={this.state.title}
@@ -49,10 +49,10 @@ class ApiRequestInfo extends Component {
 
                
                     {this.state.title.length > 3 ? 
-                     <ul id="food" className="ApiRequest-list" >
+                     <ul id="food" className="ApiRequestInfo-list" >
                     {this.state.foods
                         .map(food => (
-                            <Link className="ApiRequest-link" to={`/displayinfonut/${food.fields.origfdcd}`}><li key={food.fields.origfdnm} className="ApiRequest-listItem" > {food.fields.origfdnm}</li> </Link>
+                            <Link className="ApiRequestInfo-link" to={`/displayinfonut/${food.fields.origfdcd}`}><li key={food.fields.origfdnm} className="ApiRequestInfo-listItem" > {food.fields.origfdnm}</li> </Link>
                     ))}
                     </ul>
                     : ""
