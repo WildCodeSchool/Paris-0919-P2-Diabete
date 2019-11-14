@@ -245,7 +245,7 @@ class CarbCalculation extends React.Component {
                         }
                       >
                         <div
-                          className="carbCalculation-liItem "
+                          className="carbCalculation-liItem scale-up-center"
                           onClick={event => this.modifyItem(event, elem, index)}
                           key={index}
                         >
