@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./InsulinCalculation.css";
-import smileyHypo from "../../../assets/icons/pictos-16.png";
-import smileyHyper from "../../../assets/icons/pictos-17.png";
+import smileyHypo from "../../../assets/icons/picto-hypo.png";
+import smileyHyper from "../../../assets/icons/picto-hyper.png";
 import icon from "../../../assets/icons/checked.png";
-import smileySetParam from "../../../assets/icons/pictos-17.png";
+import smileySetParam from "../../../assets/icons/picto-param.png";
 
 class InsulinCalculation extends Component {
   state = {
@@ -135,8 +135,8 @@ class InsulinCalculation extends Component {
           </div>
 
           <div className="insulinCalculation-smileys">
-            <div>{this.state.glycemie === "" ?
-              <div className="insulinCalculation-smileySetParam-box">
+            <div>{this.state.glycemie === "" || this.state.glycemie === "0" || (this.state.glycemie >= "0.8" && this.state.glycemie <= "1.2" ) ?
+              <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileySetParam"
                   src={smileySetParam}
@@ -147,7 +147,7 @@ class InsulinCalculation extends Component {
             </div>
 
             <div>{this.state.glycemie > "1.20" ? 
-              <div className="insulinCalculation-smileySetParam-box">
+              <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileyHyper"
                   src={smileyHyper}
@@ -158,7 +158,7 @@ class InsulinCalculation extends Component {
             </div>
 
             <div>{this.state.glycemie > "0.01" && this.state.glycemie < "0.8" ?
-              <div className="insulinCalculation-warning">
+              <div className="insulinCalculation-smiley-box">
                 <img
                   className="insulinCalculation-smileyHypo"
                   src={smileyHypo}
@@ -188,7 +188,7 @@ class InsulinCalculation extends Component {
 
 
         <div className="insulinCalculation-total">
-          <p id="insulinCalculation-totalTitle">Nombre de doses d'insuline suggéré</p>
+          <p id="insulinCalculation-totalTitle">Doses d'insuline suggérées</p>
           <div className="insulinCalculation-totalNumber">
             <p id="insulinCalculation-number"> {this.state.total} </p>
           </div>
