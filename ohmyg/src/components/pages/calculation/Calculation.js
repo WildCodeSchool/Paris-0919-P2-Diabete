@@ -16,7 +16,7 @@ const Calculation = () => {
         />
         <HeaderMobile src = {logo}/>
         <ContentFrame src = {icon}
-        content = {<InsulinCalculation/>}
+        content = {<InsulinCalculation color1="insulin-blue" color2="insulin-lightBlue" color3="insulin-lightBlueText"/>}
         />
         <Footer color = 'footer-calculation'/>
       </div>

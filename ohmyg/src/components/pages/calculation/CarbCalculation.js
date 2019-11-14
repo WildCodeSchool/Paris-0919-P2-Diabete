@@ -227,7 +227,7 @@ class CarbCalculation extends React.Component {
                     </div>
                 </div>
                 <div className="CarbCalculation-InsulinCalculation">
-                    {this.state.calculationButtonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} /> : ""}
+                    {this.state.calculationButtonIsClicked ? <InsulinCalculation carbs={this.state.totalCarb} color1="insulin-orange" color2="insulin-lightOrange" color3="insulin-lightOrangeText"/> : ""}
                 </div>
             </div>
         );
