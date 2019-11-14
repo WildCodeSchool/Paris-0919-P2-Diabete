@@ -218,7 +218,7 @@ class CarbCalculation extends React.Component {
                             <div className='carbs-list'>
                                 {this.state.galleryItems.map((elem, index) =>
                                     <ul className={this.state.modifyingItem ? "carbCalculation-ulModifying" : "carbCalculation-ul"} >
-                                        <div className="carbCalculation-liItem " onClick={(event) => this.modifyItem(event, elem, index)} key={index}>
+                                        <div className="carbCalculation-liItem scale-up-center" onClick={(event) => this.modifyItem(event, elem, index)} key={index}>
                                             <li> {elem.dish}</li>
                                             <li> {elem.dishCarb}</li>
                                         </div>
