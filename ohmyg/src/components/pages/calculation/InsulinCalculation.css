@@ -75,13 +75,13 @@
   }
 
   .insulinCalculation-inputTitle, .insulinCalculation-label, .insulinCalculation-unit {
-    font-size: 5vw;
+    font-size: 3.5vw;
     margin: 1vw;
     text-align: center;
   }
 
   .insulinCalculation-inputAndLabels {
-    width: 90%;
+    width: 80%;
     display: grid;
     grid-template-columns: 15% 1fr 15%;
     justify-content: center;
@@ -91,6 +91,7 @@
 
   .insulinCalculation-inputAndLabels input {
     height: 8vw;
+    max-width: 40vw;
     margin: 0 1vw;
     text-align: center;
     font-size: 4vw;
@@ -146,14 +147,17 @@
 
   .insulinCalculation-total {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: space-evenly;
     background-color: hsl(216, 100%, 92%);
-    height: 12vw;
+    height: 40vw;
   }
 
   .insulinCalculation-total p {
     font-size: 4vw;
+    text-align: center;
+    font-weight: 800;
   }
 
   .insulinCalculation-warningCalcul p {
@@ -161,6 +165,7 @@
     color: hsl(233, 100%, 61%);
     text-align: center;
     margin-top: 1.5vw;
+    font-weight: 800;
   }
 
   .insulinCalculation-totalNumber {
@@ -170,7 +175,7 @@
     font-size: 1.5em;
     border: 2px solid grey;
     background-color: white;
-    width: 4vw;
+    width: 30vw;
     height: 6vw;
     align-self: center;
     padding:0 1em;
@@ -310,284 +315,42 @@
     display: flex;
     justify-content: center;
   }
-
+  
   .insulinCalculation-total {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     background-color: hsl(216, 100%, 92%);
-    height: 12vw;
+    height: 20vw;
   }
 
   .insulinCalculation-total p {
-    font-size: 1.4vw;
+    font-size: 1.6vw;
+    text-align: center;
+    font-weight: 800;
   }
 
   .insulinCalculation-warningCalcul p {
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     color: hsl(233, 100%, 61%);
     text-align: center;
-    margin-top: 1.5vw;
+    line-height: 2vw;
+    font-weight: 800;
+    margin: 0 5%;
   }
 
   .insulinCalculation-totalNumber {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 2.5em;
     border: 2px solid grey;
     background-color: white;
     min-width: 4em;
-    width: auto;
-    height: 2.5vw;
+    width: 10vw;
+    height: 4vw;
     align-self: center;
     padding:0 1em;
-    margin-left: 3vw;
   }
 }  
-
-
-/* 
-.insulinCalculationContainer {
-  display: grid;
-  grid-auto-columns: 1fr;
-  margin: auto;
-  text-align: center;
-  width: 100%;
-}
-
-.ratioAndGlycemie,
-.hyperglycemie {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  text-align: center;
-} */
-
-/* .ratio,
-.glycemie,
-.sensibilite,
-.glycemieCible {
-  display: grid;
-  grid-template-rows: 1fr;
-  align-items: center;
-}
-
-.inputAndLabels {
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "label input unit";
-  margin: auto;
-  margin-bottom: 1em;
-}
-
-.totalGlucides .inputAndLabels {
-  grid-template-columns: 1fr 8em 1fr;
-}
-
-#totalGlucides {
-  width: 6em;
-}
-
-input {
-  grid-area: input;
-  margin-bottom: 15px;
-  width: 4em;
-  height: 2em;
-  text-align: center;
-  font-size: 1.2em;
-  border: 4px solid grey;
-  margin: auto;
-}
-
-label {
-  margin: 0 0.3em 0 0.3em;
-}
-
-.label {
-  grid-area: label;
-  justify-self: end;
-  align-self: center;
-}
-
-.unit {
-  grid-area: unit;
-  justify-self: start;
-  align-self: center;
-}
-
-.warning {
-  display: flex;
-  justify-content: center;
-}
-
-.glycemieInputHypoColor {
-  border-color: #ffa476;
-}
-
-.glycemieInputHyperColor {
-  border-color: #a13df9;
-}
-
-.no-hypoglycemie {
-  display: none;
-} */
-
-/* --- */
-
-/* Font */
-
-/* label {
-  font-family: "Barlow", sans-serif;
-  font-size: 1em;
-}
-
-.inputTitle {
-  font-size: 1em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-}
-
-#totalTitle {
-  font-size: 1.2em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-}
-
-
-
-.totalNumber {
-  display: flex;
-  font-size: 1.5em;
-  border: 4px solid grey;
-  min-width: 4em;
-  width: auto;
-  height: 2em;
-  align-self: center;
-  justify-self: center;
-  padding:0 1em;
-}
-
-#number {
-  font-size: 1em;
-  margin: auto;
-} */
-
-/* size smiley */
-
-/* .smileyHypo, .smileyHyper {
-  width: 85%;
-  height: auto;
-} */
-
-/* .warningCalcul {
-  font-size: 0.8em;
-  color: #364eff;
-  margin: 1em auto 1em auto;
-  width: 90%;
-} */
-
-
-/* @media screen and (max-width: 959px) { */
-    /* BUTTON */
-  
-
-    /* .InsulinCalculation-button {
-      margin: 3vw;
-      width: 60%;
-      height: 2.5em;
-      font-size: 1.2em;
-      background-color: #364eff;
-      border: none;
-      position: relative;
-    }
-  
-    .Button-Icon-Checked {
-      height: 70%;
-      width: auto;
-      margin: auto auto 2px auto;
-    }
-  
-    .Button-Border {
-      position: absolute;
-      width: 100%;
-      height: 2.5em;
-      border: solid 3.5px black;
-      bottom: 7px;
-      right: 7px;
-    }
-  }
-  
-////////////////// Desktop ///////////////////
-
-@media screen and (min-width: 960px) {
-  .inputTitle {
-    font-size: 2em;
-  }
-
-  #totalTitle {
-    font-size: 3em;
-  }
-
-  #number {
-    font-size: 1.5em;
-  }
-
-  label {
-    font-size: 2em;
-  }
-
-  input {
-    height: 3em;
-    width: 6em;
-    font-size: 1.6em;
-  }
-
-  .totalGlucides .inputAndLabels {
-    grid-template-columns: 1fr 16em 1fr;
-  }
-
-  #totalGlucides {
-    width: 9em;
-  }
-  .smileyHypo .smileyHyper {
-    width: 50%;
-    height: auto;
-  }
-  .InsulinCalculation-button {
-    margin: 3vw;
-    width: 40%;
-    height: 3.5em;
-    font-size: 1.6em;
-    background-color: #364eff;
-    position: relative;
-    border: none;
-  }
-
-  .insulinCalculation-Button-Icon-Checked {
-    height: 70%;
-    width: auto;
-    margin: auto auto 3px auto;
-  }
-
-  .insulinCalculation-Button-Border {
-    position: absolute;
-    width: 101%;
-    height: 3.6em;
-    border: solid 4.5px black;
-    bottom: 10px;
-    right: 10px;
-  }
-
-  .warningCalcul p {
-    font-size: 1.6em;
-  }
-
-  .totalNumber {
-    min-width: 8em;
-    width: auto;
-    height: 3.5em;
-    padding:0 1em;
-  }
-} */

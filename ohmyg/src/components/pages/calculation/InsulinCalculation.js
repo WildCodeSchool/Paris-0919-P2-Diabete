@@ -15,6 +15,10 @@ class InsulinCalculation extends Component {
     total: "0",
   };
 
+  componentDidMount() {
+    this.setState ({totalGlucides : this.props.carbs})
+  }
+
   handleChange = e => {
     if (e.target.value.length > 4) {
       return;
@@ -192,15 +196,15 @@ class InsulinCalculation extends Component {
           <div className="insulinCalculation-totalNumber">
             <p id="insulinCalculation-number"> {this.state.total} </p>
           </div>
+          <div className="insulinCalculation-warningCalcul">
+            <p>
+              Attention, ce calcul ne prend pas en compte l'évolution de ta
+              glycémie à l'instant présent et l'activité physique que tu auras
+              après ton repas.
+            </p>
+          </div>
         </div>
 
-        <div className="insulinCalculation-warningCalcul">
-          <p>
-            Attention, ce calcul ne prend pas en compte l'évolution de ta
-            glycémie à l'instant présent et l'activité physique que tu auras
-            après ton repas.
-          </p>
-        </div>
       </div>
     );
   }

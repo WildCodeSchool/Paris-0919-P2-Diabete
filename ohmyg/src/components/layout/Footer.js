@@ -43,7 +43,7 @@ const Footer = props => {
                 />
               </g>
             </svg>
-            <p>About Us</p>
+            <p>A propos de Nous</p>
           </div>
         </Link>
         <Link to="/" className="footer-link">
@@ -57,7 +57,7 @@ const Footer = props => {
                             c0,2.3-1.8,4.1-4.1,4.1H10.7c-2.3,0-4.1-1.8-4.1-4.1v-1.6L57,73.7l50.4,27.8V103.3z M107.4,94L71.9,74.4l35.5-24.1V94z"
               />
             </svg>
-            <p>Contact Us</p>
+            <p>Contacte-Nous!</p>
           </div>
         </Link>
         <Link to="/" className="footer-link">
@@ -77,7 +77,7 @@ const Footer = props => {
               <rect x="29.2" y="48" width="48.1" height="6.8" />
               <rect x="29.2" y="63.2" width="48.1" height="6.8" />
             </svg>
-            <p>Terms of Service</p>
+            <p>Mentions Légales</p>
           </div>
         </Link>
         <a href="https://www.instagram.com/" className="footer-link" target="_blank" rel="noopener noreferrer">
@@ -98,7 +98,7 @@ const Footer = props => {
                                 c-2.4,0-4.3-1.9-4.3-4.3s1.9-4.3,4.3-4.3l0,0C67.3,22.4,69.2,24.4,69.2,26.7z"
               />
             </svg>
-            <p>Follow Us</p>
+            <p>Suis-Nous!</p>
           </div>
         </a>
       </div>

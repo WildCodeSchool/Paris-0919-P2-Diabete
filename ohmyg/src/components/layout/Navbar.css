@@ -55,12 +55,13 @@
   }
 
 
+
   .Navbar_ul {
     list-style: none;
     padding: 10px;
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 65%;
     justify-content: space-around;
   }
 
@@ -73,6 +74,15 @@
     cursor: pointer;
   }
 
+
+  .icones-homepage svg,
+  .icones-calculation svg,
+  .icones-meal svg,
+  .icones-news svg,
+  .icones-nutritionInfo svg {
+    display:block;
+    height:220px;
+  }
 
   .Navbar_logo {
     width: 250px;
@@ -98,7 +108,18 @@
 /*////////////////////////////////////////*/
 }
 
-
+@media (max-width: 480px) {
+  .Navbar_Navigation {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+  }
+  .Navbar_Header {
+    height: 70px;   
+  }
+}
 
 
 
@@ -106,7 +127,7 @@
 
   .Navbar_Header {
     background-color: black;
-    height: 80px;
+    height: 70px;
     width: 100%;
     display: flex;
     align-content: center;
@@ -153,7 +174,7 @@
   .icones-meal svg,
   .icones-news svg,
   .icones-nutritionInfo svg {
-    width: 60%;
+    width: 70%;
   }
 
   .Navbar_Navigation {
