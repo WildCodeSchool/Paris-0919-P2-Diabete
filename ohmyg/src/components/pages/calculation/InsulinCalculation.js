@@ -35,7 +35,7 @@ class InsulinCalculation extends Component {
     if (this.state.glycemie < "0.8") {
       this.setState({ total: "0" });
     } else if (this.state.glycemie >= "0.80" && this.state.glycemie <= "1.20") {
-      this.setState({ total: this.state.totalGlucides / this.state.ratio });
+      this.setState({ total: (this.state.totalGlucides / this.state.ratio).toFixed(2) });
     } else {
       const ecart = this.state.glycemie - this.state.glycemiecible;
       const correction = ecart / this.state.sensibilite;
