@@ -59,6 +59,10 @@
     height: 50px;
 }
 
+.footerContainer{
+    margin-top: 12.5vw;
+    width: 100%;
+}
 
 @media screen and (max-width: 960px) {
     .footer-calculation, .footer-homepage, .footer-news, .footer-meal, .footer-info {      
@@ -86,10 +90,4 @@
         display: flex;
         bottom : 0;
     }
-
-    .footerContainer{
-        margin-top: 12.5vw;
-        width: 100%;
-    }
-
 }
