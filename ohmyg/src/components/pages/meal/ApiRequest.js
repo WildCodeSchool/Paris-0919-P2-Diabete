@@ -58,9 +58,9 @@ class ApiRequest extends Component {
                 type="text"
                 value={this.state.title}
                 onChange={this.handleChange}
-                minLength="4" required
+                minLength="4" 
                 placeholder=  "Choisis un aliment..."
-                
+                // required
                 />
 
                
