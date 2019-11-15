@@ -4,6 +4,17 @@
   scroll-behavior: smooth;
 }
 
+Button:active {
+  border : none;
+}
+
+button:active {
+  border : none;
+}
+
+input:active {
+  border:none;
+}
 
 /* SLIDER */
 

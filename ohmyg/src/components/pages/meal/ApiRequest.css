@@ -81,4 +81,5 @@
 
 .ApiRequest-listItem:hover{
     background-color: #ffdb92;
+    cursor: pointer;
 }
