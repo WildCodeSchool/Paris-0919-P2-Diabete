@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  /* different colors for icons depending on the active page */
+.icones-homepage:hover {
+  fill: #08f9d6;
+}
+
+.icones-calculation:hover {
+  fill: #364eff;
+}
+
+.icones-meal:hover {
+  fill: #ffa476;
+}
+
+.icones-news:hover {
+  fill: #a13df9;
+}
+
+.icones-nutritionInfo:hover {
+  fill: #08f9d6;
+}
+
+
+/*//////////////////////////////////////////////////////*/
+
+
+
+
+@media (min-width: 961px) {
+
+  .Navbar_Header {
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index:100;
+    transition: transform 0.4s;
+  }
+
+  .Navbar_Navigation {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100px;
+  }
+
+
+
+  .Navbar_ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 65%;
+    justify-content: space-around;
+  }
+
+  .icones-homepage,
+  .icones-calculation,
+  .icones-meal,
+  .icones-news,
+  .icones-nutritionInfo {
+    fill: black;
+    cursor: pointer;
+  }
+
+
+  .icones-homepage svg,
+  .icones-calculation svg,
+  .icones-meal svg,
+  .icones-news svg,
+  .icones-nutritionInfo svg {
+    display:block;
+    height:220px;
+  }
+
+  .Navbar_logo {
+    width: 250px;
+    display: block;
+    margin: auto;
+  }
+
+  .Navbar_iconHome {
+    display: none;
+  }
+  /*////////////animation classes //////////*/
+
+.scroll-down .Navbar_Header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .Navbar_Header {
+  transform: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+
+
+/*////////////////////////////////////////*/
+}
+
+@media (max-width: 480px) {
+  .Navbar_Navigation {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+  }
+  .Navbar_Header {
+    height: 70px;   
+  }
+}
+
+
+
+@media (max-width: 960px) {
+
+  .Navbar_Header {
+    background-color: black;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index:100;
+  }
+
+  .Navbar_ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .Navbar_li {
+    display: flex;
+  }
+
+  .Navbar_logo {
+    display: none;
+  }
+
+  .Navbar_iconHome {
+    display: block;
+    fill:white;
+  }
+
+  .icones-homepage,
+  .icones-calculation,
+  .icones-meal,
+  .icones-news,
+  .icones-nutritionInfo {
+    fill: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icones-homepage svg,
+  .icones-calculation svg,
+  .icones-meal svg,
+  .icones-news svg,
+  .icones-nutritionInfo svg {
+    width: 70%;
+  }
+
+  .Navbar_Navigation {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+  }
+
+}

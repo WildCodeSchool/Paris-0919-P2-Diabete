@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+  /* different colors for footer background depending on the active page */
+
+.footer-calculation {
+    background-color: #364eff;
+}
+
+.footer-homepage {
+    background-color: #08f9d6;
+}
+
+.footer-meal {
+    background-color: #ffa476;
+}
+
+.footer-news {
+    background-color: #a13df9;
+}
+
+.footer-info {
+    background-color: #08f9d6;
+}
+
+.footer-link p {
+    font-family: "Barlow", sans-serif;
+}
+/*//////////////////////////////////////////////////////////*/
+
+.footer-link {
+    text-decoration: none;
+    color: black;
+    margin: 2vw;
+    fill:black;
+}
+
+.footer-link:hover {
+    color: white;
+    fill:white;
+}
+
+
+.footer-aboutUs, .footer-contactUs, .footer-terms, .footer-follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    line-height: 2em;
+    height: 50px;
+}
+
+.footerContainer{
+    margin-top: 12.5vw;
+    width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+    .footer-calculation, .footer-homepage, .footer-news, .footer-meal, .footer-info {      
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        padding-left:18vw;
+        padding-right:18vw;
+        padding-top:2vw;
+        width: 100%;
+        padding-bottom : 80px;
+    }
+
+    .footer-aboutUs, .footer-contactUs, .footer-terms, .footer-follow {
+        height:50px;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .footer-calculation, .footer-homepage, .footer-news, .footer-meal, .footer-info{
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        bottom : 0;
+    }
+}

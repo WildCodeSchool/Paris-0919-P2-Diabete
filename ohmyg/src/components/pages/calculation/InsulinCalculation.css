@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+.insulinCalculationContainer * {
+  margin-top: 0;
+  font-family: "Barlow", sans-serif;
+}
+
+@media screen and (max-width: 960px) {
+  .insulinCalculationContainer {
+    margin-top: 0;
+  }
+
+  .insulinCalculation-firstParamaters {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .insulinCalculation-totalGlucides {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2vw;
+    margin-top: 3vw;
+  }
+
+  .insulinCalculation-ratioAndGlycemie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    margin-top: 5vw;
+    padding-bottom: 4vw;
+  }
+
+  .insulinCalculation-normal{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .insulinCalculation-ratio, .insulinCalculation-glycemie, .insulinCalculation-sensibilite, .insulinCalculation-glycemieCible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 100%; 
+  }
+
+  .insulinCalculation-smileys {
+    grid-area: smileys;
+    display: flex;
+  }
+
+  .insulinCalculation-smiley-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw 0;
+  }
+
+  .insulinCalculation-smileySetParam, .insulinCalculation-smileyHyper, .insulinCalculation-smileyHypo {
+    width: 100%;
+  }
+
+  .insulinCalculation-inputTitle, .insulinCalculation-label, .insulinCalculation-unit {
+    font-size: 3.5vw;
+    margin: 1vw;
+    text-align: center;
+  }
+
+  .insulinCalculation-inputAndLabels {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2.5vw;
+  }
+
+  .insulinCalculation-inputAndLabels input {
+    height: 8vw;
+    max-width: 40vw;
+    margin: 0 1vw;
+    text-align: center;
+    font-size: 4vw;
+    grid-column: 2/ span 1;
+  }
+
+  .insulinCalculation-hyperglycemie {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 1.5vw;
+  }
+  
+  .insulinCalculation-button:active {
+    top:4px;
+  }
+  .insulinCalculation-button:hover {
+    cursor: pointer;
+  }
+
+  .insulinCalculation-button {
+    margin: 3vw 3vw 4.5vw;
+    width: 60%;
+    height: 2.5em;
+    font-size: 1.2em;
+    position: relative;
+    border:none;
+  }
+
+  .insulinCalculation-Button-Icon-Checked {
+    height: 70%;
+    width: auto;
+    margin: auto auto 2px auto;
+  }
+
+  .insulinCalculation-Button-Border {
+    position: absolute;
+    width: 100%;
+    height: 2.5em;
+    border: solid 2.5px black;
+    bottom: 7px;
+    right: 7px;
+  }
+
+  .insulinCalculation-button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vw;
+  }
+
+  .insulinCalculation-total {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    height: 40vw;
+  }
+
+  .insulinCalculation-total p {
+    font-size: 4vw;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  .insulinCalculation-warningCalcul p {
+    font-size: 3.5vw;
+    text-align: center;
+    margin-top: 1.5vw;
+    font-weight: 800;
+    padding:1em;
+  }
+
+  .insulinCalculation-totalNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border: 2px solid grey;
+    background-color: white;
+    width: 30vw;
+    height: 6vw;
+    align-self: center;
+    padding:0 1em;
+    margin-left: 3vw;
+  }
+
+  .insulinCalculation-hiddenInMobile {
+    display: none;
+  }
+}
+
+.insulin-blue {
+  background-color: hsl(233, 100%, 61%);
+
+}
+
+.insulin-lightBlue {
+  background-color: hsl(216, 100%, 92%);
+
+}
+
+.insulin-orange {
+  background-color: #FFA476;
+
+}
+
+.insulin-lightOrange {
+  background-color: hsl(40, 100%,79%);
+
+}
+
+
+@media screen and (min-width: 961px) {
+  .insulinCalculationContainer {
+    margin-top: 60px;
+  }
+
+  .insulinCalculation-firstParamaters {
+    display: grid;
+    grid-template-areas: 
+    "gluci smileys"
+    "RandG RandG"
+    ;
+    grid-template-rows:  auto auto;
+    grid-template-columns: 61% 36%;
+    grid-row-gap: 2vw;
+    grid-column-gap: 3%;
+  }
+
+  .insulinCalculation-totalGlucides {
+    grid-area: gluci;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 12vw;
+  }
+
+  .insulinCalculation-ratioAndGlycemie {
+    grid-area: RandG;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+  }
+
+  .insulinCalculation-normal {
+    height: 12vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .insulinCalculation-ratio, .insulinCalculation-glycemie, .insulinCalculation-sensibilite, .insulinCalculation-glycemieCible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 45%;
+  }
+
+  .insulinCalculation-smileys {
+    grid-area: smileys;
+    display: flex;
+  }
+
+  .insulinCalculation-smiley-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .insulinCalculation-smileySetParam, .insulinCalculation-smileyHyper, .insulinCalculation-smileyHypo {
+    width: 100%;
+  }
+
+  .insulinCalculation-inputTitle, .insulinCalculation-label, .insulinCalculation-unit {
+    font-size: 1.4vw;
+  }
+
+  .insulinCalculation-inputAndLabels {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2.5vw;
+  }
+
+  .insulinCalculation-inputAndLabels input {
+    width: 70%;
+    height: 2.5vw;
+    margin: 0 1vw;
+    text-align: center;
+    font-size: 1.2vw;
+  }
+
+  .insulinCalculation-hyperglycemie {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 12vw;
+    padding-bottom: 1.5vw;
+  }
+  
+  .insulinCalculation-button:active {
+    top:4px;
+  }
+  .insulinCalculation-button:hover {
+    cursor: pointer;
+  }
+
+  .insulinCalculation-button {
+    margin: 3vw 3vw 2vw;
+    width: 30%;
+    height: 3.5vw;
+    font-size: 1.6em;
+    position: relative;
+    border: none;
+  }
+
+  .insulinCalculation-Button-Icon-Checked {
+    height: 70%;
+    width: auto;
+    margin: auto auto 3px auto;
+  }
+
+  .insulinCalculation-Button-Border {
+    position: absolute;
+    width: 101%;
+    height: 3.6vw;
+    border: solid 2.5px black;
+    bottom: 7px;
+    right: 7px;
+  }
+
+  .insulinCalculation-button-box {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .insulinCalculation-total {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20vw;
+  }
+
+  .insulinCalculation-total p {
+    font-size: 1.6vw;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  .insulinCalculation-warningCalcul p {
+    font-size: 1.4vw;
+    text-align: center;
+    line-height: 2vw;
+    font-weight: 300;
+    margin: 0 5%;
+  }
+
+  .insulinCalculation-totalNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    border: 2px solid grey;
+    background-color: white;
+    min-width: 4em;
+    width: 10vw;
+    height: 4vw;
+    align-self: center;
+    padding:0 1em;
+  }
+
+  .insulinCalculation-hiddenInDesktop {
+    display: none;
+  }
+}  
