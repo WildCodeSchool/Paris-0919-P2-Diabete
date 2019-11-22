@@ -179,7 +179,6 @@ input:active {
 }
 
 .carbCalculation-liItem {
-  /* border: solid white 3px; */
   background-color: white;
   list-style: none;
   font-family: "Barlow", "sans serif";

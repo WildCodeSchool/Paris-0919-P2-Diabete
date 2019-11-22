@@ -12,18 +12,18 @@ import "./Meal.css"
 
 
 const Meal = () => {
-    return (
-      <div className="meal-background">
-         <Navbar  src = {logo}
-                 color = 'icones-meal'  
-        />
-        <HeaderMobile src = {logo} />
-        <ContentFrame src = {icon}
-        content = {<ApiCarbs />}
-        />
-        <Footer color = 'footer-meal' />
-      </div>
-    );
-  }
+  return (
+    <div className="meal-background">
+      <Navbar src={logo}
+        color='icones-meal'
+      />
+      <HeaderMobile src={logo} />
+      <ContentFrame src={icon}
+        content={<ApiCarbs />}
+      />
+      <Footer color='footer-meal' />
+    </div>
+  );
+}
 
 export default Meal

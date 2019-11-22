@@ -1,7 +1,4 @@
 import React from 'react'
-
-import Youtube from'react-youtube'
-
 import './NewsInfo.css'
 
 const NewsInfo = () => {

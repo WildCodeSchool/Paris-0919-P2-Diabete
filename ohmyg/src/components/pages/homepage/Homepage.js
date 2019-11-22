@@ -9,19 +9,19 @@ import Navbar from '../../layout/Navbar';
 import "./Homepage.css"
 
 const Homepage = () => {
-    return (
-      <>
+  return (
+    <div>
       <div className='Homepage-total'>
-          <Navbar  src = {logo}
-                  color = 'icones-homepage'  
-          />
-        <HeaderMobile src = {logo} />
+        <Navbar src={logo}
+          color='icones-homepage'
+        />
+        <HeaderMobile src={logo} />
         <HomeNavButtons />
-        <Footer color = 'footer-homepage' />
+        <Footer color='footer-homepage' />
       </div>
-      <div className = "homepage-background-slide-in-bottom"></div>
-      </>
-    );
-  }
+      <div className="homepage-background-slide-in-bottom"></div>
+    </div>
+  );
+}
 
 export default Homepage
