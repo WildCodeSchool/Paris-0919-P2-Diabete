@@ -1,6 +1,6 @@
 # Oh my G! Project
 
-A web app which helps teenagers to deal with their diabete everyday. Features : a tool to calculate insuline, a tool to calculate glucidic meal income and a nutritional informations database.
+A web app which helps teenagers to deal with their diabetes everyday. Features : a tool to calculate insuline, a tool to calculate glucidic meal income and a nutritional informations database.
 
 #### Homepage
 ![](./public/images/ohmyg-github-homepage.png "HomePage")
