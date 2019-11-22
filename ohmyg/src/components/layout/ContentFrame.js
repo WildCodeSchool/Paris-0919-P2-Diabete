@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './ContentFrame.css'
 
 const ContentFrame = (props) => {

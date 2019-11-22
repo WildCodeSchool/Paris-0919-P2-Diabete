@@ -1,26 +1,27 @@
 import React from 'react';
-import Navbar from '../../layout/Navbar';
+
+import HeaderMobile from '../../layout/HeaderMobile';
 import HomeNavButtons from './HomeNavButtons';
 import Footer from '../../layout/Footer';
 import logo from "../../../assets/pictures/logoOMG.svg"
-import "./Homepage.css"
-import HeaderMobile from '../../layout/HeaderMobile';
+import Navbar from '../../layout/Navbar';
 
+import "./Homepage.css"
 
 const Homepage = () => {
-    return (
-      <>
+  return (
+    <div>
       <div className='Homepage-total'>
-          <Navbar  src = {logo}
-                  color = 'icones-homepage'  
-          />
-        <HeaderMobile src = {logo}/>
+        <Navbar src={logo}
+          color='icones-homepage'
+        />
+        <HeaderMobile src={logo} />
         <HomeNavButtons />
-        <Footer color = 'footer-homepage'/>
+        <Footer color='footer-homepage' />
       </div>
-      <div className = "homepage-background-slide-in-bottom"></div>
-      </>
-    );
-  }
+      <div className="homepage-background-slide-in-bottom"></div>
+    </div>
+  );
+}
 
 export default Homepage

@@ -1,11 +1,11 @@
 import React from "react";
-import "./Footer.css";
 import { Link } from "react-router-dom";
+
+import "./Footer.css";
 
 const Footer = props => {
   return (
     <div className='footerContainer'>
-
       <div className={props.color}>
         <Link to="/" className="footer-link">
           <div className="footer-aboutUs">
