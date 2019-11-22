@@ -19,13 +19,13 @@ const Calculation = () => {
         <Navbar  src = {logo}
                  color = 'icones-calculation'  
         />
-        <HeaderMobile src = {logo}/>
+        <HeaderMobile src = {logo} />
         <ContentFrame src = {icon}
         content = {<InsulinCalculation 
           color1="insulin-blue" color2="insulin-lightBlue" color3="insulin-lightBlueText"
           desktParam={smileySetParamBlue} desktHypo={smileyHypoOrange} mobParam={smileySetParamMobBlue} mobHypo={smileyHypoMobOrange} />}
         />
-        <Footer color = 'footer-calculation'/>
+        <Footer color = 'footer-calculation' />
       </div>
     );
   }

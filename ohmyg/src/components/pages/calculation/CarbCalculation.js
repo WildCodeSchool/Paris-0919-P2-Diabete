@@ -25,7 +25,6 @@ class CarbCalculation extends React.Component {
         listButtonIsClicked: false
     }
 
-
     newFood = () => {
         this.setState({ value: 100 })
         this.setState({ name: this.props.newName })
@@ -39,7 +38,6 @@ class CarbCalculation extends React.Component {
             }
         }
     }
-
 
     responsive = {
         0: { items: 1 },
@@ -64,7 +62,6 @@ class CarbCalculation extends React.Component {
     }
 
     /* button validation */
-
     handleClick = async () => {
         if (this.state.modifyingItem === false && this.state.name !== "") {
 
@@ -79,12 +76,10 @@ class CarbCalculation extends React.Component {
                 await this.setState({ galleryItems: tab })
             })
             const result = await parseFloat(this.state.totalCarb) + parseFloat(this.state.carbRatio)
-
             await this.setState({ totalCarb: result.toFixed(2) })
             this.setState({ value: 100 })
             this.setState({ name: "" })
         }
-
 
         if (this.state.modifyingItem === true) {
             /* delete food*/
@@ -102,13 +97,12 @@ class CarbCalculation extends React.Component {
                 const result = (parseFloat(this.state.totalCarb) + parseFloat(this.state.carbRatio)).toFixed(2)
                 this.setState({ totalCarb: result })
             })
-            this.setState({ modifyingItem: false })
-
+            this.setState({ modifyingItem: false 
+            })
         }
     }
 
     /* Button delete */
-
     deleteItem = () => {
         this.setState({ modifyingItem: false })
         const tab = this.state.galleryItems
@@ -124,25 +118,18 @@ class CarbCalculation extends React.Component {
     }
 
     modifyItem = async (event, elem, index) => {
-        console.log(event.target);
-
         event.target.className += " carbCalculation-active"
-
         await this.setState({ modifyingItem: true })
         this.setState({ index: index })
         this.setState({ name: elem.dish })
         this.setState({ value: elem.dishWeight })
         this.setState({ carbRatio: elem.dishCarb })
         this.setState({ carb100g: elem.dishCarb100 })
-        console.log(this.state.name, this.state.carb100g, this.state.carbRatio, this.state.value);
     }
 
 
     render() {
-        console.log(this.state.modifyingItem);
-
         let carbRatio = (this.state.carb100g * this.state.value / 100).toFixed(2)
-
         const weight = this.state.value
         const ratio = 100 / this.state.carb100g
         let carbRatio2 = (weight / ratio).toFixed(2)
@@ -200,8 +187,7 @@ class CarbCalculation extends React.Component {
                   <div className="CarbCalculation-button-box">
                     <button
                       className="CarbCalculation-button"
-                      onClick={this.handleClick}
-                    >
+                      onClick={this.handleClick}>
                       <div className="CarbCalculation-Button-Border"></div>
                       <img
                         className="CarbCalculation-Button-Icon-Checked"
@@ -211,8 +197,7 @@ class CarbCalculation extends React.Component {
                     {this.state.modifyingItem ? (
                       <button
                         onClick={this.deleteItem}
-                        className="CarbCalculation-button bin"
-                      >
+                        className="CarbCalculation-button bin">
                         <div className="CarbCalculation-Button-Border"></div>
                         <img
                           className="CarbCalculation-Button-Icon-Checked"
@@ -224,8 +209,7 @@ class CarbCalculation extends React.Component {
                     )}
                   </div>
                 </div>
-
-                </div>
+              </div>
 
               <div className="CarbCalculation-ListBlock">
                 <div className="carbCalculation-totalCarousel">
@@ -249,7 +233,6 @@ class CarbCalculation extends React.Component {
                           onClick={event => this.modifyItem(event, elem, index)}
                           key={index}
                         >
-                          {/* <div className={this.state.modifyingItem ? "carbCalculation-liItem" :"carbCalculation-liItemBis"} */}
                           <li> {elem.dish}</li>
                           <li> {elem.dishCarb}</li>
                         </div>

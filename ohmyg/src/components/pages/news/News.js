@@ -18,12 +18,12 @@ const News = () => {
         <Navbar  src = {logo}
                  color = 'icones-news'  
         />
-        <HeaderMobile src = {logo}/>
+        <HeaderMobile src = {logo} />
         <ContentFrame
             src = {icon}
-             content = {<NewsContent/>}
+             content = {<NewsContent />}
         />
-        <Footer color = 'footer-news'/>
+        <Footer color = 'footer-news' />
       </div>
     );
   }

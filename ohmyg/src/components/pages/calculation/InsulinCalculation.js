@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import "./InsulinCalculation.css";
-// import smileyHypo from "../../../assets/icons/picto-hypo.png";
 import smileyHyper from "../../../assets/icons/picto-hyper.png";
 import smileyHyperMob from "../../../assets/icons/picto-hyper-mob.png";
 import icon from "../../../assets/icons/checked.png";
-// import smileySetParam from "../../../assets/icons/picto-param.png";
-// import smileyHypoMob from "../../../assets/icons/picto-hypo-mob.png";
-// import smileySetParamMob from "../../../assets/icons/picto-param-mob.png";
 
 class InsulinCalculation extends Component {
   state = {
@@ -47,12 +43,10 @@ class InsulinCalculation extends Component {
   };
 
   render() {
-    console.log(this.state.hypo)
     return (
       <div className="insulinCalculationContainer">
         <div className="insulinCalculation-firstParamaters">
-
-        <div className="insulinCalculation-smileys insulinCalculation-hiddenInDesktop">
+          <div className="insulinCalculation-smileys insulinCalculation-hiddenInDesktop">
             <div>{this.state.glycemie === "" || this.state.glycemie === "0" || (this.state.glycemie >= "0.8" && this.state.glycemie <= "1.2" ) ?
               <div className="insulinCalculation-smiley-box">
                 <img
@@ -211,15 +205,8 @@ class InsulinCalculation extends Component {
               </div> 
               : ""}
             </div>
-
           </div>
-
-          
         </div>
-
-
-
-
 
         <div className="insulinCalculation-button-box">
           <button
@@ -230,8 +217,6 @@ class InsulinCalculation extends Component {
             <img className="insulinCalculation-Button-Icon-Checked" src={icon} />
           </button>
         </div>
-
-
 
         <div className={`insulinCalculation-total ${this.props.color2}`}>
           <p id="insulinCalculation-totalTitle">Doses d'insuline suggérées</p>
@@ -246,7 +231,6 @@ class InsulinCalculation extends Component {
             </p>
           </div>
         </div>
-
       </div>
     );
   }

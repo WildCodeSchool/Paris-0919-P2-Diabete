@@ -6,32 +6,21 @@ import icon from "../../../assets/icons/pictog-coeur-39.png";
 class NewsContent extends React.Component {
 
   render() {
-    // const size1 = {
-    //     height: '400',
-    //     }
-
     return (
-
       <div>
         <div className="Main-Video">
-
           <h1 className='newsContent-Page'> A la Une !</h1>
           <Youtube
             id="video2"
             videoId="0idJ9XpBFEo"
-            // opts={size1}
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           />
-
-
-
           <h2 className='newsContent-testymony'>Temoignages</h2>
           <Youtube
             id="video2"
             videoId="A320QGM80Z8"
-            // opts={size1}
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -40,13 +29,11 @@ class NewsContent extends React.Component {
           <Youtube
             id="video3"
             videoId="hVaKaZcQqec"
-            // opts={size1}
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           />
         </div>
-
 
         <div className="NewsContent-Article">
           <h2 className='firstArticleTitle'>Tout savoir sur le diabète</h2>
@@ -84,22 +71,22 @@ class NewsContent extends React.Component {
               Pour la plongée sous-marine, l’apnée a toujours pu être pratiquée. Avec bouteilles, les jeunes de plus de 18 ans peuvent être accueillis dans les clubs de plongée, mais avec l’obligation de respecter certaines règles.</p>
           </div>
         
-        <div className='NewsContent-block4'>
-        <h3 className="Title-sport">Sports et glycémie</h3>
-        <p className="text-sportAndDiabete">Le plus souvent, l’exercice physique fait baisser la glycémie pendant le sport et surtout dans les heures qui suivent le sport. Des précautions simples permettent d’éviter l’hypoglycémie :
-        <br />
-            • Diminuer les doses d’insuline
-            <br />
-            • Adapter l’alimentation
-            <br />
-            • Contrôler la glycémie, avant le sport pour savoir d’où on part et après pour savoir si la dose a été corrigée de façon correcte, pourquoi pas à la mi-temps.
-            <br />
-            Il est important de noter dans le carnet le sport pratiqué, la dose d’insuline, les collations prises, les glycémies. Il faut être d’autant plus attentif au début du diabète, quand on commence une nouvelle activité physique dont on ne connaît pas les effets.
-            Peu à peu, on fait sa propre expérience et on apprend, par ses propres réactions, à faire les ajustements nécessaires, en s’aidant des conseils de l’équipe médicale.
-            <br />
-              Attention ! Ne jamais faire de sport à jeun.</p>
-        </div>  
-      </div>
+          <div className='NewsContent-block4'>
+          <h3 className="Title-sport">Sports et glycémie</h3>
+          <p className="text-sportAndDiabete">Le plus souvent, l’exercice physique fait baisser la glycémie pendant le sport et surtout dans les heures qui suivent le sport. Des précautions simples permettent d’éviter l’hypoglycémie :
+          <br />
+              • Diminuer les doses d’insuline
+              <br />
+              • Adapter l’alimentation
+              <br />
+              • Contrôler la glycémie, avant le sport pour savoir d’où on part et après pour savoir si la dose a été corrigée de façon correcte, pourquoi pas à la mi-temps.
+              <br />
+              Il est important de noter dans le carnet le sport pratiqué, la dose d’insuline, les collations prises, les glycémies. Il faut être d’autant plus attentif au début du diabète, quand on commence une nouvelle activité physique dont on ne connaît pas les effets.
+              Peu à peu, on fait sa propre expérience et on apprend, par ses propres réactions, à faire les ajustements nécessaires, en s’aidant des conseils de l’équipe médicale.
+              <br />
+                Attention ! Ne jamais faire de sport à jeun.</p>
+          </div>  
+        </div>
       
       <div className="NewsContent-Article">
         <div className='pyctoAndTitle'>

@@ -14,9 +14,9 @@ const Homepage = () => {
           <Navbar  src = {logo}
                   color = 'icones-homepage'  
           />
-        <HeaderMobile src = {logo}/>
+        <HeaderMobile src = {logo} />
         <HomeNavButtons />
-        <Footer color = 'footer-homepage'/>
+        <Footer color = 'footer-homepage' />
       </div>
       <div className = "homepage-background-slide-in-bottom"></div>
       </>

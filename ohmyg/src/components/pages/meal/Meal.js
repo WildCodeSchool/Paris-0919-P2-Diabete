@@ -15,11 +15,11 @@ const Meal = () => {
          <Navbar  src = {logo}
                  color = 'icones-meal'  
         />
-        <HeaderMobile src = {logo}/>
+        <HeaderMobile src = {logo} />
         <ContentFrame src = {icon}
-        content = {<ApiCarbs/>}
+        content = {<ApiCarbs />}
         />
-        <Footer color = 'footer-meal'/>
+        <Footer color = 'footer-meal' />
       </div>
     );
   }

@@ -10,8 +10,6 @@ class InfoNutApi extends React.Component {
   };
 
   getFood = async() => {
-    
-    // loader ? //
     const temporaryCategory = []
     await axios
       .get(
@@ -22,30 +20,24 @@ class InfoNutApi extends React.Component {
         temporaryCategory.push(...data.records)
       })
 
-        await axios
-          .get(
-            `https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=${this.props.food2}`
-          )
-          .then(response => response.data)
-          .then(data => {
-            temporaryCategory.push(...data.records)
-          })
-        .then(_=> {this.sortState(temporaryCategory)})
-        
-        
-
+      await axios
+        .get(
+          `https://plateforme.api-agro.fr/api/records/1.0/search/?dataset=tables-ciqual&rows=30&facet=origgpfr&q=${this.props.food2}`
+        )
+        .then(response => response.data)
+        .then(data => {
+          temporaryCategory.push(...data.records)
+        })
+        .then(_=> {this.sortState(temporaryCategory)}) 
   }
       
-      componentDidUpdate() {
-       
-        if (this.state.update !== this.props.food2) {
-          this.setState({ loading : true, update: this.props.food2 }, ()=> {
-            this.getFood()})
+  componentDidUpdate() {
+    if (this.state.update !== this.props.food2) {
+      this.setState({ loading : true, update: this.props.food2 }, ()=> {
+      this.getFood()})
     }
-   
   }
 
- 
   sortState = (foodCategory) => {
     const newState = foodCategory.sort((a , b) => {
       return a.fields.origfdnm.localeCompare(b.fields.origfdnm)
@@ -56,20 +48,17 @@ class InfoNutApi extends React.Component {
 
   render() {
     return (
-      
         <div id="food-box">
         {this.state.loading ? 'Loading...' : 
         this.state.foodsFromCategory
         .map(food => (
           <Link className="food-card-link" to={`/displayinfonut/${food.fields.origfdcd}`}>
             <p className="food-card"> {food.fields.origfdnm}</p>{" "}
-        </Link>))
+          </Link>))
         }
-  
       </div>
     );
   }
 }
-
 
 export default InfoNutApi;

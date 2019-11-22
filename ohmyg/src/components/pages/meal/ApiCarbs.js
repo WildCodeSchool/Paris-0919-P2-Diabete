@@ -18,24 +18,21 @@ class ApiCarbs extends Component {
         this.setState({carbsFromApi : food})
     }
 
-render () {
-    // console.log(this.state.nameFromApi)
-    // console.log(this.state.carbsFromApi)
-    return(
-    <div>
-        <div className="nutriContent-searchBox">
-            <ApiRequest
-            name = {this.getChosenFoodName}
-            carbs = {this.getChosenFoodCarbs}
+    render () {
+        return(
+        <div>
+            <div className="nutriContent-searchBox">
+                <ApiRequest
+                name = {this.getChosenFoodName}
+                carbs = {this.getChosenFoodCarbs}
+                />
+            </div>
+            <CarbCalculation
+            newName = {this.state.nameFromApi}
+            newCarbs = {this.state.carbsFromApi}
             />
         </div>
-        <CarbCalculation
-        newName = {this.state.nameFromApi}
-        newCarbs = {this.state.carbsFromApi}
-        />
-    </div>
-    )
-
+        )
     }
 }
 
