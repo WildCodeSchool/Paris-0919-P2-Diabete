@@ -1,37 +1,28 @@
 import React from "react";
-import "./NewsContent.css";
-import Youtube from "react-youtube";
+
 import icon from "../../../assets/icons/pictog-coeur-39.png";
+import Youtube from "react-youtube";
+
+import "./NewsContent.css";
 
 class NewsContent extends React.Component {
 
   render() {
-    // const size1 = {
-    //     height: '400',
-    //     }
-
     return (
-
       <div>
         <div className="Main-Video">
-
           <h1 className='newsContent-Page'> A la Une !</h1>
           <Youtube
             id="video2"
             videoId="0idJ9XpBFEo"
-            // opts={size1}
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           />
-
-
-
           <h2 className='newsContent-testymony'>Temoignages</h2>
           <Youtube
             id="video2"
             videoId="A320QGM80Z8"
-            // opts={size1}
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -40,19 +31,17 @@ class NewsContent extends React.Component {
           <Youtube
             id="video3"
             videoId="hVaKaZcQqec"
-            // opts={size1}
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           />
         </div>
 
-
         <div className="NewsContent-Article">
           <h2 className='firstArticleTitle'>Tout savoir sur le diabète</h2>
-          <p className='textFirstArticle-block1'> Le diabète, c’est avoir trop de sucre dans le sang. On dit que c’est un diabète sucré. Attention ! On n’a pas un diabète sucré parce qu’on mange trop de sucre, comme on le croit trop souvent. 
+          <p className='textFirstArticle-block1'> Le diabète, c’est avoir trop de sucre dans le sang. On dit que c’est un diabète sucré. Attention ! On n’a pas un diabète sucré parce qu’on mange trop de sucre, comme on le croit trop souvent.
           <br />
-          Chez l’enfant, le diabète est dû à la disparition d’une substance appelée l’Insuline. C’est donc un diabète sucré insulinodépendant.</p>
+            Chez l’enfant, le diabète est dû à la disparition d’une substance appelée l’Insuline. C’est donc un diabète sucré insulinodépendant.</p>
 
           <h3 className='firstArticle-substitle'>Le traitement</h3>
           <p className='textFirstArticle-block2'>Pour faire baisser le sucre dans le sang, il faut donner l’insuline qui a disparu. Le traitement par l’insuline a trois particularités :
@@ -75,44 +64,44 @@ class NewsContent extends React.Component {
               Pour promouvoir la pratique du sport auprès des personnes diabétiques, la Fédération française de triathlon a mis en place un programme adapté. Des entraîneurs ont reçu une formation spécifique pour mieux accompagner les sportifs atteints de diabète.</p>
             </div>
           </div>
-          
+
           <div className='NewsContent-block3'>
-          <h3 className="Title-sport">Des programmes sportifs adaptés aux diabétiques</h3>
-          <p className="text-sportAndDiabete">Presque tous les sports peuvent être pratiqués, l’important est de se faire plaisir. On choisit celui qu’on préfère et qu’on peut pratiquer régulièrement.
-          L’exercice musculaire régulier, qui peut se prolonger sans épuiser l’organisme développe la résistance à l’effort. De plus, si on a un diabète, l’exercice améliore le passage du glucose dans le muscle et permet de diminuer les doses d’insuline.
-          Certains sports ne sont pas à encourager (voire à déconseiller), parce qu’ils sont potentiellement dangereux avec le diabète. Il peut s’agir d’un danger en cas d’hypoglycémie deltaplane, parapente, parachutisme, alpinisme en montagne, voile en solitaire, sports mécaniques) ; ou d’un risque de lésions rétiniennes (boxe).
+            <h3 className="Title-sport">Des programmes sportifs adaptés aux diabétiques</h3>
+            <p className="text-sportAndDiabete">Presque tous les sports peuvent être pratiqués, l’important est de se faire plaisir. On choisit celui qu’on préfère et qu’on peut pratiquer régulièrement.
+            L’exercice musculaire régulier, qui peut se prolonger sans épuiser l’organisme développe la résistance à l’effort. De plus, si on a un diabète, l’exercice améliore le passage du glucose dans le muscle et permet de diminuer les doses d’insuline.
+            Certains sports ne sont pas à encourager (voire à déconseiller), parce qu’ils sont potentiellement dangereux avec le diabète. Il peut s’agir d’un danger en cas d’hypoglycémie deltaplane, parapente, parachutisme, alpinisme en montagne, voile en solitaire, sports mécaniques) ; ou d’un risque de lésions rétiniennes (boxe).
               Pour la plongée sous-marine, l’apnée a toujours pu être pratiquée. Avec bouteilles, les jeunes de plus de 18 ans peuvent être accueillis dans les clubs de plongée, mais avec l’obligation de respecter certaines règles.</p>
           </div>
-        
-        <div className='NewsContent-block4'>
-        <h3 className="Title-sport">Sports et glycémie</h3>
-        <p className="text-sportAndDiabete">Le plus souvent, l’exercice physique fait baisser la glycémie pendant le sport et surtout dans les heures qui suivent le sport. Des précautions simples permettent d’éviter l’hypoglycémie :
-        <br />
-            • Diminuer les doses d’insuline
-            <br />
-            • Adapter l’alimentation
-            <br />
-            • Contrôler la glycémie, avant le sport pour savoir d’où on part et après pour savoir si la dose a été corrigée de façon correcte, pourquoi pas à la mi-temps.
-            <br />
-            Il est important de noter dans le carnet le sport pratiqué, la dose d’insuline, les collations prises, les glycémies. Il faut être d’autant plus attentif au début du diabète, quand on commence une nouvelle activité physique dont on ne connaît pas les effets.
-            Peu à peu, on fait sa propre expérience et on apprend, par ses propres réactions, à faire les ajustements nécessaires, en s’aidant des conseils de l’équipe médicale.
-            <br />
+
+          <div className='NewsContent-block4'>
+            <h3 className="Title-sport">Sports et glycémie</h3>
+            <p className="text-sportAndDiabete">Le plus souvent, l’exercice physique fait baisser la glycémie pendant le sport et surtout dans les heures qui suivent le sport. Des précautions simples permettent d’éviter l’hypoglycémie :
+          <br />
+              • Diminuer les doses d’insuline
+              <br />
+              • Adapter l’alimentation
+              <br />
+              • Contrôler la glycémie, avant le sport pour savoir d’où on part et après pour savoir si la dose a été corrigée de façon correcte, pourquoi pas à la mi-temps.
+              <br />
+              Il est important de noter dans le carnet le sport pratiqué, la dose d’insuline, les collations prises, les glycémies. Il faut être d’autant plus attentif au début du diabète, quand on commence une nouvelle activité physique dont on ne connaît pas les effets.
+              Peu à peu, on fait sa propre expérience et on apprend, par ses propres réactions, à faire les ajustements nécessaires, en s’aidant des conseils de l’équipe médicale.
+              <br />
               Attention ! Ne jamais faire de sport à jeun.</p>
-        </div>  
-      </div>
-      
-      <div className="NewsContent-Article">
-        <div className='pyctoAndTitle'>
-          <img className ="picto-coeur" src={icon} alt="pictoCoeur" />
-          <h2 className="thirdArticleTitle">Coups de coeur de la semaine</h2>
+          </div>
         </div>
-        <div className='imageAndTextThirdArticle'>
-          <img className="photo1" src="https://i.etsystatic.com/8886419/r/il/3940ae/1162144846/il_570xN.1162144846_k79i.jpg" alt='Pictures of bag'/>
-          <p className="text-pocketInsuline">Aujourd'hui, nous vous présentons une jolie pochette "Super Mario" faite mains. Elle vous permet de ranger vos stylos à insuline et tout le nécessaire. Vous pouvez retrouver plein d'autres modèles <span className='newsTarget'><a href='https://www.etsy.com/fr/search?q=pochettes+insuline' target='_blank'>ICI</a></span>.
+
+        <div className="NewsContent-Article">
+          <div className='pyctoAndTitle'>
+            <img className="picto-coeur" src={icon} alt="pictoCoeur" />
+            <h2 className="thirdArticleTitle">Coups de coeur de la semaine</h2>
+          </div>
+          <div className='imageAndTextThirdArticle'>
+            <img className="photo1" src="https://i.etsystatic.com/8886419/r/il/3940ae/1162144846/il_570xN.1162144846_k79i.jpg" alt='Pictures of bag' />
+            <p className="text-pocketInsuline">Aujourd'hui, nous vous présentons une jolie pochette "Super Mario" faite mains. Elle vous permet de ranger vos stylos à insuline et tout le nécessaire. Vous pouvez retrouver plein d'autres modèles <span className='newsTarget'><a href='https://www.etsy.com/fr/search?q=pochettes+insuline' target='_blank'>ICI</a></span>.
           </p>
+          </div>
         </div>
       </div>
-    </div>
     )
   };
 }

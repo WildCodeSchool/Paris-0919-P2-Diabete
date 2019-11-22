@@ -1,6 +1,7 @@
 import React from "react";
-import "./NutriTable.css";
 import { Link } from "react-router-dom";
+
+import "./NutriTable.css";
 
 
 const cleanProps = value => {
@@ -124,8 +125,7 @@ const NutriTable = props => {
             <td>
               {props.vitamineD === undefined
                 ? "Vitamine D : non renseigné"
-                : `Vitamine D : ${cleanProps(props.vitamineD)} ug`}
-                
+                : `Vitamine D : ${cleanProps(props.vitamineD)} ug`}      
             </td>
           </tr>
         </tbody>

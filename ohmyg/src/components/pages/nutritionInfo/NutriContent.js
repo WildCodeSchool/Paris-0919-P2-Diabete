@@ -1,13 +1,15 @@
 import React from "react";
+
 import ApiRequestInfo from "./ApiRequestInfo";
-import InfoNutApi from "./InfoNutApi";
-import "./NutriContent.css";
-import fruitAndVeg from "../../../assets/icons/picto-fruitAndVeg.svg";
-import starchy from "../../../assets/icons/picto-starchy.svg";
+import dessert from "../../../assets/icons/picto-dessert.svg";
 import drink from "../../../assets/icons/picto-drink.svg";
+import fruitAndVeg from "../../../assets/icons/picto-fruitAndVeg.svg";
+import InfoNutApi from "./InfoNutApi";
 import junkFood from "../../../assets/icons/picto-junkFood.svg";
 import meatAndFish from "../../../assets/icons/picto-meatAndFish.svg";
-import dessert from "../../../assets/icons/picto-dessert.svg";
+import starchy from "../../../assets/icons/picto-starchy.svg";
+
+import "./NutriContent.css";
 
 class NutriContent extends React.Component {
   state = {
