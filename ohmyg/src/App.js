@@ -1,11 +1,13 @@
 import React from 'react';
+import {Switch, Route} from "react-router-dom";
+
 import Calculation from './components/pages/calculation/Calculation';
+import DisplayInfoNut from './components/pages/nutritionInfo/DisplayInfoNut';
+import Homepage from './components/pages/homepage/Homepage';
 import Meal from './components/pages/meal/Meal';
 import News from './components/pages/news/News';
 import NutritionInfo from './components/pages/nutritionInfo/NutritionInfo';
-import DisplayInfoNut from './components/pages/nutritionInfo/DisplayInfoNut';
-import Homepage from './components/pages/homepage/Homepage';
-import {Switch, Route} from "react-router-dom";
+
 import './App.css';
 
 
