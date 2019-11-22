@@ -3,13 +3,13 @@
 A web app which helps teenagers to deal with their diabete everyday. Features : a tool to calculate insuline, a tool to calculate glucidic meal income and a nutritional informations database.
 
 #### Homepage
-![](/images.ohmyg-github-homepage.png "HomePage")
+![](/public/images/ohmyg-github-homepage.png "HomePage")
 
 #### Meal Calculation
-![](images.ohmyg-github-calculation.png "Calculation")
+![](/public/images/ohmyg-github-calculation.png "Calculation")
 
 #### Nutritional Informations Database
-![](images.ohmyg-github-infonut.png "Nutritional Informations Database")
+![](/public/images/ohmyg-github-infonut.png "Nutritional Informations Database")
 
 
 
