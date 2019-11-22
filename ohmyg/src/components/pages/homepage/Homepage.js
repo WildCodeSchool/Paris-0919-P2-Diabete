@@ -1,11 +1,12 @@
 import React from 'react';
-import Navbar from '../../layout/Navbar';
+
+import HeaderMobile from '../../layout/HeaderMobile';
 import HomeNavButtons from './HomeNavButtons';
 import Footer from '../../layout/Footer';
 import logo from "../../../assets/pictures/logoOMG.svg"
-import "./Homepage.css"
-import HeaderMobile from '../../layout/HeaderMobile';
+import Navbar from '../../layout/Navbar';
 
+import "./Homepage.css"
 
 const Homepage = () => {
     return (

@@ -1,7 +1,9 @@
 import React from "react";
-import "./NewsContent.css";
-import Youtube from "react-youtube";
+
 import icon from "../../../assets/icons/pictog-coeur-39.png";
+import Youtube from "react-youtube";
+
+import "./NewsContent.css";
 
 class NewsContent extends React.Component {
 

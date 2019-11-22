@@ -1,16 +1,15 @@
 import React from 'react';
-import Navbar from '../../layout/Navbar';
+
 import ContentFrame from '../../layout/ContentFrame';
 import Footer from '../../layout/Footer';
-import logo from "../../../assets/pictures/logoOMGPurple.svg"
-import "./News.css"
-import icon from "../../../assets/icons/picto-section-news.png"
 import HeaderMobile from '../../layout/HeaderMobile';
+import icon from "../../../assets/icons/picto-section-news.png"
+import logo from "../../../assets/pictures/logoOMGPurple.svg"
+import Navbar from '../../layout/Navbar';
 import NewsContent from './NewsContent';
+
+import "./News.css"
 import "./NewsContent.css";
-
-
-
 
 const News = () => {
     return (

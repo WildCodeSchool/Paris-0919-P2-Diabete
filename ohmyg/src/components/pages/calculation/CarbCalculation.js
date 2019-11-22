@@ -1,14 +1,16 @@
 import React from 'react'
-import InputRange from 'react-input-range';
-import 'react-input-range/lib/css/index.css';
-import './CarbCalculation.css';
-import InsulinCalculation from "./InsulinCalculation";
+
 import bin from "../../../assets/icons/trash.png"
 import icon from "../../../assets/icons/checked.png"
+import InputRange from 'react-input-range';
+import InsulinCalculation from "./InsulinCalculation";
+import smileyHypoBlue from "../../../assets/icons/picto-hypo-bleu.png";
+import smileyHypoMobBlue from "../../../assets/icons/picto-hypo-bleu-mob.png";
 import smileySetParamOrange from "../../../assets/icons/picto-param-orange.png";
 import smileySetParamMobOrange from "../../../assets/icons/picto-param-orange-mob.png";
-import smileyHypoMobBlue from "../../../assets/icons/picto-hypo-bleu-mob.png";
-import smileyHypoBlue from "../../../assets/icons/picto-hypo-bleu.png";
+
+import './CarbCalculation.css';
+import 'react-input-range/lib/css/index.css';
 
 
 class CarbCalculation extends React.Component {

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import "./InsulinCalculation.css";
+
+import icon from "../../../assets/icons/checked.png";
 import smileyHyper from "../../../assets/icons/picto-hyper.png";
 import smileyHyperMob from "../../../assets/icons/picto-hyper-mob.png";
-import icon from "../../../assets/icons/checked.png";
+
+import "./InsulinCalculation.css";
 
 class InsulinCalculation extends Component {
   state = {
